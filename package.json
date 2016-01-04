@@ -1,14 +1,15 @@
 {
   "name": "test_sheets_app",
   "version": "0.0.1",
-  "description": "Master Thesis project for implementation of a software for generetion of a real-time web-page tests from a provided test sheets.",
+  "description": "Master Thesis project for implementation of a software for generation of a real-time web-page tests from a provided test sheets.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dzdidi/test_sheets.git"
+    "url": "git+https://github.com/figome/test_sheets.git"
+
   },
   "keywords": [
     "testsheets",
@@ -22,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/dzdidi/test_sheets/issues"
   },
-  "homepage": "https://github.com/dzdidi/test_sheets#readme"
+  "homepage": "https://github.com/dzdidi/test_sheets#readme",
+  "dependencies": {
+    "csv-parse": "^1.0.1"
+  }
 }
