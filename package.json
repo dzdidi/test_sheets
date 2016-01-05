@@ -9,7 +9,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/figome/test_sheets.git"
-
   },
   "keywords": [
     "testsheets",
@@ -25,6 +24,8 @@
   },
   "homepage": "https://github.com/dzdidi/test_sheets#readme",
   "dependencies": {
-    "csv-parse": "^1.0.1"
+    "csv-parse": "^1.0.1",
+    "mocha": "^2.3.4",
+    "sinon": "^1.17.2"
   }
 }
