@@ -43,7 +43,9 @@ Syntax for **guard**:
  * `#N` - number of times row `N` has already been executed within current test;
  * `<condition>` - conditional operator (`>`, `>=`, `<`, `<=`, `==`, `!=`)
  * `<value | link to the cell>` - value or link to the cell with value which should be compared.
-  ## Parameterized and Higher-Order Test Sheets
+
+
+## Parameterized and Higher-Order Test Sheets
   Lower order test sheets can belong to Basic of Non-Linear types of Test Sheets and respectively follow conventions, with next additional option:
   * Input and/or output cells can contain parameters `?[B-Z]+` which represent the value of cells within the representative column of **Higher-Order Test Sheet**
   * Rows `1` and `2` should follow conventions for Basic Test Sheet;
