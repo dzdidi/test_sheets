@@ -1,2 +1,1 @@
-var module = require('./lib/read_xlsx')(25);
-console.log(module);
+var module = require('./lib/read_xlsx')('./test/doublers');
