@@ -1,5 +1,6 @@
-var assert = require('assert');
+var assert = require('chai').assert;
 var fs = require('fs');
+var path = require('path');
 
 var mocha = require('mocha');
 var sinon = require('sinon');
@@ -42,8 +43,6 @@ describe('Test coverage for read_xlsx library', function() {
     done();
   });
 
-  // HOW TO CHECK NESTED FUCTIONS WITH SINON?!
-  // probably with nextTick hacks
   // it('should call itself if content is a directory', function(done) {
   //   var selfSpy = sinon.spy(readXLSX);
   //   var statSpy = sinon.spy(fs, 'statSync');
@@ -59,17 +58,25 @@ describe('Test coverage for read_xlsx library', function() {
   //   done();
   // });
   //
-  // it('should check file\'s extenstion and skip it if not .xlsx', function(done) {
+  // it('should check file\'s extenstion and skip it if not .xlsx ', function(done) {
+  //   var spy = sinon.spy(path, 'extname');
+  //
+  //   readXLSX('./test/doublers');
+  //   assert.equal(spy.called, true);
+  //
+  //   spy.restore();
   //   done();
   // });
   //
   // it('should call testSheetFactory', function(done) {
-  //   var factorySpy = sinon.spy(testSheetFactory, 'createTS');
+  //   var spy = sinon.spy(testSheetFactory, 'createTS');
   //
   //   readXLSX('./test/doublers');
   //
-  //   assert.equal(factorySpy.called, true);
-  //   factorySpy.restore();
+  //   assert.equal(spy.called, true);
+  //
+  //   spy.restore();
+  //
   //   done();
   // });
 });
