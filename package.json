@@ -4,7 +4,7 @@
   "description": "Master Thesis project for implementation of a software for generation of a real-time web-page tests from a provided test sheets.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": " NODE_ENV=testing mocha"
   },
   "repository": {
     "type": "git",
@@ -24,8 +24,9 @@
   },
   "homepage": "https://github.com/dzdidi/test_sheets#readme",
   "dependencies": {
-    "csv-parse": "^1.0.1",
+    "chai": "^3.4.1",
     "mocha": "^2.3.4",
-    "sinon": "^1.17.2"
+    "sinon": "^1.17.2",
+    "xlsx": "^0.8.0"
   }
 }
