@@ -20,7 +20,11 @@ Execution stages:
 
  # Conventions for definitions of Test Sheets
 Following conventions should be followed for Test Sheet passed verification.
-##  Basic Test Sheets
+### General
+ * Number of columns within one TS should not exceed 26 columns *(from A to Z)*
+ * Invocation delimiters must be allocated within single column the *(aligned to the longest row)*
+
+###  Basic Test Sheets
  * file extension .xlsx
  * `A1` cell(optional) - description of the test case;
  * `A2` cell - module under testing with an extension *(.js)*;
@@ -30,7 +34,7 @@ Following conventions should be followed for Test Sheet passed verification.
  * **Invocation Column** - the column for separation of input values from expected output value*(s)* filled with `|` (pipe) as a cells values until the last line which includes objects under tests;
  * **Expected Return** - column*(s)* after invocation line.
 
- ## Non-Linear Test Sheets
+ ### Non-Linear Test Sheets
   Same convention as for Basic Test Sheets plus following conventions for
 Behaviour Specification:
   * `N`-th row - the row for separation of test definitions from the test behaiour. Filled with `_` (underscore) until the last column of expect values *(excluding invocation column)*
@@ -45,7 +49,7 @@ Syntax for **guard**:
  * `<value | link to the cell>` - value or link to the cell with value which should be compared.
 
 
-## Parameterized and Higher-Order Test Sheets
+### Parameterized and Higher-Order Test Sheets
   Lower order test sheets can belong to Basic of Non-Linear types of Test Sheets and respectively follow conventions, with next additional option:
   * Input and/or output cells can contain parameters `?[B-Z]+` which represent the value of cells within the representative column of **Higher-Order Test Sheet**
   * Rows `1` and `2` should follow conventions for Basic Test Sheet;
