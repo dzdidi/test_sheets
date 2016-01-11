@@ -1,3 +1,7 @@
-var reader = require('./lib/read_xlsx');
+var Reader = require('./lib/read_xlsx');
 
-console.log(reader('./test/doublers'));
+var r  = new Reader('./test/doublers');
+
+r.on('readable', function() {
+  console.log(r.read());
+})
