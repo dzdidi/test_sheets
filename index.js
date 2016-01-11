@@ -1,1 +1,3 @@
-var module = require('./lib/read_xlsx')('./test/doublers');
+var reader = require('./lib/read_xlsx');
+
+console.log(reader('./test/doublers'));

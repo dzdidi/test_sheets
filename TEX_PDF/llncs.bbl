@@ -1,0 +1,27 @@
+\begin{thebibliography}{1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+
+\bibitem{nodejsabout}
+About node.js®, \url{https://nodejs.org/en/about/}
+
+\bibitem{ts}
+Test sheets,
+  \url{http://swt.informatik.uni-mannheim.de/de/research/research-topics/test-sheets/}
+
+\bibitem{tsb}
+Test sheets,
+  \url{http://swt.informatik.uni-mannheim.de/de/research/research-topics/test-sheets/basic-test-sheets/}
+
+\bibitem{nodejsbook}
+Casciaro, M.: NodeJS Design Patterns. Packt Publishing (2014)
+
+\bibitem{MartinClean}
+Martin, R.C.: Clean Code: A Handbook of Agile Software Craftsmanship. Prentice
+  Hall PTR, Upper Saddle River, NJ, USA, 1 edn. (2008)
+
+\bibitem{MartinASD}
+Martin, R.C.: Agile Software Development: Principles, Patterns, and Practices.
+  Prentice Hall PTR, Upper Saddle River, NJ, USA (2003)
+
+\end{thebibliography}

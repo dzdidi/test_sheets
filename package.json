@@ -25,6 +25,7 @@
   "homepage": "https://github.com/dzdidi/test_sheets#readme",
   "dependencies": {
     "chai": "^3.4.1",
+    "fs-readdir": "0.0.3",
     "mocha": "^2.3.4",
     "sinon": "^1.17.2",
     "xlsx": "^0.8.0"
