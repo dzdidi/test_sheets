@@ -48,16 +48,6 @@ describe('Test coverage for read_xlsx library', function() {
     done();
   });
 
-  // should be changed with respect to streams
-  it('should check entry is a directory', function(done) {
-    readXLSX('./test/doublers');
-
-    assert.equal(statSpy.called, true);
-
-    statSpy.restore();
-    done();
-  });
-
   it('should check file\'s extenstion and skip it if not .xlsx ', function(done) {
     readXLSX('./test/doublers');
     assert.equal(extnameSpy.called, true);
