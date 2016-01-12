@@ -5,7 +5,7 @@ var path = require('path');
 var mocha = require('mocha');
 var sinon = require('sinon');
 
-var readXLSX = require('../lib/read_xlsx');
+var readXLSX = require('../lib/read_stream');
 var testSheetScheme = require('../lib/test_sheet_scheme');
 
 var readXLSXSpy = sinon.spy(readXLSX);
@@ -45,16 +45,6 @@ describe('Test coverage for read_xlsx library', function() {
     assert.equal(fsSpy.called, true);
 
     fsSpy.restore();
-    done();
-  });
-
-  // should be changed with respect to streams
-  it('should check entry is a directory', function(done) {
-    readXLSX('./test/doublers');
-
-    assert.equal(statSpy.called, true);
-
-    statSpy.restore();
     done();
   });
 
