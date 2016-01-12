@@ -1,1 +1,3 @@
-var funks = require('./lib/read_xlsx')('./test/doublers');
+var streams = require('./lib/read_stream');
+
+streams('./test/doublers').pipe(process.stdout);
