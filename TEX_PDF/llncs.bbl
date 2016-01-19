@@ -1,9 +1,31 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
 
 \bibitem{nodejsabout}
 About node.js®, \url{https://nodejs.org/en/about/}
+
+\bibitem{tdd}
+Iintroduction to test driven development (tdd),
+  \url{http://www.agiledata.org/essays/tdd.html}
+
+\bibitem{libuvBasic}
+An introduction to libuv: Basics of libuv,
+  \url{http://nikhilm.github.io/uvbook/basics.html}
+
+\bibitem{javase}
+Java se 8 lambda quick start,
+  \url{https://apexapps.oracle.com/pls/apex/f?p=44785:24:100775742404222::NO:24:P24\_CONTENT\_ID,P24\_PREV\_PAGE:7180,29}
+
+\bibitem{mozillaJS}
+Javascript, \url{https://developer.mozilla.org/en-US/docs/Web/JavaScript}
+
+\bibitem{oosite}
+Object oriented design patterns, \url{http://www.oodesign.com/}
+
+\bibitem{nodejsstreams}
+Stream: Node.js v5.4.1 documentation,
+  \url{https://nodejs.org/docs/latest/api/stream.html}
 
 \bibitem{ts}
 Test sheets,
@@ -13,8 +35,66 @@ Test sheets,
 Test sheets,
   \url{http://swt.informatik.uni-mannheim.de/de/research/research-topics/test-sheets/basic-test-sheets/}
 
+\bibitem{tsh}
+Test sheets,
+  \url{http://swt.informatik.uni-mannheim.de/de/research/research-topics/test-sheets/parameterized-and-higher-order-test-sheets/}
+
+\bibitem{nodejscontributors}
+Top npm contributors by number of packages,
+  \url{https://gist.github.com/michalbe/71f6f9e5938eeb781dc4}
+
+\bibitem{libuv}
+Welcome to the libuv api documentation,
+  \url{http://docs.libuv.org/en/v1.x/\#features}
+
+\bibitem{sicp}
+Abelson, H., Sussman, G.J.: Structure and Interpretation of Computer Programs.
+  MIT Press, Cambridge, MA, USA, 2nd edn. (1996)
+
+\bibitem{IntroductionST}
+Ammann, P., Offutt, J.: Introduction to Software Testing. Cambridge University
+  Press, New York, NY, USA, 1 edn. (2008)
+
+\bibitem{TDDPractical}
+Astels, D.: Test Driven Development: A Practical Guide. Prentice Hall
+  Professional Technical Reference (2003)
+
+\bibitem{Lecture1}
+Atkinson, C.: L1-introduction (2015)
+
+\bibitem{Lecture2}
+Atkinson, C.: L2-testingintroduction (2015)
+
 \bibitem{nodejsbook}
 Casciaro, M.: NodeJS Design Patterns. Packt Publishing (2014)
+
+\bibitem{desikan}
+Desikan, S., Ramesh, G.: Software Testing: Principles and Practice. Pearson
+  Education Canada (2006), \url{https://books.google.de/books?id=Yt2yRW6du9wC}
+
+\bibitem{Dooley}
+Dooley, J.: Software Development and Professional Practice. Apress, Berkely,
+  CA, USA, 1st edn. (2011)
+
+\bibitem{DesignPatterns}
+Gamma, E., Helm, R., Johnson, R., Vlissides, J.: Design Patterns: Elements of
+  Reusable Object-oriented Software. Addison-Wesley Longman Publishing Co.,
+  Inc., Boston, MA, USA (1995)
+
+\bibitem{RealTimeTesting}
+Glass, R.L.: Real-time: The \&ldquo;lost world\&rdquo; of software debugging
+  and testing. Commun. ACM  23(5),  264--271 (May 1980),
+  \url{http://doi.acm.org/10.1145/358855.358857}
+
+\bibitem{Hudak}
+Hudak, P.: Conception, evolution, and application of functional programming
+  languages. ACM Comput. Surv.  21(3),  359--411 (Sep 1989),
+  \url{http://doi.acm.org/10.1145/72551.72554}
+
+\bibitem{STCraft}
+Jorgensen, P.: Software Testing: A Craftsman’s Approach, Fourth Edition. An
+  Auerbach book, Taylor \& Francis (2013),
+  \url{https://books.google.de/books?id=6WlmAQAAQBAJ}
 
 \bibitem{MartinClean}
 Martin, R.C.: Clean Code: A Handbook of Agile Software Craftsmanship. Prentice
@@ -23,5 +103,9 @@ Martin, R.C.: Clean Code: A Handbook of Agile Software Craftsmanship. Prentice
 \bibitem{MartinASD}
 Martin, R.C.: Agile Software Development: Principles, Patterns, and Practices.
   Prentice Hall PTR, Upper Saddle River, NJ, USA (2003)
+
+\bibitem{concepts}
+Sebesta, R.W.: Concepts of Programming Languages. Addison-Wesley Publishing
+  Company, USA, 9th edn. (2009)
 
 \end{thebibliography}

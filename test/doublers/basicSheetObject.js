@@ -133,5 +133,40 @@ module.exports = {
   objectsUnderTest: ['A3', 'A4', 'A5'],
   methodsUnderTest: ['B3', 'B4', 'B5'],
   inputParameters: ['C3', 'C4', 'C5', 'D3', 'D4', 'D5'],
+<<<<<<< Updated upstream
   outputParameters: ['F3', 'F4', 'F5', 'G3', 'G4', 'G5']
 }
+=======
+  outputParameters: ['F3', 'F4', 'F5', 'G3', 'G4', 'G5'],
+  scheme: {
+    description: 'A1',
+    moduleUnderTest: 'A2',
+    objectsUnderTest: ['A3', 'A4', 'A5'],
+    methodsUnderTest: ['B3', 'B4', 'B5'],
+    inputParameters: ['C3', 'C4', 'C5', 'D3', 'D4', 'D5'],
+    outputParameters: ['F3', 'F4', 'F5', 'G3', 'G4', 'G5'],
+  },
+  transformedScheme: {
+    1: 'A1',
+    2: 'A2',
+    3: {
+      objectsUnderTest: ['A3'],
+      methodsUnderTest: ['B3'],
+      inputParameters: ['C3', 'D3'],
+      outputParameters: ['F3', 'G3'],
+    },
+    4: {
+      objectsUnderTest: ['A4'],
+      methodsUnderTest: ['B4'],
+      inputParameters: ['C4', 'D4'],
+      outputParameters: ['F4', 'G4'],
+    },
+    5: {
+      objectsUnderTest: ['A5'],
+      methodsUnderTest: ['B5'],
+      inputParameters: ['C5', 'D5'],
+      outputParameters: ['F5', 'G5'],
+    },
+  },
+};
+>>>>>>> Stashed changes
