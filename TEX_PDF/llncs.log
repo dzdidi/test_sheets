@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.13)  19 JAN 2016 19:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.13)  20 JAN 2016 11:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -291,21 +291,9 @@ Missing character: There is no ™ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
-Missing character: There is no ï in font cmr10!
-Missing character: There is no ¬ in font cmr10!
-Missing character: There is no  in font cmr10!
-Missing character: There is no ï in font cmr10!
-Missing character: There is no ¬ in font cmr10!
-Missing character: There is no  in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
-Missing character: There is no ï in font cmr10!
-Missing character: There is no ¬ in font cmr10!
-Missing character: There is no  in font cmr10!
-Missing character: There is no ï in font cmr10!
-Missing character: There is no ¬ in font cmr10!
-Missing character: There is no  in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
@@ -321,9 +309,6 @@ Missing character: There is no  in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
-Missing character: There is no ï in font cmr10!
-Missing character: There is no ¬ in font cmr10!
-Missing character: There is no  in font cmr10!
 Missing character: There is no ï in font cmr10!
 Missing character: There is no ¬ in font cmr10!
 Missing character: There is no  in font cmr10!
@@ -349,12 +334,12 @@ Missing character: There is no œ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no  in font cmr10!
- [7] [8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 330--331
+ [7] [8]
+Underfull \hbox (badness 10000) in paragraph at lines 324--325
 
  []
 
-[10] [11]
+[9] [10] [11]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
@@ -362,22 +347,40 @@ Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
  [12]
-Underfull \hbox (badness 10000) in paragraph at lines 448--449
+Underfull \hbox (badness 10000) in paragraph at lines 442--443
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 453--455
+Underfull \hbox (badness 10000) in paragraph at lines 447--449
 
  []
 
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 458--461
+
+Underfull \hbox (badness 10000) in paragraph at lines 452--455
 
  []
 
-[14]
+[13] [14]
+Underfull \hbox (badness 10000) in paragraph at lines 474--475
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 478--479
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 480--481
+
+ []
+
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 482--483
 
  []
 
@@ -391,63 +394,45 @@ Underfull \hbox (badness 10000) in paragraph at lines 486--487
 
  []
 
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ™ in font cmr10!
 
 Underfull \hbox (badness 10000) in paragraph at lines 488--489
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 490--491
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 492--493
-
- []
-
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 494--495
-
- []
-
-[16]
-Overfull \hbox (11.04199pt too wide) in paragraph at lines 547--551
+[15] [16]
+Overfull \hbox (11.04199pt too wide) in paragraph at lines 541--545
  \OT1/cmr/m/it/10 Du-plex streams.[] \OT1/cmr/m/n/10 A Du-plex stream is a stre
 am that is both Read-able and Writ[e]able.
  []
 
 [17]
-Overfull \hbox (8.89859pt too wide) in paragraph at lines 566--567
+Overfull \hbox (8.89859pt too wide) in paragraph at lines 560--561
  \OT1/cmr/m/it/10 Merg-ing streams[] \OT1/cmr/m/n/10 - pip-ing mul-ti-ple read-
 able streams in to sin-gle writable stream.[18] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 591--592
+Underfull \hbox (badness 10000) in paragraph at lines 585--586
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 596--597
 
  []
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 602--603
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 633--634
+Underfull \hbox (badness 10000) in paragraph at lines 627--628
 
  []
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 672--673
+Underfull \hbox (badness 10000) in paragraph at lines 666--667
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 674--676
+Underfull \hbox (badness 10000) in paragraph at lines 668--670
 
  []
 
@@ -484,7 +469,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--33
 /research-
  []
 
-[20]
+
 Underfull \hbox (badness 10000) in paragraph at lines 35--37
 []\OT1/cmr/m/n/9 Test sheets, http://swt.informatik.uni-mannheim.de/de/research
 /research-
@@ -501,7 +486,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--45
 []\OT1/cmr/m/n/9 Top npm con-trib-u-tors by num-ber of pack-ages,
  []
 
-
+[20]
 Underfull \hbox (badness 5970) in paragraph at lines 85--88
 []\OT1/cmr/m/n/9 Glass, R.L.: Real-time: The &ldquo;lost world&rdquo; of soft-w
 are de-
@@ -541,7 +526,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 95--98
 Here is how much of TeX's memory you used:
  1941 strings out of 494501
  26975 string characters out of 6167030
- 92674 words of memory out of 5000000
+ 91674 words of memory out of 5000000
  5219 multiletter control sequences out of 15000+600000
  6278 words of font info for 23 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
@@ -555,7 +540,7 @@ nts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015basic/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2015basic/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015basic/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on llncs.pdf (21 pages, 183911 bytes).
+Output written on llncs.pdf (21 pages, 182491 bytes).
 PDF statistics:
  104 PDF objects out of 1000 (max. 8388607)
  72 compressed objects within 1 object stream

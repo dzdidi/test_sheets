@@ -1,3 +1,4 @@
-var streams = require('./lib/read_stream');
+var readStream = require('./lib/read_stream');
+var writeStream = require('./lib/write_stream');
 
-streams('./test/doublers').pipe(process.stdout);
+readStream('./test/doublers').pipe(writeStream);

@@ -6,7 +6,7 @@ var mocha = require('mocha');
 var sinon = require('sinon');
 
 var readXLSX = require('../lib/read_stream');
-var testSheetScheme = require('../lib/test_sheet_scheme');
+var testSheetScheme = require('../lib/scheme_maker');
 
 var readXLSXSpy = sinon.spy(readXLSX);
 var fsSpy = sinon.spy(fs, 'readdir');
