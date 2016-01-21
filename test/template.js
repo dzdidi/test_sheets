@@ -82,7 +82,7 @@ describe('Test coverage for template module', function() {
     });
 
     it('should return value from the cell in provided sheet', function(done) {
-      assert.equal(template.getValue(testSheetObject.Sheets.Sheet1, 'A1'), 'Here should be scenario name');
+      assert.equal(template.getValue(testSheetObject.Sheets.Sheet1, 'A1'), 'Create new bank account');
       assert.equal(template.getValue(testSheetObject.Sheets.Sheet1, 'C4'), 'input1');
       done();
     });
@@ -102,16 +102,11 @@ describe('Test coverage for template module', function() {
     });
 
     it('should return object with values from the provided row in a provided sheet', function(done) {
-      assert.deepEqual(template.getRow(1, testSheetObject.Sheets.Sheet1, testSheetObject.transformedScheme), { description: 'Here should be scenario name' });
+      assert.deepEqual(template.getRow(1, testSheetObject.Sheets.Sheet1, testSheetObject.transformedScheme), { description: 'Create new bank account' });
 
       assert.deepEqual(template.getRow(2, testSheetObject.Sheets.Sheet1, testSheetObject.transformedScheme), { moduleUnderTest: 'module_under_test.js' });
 
-      assert.deepEqual(template.getRow(3, testSheetObject.Sheets.Sheet1, testSheetObject.transformedScheme), {
-        objectUnderTest: 'module_under_test',
-        methodUnderTest: 'method1',
-        inputs: ['input1', 'input2'],
-        outputs: ['output1', 'output2'],
-      });
+      assert.deepEqual(template.getRow(3, testSheetObject.Sheets.Sheet1, testSheetObject.transformedScheme), testSheetObject.thirdRow);
 
       done();
     });
