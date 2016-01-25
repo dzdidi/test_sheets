@@ -48,21 +48,55 @@ describe('Test coverage for template module', function() {
     });
   });
 
-  describe('Test coverage for a makeRequire', function() {
-    it('should have makeRequire function', function(done) {
-      assert.equal(typeof template.makeRequire, 'function');
+  describe('Test coverage for a requireBaseScript', function() {
+    it('should have requireBaseScript function', function(done) {
+      assert.equal(typeof template.requireBaseScript, 'function');
 
       done();
     });
 
-    it('should accept one parameter', function(done) {
-      assert.equal(template.makeRequire.length, 1);
+    it('should accept zero parameters', function(done) {
+      assert.equal(template.requireBaseScript.length, 0);
 
       done();
     });
 
     it('should return string with require applied to the input parameter', function(done) {
-      assert.equal(template.makeRequire('moduleUnderTest'), 'var moduleUnderTest = require(\'./moduleUnderTest\');\n');
+      assert.equal(template.requireBaseScript(), 'var scrapBase = require(\'../../banking/scraping/nodeBase\')');
+
+      done();
+    });
+  });
+
+  describe('Test coverage for makeCall', function() {
+    it('should have makeCall function', function(done) {
+      assert.equal(typeof template.makeCall, 'function');
+
+      done();
+    });
+
+    it('should accept two parameters', function(done) {
+      assert.equal(template.makeCall.length, 2);
+
+      done();
+    });
+
+    it('should return call string', function(done) {
+      assert.equal(template.makeCall('script', 'arguments'), 'scrapBase.prototype.execScript(this, \'script\', arguments, ' + template.compareAndReport.toString() + ');');
+
+      done();
+    });
+  });
+
+  describe('Test coverage for compareAndReport', function() {
+    it('should have compareAndReport function', function(done) {
+      assert.equal(typeof template.compareAndReport, 'function');
+
+      done();
+    });
+
+    it('should accept two paramters', function(done) {
+      assert.equal(template.compareAndReport.length, 2);
 
       done();
     });
