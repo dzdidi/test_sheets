@@ -1,0 +1,49 @@
+\chapter{NodeJS}
+"As an asynchronous event driven framework, Node.js is designed to build scalable network applications. 
+Node is similar in design to and influenced by systems like Ruby's Event Machine or Python's Twisted. 
+Node takes the event model a bit further, it presents the event loop as a language construct instead of as a library." \cite{nodejsabout}
+
+"Node.js is considered by many as a game-changer—the biggest shift of the decade in web development.[...]\\
+ First, Node.js applications are written in JavaScript, the language of the web, the only programming language supported natively by a majority of web browsers. [...]\\
+The second revolutionizing factor is its single-threaded, asynchronous architecture. 
+Besides obvious advantages from a performance and scalability point of view, this characteristic changed the way developers approach concurrency and parallelism. [...]\\
+The last and most important aspect of Node.js lies in its ecosystem: the npm package manager, its constantly growing database of modules, its enthusiastic and helpful community, and most importantly, its very own culture based on simplicity, pragmatism, and extreme modularity. "\cite{nodejsbook}
+
+"JavaScript (JS) is a lightweight, interpreted, programming language with first-class functions. Most well-known as the scripting language for Web pages, many non-browser environments use it such as node.js and Apache CouchDB. JS is a prototype-based, multi-paradigm, dynamic scripting language, supporting object-oriented, imperative, and functional programming styles."\cite{mozillaJS}
+
+\paragraph{Non blocking I/O}
+A set of bindings responsible for wrapping and exposing libuv and other low-level functionality to JavaScript.\cite{nodejsbook}
+
+Non blocking I/O in NodeJS is provided by libuv\cite{nodejsabout}\cite{nodejsbook}. 
+Which is "libuv is a multi-platform support library with a focus on asynchronous I/O. It was primarily developed for use by Node.js, but it’s also used by Luvit, Julia, pyuv, and others."\cite{libuv}\\
+libuv properties\cite{libuvBasic}:
+\begin{itemize}
+\item Abstract operations, not events
+\item Support different nonblocking I/O models
+\item Focus on embeddability and perfomace
+\end{itemize}
+
+
+\paragraph{Node core}
+A core JavaScript library (called node-core) that implements the high-level Node.js API.
+
+\paragraph{V8/Chakra} the JavaScript engine originally developed by Google for the Chrome browser/ Microsoft for IE 9 browser"\cite{nodejsbook} 
+
+\paragraph{Event handling}
+NodeJS asynchronous nature provided by event handler which is an implementation of reactor pattern. Here is the description of process lifecycle\cite{nodejsbook}:
+\begin{enumerate}
+\item The application generates a new I/O operation by submitting a request to the Event Demultiplexer. The application also specifies a handler, which will be invoked when the operation completes. Submitting a new request to the Event Demultiplexer is a non-blocking call and it immediately returns the control back to the application.
+\item When a set of I/O operations completes, the Event Demultiplexer pushes the new events into the Event Queue.
+\item At this point, the Event Loop iterates over the items of the Event Queue.
+\item For each event, the associated handler is invoked.
+\item The handler, which is part of the application code, will give back the control to the Event Loop when its execution completes. However, new asynchronous operations might be requested during the execution of the handler, causing new operations to be inserted in the Event Demultiplexer, before the control is given back to the Event Loop.
+\item When all the items in the Event Queue are processed, the loop will block again on the Event Demultiplexer which will then trigger another cycle.
+\end{enumerate}
+
+\section{Approaches application flow}
+	\paragraph{Callbacks}
+	\paragraph{Async}
+	\paragraph{Promises}
+	\paragraph{Fibers}
+	\paragraph{Generators}
+

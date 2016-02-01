@@ -1,0 +1,22 @@
+%  NATBIB.CFG         in Verbindung mit natbib.sty
+%                      Lorenzen, 2004/12/11
+%                      diese Konfigurationsdatei wird zuletzt eingelesen und
+%                      enth"alt die lokal gew"unschten Einstellungen f"ur den
+%                      Bibliographie-- und Zitierstil
+%        im Original:
+%%\bibstyle@plainnat
+%%default:
+%%\bibpunct{(}{)}{;}{a}{\ }{,~}
+%%%%%%%%%%%%% neu in Verbindung mit DIN-Stil natdin.bst  %%%%%%%%%%%%%%%%%%%
+%bibpunct: 1 & 2: delimiter whole citation e.g. "(Tuttlies 2007)" or "[Tuttlies 2007]"
+%bibpunct: 3: separator of multilple srcs, e.g. "Tuttlies 2007; Ranganathan 2003" or "Tuttlies 2007, Ranganathan 2003"
+%bibpunct: 4: n for numerical, s for numerical superscrip, any other letter for author-year citation style
+%bibpunct: 5: separator (additional to one whitespace) between author and year
+%bibpunct: 6: the punctuation that comes between years or numbers when common author lists are suppressed (default = ,); 
+\newcommand\bibstyle@din{\bibpunct{[}{]}{;}{b}{}{,~}%
+     %%\gdef\NAT@biblabel##1{\textbf{##1}}
+    \gdef\NAT@biblabelnum##1{\textbf{##1}}}
+\bibstyle@din
+
+%% Einzug der Belege nach der Einordnungsmarke
+\setlength{\bibhang}{7mm}

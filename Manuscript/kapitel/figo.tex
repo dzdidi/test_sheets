@@ -1,0 +1,88 @@
+\chapter{figo GmbH}
+\section{General Information}
+The figo GmbH’s mission is to “build the backbone of next generation financial services"\cite{figoFAQVision}, company was founded in 2012 and has its headquarter in Hamburg. Total Equity Funding: \$778.660 in 3 Rounds from 7 Investors (November 3, 2015). Currently, the API is fully functional in Germany and partly in Austria.\cite{figoAngel}\cite{figoCB}
+
+figo Connect API was created to accelerate innovation in the FinTech area and to allow figo's partners to offer products with real added value. It enables developers, startups and even banks to connect to every financial service provider. These partners can access every bank account (current, savings, loan, securities, ...), credit card, eWallet and other financial services like PayPal through one single REST-API. \cite{figoFAQWhat}\cite{figoFAQVision}\cite{figoFAQPartners}
+
+Functions available through API:\cite{figoAPI}
+\begin{itemize}
+	\item Create, Read, Update, Delete Bank account(s);
+	\item Read, Update, Delete Bank account(s) transactions;
+	\item Create, Read, Update, Delete Bank account(s) standing orders;
+	\item Create, Read, Update, Delete Bank account(s) direct debits;
+	\item Read, Update  Bank account(s) securities;
+	\item Create, Read, Update, Delete Bank payment(s);
+\end{itemize}
+List of partners of figo API with their use-cases: \url{http://figo.io/use_cases.html} 
+
+
+
+%"The Figo GmbH was founded in 2012 and has its headquarters in Hamburg.
+%Figo is a modern and safe with the Figo Connect banking as a service ready platform. Developers can integrate into a variety of services and services thanks to Figo very easy and fast online banking. In addition to the retrieval of account balances and transactions in almost all banks, credit cards and services like PayPal, payments on the platform can be initiated. Figo operates the platform in a German bank for the data center and has been with the "Cloud Services Made in Germany awarded" seal."\cite{figoFAQWhat}
+%"The current development in the FinTech scene just shows the need for innovation in the field of finance. Too much was thought of in silos in recent years, and products / services have been developed over the customer. This trend reverses itself just around, and we Figo strive in the same direction. For this reason, we have the Figo Connect API in order to accelerate innovation in the FinTech area and want to allow our partners to offer products with real added value."\cite{figoFAQVision}\\
+%"Figo is working with a variety of partners. These partners use our API for very different purposes. "\cite{figoFAQPartners}.List of partners of Figo API with their usecases 
+%http://figo.io/use\_ cases.html\\
+
+%"figo’s mission is to “build the backbone of next generation financial services”. 
+
+%Our banking API enables developers, startups and even banks to connect to every financial service provider. These partners can access every bank account (current, savings, loan, securities, ...), credit card, eWallet and other financial services through one single REST-API. It is possible to extract account information and initiate bank transfers \& direct debits.
+%With our API, old and new players of the financial service industry are able to easily develop and test new services without the inconvenience of connecting to every single bank.
+
+%Currently, the API is fully functional in Germany and partly in Austria (more countries to follow). Please contact us for access to our API."\cite{figoAngel}
+
+%"Our banking API enables developers, startups and even banks to connect to every financial service provider. These partners can access every bank account (current, savings, loan, securities, ...), credit card, eWallet and other financial services through one single REST-API. It is possible to extract account information and initiate bank transfers \& direct debits. With our API, old and new players of the financial service industry are able to easily develop and test new services without the inconvenience of connecting to every single bank."\cite{figoCB}
+
+\section{IT infrastructure}
+Information technology infrastructure of figo GmbH has two parts related to the external connections. \textbf{API Server} - implements interfaces to figo's customers and partners for accessing banking inforamtion and services. \textbf{Banking Server} - implements connection to banks via three possible communication channels. This particular part lays in scope of this research as a part where implemented system is running. Below provided description introduces basic concepts of Banking Service Architecture. For more information regarding IT infrastructure please use (pics with arch scheme attached)
+	\subsection{Banking Server Architecture}
+	\paragraph{Custom-API.} Introduction of Directive on Payment Services (PSD) and PSD2 by European Commission in European Union and initiatives of Government in United Kingdom regarding provision of API by Banks and its standartization obligated with providing of online access points to their services.\cite{LarsAPI}\cite{TimAPI}\cite{DaveAPI} Some of the banks already implemented Application Program Interfaces to access their services. Some of which provide full functionality while some only partial. Within the Single European Payment Area acceptance of directive by European Bank Authority scheduled within 2017 year. \cite{PSD2} All this APIs very in their structure and functionality, and connection process lays out of the scope of this research.
+	
+Moreover some of the banks implements standardized programmable entry point. 
+	
+	\paragraph{HBCI+/FinTS} - bank-independent protocol for online banking, developed and used by German banks.  Home Banking Computer Interface (HBCI) was originally designed by the two German banking groups Sparkasse and Volksbanken und Raiffeisenbanken and German higher-level associations as the Bundesverband deutscher Banken e.V.. The result of this effort was an open protocol specification, which is publicly available. The standardisation effort was necessary to replace the huge number of deprecated homemade software clients and servers (some of them still using BTX emulation). While IFX (Interactive Financial Exchange), OFX (Open Financial Exchange) and SET are tailored for the North American market, HBCI is designed to meet the requirements of the European market.\cite{finTS}\\
+	Features\cite{finTS}:\\
+	\begin{itemize}
+		\item Support for online-banking using PIN/TAN one time passwords.
+		\item Support for online-banking with SWIFT.
+		\item DES and RSA encryption and signatures.
+		\item Making use of XML and SOAP for data-exchange, encryption and signatures.
+		\item Implemented on top of HTTP, HTTPS and SMTP as communication layer.
+		\item Multibanking: The software clients are designed to support accounts on multiple banking companies.
+		\item Platform Independency: The specification allows software development for various types of clients.
+		\item Storage of the encryption keys on an external physical device (smart card) for improved security.
+		\item Possibility to use so called "Secoder" smart card readers to allow the user to cross check the transaction data on a secure device before signing it to uncover manipulations caused by malware. To use Secoder the bank as well as the home banking software have to support the Secoder protocol extension of FinTS
+	\end{itemize}
+	Low level vocabulary for message communication is defined by ISO20022 for more information please have a look to \url{https://www.iso20022.org/}
+	
+	% For banks which do not provide HBCI/FinTS end point  but has their own tailored API connection is implemented via provided interface. 
+	\paragraph{Web-Banking Engine.} Since not all of the banks provide API nor HBCI figo uses web scraping technology (implemented within Web-Banking Engine) to access account's information and perform interaction with internet banking web page.
+	From the banks perspective interaction completely looks like directly with user, while user does not feel the difference between interaction via Custom-API or HBCI or Web-Banking Engine.\\
+	In a same time this is the most sensitive part from the developer's perspective since every change to the bank's web page can leads to failure of the specific scripts. The critical part to recognize such significant for scraping changes before any user's interaction and notify a developer regarding part of the script which failed. Exactly for this purpose testing scripts generated from Test Sheets are used as a (demon task/crown job) in real time fashion with recording unexpected behavior to the general log and notification of the developer (email/slack). Next chapter provides general information regarding web scraping and high-level description of scraping tool used by figo Gmbh.
+	
+
+	
+	%\subsection{Banking Technology Stack}
+	%banking server only
+	\subsection{Web scraping}
+	"Web scraping (web harvesting or web data extraction) is a computer software technique of extracting information from websites. Usually, such software programs simulate human exploration of the World Wide Web by either implementing low-level Hypertext Transfer Protocol (HTTP), or embedding a fully-fledged web browser, such as Mozilla Firefox.\\
+
+Web scraping is the process of automatically collecting information from the World Wide Web. It is a field with active developments sharing a common goal with the semantic web vision, an ambitious initiative that still requires breakthroughs in text processing, semantic understanding, artificial intelligence and human-computer interactions. Current web scraping solutions range from the ad-hoc, requiring human effort, to fully automated systems that are able to convert entire web sites into structured information, with limitations." \cite{wikiScraping}
+
+"The Document Object Model is a platform- and language-neutral interface that will allow programs and scripts to dynamically access and update the content, structure and style of documents." \cite{w3cDOM}
+	\subsection{CasperJS}
+		\cite{casperjs}
+		CasperJS is an open source navigation scripting \& testing utility written in JavaScript for the PhantomJS WebKit headless browser and SlimerJS (Gecko). It eases the process of defining a full navigation scenario and provides useful high-level functions, methods \& syntactic sugar for doing common tasks such as:
+\begin{itemize}
+	\item defining \& ordering browsing navigation steps
+	\item filling \& submitting forms
+	\item clicking \& following links
+	\item capturing screenshots of a page (or part of it)
+	\item testing remote DOM
+	\item logging events
+	\item downloading resources, including binary ones
+	\item writing functional test suites, saving results as JUnit XML
+	\item scraping Web contents
+\end{itemize}
+
+	
+

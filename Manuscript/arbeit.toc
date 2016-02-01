@@ -1,0 +1,72 @@
+\select@language {ngerman}
+\select@language {english}
+\contentsline {chapter}{\nonumberline Abstract}{iii}{chapter*.1}
+\contentsline {chapter}{\nonumberline List of Figures}{vii}{chapter*.3}
+\contentsline {chapter}{\nonumberline List of Tables}{ix}{chapter*.4}
+\contentsline {chapter}{List of Abbreviations}{x}{chapter*.4}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {chapter}{\numberline {2}figo GmbH}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}General Information}{3}{section.2.1}
+\contentsline {section}{\numberline {2.2}IT infrastructure}{3}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Banking Server Architecture}{4}{subsection.2.2.1}
+\contentsline {paragraph}{\nonumberline Custom-API.}{4}{section*.5}
+\contentsline {paragraph}{\nonumberline HBCI+/FinTS}{4}{section*.6}
+\contentsline {paragraph}{\nonumberline Web-Banking Engine.}{5}{section*.7}
+\contentsline {subsection}{\numberline {2.2.2}Web scraping}{6}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}CasperJS}{6}{subsection.2.2.3}
+\contentsline {chapter}{\numberline {3}Testing}{9}{chapter.3}
+\contentsline {section}{\numberline {3.1}Test Driven Development}{10}{section.3.1}
+\contentsline {paragraph}{\nonumberline Pros.}{11}{section*.8}
+\contentsline {paragraph}{\nonumberline Cons.}{11}{section*.9}
+\contentsline {section}{\numberline {3.2}Requirements for tests (F. I. R. S. T.)}{11}{section.3.2}
+\contentsline {paragraph}{\nonumberline Fast. Tests should be fast.}{11}{section*.10}
+\contentsline {paragraph}{\nonumberline Independent. Tests should not depend on each other.}{12}{section*.11}
+\contentsline {paragraph}{\nonumberline Repeatable. Tests should be repeatable in any environment.}{12}{section*.12}
+\contentsline {paragraph}{\nonumberline Self-Validating. The tests should have a boolean output.}{12}{section*.13}
+\contentsline {paragraph}{\nonumberline Timely. The tests need to be written in a timely fashion.}{12}{section*.14}
+\contentsline {section}{\numberline {3.3}Dependability \cite {lyu}}{12}{section.3.3}
+\contentsline {section}{\numberline {3.4}Real Time Testing}{13}{section.3.4}
+\contentsline {section}{\numberline {3.5}Reliability testing}{13}{section.3.5}
+\contentsline {chapter}{\numberline {4}Test Sheets}{15}{chapter.4}
+\contentsline {section}{\numberline {4.1}Basic Test Sheets}{16}{section.4.1}
+\contentsline {section}{\numberline {4.2}High Order, Parameterized Test Sheets}{16}{section.4.2}
+\contentsline {chapter}{\numberline {5}NodeJS}{17}{chapter.5}
+\contentsline {paragraph}{\nonumberline Non blocking I/O}{17}{section*.15}
+\contentsline {paragraph}{\nonumberline Node core}{18}{section*.16}
+\contentsline {paragraph}{\nonumberline V8/Chakra}{18}{section*.17}
+\contentsline {paragraph}{\nonumberline Event handling}{18}{section*.18}
+\contentsline {section}{\numberline {5.1}Approaches application flow}{19}{section.5.1}
+\contentsline {paragraph}{\nonumberline Callbacks}{19}{section*.19}
+\contentsline {paragraph}{\nonumberline Async}{19}{section*.20}
+\contentsline {paragraph}{\nonumberline Promises}{19}{section*.21}
+\contentsline {paragraph}{\nonumberline Fibers}{19}{section*.22}
+\contentsline {paragraph}{\nonumberline Generators}{19}{section*.23}
+\contentsline {chapter}{\numberline {6}OOP and FP}{21}{chapter.6}
+\contentsline {section}{\numberline {6.1}Object Oriented Programming}{21}{section.6.1}
+\contentsline {paragraph}{\nonumberline Dynamic lookup}{21}{section*.24}
+\contentsline {paragraph}{\nonumberline Abstraction}{21}{section*.25}
+\contentsline {paragraph}{\nonumberline Subtyping}{21}{section*.26}
+\contentsline {paragraph}{\nonumberline Inheritance}{21}{section*.27}
+\contentsline {subsection}{\numberline {6.1.1}Design Principles}{21}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Design Patterns}{23}{subsection.6.1.2}
+\contentsline {section}{\numberline {6.2}Functional Programming}{24}{section.6.2}
+\contentsline {section}{\numberline {6.3}Streams}{25}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Anatomy of Streams}{26}{subsection.6.3.1}
+\contentsline {paragraph}{\nonumberline Readable streams.}{26}{section*.28}
+\contentsline {paragraph}{\nonumberline Writable streams.}{26}{section*.29}
+\contentsline {paragraph}{\nonumberline Duplex streams.}{27}{section*.30}
+\contentsline {paragraph}{\nonumberline Transform streams.}{27}{section*.31}
+\contentsline {subsection}{\numberline {6.3.2}Piping patterns}{27}{subsection.6.3.2}
+\contentsline {chapter}{\numberline {7}Contributions}{29}{chapter.7}
+\contentsline {section}{\numberline {7.1}Conventions}{29}{section.7.1}
+\contentsline {section}{\numberline {7.2}Use Case}{30}{section.7.2}
+\contentsline {section}{\numberline {7.3}Architecture}{30}{section.7.3}
+\contentsline {section}{\numberline {7.4}Design and Implementation}{31}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}Reader}{31}{subsection.7.4.1}
+\contentsline {paragraph}{\nonumberline Correspondence to design principles:}{32}{section*.32}
+\contentsline {subsection}{\numberline {7.4.2}Writer}{32}{subsection.7.4.2}
+\contentsline {chapter}{\numberline {8}Implementierung}{33}{chapter.8}
+\contentsline {chapter}{\nonumberline Bibliography}{35}{appendix*.33}
+\contentsline {part}{\nonumberline Appendix}{39}{section*.34}
+\contentsline {chapter}{\numberline {A}First class of appendices}{41}{appendix.A}
+\contentsline {section}{\numberline {A.1}Some appendix}{41}{section.A.1}

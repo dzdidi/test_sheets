@@ -1,0 +1,21 @@
+\chapter{Methodology}
+\section{Case Study Quality Criteria}
+
+\begin{table}[htbp]
+\caption{Case Study Quality Criteria by \citet{Dube2003}}
+\begin{tabular}{|l|p{.5\textwidth}|}
+\hline
+Clear  research  questions  &  Yes (cf. chapter \ref{introduction}).\\ \hline
+A priori  specification  of constructs &  Yes, due to confirmatory nature (cf. chapter \ref{framework}).\\ \hline
+Clean  theoretical  slate &  No, only relevant for highly exloratory studies.\\ \hline
+Theory  of interest &  Yes, Practice Theory and Transaction Cost Economics (cf. chapter \ref{theories}).\\ \hline
+Predictions  from  theory  &  Yes, deductive formulation of propositions complemented by inductive aspects (cf. chapter \ref{framework}).\\ \hline
+Rival theories &  Yes, controlled for synergetic effects of cultural distance and a culture free explanation. \\ \hline
+Multiple-case  design &  Yes, two organizations, each one project in China, one in India, each project comprises one case.\\ \hline
+Unit  of analysis  &  Offshore ISD projects in implementation stage of leading edge multi-national corporations. \\ \hline
+Pilot  study &  No, only recommended for highly exploratory studies. \\ \hline
+Team-based research &  Due to the nature of this paper (thesis) the author was forced to work alone. However, discussions with fellow students and researchers yielded fruitful ideas and critique influencing the thesis from its conception to the final paper.\\ \hline
+Different  roles  for  investigators &  N/A\\ \hline
+\end{tabular}
+\label{tab:methodology}
+\end{table}

@@ -1,0 +1,212 @@
+% ---------------------------------------
+%
+%    Beispieldiplomarbeit
+%
+%    - text kann gel{\"o}scht, und mit eigenen Inhalten gef{\"u}llt werden. 
+%	In dieser Datei kann die gesamte Konfiguration durchgeführt werden.*
+%	
+%
+%    *mit Ausnahme der spezifischen Optionen in natbib.cfg, die nicht von Interesse sein sollten
+% ---------------------------------------
+
+\documentclass[
+    smallheadings,  % kleinere {\"U}berschriften
+    oneside,        % einseitig, nur rechte seiten
+    liststotoc,     % listen in inhaltsverzeichnis aufnehmen
+    bibtotoc,       % literaturverzeichnis in inhltsvz. aufnehmen
+    headsepline,     % trennlinie unter kopfzeile
+    12pt	%Schriftgröße
+    ]{scrbook}
+
+\usepackage{a4}  %a4 Seitenformat benutzen
+\usepackage[english, ngerman]{babel} %Verwende deutsche und amerikanische Silbentrennung
+\usepackage[utf8]{inputenc} %damit k{\"o}nnen Umlaute ganz normal geschrieben werden. 
+
+\usepackage{subfigure} %f{\"u}r mehrteilige Grafiken
+\usepackage{epsfig}    %damit funktioniert das einbinden von grafiken {\"u}ber epsfig.
+\usepackage{graphicx}     % zum einbinden von grafiken
+\graphicspath{{grafiken}{../}{kapitel}} %da sind m{\"o}gliche bilder fuer den includegraphics-Befehl zu finden (man muss dann nicht den ganzen Pfad bei includegraphics angeben. 
+
+\usepackage{multirow}     %fuer kompliziertere Tabellen
+\usepackage{longtable}	%fuer kompliziertere Tabellen
+\usepackage{rotating}	%enable landscape pages
+\usepackage{framed}
+\usepackage{scrpage2}     % paket f{\"u}r kopf- und fu{\ss}zeilen
+\pagestyle{scrheadings}   % kopzeilenseitenstil
+
+%\usepackage{ifpdf} %provides the switch ``ifpdf'' to determine if latex or pdflatex is executed
+%see ftp://ftp.ctan.org/tex-archive/macros/latex/contrib/oberdiek/ifpdf.pdf or doc folder
+
+\usepackage{float} % adds location parameter [H] to [htb] to force figures and tables to a location, no floating
+
+%%%% use hyperlinks and adjust settings, see http://en.wikibooks.org/wiki/LaTeX/Hyperlinks and
+% ftp://tug.ctan.org/tex-archive/macros/latex/contrib/hyperref/doc/manual.pdf
+\usepackage[
+a4paper=true, % a4
+pdftitle={The title of this paper}, %title to display for pdfs
+pdfauthor={The Author}, %set author
+%dvipdfmx, % must be used if pdf is created from the dvi file rather than by running pdflatex. Otherwise links won't work
+colorlinks,% set link color for all links to black, i.e. invisible but working links
+citecolor=black,%
+filecolor=black,%
+linkcolor=black,%
+urlcolor=black, %
+plainpages=false, %used with pdfpagelabels to make pdf readers show roman and arabic page numbers correctly
+pdfpagelabels, %used with plainpages=false to make pdf readers show roman and arabic page numbers correctly
+%pagebackref=true %false: no back-references in bibliography to citations in text
+]{hyperref} %include hyperlinks for citations, urls, and references
+%CAUTION: breaks color settings in dvi, pdf works fine
+%%%%end: use hyperlinks
+
+%%%%Literaturverzeichnis und Zitate: s.a. doc/natnotes.pdf und http://merkel.zoneo.net/Latex/natbib.php
+\usepackage[%Zitate:
+%% Autoren
+longnamesfirst, %bei erster Verwendung alle Autoren nennen
+%nonamebreak, %keeps all the authors’ names in a citation on one line; causes overfull hboxes but helps with some hyperref problems.
+%
+%% Klammern fuer Zitate
+round, %(default) for round parentheses;
+%square, %for square brackets;
+%curly, %for curly braces;
+%angle, %for angle brackets;
+%
+%% Trennung mehrerer Quellen
+%colon, %(default) to separate multiple citations with colons;
+%comma, %to use commas as separaters;
+%
+%% Zitierstil
+%authoryear, %(default) for author–year citations;
+%numbers, %for numerical citations;
+%super, %for superscripted numerical citations, as in Nature;
+%
+%% Sortierung bei mehrern Quellen
+sort,	%in case of multiple citations sort as in bibliography
+%sort&compress, %as sort but in addition multiple numerical citations are compressed if possible (as 3–6, 15);
+]
+{natbib}       % Literaturverzeichnis Stil Natbib. 
+%docu http://merkel.zoneo.net/Latex/natbib.php und in Verzeichnis doc Datei natnotes.pdf
+%\bibpunct{[}{]}{;}{b}{}{,~} kann genutzt werden, um die Konfiguration aus usepackage zu ueberschreiben.
+
+\setlength{\bibhang}{7mm}	%Einzug eines Eintrags im Literaturverzeichnis
+%docu http://merkel.zoneo.net/Latex/natbib.php und in Verzeichnis doc Datei natnotes.pdf
+%%%%ENDE Literaturverzeichnis
+
+\usepackage{setspace}
+\usepackage{url}          % fuer urls: schreibweise ist z.B. \url{http://www.uni-mannheim.de}
+%\urlstyle{same} % makes urls in the same font as the rest of the text
+
+
+%Automatisch Abkürzungsliste generieren: 2x latex, makeindex myfile.nlo -s nomencl.ist -o myfile.nls, 2x latex
+\usepackage{nomencl} % um Abkürzungen aufzunehmen: \abbrev{PDA}{personal digital assistant}
+\let\abbrev\nomenclature
+\renewcommand{\nomname}{List of Abbreviations} %Titel der Liste hier ändern (z.B. auf deutsch)
+\setlength{\nomlabelwidth}{.25\hsize}
+\renewcommand{\nomlabel}[1]{#1 \dotfill}
+\setlength{\nomitemsep}{-\parsep}
+\makenomenclature
+\newcommand{\Listofabbrev}{
+\printnomenclature
+\newpage
+}
+
+
+
+%Inhaltsverzeichnis
+\usepackage
+%[
+%tocfullflat,			%alle Eintraege left-aligned, alternativ: tocflat
+%tocbreakscareless		%page break between toc entry allowed
+%]
+{tocstyle}			%mehr Kontrolle ueber Inhaltsverzeichnis
+\usetocstyle{allwithdot}	%ensure there are dots in table of contents, alternativ: noonewithdot, nopagecolumn
+% docu http://www.tug.org/texlive/devsrc/Master/texmf-dist/source/latex/koma-script/tocstyle.dtx
+\setcounter{secnumdepth}{5} %numbering up to fifth level in table of contents
+\setcounter{tocdepth}{5} %show entries in toc up to fifth level (subsubsubsubsection)
+
+
+\setlength{\parindent}{0pt}		% Einzug fuer neuen Absatz
+\setlength{\parskip}\medskipamount % Abstand neuer Absatz, besser als explizite Angabe in pt
+
+\onehalfspacing %Zeilenabstand 1,5
+
+
+% kapitel{\"u}berschriften in schriftart mit serifen
+\setkomafont{sectioning}{\normalfont\normalcolor\bfseries}
+
+% gestaltung der kopfzeilen
+\ohead{\pagemark}
+\cfoot{}
+\cohead{}
+\ihead{\headmark}
+\setkomafont{pagehead}{\normalfont\bfseries}
+\setkomafont{pagenumber}{\normalfont\bfseries}
+\automark{section}
+
+% ----- ende der pr{\"a}ambel ----------------------------------
+
+
+
+
+
+
+\begin{document}  % dokument f{\"a}ngt an
+\selectlanguage{english} %englische Silbentrennung, fuer deutsche Arbeiten: \selectlanguage{ngerman}
+\frontmatter      % vorspann, kapitel r{\"o}misch nummeriert
+
+\include{kapitel/titel}     % titelseite einbinden
+\tableofcontents            % inhaltsverzeichnis
+
+\listoffigures              % abbildungsverzeichnis
+\listoftables               % tabellenverzeichnis
+
+\clearpage %tell toc that there is a pagebreak after list of tables, however the hyperlink still points to the wrong page
+\addcontentsline{toc}{chapter}{\nomname} %abkuerzungen ins inhaltsverzeichnis
+
+\Listofabbrev % liste der abkuerzungen erstellen
+
+
+
+\mainmatter       % hauptteil, kapitel lateinisch nummeriert
+%\include{kapitel/content}
+\include{kapitel/introduction}
+\selectlanguage{ngerman} % jetzt sprechen wir deutsch.
+\include{kapitel/grafiken}
+\selectlanguage{english} % jetzt sprechen wir wieder englisch
+\include{kapitel/fazit}
+%\selectlanguage{ngerman} % wenn im Inhaltsverzeichnis Appendix stehen soll, muss Engl gewaehlt sein, fuer Anhang Deutsch
+\appendix
+
+%Bibliographie
+%waehle einen der folgenden 4 Eintraege
+%\bibliographystyle{literatur/natdin} %DIN Style Literaturverzeichnis, comment out pagebackref
+%\bibliographystyle{literatur/IEEEtran} % IEEE Style Literaturverzeichnis
+%\bibliographystyle{literatur/natdinCustomized} %DIN Style Literaturverzeichnis + Punkt hinter jeder Literaturangabe -> low level config fuer Zitate: natdin.cfg im Projektordner, comment out pagebackref
+%\bibliographystyle{literatur/natdinCustomizedEnglish} %DIN Style auf Englisch getrimmt mit Punkt hinter Literaturangabe -> low lovel config fuer Zitate: natdin.cfg im Projektordner, pagebackref kann damit nicht genutzt werden
+%\bibliographystyle{aer} % alternativ auch apalike, aer, apalike2... s.a. http://web.reed.edu/cis/Help/LaTeX/bibtexstyles.html
+\bibliographystyle{apalike2} % very nice bib style
+%note on aer: does not like inbook entries
+%\bibliographystyle{natdin}
+
+\bibliography{literatur/lit} %Pfad zur bib-Datei
+
+%appendices can be defined here, the appendix structure has to be added manually to the toc (table of contents)
+%\clearpage  %toc new page
+%\addcontentsline{toc}{chapter}{Appendix} %add chapter to toc
+\addpart{\appendixname}
+\input{kapitel/append}
+% \newpage
+% \input{kapitel/methodologyQuestionMappingTable}
+% 
+% \input{kapitel/question_origins}
+% \include{extern/fragebogenE}
+% \include{extern/fragebogenD}
+% 
+% \input{kapitel/invitationLetters}
+% 
+% 
+% \include{kapitel/coverageTable}
+
+%Eidesstattliche Erklaerung
+\include{kapitel/erklaerung}
+
+\end{document}

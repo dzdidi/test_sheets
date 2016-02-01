@@ -1,0 +1,46 @@
+\chapter{Test Sheets}
+"Software testing is an important aspect of modern software development.
+Testing is performed to ensure that a product or component meets the requirements of all stakeholders.
+Just as the requirements themselves tests can vary widely in their nature.
+Some tests check whether executing certain code paths results in a correct state or answer while others may check whether a certain code path delivers its results in a specified amount of time.
+
+However writing and evaluating tests is often not much different from programming itself.
+Tests are usually written in a formal programming language such as Java/JUnit.
+This necessitates that in order to create a test and understand its results knowledge of a formal programming language is required.
+This is a significant barrier of entry for stakeholders without a background in IT even though they may be interested in the tests themselves.
+Even without deep IT knowledge a stakeholder may still be interested in how well a product performs with regard to her requirements.
+
+Visual test representations such as the UML Testing Profile try to lower the barrier of entry into testing.
+However most of the time these visualizations are only partial descriptions of the tests and so do not contain all the desired information for evaluation.
+
+The Software Engineering group has started to develop a new representation for tests called Test Sheets.
+The goal is to create a way to define tests which combines the power and completeness of formal programming language with a representation that is easy to understand and work with even for people with little IT knowledge.
+This is achieved by representing a test in tabular form as a spreadsheet.
+Rows in a Test Sheet represent operations being executed while the columns represent input parameters and expected results.
+The actual content of a cell can be made dependent on other cells by addressing them via their location.
+This works in a way similar to existing spreadsheet software such as Microsoft Excel.
+After executing a test the cells for each expected result is colored according to the result of the test.
+A successful test causes cells to become green while failed tests are indicated by red cells."\cite{ts}
+ \section{Basic Test Sheets}
+"A Test Sheet consists of a name and a class being tested. 
+Each row after that represents one method call.
+The first column identifies the object being tested while the second column indicates which method is being called on said object. [...]
+Input parameters are specified in the columns following the method name up to the invocation line. 
+Right after the invocation line the expected return values can be specified."\cite{tsb}
+
+% \paragraph{Non-Linear}
+%Similar to the invocation line (double line separating input parameters and expected return values) there is a double line below the last method invocation row.
+%Below this line the behavior specification starts. 
+%Each row of the behavior specification represents a state of a state machine. 
+%The state machine starts in the first state that is being specified right below the double line and stops execution once a state is reached without any valid transitions.
+
+%Each column in a row specifies a transition. 
+%A transition consists of a guard, executed invocations and a subsequent state. 
+%The starting state has only one transition with no guard, the intermediate state has [...] transitions each with a guard and the terminating state does not have any transitions at all[...].  \cite{tsn}
+
+\section{High Order, Parameterized Test Sheets}
+"The actual value used for Parameterized Test Sheets is specified by a Higher-Order Test Sheet as in the example below. 
+The Higher-Order Test Sheet references the Parameterized Test Sheet as the 'class' being tested. 
+On said pseudo-class it invokes the pseudo-method test followed the by the value to be used as parameter. 
+?C in the Parameterized Test Sheet is replaced by the value defined the third column (column C) for each execution.
+It is also possible to use more than one parameter. These are defined in the Higher-Order Test Sheet in subsequent columns (D, E, F, etc.) and referenced in the Parameterized Test Sheet via ?D, ?E, ?F, etc"\cite{tsh}

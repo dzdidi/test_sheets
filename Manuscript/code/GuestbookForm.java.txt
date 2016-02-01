@@ -1,0 +1,34 @@
+package de.uni_mannheim.informatik.swt.projektname;
+
+import javax.servlet.http.HttpServletRequest;
+
+import de.unimannheim.wifo3.cobana.action.ActionForm;
+import de.unimannheim.wifo3.cobana.action.ActionMapping;
+
+public class GuestbookForm extends ActionForm {
+    private String name = null;
+    private String message = null;
+
+    public GuestbookForm() {
+    }
+
+    public String getName() {
+        return this.name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getMessage() {
+        return this.message;
+    }
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public void reset(ActionMapping mapping, HttpServletRequest request) {
+        setName(null);
+        setMessage(null);
+    }
+
+}

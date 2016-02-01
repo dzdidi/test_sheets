@@ -1,0 +1,59 @@
+% Die Titelseite der Arbeit
+
+\begin{titlepage}
+
+\begin{center} % zentrieren
+
+  % Logo der Universit{\"a}t Mannheim
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[width=.6\textwidth]{grafiken/unilogo-neu}
+  \end{figure}
+  
+  % Vertikaler Zwischenraum
+  \bigskip
+  \vfill 
+  \begin{framed}
+  % Titel der Arbeit und Typ der Arbeit, umrandet
+    \begin{center}
+     \textsc{{\Large This paper's title \\ Subtitle\\}}
+                                % Letztes \\ ist wichtig, beginnt eine neue Zeile f{\"u}r die Art der Arbeit
+  
+      \bigskip
+  
+                                % Art der Arbeit, ggf. auszutauschen gegen Seminar- oder Doktorarbeit
+      \textbf{Term Paper}
+    \end{center}
+    \end{framed}
+    \vfill
+    \vfill
+  
+  % Daten des Erstellers, Einreichungsdatum
+  % in einer Tabelle ausgerichtet
+  \begin{tabular*}{0.62\textwidth}{r@{\extracolsep{\fill}}l}
+   submitted: &\ January 2004\\\\
+    by: &\ Martin Mustermann\\
+    &\ born March 28th 1984\\
+    &\ in Eberbach\\
+    \\
+    Student ID Number: &\ 012345\\
+  \end{tabular*}
+  \vfill
+  \vfill
+  
+  % Unten: Kontaktdaten des Lehrstuhls f{\"u}r Wirtschaftsinformatik 1
+  
+  \rule{\textwidth}{.4pt}\\ % vertikale Linie
+  University of Mannheim\\
+  Chair of Business Administration and Information Systems\\
+  D -- 68131 Mannheim\\
+  Phone: +49 621-181-1691, Fax +49 621-181-1692\\
+  Internet: \url{http://heinzl.bwl.uni-mannheim.de}
+\end{center}
+
+\end{titlepage} % Ende des Titelblatts
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "~/Documents/DA-Vorlage/beispiel/da-beispiel"
+%%% End: 

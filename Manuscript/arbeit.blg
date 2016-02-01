@@ -1,0 +1,88 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: arbeit.aux
+A level-1 auxiliary file: kapitel/titel.aux
+A level-1 auxiliary file: kapitel/abstract.aux
+A level-1 auxiliary file: kapitel/introduction.aux
+A level-1 auxiliary file: kapitel/figo.aux
+A level-1 auxiliary file: kapitel/testing.aux
+A level-1 auxiliary file: kapitel/testSheets.aux
+A level-1 auxiliary file: kapitel/nodejs.aux
+A level-1 auxiliary file: kapitel/oop_fp.aux
+A level-1 auxiliary file: kapitel/contribution.aux
+A level-1 auxiliary file: kapitel/grafiken.aux
+The style file: plain.bst
+A level-1 auxiliary file: kapitel/erklaerung.aux
+A level-1 auxiliary file: kapitel/abtretungserklaerung.aux
+Database file #1: literatur/lit.bib
+Warning--I didn't find a database entry for "javase"
+Warning--I didn't find a database entry for "nodejsstreams"
+Warning--I didn't find a database entry for "nodejscontributors"
+Warning--to sort, need author or key in figoFAQVision
+Warning--to sort, need author or key in figoAngel
+Warning--to sort, need author or key in figoCB
+Warning--to sort, need author or key in figoFAQWhat
+Warning--to sort, need author or key in figoFAQPartners
+Warning--to sort, need author or key in figoAPI
+Warning--to sort, need author or key in LarsAPI
+Warning--to sort, need author or key in TimAPI
+Warning--to sort, need author or key in DaveAPI
+Warning--to sort, need author or key in PSD2
+Warning--to sort, need author or key in finTS
+Warning--to sort, need author or key in wikiScraping
+Warning--to sort, need author or key in w3cDOM
+Warning--to sort, need author or key in casperjs
+Warning--to sort, need author or key in tdd
+Warning--to sort, need author or key in ts
+Warning--to sort, need author or key in tsb
+Warning--to sort, need author or key in tsh
+Warning--to sort, need author or key in nodejsabout
+Warning--to sort, need author or key in mozillaJS
+Warning--to sort, need author or key in libuv
+Warning--to sort, need author or key in libuvBasic
+Warning--to sort, need author or key in oosite
+Warning--empty note in Lecture1
+Warning--empty note in Lecture2
+Warning--empty booktitle in vouk
+You've used 40 entries,
+            2118 wiz_defined-function locations,
+            704 strings with 8829 characters,
+and the built_in function-call counts, 7986 in all, are:
+= -- 767
+> -- 177
+< -- 1
++ -- 88
+- -- 46
+* -- 346
+:= -- 1144
+add.period$ -- 99
+call.type$ -- 40
+change.case$ -- 136
+chr.to.int$ -- 0
+cite$ -- 66
+duplicate$ -- 366
+empty$ -- 917
+format.name$ -- 46
+if$ -- 1837
+int.to.chr$ -- 0
+int.to.str$ -- 40
+missing$ -- 25
+newline$ -- 180
+num.names$ -- 35
+pop$ -- 282
+preamble$ -- 1
+purify$ -- 102
+quote$ -- 0
+skip$ -- 306
+stack$ -- 0
+substring$ -- 292
+swap$ -- 49
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 138
+warning$ -- 26
+while$ -- 41
+width$ -- 42
+write$ -- 350
+(There were 29 warnings)

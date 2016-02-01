@@ -1,0 +1,115 @@
+\chapter{Testing}
+
+"Software testing has grown as an important technique to evaluate and help to improve software quality.
+Numerous techniques and tools have appeared in the last decade, ranging from static analysis to automatic test generation and application.
+One can argue that software is the dominant part of an embedded system, either as a final product (executable code) or during its development lifecycle (system modeling in specific languages and computation models).
+In both cases, software must be thoroughly verified to ensure product quality and reliability.
+One can observe a growing number of academic and industrial works on the topic of embedded SW testing in the last four or five years, and this seems to be a good time for reflection: how exactly is embedded software testing different from traditional software testing? 
+Is it an engineering or computer science problem? 
+Does it need extra support from platform developers? 
+What is the role of the SW engineer and of the designer in developing a high-quality software-based embedded application?
+Many authors suggest that, on top of the ordinary software testing challenges, software usage in an embedded application brings additional issues that must be dealt with: the variety of possible target platforms, the different computational models involved during the design, faster time-to-market and even more instable and complex specifications, platform-dependent constraints (power, memory, and resources availability), etc.
+On the other hand, current platforms are more and more powerful, and the specificities of the embedded application can help to reduce the search space during test generation:
+application domains, strong code reuse paradigm, use of less advanced programming language resources, and common availability of system models subject to or already verified with respect to specific properties, for instance.
+Furthermore, a major part of the so-called embedded software does not depend directly on hardware, and one can argue that only a small percentage really needs to be tested together with the target platform, and this test is part of the platform design, not the system design. "\cite{cota}
+
+Introduction of Agile and Extreme development paradigms with increased requirements for control over the existing code, its reuse and maintenance lifted requirements for tests and their quality to the new level and shifted responsibility regarding testing process from software engineers to people without development background. 
+This led to new requirements for testing definition and representation tools since old tools like JUnit have high entry level for test engineers and requires its users to have an ability to write and read an executable code in a corresponding programming language.
+
+"Tests are as important to the health of a project as the production code is. 
+Perhaps they are even more important, because tests preserve and enhance the flexibility, maintainability, and reusability of the production code. "\cite{MartinClean}
+
+"The ideas and techniques of software testing have become essential knowledge for all software delopers"\cite{IntroductionST}
+
+Testing is responsible for at least 30\% of the cost in a software project.\cite{Lecture2}
+
+NIST 2002 report, “The Economic Impacts of Inadequate Infrastructure for Software Testing” claimed that - inadequate software testing costs the US alone between \$22 and \$59 billion annually. \cite{Lecture1}
+
+Huge losses due to web application failures
+Financial services : \$6.5 million per hour (just in USA!)
+Credit card sales applications : \$2.4 million per hour (in USA)
+\cite{Lecture1}
+
+\section{Test Driven Development}
+
+Test Driven Development is a software development paradigm which combines test-first development and refracting. This means that programmers first define test and only after write code to fulfill test requirements, both code and test maintained by developers. This reduces amount of redundant code and improves developers' confidence during refractoring process.
+Refactroing in TDD requires developer before introducing new feature first ask question the existing design fits best for implementation of new functionality.\cite{tdd} \cite{TDDPractical}
+
+"Consider the following three laws:
+1)First Law You may not write production code until you have written a failing unit test.
+2)Second Law You may not write more of a unit test than is sufficient to fail, and not compiling is failing.
+3)Third Law You may not write more production code than is sufficient to pass the currently failing test.
+
+These three laws lock you into a cycle that is perhaps thirty seconds long.
+The tests and the production code are written together, with the tests just a few seconds ahead of the production code. 
+If we work this way, we will write dozens of tests every day, hundreds of tests every month, and thousands of tests every year. 
+If we work this way, those tests will cover virtually all of our production code. 
+The sheer bulk of those tests, which can rival the size of the production code itself, can present a daunting management problem.\cite{MartinClean}
+
+\paragraph{Pros.}
+As a result you will always be improving the quality of your design, thereby making it easier to work with in the future.\cite{tdd}
+Excelent fault isolation. Support by big variety of test frameworks \cite{STCraft}
+Tests can replace code documentation at certain level of abstraction \cite{MartinClean}
+
+\paragraph{Cons.}
+Very hard to perform TDD without testing framework. \cite{STCraft}
+Also \cite{STCraft} states among the limitations of TDD is its bottom-up nature which provides little oportunity for elegant design. In contrast \cite{tdd} citates Robert C Martin with following words: "The act of writing a unit test is more an act of design than of verification.  It is also more an act of documentation than of verification.  The act of writing a unit test closes a remarkable number of feedback loops, the least of which is the one pertaining to verification of function”  For the same bottom-up approach \cite{STCraft} claims that some of the faults can be tracked only by data flow testing.
+
+
+\section{Requirements for tests (F. I. R. S. T.)}
+
+\paragraph{Fast. Tests should be fast.} 
+They should run quickly. When tests run slow, you won’t want to run them frequently. 
+If you don’t run them frequently, you won’t find problems early enough to fix them easily. 
+You won’t feel as free to clean up the code. Eventually the code will begin to rot.\cite{MartinClean}
+
+\paragraph{Independent. Tests should not depend on each other.} 
+One test should not set up the conditions for the next test. 
+You should be able to run each test independently and run the tests in any order you like. 
+When tests depend on each other, then the first one to fail causes a cascade of downstream failures, making diagnosis difficult and hiding downstream defects.\cite{MartinClean}
+
+\paragraph{Repeatable. Tests should be repeatable in any environment.}
+You should be able to run the tests in the production environment, in the QA environment, and on your laptop while riding home on the train without a network. 
+If your tests aren’t repeatable in any environment, then you’ll always have an excuse for why they fail. 
+You’ll also find yourself unable to run the tests when the environment isn’t available.\cite{MartinClean}
+
+\paragraph{Self-Validating. The tests should have a boolean output.}
+Either they pass or fail. 
+You should not have to read through a log file to tell whether the tests pass. 
+You should not have to manually compare two different text files to see whether the tests pass. 
+If the tests aren’t self-validating, then failure can become subjective and running the tests can require a long manual evaluation.\cite{MartinClean}
+
+\paragraph{Timely. The tests need to be written in a timely fashion.}
+Unit tests should be written just before the production code that makes them pass. 
+If you write tests after the production code, then you may find the production code to be hard to test. 
+You may decide that some production code is too hard to test. 
+You may not design the production code to be testable.\cite{MartinClean}
+
+\section{Dependability \cite{lyu}}
+Dependability is defined as the trustwothiness of a computer system such that reliance can justifiably be place on the service it delivers. The service delivered by a system is its behaviour as it is perceptible by its users(s); a user is another system (human or physical) iwth the former.\\
+Depening on applications inteded for the system, a different emphasis mau be put on the various facets fo dependability, that is dependablility can be veiwed according to different, but complementary properties which enable the attributes of dependability to be defined:
+\begin{itemize}
+	\item \textit{The readiness for usage} leads to \textbf{availability}
+	\item \textit{The continuity of service} leads to \textbf{reliability}
+	\item \textit{The nonoccurence of catastrophic consequences on the environment} leads to \textbf{safety}
+	\item \textit{The nonoccirence of unauthorized disclosure of information} leads to \textbf{confidentiality}
+	\item \textit{The nonoccurrence of improper information} leads to \textbf{integrity}
+	\item \textit{The ability to undergo repeairs and evelutions} leads to \textbf{maintainability}
+\end{itemize}
+
+\section{Real Time Testing}
+"Real-time software is a software thaht dries a computer which intercats  with functioning external devices or objects. It is called real-time because the software actions control activities that are accuring in an ongoing process."\cite{RealTimeTesting}
+(MORE SHOULD BE ADDED)
+
+\section{Reliability testing}
+"Reliability is the probability that a system, or a system component, will deliver its
+intended functionality and quality for a specified period of "time", and under specified
+conditions, given that the system was functioning properly at the start of this "time" period. For
+example, this may be the probability that a real-time system will give specified functional and
+timing performance for the duration of a ten hour mission when used in the way and for the
+purpose intended. Since, software reliability will depend on how software is used, software usage
+information is an important part of reliability evaluation. This includes information on the
+environment in which software is used, as well as the information on the actual frequency of
+usage of different functions (or operations, or features) that the system offers. The usage
+information is quantified through operational profiles."\cite{vouk}
+
