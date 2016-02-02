@@ -40,10 +40,13 @@ NodeJS asynchronous nature provided by event handler which is an implementation 
 \item When all the items in the Event Queue are processed, the loop will block again on the Event Demultiplexer which will then trigger another cycle.
 \end{enumerate}
 
-\section{Approaches application flow}
-	\paragraph{Callbacks}
-	\paragraph{Async}
-	\paragraph{Promises}
-	\paragraph{Fibers}
-	\paragraph{Generators}
+\paragraph{Approaches for asynchronous information flow handling}
+\begin{itemize}
+	\item \textit{Continuation Passing.} Definition and call of a function within function which performs asynchronous operation
+	\item \textit{Callbacks.} Passing as last input parameter function with specific signature for iinput paramteres (error, data), which performs operation/error handling over returned data after it was obtained.
+	\item \textit{Async.} JavaScript library which gives an opportunity to write asynchronous functions execution in chain or parallel form within single information flow.
+	\item \textit{Promises.} Function can return promise object with can be resolved or rejected in a later time when it particular method will be called by other function.
+	\item\textit{Streams.} Piping asynchronous functions one to another. Result of first will be pushed to next stream whenever it is available, or pulled by the next stream whenever it is necessary (depends from stream mode)
+	\item\textit{Generators.} Type of constructor introduced in ECMA6 which returns iterator value. Which will iterate through the code unless it will rich yeild method which will wait for return value without blocking event loop.
 
+\end{itemize}

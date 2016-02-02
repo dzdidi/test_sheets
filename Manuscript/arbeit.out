@@ -19,24 +19,16 @@
 \BOOKMARK [1][-]{section.4.1}{Basic Test Sheets}{chapter.4}% 19
 \BOOKMARK [1][-]{section.4.2}{High Order, Parameterized Test Sheets}{chapter.4}% 20
 \BOOKMARK [0][-]{chapter.5}{NodeJS}{}% 21
-\BOOKMARK [1][-]{section.5.1}{Approaches application flow}{chapter.5}% 22
-\BOOKMARK [0][-]{chapter.6}{OOP and FP}{}% 23
-\BOOKMARK [1][-]{section.6.1}{Object Oriented Programming}{chapter.6}% 24
-\BOOKMARK [2][-]{subsection.6.1.1}{Design Principles}{section.6.1}% 25
-\BOOKMARK [2][-]{subsection.6.1.2}{Design Patterns}{section.6.1}% 26
-\BOOKMARK [1][-]{section.6.2}{Functional Programming}{chapter.6}% 27
-\BOOKMARK [1][-]{section.6.3}{Streams}{chapter.6}% 28
-\BOOKMARK [2][-]{subsection.6.3.1}{Anatomy of Streams}{section.6.3}% 29
-\BOOKMARK [2][-]{subsection.6.3.2}{Piping patterns}{section.6.3}% 30
-\BOOKMARK [0][-]{chapter.7}{Contributions}{}% 31
-\BOOKMARK [1][-]{section.7.1}{Conventions}{chapter.7}% 32
-\BOOKMARK [1][-]{section.7.2}{Use Case}{chapter.7}% 33
-\BOOKMARK [1][-]{section.7.3}{Architecture}{chapter.7}% 34
-\BOOKMARK [1][-]{section.7.4}{Design and Implementation}{chapter.7}% 35
-\BOOKMARK [2][-]{subsection.7.4.1}{Reader}{section.7.4}% 36
-\BOOKMARK [2][-]{subsection.7.4.2}{Writer}{section.7.4}% 37
-\BOOKMARK [0][-]{chapter.8}{Implementierung}{}% 38
-\BOOKMARK [0][-]{appendix*.33}{Bibliography}{}% 39
-\BOOKMARK [-1][-]{section*.34}{Appendix}{}% 40
-\BOOKMARK [0][-]{appendix.A}{First class of appendices}{section*.34}% 41
-\BOOKMARK [1][-]{section.A.1}{Some appendix}{appendix.A}% 42
+\BOOKMARK [0][-]{chapter.6}{Contributions}{}% 22
+\BOOKMARK [1][-]{section.6.1}{Requirements analysis}{chapter.6}% 23
+\BOOKMARK [1][-]{section.6.2}{Conventions}{chapter.6}% 24
+\BOOKMARK [1][-]{section.6.3}{Use Case}{chapter.6}% 25
+\BOOKMARK [1][-]{section.6.4}{Architecture}{chapter.6}% 26
+\BOOKMARK [1][-]{section.6.5}{Design and Implementation}{chapter.6}% 27
+\BOOKMARK [2][-]{subsection.6.5.1}{Reader}{section.6.5}% 28
+\BOOKMARK [2][-]{subsection.6.5.2}{Writer}{section.6.5}% 29
+\BOOKMARK [0][-]{chapter.7}{Implementierung}{}% 30
+\BOOKMARK [0][-]{appendix*.21}{Bibliography}{}% 31
+\BOOKMARK [-1][-]{section*.22}{Appendix}{}% 32
+\BOOKMARK [0][-]{appendix.A}{First class of appendices}{section*.22}% 33
+\BOOKMARK [1][-]{section.A.1}{Some appendix}{appendix.A}% 34

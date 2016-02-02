@@ -1,6 +1,16 @@
 \chapter{Contributions}
 \label{sec:contributions}
 For particular implementation of Test Sheets paradigm were developed conventions conventions described below. 
+\section{Requirements analysis}
+This section describes and analyses requirements differences defined by Test Sheets concept and introduced by figo GmbH.
+
+Test Sheets were originally designed for test definitions of  OOP languages. And all available examples describes tests definitions for Java Classes. While figo GmbH case requires implementation of tests for nodeJS/casperJS, which are based on JavaScript - Object Oriented, imperative, Functional Oriented programming language with asynchronous information flow. Moreover figo GmbH requires input of test results to be recorded in to LogStash logs database. The execution requirements from figo GmbH are such that tests defined via Test Sheets should be automatically executed in a time manner (every 2 mins or so), while normal software testing is performed on demand.
+The figo's requirement for comparison is such that while defining a Test Sheet user should be able to select from two types of comparison: 1) Strict comparison - complete comparison of objects including both properties' structure and their values. 2) Not-Strict comparison - scheme comparison of objects.
+
+(Probably should go to different section)
+Scraping scripts implement callback based approach for handling asynchronous data flow. This provides an opportunity to perform result comparison within the custom callback defined on a implementation stage.
+Standard convention for callback definitions limitates number of input parameters of a callback (error, data), while comparison requires compare data parameter with expected outputs from Test Sheet. The opportunity to resolve this issue lays in a JavaScript's support of functions as a class citizens, the function implementation of module for comparison and report: module exports function which invoked with single parameters (expected\_output) / ( + script name) and returns function which is used as a callback for scrapping script, this callback function performs comparison and writes its result to TestSheet or logstash depending on environment in which the program was executed
+
 \section{Conventions}
 \label{sec:conventions}
 

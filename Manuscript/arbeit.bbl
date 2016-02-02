@@ -57,10 +57,6 @@ Lars markull's answer to what are the benefits of an api for a consumer bank? -
 \newblock
   \url{https://www.quora.com/What-are-the-benefits-of-an-API-for-a-consumer-bank/answer/Lars-Markull?srid=hmj2\&share=267222bd}.
 
-\bibitem{oosite}
-Object oriented design patterns.
-\newblock \url{http://www.oodesign.com/}.
-
 \bibitem{TimAPI}
 Open banking apis: Threat and opportunity | consult hyperion.
 \newblock \url{http://www.chyp.com/open-banking-apis-threat-and-opportunity/}.
@@ -102,11 +98,6 @@ Wer sind eure partner? wie kann ich figo dort nutzen?
 \newblock
   \url{https://figo.zendesk.com/hc/de/articles/200907292-Wer-sind-eure-Partner-Wie-kann-ich-figo-dort-nutzen-}.
 
-\bibitem{sicp}
-Harold Abelson and Gerald~J. Sussman.
-\newblock {\em Structure and Interpretation of Computer Programs}.
-\newblock MIT Press, Cambridge, MA, USA, 2nd edition, 1996.
-
 \bibitem{IntroductionST}
 Paul Ammann and Jeff Offutt.
 \newblock {\em Introduction to Software Testing}.
@@ -144,22 +135,11 @@ John Dooley.
 \newblock {\em Software Development and Professional Practice}.
 \newblock Apress, Berkely, CA, USA, 1st edition, 2011.
 
-\bibitem{DesignPatterns}
-Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides.
-\newblock {\em Design Patterns: Elements of Reusable Object-oriented Software}.
-\newblock Addison-Wesley Longman Publishing Co., Inc., Boston, MA, USA, 1995.
-
 \bibitem{RealTimeTesting}
 Robert~L. Glass.
 \newblock Real-time: The \&ldquo;lost world\&rdquo; of software debugging and
   testing.
 \newblock {\em Commun. ACM}, 23(5):264--271, May 1980.
-
-\bibitem{Hudak}
-Paul Hudak.
-\newblock Conception, evolution, and application of functional programming
-  languages.
-\newblock {\em ACM Comput. Surv.}, 21(3):359--411, September 1989.
 
 \bibitem{STCraft}
 P.C. Jorgensen.
@@ -175,17 +155,6 @@ Michael~R. Lyu, editor.
 Robert~C. Martin.
 \newblock {\em Clean Code: A Handbook of Agile Software Craftsmanship}.
 \newblock Prentice Hall PTR, Upper Saddle River, NJ, USA, 1 edition, 2008.
-
-\bibitem{MartinASD}
-Robert~Cecil Martin.
-\newblock {\em Agile Software Development: Principles, Patterns, and
-  Practices}.
-\newblock Prentice Hall PTR, Upper Saddle River, NJ, USA, 2003.
-
-\bibitem{concepts}
-Robert~W. Sebesta.
-\newblock {\em Concepts of Programming Languages}.
-\newblock Addison-Wesley Publishing Company, USA, 9th edition, 2009.
 
 \bibitem{vouk}
 Mladen~A Vouk et~al.

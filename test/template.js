@@ -48,21 +48,23 @@ describe('Test coverage for template module', function() {
     });
   });
 
-  describe('Test coverage for a requireBaseScript', function() {
-    it('should have requireBaseScript function', function(done) {
-      assert.equal(typeof template.requireBaseScript, 'function');
+  describe('Test coverage for a makeRequires', function() {
+    it('should have makeRequires function', function(done) {
+      assert.equal(typeof template.makeRequires, 'function');
 
       done();
     });
 
     it('should accept zero parameters', function(done) {
-      assert.equal(template.requireBaseScript.length, 0);
+      assert.equal(template.makeRequires.length, 0);
 
       done();
     });
 
     it('should return string with require applied to the input parameter', function(done) {
-      assert.equal(template.requireBaseScript(), 'var scrapBase = require(\'../../banking/scraping/nodeBase\')');
+      assert.equal(template.makeRequires(), 'var scrapBase = require(\'../../banking/scraping/nodeBase\');'
+      + '\n var assert = require(\'assert\');'
+      + '\n');
 
       done();
     });
@@ -146,63 +148,5 @@ describe('Test coverage for template module', function() {
     });
   });
 
-  describe('Test coverage for compare', function() {
-    it('should have compare function', function(done) {
-      assert.equal(typeof template.compare, 'function');
 
-      done();
-    });
-
-    it('should accept three paramters', function(done) {
-      assert.equal(template.compare.length, 3);
-
-      done();
-    });
-
-    it('should deeply compare scheme if last parameter is \'|\'', function(done) {
-      var obj1 = {a:1, b:{c: 2, d: {e: 3}}};
-      var obj2 = {a:4, b:{c: 5, d: {e: 6}}};
-      var obj3 = {a:4, b:{c: 5, d: {f: 6}}};
-
-      assert.equal(template.compare(obj1, obj2, '|'), true);
-      assert.equal(template.compare(obj1, obj3, '|'), false);
-
-      done();
-    });
-
-    it('should deeply objects is last parameter is \'||\'', function(done) {
-      var obj1 = {a:1, b:{c: 2, d: {e: 3}}};
-      var obj2 = {a:1, b:{c: 2, d: {e: 3}}};
-      var obj3 = {a:1, b:{c: 2, d: {f: 3}}};
-      var obj4 = {a:1, b:{c: 2, d: {e: 6}}};
-
-      assert.equal(template.compare(obj1, obj2, '||'), true);
-      assert.equal(template.compare(obj1, obj3, '||'), false);
-      assert.equal(template.compare(obj1, obj4, '||'), false);
-
-      done();
-    });
-  });
-
-  describe('Test coverage for getDeepKeys', function() {
-    it('should have getDeepKeys function', function(done) {
-      assert.equal(typeof template.getDeepKeys, 'function');
-
-      done();
-    });
-
-    it('should accept two paramters', function(done) {
-      assert.equal(template.getDeepKeys.length, 2);
-
-      done();
-    });
-
-    it('should  return deep getDeepKeys', function(done) {
-      var obj1 = {a:1, b:{c: 2, d: {e: 3}}};
-
-      assert.deepEqual(template.getDeepKeys(obj1, []), ['a', 'b', 'c', 'd', 'e']);
-
-      done();
-    });
-  });
 });
