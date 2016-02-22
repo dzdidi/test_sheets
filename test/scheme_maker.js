@@ -3,7 +3,7 @@ var assert = require('chai').assert;
 var mocha = require('mocha');
 var sinon = require('sinon');
 
-var schemeMaker = require('../lib/scheme_maker');
+var schemeMaker = require('../lib/scheme').make;
 
 // should be molved to before hook
 var descriptionSpy = sinon.spy(schemeMaker, 'getDescription');

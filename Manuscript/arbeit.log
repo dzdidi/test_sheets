@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.25)  2 FEB 2016 17:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.25)  19 FEB 2016 11:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -698,9 +698,9 @@ Package scrkbase Warning: `pagehead' is only an alias of `pageheadfoot'.
 
 (./arbeit.aux (./kapitel/titel.aux) (./kapitel/abstract.aux)
 (./kapitel/introduction.aux) (./kapitel/figo.aux) (./kapitel/testing.aux)
-(./kapitel/testSheets.aux) (./kapitel/nodejs.aux) (./kapitel/contribution.aux)
-(./kapitel/grafiken.aux) (./kapitel/erklaerung.aux)
-(./kapitel/abtretungserklaerung.aux))
+(./kapitel/testSheets.aux) (./kapitel/realTime.aux) (./kapitel/nodejs.aux)
+(./kapitel/oop_fp.aux) (./kapitel/contribution.aux) (./kapitel/grafiken.aux)
+(./kapitel/erklaerung.aux) (./kapitel/abtretungserklaerung.aux))
 \openout1 = `arbeit.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 125.
@@ -866,7 +866,7 @@ Package tocstyle Info: prepare \l@figure for redefinition on input line 125.
 \openout2 = `kapitel/titel.aux'.
 
  (./kapitel/titel.tex
-<grafiken/unilogo.png, id=139, 1445.4pt x 281.05pt>
+<grafiken/unilogo.png, id=300, 1445.4pt x 281.05pt>
 File: grafiken/unilogo.png Graphic file (type png)
  <use grafiken/unilogo.png>
 Package pdftex.def Info: grafiken/unilogo.png used on input line 10.
@@ -965,63 +965,224 @@ m (toc, 2): 37.59956pt
 C (toc, 2): 41.40253pt
 a (toc, 2): 33.29132pt
 A (toc, 2): 41.40253pt
+m (toc, 0): 17.62482pt
+C (toc, 0): 0.0pt
+a (toc, 0): 20.69444pt
+A (toc, 0): 0.0pt
+m (toc, 1): 27.02475pt
+C (toc, 1): 17.25pt
+a (toc, 1): 27.08583pt
+A (toc, 1): 20.69444pt
+m (toc, 1): 27.02475pt
+C (toc, 1): 17.25pt
+a (toc, 1): 27.08583pt
+A (toc, 1): 20.69444pt
+m (toc, 1): 27.02475pt
+C (toc, 1): 17.25pt
+a (toc, 1): 27.08583pt
+A (toc, 1): 20.69444pt
+m (toc, 0): 17.62482pt
+C (toc, 0): 0.0pt
+a (toc, 0): 20.69444pt
+A (toc, 0): 0.0pt
+m (toc, 1): 27.02475pt
+C (toc, 1): 17.25pt
+a (toc, 1): 27.08583pt
+A (toc, 1): 20.69444pt
+m (toc, 1): 27.02475pt
+C (toc, 1): 17.25pt
+a (toc, 1): 27.08583pt
+A (toc, 1): 20.69444pt
+m (toc, 0): 17.62482pt
+C (toc, 0): 0.0pt
+a (toc, 0): 20.69444pt
+A (toc, 0): 0.0pt
+m (toc, 1): 27.02475pt
+C (toc, 1): 17.25pt
+a (toc, 1): 27.08583pt
+A (toc, 1): 20.69444pt
+m (toc, 1): 27.02475pt
+C (toc, 1): 17.25pt
+a (toc, 1): 27.08583pt
+A (toc, 1): 20.69444pt
+m (toc, 0): 17.62482pt
+C (toc, 0): 0.0pt
+a (toc, 0): 20.69444pt
+A (toc, 0): 0.0pt
+m (toc, 1): 27.02475pt
+C (toc, 1): 17.25pt
+a (toc, 1): 27.08583pt
+A (toc, 1): 20.69444pt
 m (toc, 2): 37.59956pt
 C (toc, 2): 41.40253pt
 a (toc, 2): 33.29132pt
 A (toc, 2): 41.40253pt
+m (toc, 1): 27.02475pt
+C (toc, 1): 17.25pt
+a (toc, 1): 27.08583pt
+A (toc, 1): 20.69444pt
 m (toc, 2): 37.59956pt
 C (toc, 2): 41.40253pt
 a (toc, 2): 33.29132pt
 A (toc, 2): 41.40253pt
-m (toc, 0): 17.62482pt
-C (toc, 0): 0.0pt
-a (toc, 0): 20.69444pt
-A (toc, 0): 0.0pt
-m (toc, 1): 27.02475pt
-C (toc, 1): 17.25pt
-a (toc, 1): 27.08583pt
-A (toc, 1): 20.69444pt
-m (toc, 1): 27.02475pt
-C (toc, 1): 17.25pt
-a (toc, 1): 27.08583pt
-A (toc, 1): 20.69444pt
-m (toc, 1): 27.02475pt
-C (toc, 1): 17.25pt
-a (toc, 1): 27.08583pt
-A (toc, 1): 20.69444pt
-m (toc, 1): 27.02475pt
-C (toc, 1): 17.25pt
-a (toc, 1): 27.08583pt
-A (toc, 1): 20.69444pt
-m (toc, 1): 27.02475pt
-C (toc, 1): 17.25pt
-a (toc, 1): 27.08583pt
-A (toc, 1): 20.69444pt
-m (toc, 0): 17.62482pt
-C (toc, 0): 0.0pt
-a (toc, 0): 20.69444pt
-A (toc, 0): 0.0pt
-m (toc, 1): 27.02475pt
-C (toc, 1): 17.25pt
-a (toc, 1): 27.08583pt
-A (toc, 1): 20.69444pt
-m (toc, 1): 27.02475pt
-C (toc, 1): 17.25pt
-a (toc, 1): 27.08583pt
-A (toc, 1): 20.69444pt
-m (toc, 0): 17.62482pt
-C (toc, 0): 0.0pt
-a (toc, 0): 20.69444pt
-A (toc, 0): 0.0pt
-m (toc, 0): 17.62482pt
-C (toc, 0): 0.0pt
-a (toc, 0): 20.69444pt
-A (toc, 0): 0.0pt
-m (toc, 1): 27.02475pt
-C (toc, 1): 17.25pt
-a (toc, 1): 27.08583pt
-A (toc, 1): 20.69444pt
 [5]
+m (toc, 2): 37.59956pt
+C (toc, 2): 41.40253pt
+a (toc, 2): 33.29132pt
+A (toc, 2): 41.40253pt
+m (toc, 1): 27.02475pt
+C (toc, 1): 17.25pt
+a (toc, 1): 27.08583pt
+A (toc, 1): 20.69444pt
+m (toc, 2): 37.59956pt
+C (toc, 2): 41.40253pt
+a (toc, 2): 33.29132pt
+A (toc, 2): 41.40253pt
+m (toc, 2): 37.59956pt
+C (toc, 2): 41.40253pt
+a (toc, 2): 33.29132pt
+A (toc, 2): 41.40253pt
+m (toc, 2): 37.59956pt
+C (toc, 2): 41.40253pt
+a (toc, 2): 33.29132pt
+A (toc, 2): 41.40253pt
+m (toc, 2): 37.59956pt
+C (toc, 2): 41.40253pt
+a (toc, 2): 33.29132pt
+A (toc, 2): 41.40253pt
+m (toc, 3): 48.17456pt
+C (toc, 3): 74.69385pt
+a (toc, 3): 48.30505pt
+A (toc, 3): 74.69385pt
+m (toc, 3): 48.17456pt
+C (toc, 3): 74.69385pt
+a (toc, 3): 48.30505pt
+A (toc, 3): 74.69385pt
+m (toc, 3): 48.17456pt
+C (toc, 3): 74.69385pt
+a (toc, 3): 48.30505pt
+A (toc, 3): 74.69385pt
+m (toc, 3): 48.17456pt
+C (toc, 3): 74.69385pt
+a (toc, 3): 48.30505pt
+A (toc, 3): 74.69385pt
+m (toc, 3): 48.17456pt
+C (toc, 3): 74.69385pt
+a (toc, 3): 48.30505pt
+A (toc, 3): 74.69385pt
+m (toc, 3): 48.17456pt
+C (toc, 3): 74.69385pt
+a (toc, 3): 48.30505pt
+A (toc, 3): 74.69385pt
+m (toc, 3): 48.17456pt
+C (toc, 3): 74.69385pt
+a (toc, 3): 48.30505pt
+A (toc, 3): 74.69385pt
+m (toc, 3): 48.17456pt
+C (toc, 3): 74.69385pt
+a (toc, 3): 48.30505pt
+A (toc, 3): 74.69385pt
+m (toc, 3): 48.17456pt
+C (toc, 3): 74.69385pt
+a (toc, 3): 48.30505pt
+A (toc, 3): 74.69385pt
+m (toc, 3): 48.17456pt
+C (toc, 3): 74.69385pt
+a (toc, 3): 48.30505pt
+A (toc, 3): 74.69385pt
+m (toc, 3): 48.17456pt
+C (toc, 3): 74.69385pt
+a (toc, 3): 48.30505pt
+A (toc, 3): 74.69385pt
+m (toc, 3): 48.17456pt
+C (toc, 3): 74.69385pt
+a (toc, 3): 48.30505pt
+A (toc, 3): 74.69385pt
+m (toc, 3): 48.17456pt
+C (toc, 3): 74.69385pt
+a (toc, 3): 48.30505pt
+A (toc, 3): 74.69385pt
+m (toc, 3): 48.17456pt
+C (toc, 3): 74.69385pt
+a (toc, 3): 48.30505pt
+A (toc, 3): 74.69385pt
+m (toc, 3): 48.17456pt
+C (toc, 3): 74.69385pt
+a (toc, 3): 48.30505pt
+A (toc, 3): 74.69385pt
+m (toc, 2): 37.59956pt
+C (toc, 2): 41.40253pt
+a (toc, 2): 33.29132pt
+A (toc, 2): 41.40253pt
+m (toc, 2): 37.59956pt
+C (toc, 2): 41.40253pt
+a (toc, 2): 33.29132pt
+A (toc, 2): 41.40253pt
+m (toc, 1): 27.02475pt
+C (toc, 1): 17.25pt
+a (toc, 1): 27.08583pt
+A (toc, 1): 20.69444pt
+m (toc, 1): 27.02475pt
+C (toc, 1): 17.25pt
+a (toc, 1): 27.08583pt
+A (toc, 1): 20.69444pt
+m (toc, 2): 37.59956pt
+C (toc, 2): 41.40253pt
+a (toc, 2): 33.29132pt
+A (toc, 2): 41.40253pt
+m (toc, 2): 37.59956pt
+C (toc, 2): 41.40253pt
+a (toc, 2): 33.29132pt
+A (toc, 2): 41.40253pt
+m (toc, 1): 27.02475pt
+C (toc, 1): 17.25pt
+a (toc, 1): 27.08583pt
+A (toc, 1): 20.69444pt
+m (toc, 1): 27.02475pt
+C (toc, 1): 17.25pt
+a (toc, 1): 27.08583pt
+A (toc, 1): 20.69444pt
+m (toc, 0): 17.62482pt
+C (toc, 0): 0.0pt
+a (toc, 0): 20.69444pt
+A (toc, 0): 0.0pt
+m (toc, 1): 27.02475pt
+C (toc, 1): 17.25pt
+a (toc, 1): 27.08583pt
+A (toc, 1): 20.69444pt
+m (toc, 2): 37.59956pt
+C (toc, 2): 41.40253pt
+a (toc, 2): 33.29132pt
+A (toc, 2): 41.40253pt
+m (toc, 2): 37.59956pt
+C (toc, 2): 41.40253pt
+a (toc, 2): 33.29132pt
+A (toc, 2): 41.40253pt
+[6]
+m (toc, 1): 27.02475pt
+C (toc, 1): 17.25pt
+a (toc, 1): 27.08583pt
+A (toc, 1): 20.69444pt
+m (toc, 1): 27.02475pt
+C (toc, 1): 17.25pt
+a (toc, 1): 27.08583pt
+A (toc, 1): 20.69444pt
+m (toc, 2): 37.59956pt
+C (toc, 2): 41.40253pt
+a (toc, 2): 33.29132pt
+A (toc, 2): 41.40253pt
+m (toc, 2): 37.59956pt
+C (toc, 2): 41.40253pt
+a (toc, 2): 33.29132pt
+A (toc, 2): 41.40253pt
+m (toc, 0): 17.62482pt
+C (toc, 0): 0.0pt
+a (toc, 0): 20.69444pt
+A (toc, 0): 0.0pt
+m (toc, 1): 27.02475pt
+C (toc, 1): 17.25pt
+a (toc, 1): 27.08583pt
+A (toc, 1): 20.69444pt
 m (toc, 1): 27.02475pt
 C (toc, 1): 17.25pt
 a (toc, 1): 27.08583pt
@@ -1070,19 +1231,19 @@ A (toc, 1): 20.69444pt
 \tf@toc=\write5
 \openout5 = `arbeit.toc'.
 
- [6] (./arbeit.lof)
+ [7] [8
+
+] (./arbeit.lof)
 \tf@lof=\write6
 \openout6 = `arbeit.lof'.
 
- [7
-
-] [8
+ [9] [10
 
 ] (./arbeit.lot)
 \tf@lot=\write7
 \openout7 = `arbeit.lot'.
 
- [9] (./arbeit.nls) [10
+ [11] (./arbeit.nls) [12
 
 
 
@@ -1125,63 +1286,179 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--44
 
  []
 
-[4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 67--68
-
- []
-
-[6]) [7]
+[4]) [5] [6]
 \openout2 = `kapitel/testing.aux'.
 
- (./kapitel/testing.tex [8
+ (./kapitel/testing.tex
+Chapter 3.
+[7
 
 
 
 ]
-Chapter 3.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Underfull \vbox (badness 1584) has occurred while \output is active []
-
- [9]
-[10] [11]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 88.
-
-[12]) [13]
+ [8]
+[9] [10]) [11]
 \openout2 = `kapitel/testSheets.aux'.
 
- (./kapitel/testSheets.tex [14
+ (./kapitel/testSheets.tex [12
 
 
 
 ]
 Chapter 4.
-[15]) [16]
-\openout2 = `kapitel/nodejs.aux'.
+[13]) [14]
+\openout2 = `kapitel/realTime.aux'.
 
- (./kapitel/nodejs.tex
+ (./kapitel/realTime.tex
 Chapter 5.
-[17
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@ifnextchar' on input line 2.
+
+) [15
 
 
 
 ]
-Overfull \hbox (9.49242pt too wide) in paragraph at lines 30--31
-[] []\OT1/cmr/bx/n/12 V8/Chakra[][] \OT1/cmr/m/n/12 the JavaScript en-gine orig
--i-nally de-vel-oped by Google for the Chrome
- []
+\openout2 = `kapitel/nodejs.aux'.
 
-[18]) [19]
-\openout2 = `kapitel/contribution.aux'.
-
- (./kapitel/contribution.tex [20
+ (./kapitel/nodejs.tex [16
 
 
 
 ]
 Chapter 6.
-[21]
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
+
+ []
+
+[17] [18]
+Overfull \hbox (9.49242pt too wide) in paragraph at lines 55--56
+[] []\OT1/cmr/bx/n/12 V8/Chakra[][] \OT1/cmr/m/n/12 the JavaScript en-gine orig
+-i-nally de-vel-oped by Google for the Chrome
+ []
+
+[19] [20]
+Underfull \vbox (badness 6995) has occurred while \output is active []
+
+ [21]
+[22] [23] [24] [25] [26] [27] [28]
+Overfull \hbox (85.48628pt too wide) in paragraph at lines 324--325
+\OT1/cmr/m/n/12 solve(promise). re-solver.return(10) is equiv-a-lent to re-solv
+e(10) or re-solve(Promise.resolve(10))since
+ []
+
+[29] [30] [31] [32] [33]
+Overfull \hbox (16.24023pt too wide) in paragraph at lines 609--610
+[]\OT1/cmr/m/n/12 The ac-com-pa-ny-ing sketch of a stream con-struc-tor im-ple-
+ments a method Stream.from,
+ []
+
+[34]
+Overfull \hbox (97.91069pt too wide) in paragraph at lines 654--658
+[]\OT1/cmr/m/n/12 iterator.copy(generator); // is equiv-a-lent to: it-er-a-tor.
+forEach(generator.yield).then(generator.return,
+ []
+
+[35] [36] [37]
+Overfull \hbox (32.85118pt too wide) in paragraph at lines 802--803
+[]\OT1/cmr/m/n/12 Jafar pro-poses that the asyn-chronous ana-logues of it-er-at
+e() would be ob-serve(generator),
+ []
+
+
+Overfull \hbox (8.00932pt too wide) in paragraph at lines 802--803
+\OT1/cmr/m/n/12 turned it-er-a-tor. What Ja-far pro-poses as the asyncIt-er-a-t
+or.observe(asyncGenerator)
+ []
+
+
+Overfull \hbox (71.13828pt too wide) in paragraph at lines 802--803
+\OT1/cmr/m/n/12 method is ef-fec-tively equiv-a-lent to syn-chronous it-er-a-to
+r.copy(generator) or stream.pipe(stream).
+ []
+
+[38]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [39]
+[40] [41] [42] [43] [44] [45] [46]
+Overfull \hbox (12.46555pt too wide) in paragraph at lines 1017--1018
+[] []\OT1/cmr/bx/n/12 Writable streams.[][] \OT1/cmr/m/n/12 A writ[e]able strea
+m rep-re-sents a data des-ti-na-tion; in Node.js,
+ []
+
+[47]) [48]
+\openout2 = `kapitel/oop_fp.aux'.
+
+ (./kapitel/oop_fp.tex
+Chapter 7.
+[49
+
+
+
+] [50]
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 103--105
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--108
+
+ []
+
+[51]
+Underfull \hbox (badness 10000) in paragraph at lines 121--122
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 129--130
+
+ []
+
+
+LaTeX Warning: Citation `javase' on page 52 undefined on input line 131.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 131--132
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
+
+ []
+
+[52]
+Underfull \hbox (badness 10000) in paragraph at lines 135--136
+
+ []
+
+[53]
+Overfull \hbox (12.46555pt too wide) in paragraph at lines 185--186
+[] []\OT1/cmr/bx/n/12 Writable streams.[][] \OT1/cmr/m/n/12 A writ[e]able strea
+m rep-re-sents a data des-ti-na-tion; in Node.js,
+ []
+
+[54]) [55]
+\openout2 = `kapitel/contribution.aux'.
+
+ (./kapitel/contribution.tex [56
+
+
+
+]
+Chapter 8.
+[57]
 Underfull \hbox (badness 10000) in paragraph at lines 24--25
 
  []
@@ -1191,20 +1468,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 35--36
 
  []
 
-[22] [23]
+[58] [59]
 Overfull \hbox (15.06499pt too wide) in paragraph at lines 90--104
 [] 
  []
 
-[24]) [25]
+[60]) [61]
 \openout2 = `kapitel/grafiken.aux'.
 
- (./kapitel/grafiken.tex [26
+ (./kapitel/grafiken.tex [62
 
 
 
 ]
-Chapter 7.
+Chapter 9.
 
 Underfull \hbox (badness 10000) in paragraph at lines 3--8
 
@@ -1232,110 +1509,115 @@ File: lstlang1.sty 2014/09/06 1.5e listings language file
 (./code/GuestbookForm.java.txt
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 8.
- [27])) [28] (./arbeit.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 8--11
+ [63])) [64] (./arbeit.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 11--14
 []\OT1/cmr/m/n/12 The bank busi-ness model for apis: Iden-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8--11
+Underfull \hbox (badness 10000) in paragraph at lines 11--14
 \OT1/cmr/m/n/12 tity.  [][]$\OT1/cmtt/m/n/12 http : / / tomorrowstransactions .
  com / 2015 / 03 /
  []
 
 
-Underfull \hbox (badness 2197) in paragraph at lines 17--20
+Underfull \hbox (badness 2197) in paragraph at lines 20--23
 []\OT1/cmr/m/n/12 Eur-lex - 32015l2366 - en - eur-lex.  [][]$\OT1/cmtt/m/n/12 h
 ttp : / / eur-[]lex . europa . eu /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--41
+Underfull \hbox (badness 10000) in paragraph at lines 41--44
 []\OT1/cmr/m/n/12 Ich m^^?ochte mehr zu eu-rer vi-sion er-fahren!  [][]$\OT1/cm
 tt/m/n/12 https :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--41
+Underfull \hbox (badness 10000) in paragraph at lines 41--44
 \OT1/cmtt/m/n/12 / / figo . zendesk . com / hc / de / articles / 200974801-[]Ic
 h-[]m % C3 %
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--53
+Underfull \hbox (badness 10000) in paragraph at lines 57--59
 []\OT1/cmr/m/n/12 Javascript.  [][]$\OT1/cmtt/m/n/12 https : / / developer . mo
 zilla . org / en-[]US / docs / Web /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--59
+Underfull \hbox (badness 10000) in paragraph at lines 61--65
 []\OT1/cmr/m/n/12 Lars markull's an-swer to what are the ben-e-fits of an api
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--59
+Underfull \hbox (badness 10000) in paragraph at lines 61--65
 \OT1/cmr/m/n/12 for a con-sumer bank? - quora.  [][]$\OT1/cmtt/m/n/12 https : /
  / www . quora . com /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--59
+Underfull \hbox (badness 10000) in paragraph at lines 61--65
 \OT1/cmtt/m/n/12 What-[]are-[]the-[]benefits-[]of-[]an-[]API-[]for-[]a-[]consum
 er-[]bank / answer /
  []
 
-[29
+[65
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 75--78
+Underfull \hbox (badness 10000) in paragraph at lines 88--91
 []\OT1/cmr/m/n/12 Test sheets.  [][]$\OT1/cmtt/m/n/12 http : / / swt . informat
 ik . uni-[]mannheim .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 75--78
+Underfull \hbox (badness 10000) in paragraph at lines 88--91
 \OT1/cmtt/m/n/12 de / de / research / research-[]topics / test-[]sheets /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--100
+Underfull \hbox (badness 10000) in paragraph at lines 113--116
 []\OT1/cmr/m/n/12 Wer sind eure part-ner? wie kann ich figo dort
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--100
+Underfull \hbox (badness 10000) in paragraph at lines 113--116
 \OT1/cmr/m/n/12 nutzen?  [][]$\OT1/cmtt/m/n/12 https : / / figo . zendesk . com
  / hc / de / articles /
  []
 
 
-Overfull \hbox (3.20154pt too wide) in paragraph at lines 97--100
+Overfull \hbox (3.20154pt too wide) in paragraph at lines 113--116
 \OT1/cmtt/m/n/12 200907292-[]Wer-[]sind-[]eure-[]Partner-[]Wie-[]kann-[]ich-[]f
 igo-[]dort-[]nutzen-[]$[][]\OT1/cmr/m/n/12 . 
  []
 
-[30]) [31] [32
+[66]) [67] [68
 
-] [33] [34] (./kapitel/append.tex
+] [69] [70] (./kapitel/append.tex
 Appendix A.
-) [35
+) [71
 
 ]
 \openout2 = `kapitel/erklaerung.aux'.
 
- (./kapitel/erklaerung.tex [36
+ (./kapitel/erklaerung.tex [72
 
 
 ])
-Underfull \hbox (badness 10000) in paragraph at lines 21--194
+Overfull \hbox (1.45341pt too wide) in paragraph at lines 21--195
+[]\OT1/cmr/m/n/12 Mannheim, Febru-ary 19, 2016  Un-ter-schrift 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--195
 
  []
 
-[37]
+[73]
 \openout2 = `kapitel/abtretungserklaerung.aux'.
 
- (./kapitel/abtretungserklaerung.tex [38
+ (./kapitel/abtretungserklaerung.tex [74
 
 
 
@@ -1352,32 +1634,41 @@ unbeschr^^?ankte Nutzungsrechte
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 20--197
+Overfull \hbox (1.45341pt too wide) in paragraph at lines 20--198
+[]\OT1/cmr/m/n/12 Mannheim, Febru-ary 19, 2016  Un-ter-schrift 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--198
 
  []
 
-[39]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 199.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 199.
+[75]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 200.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 200.
  (./arbeit.aux (./kapitel/titel.aux) (./kapitel/abstract.aux)
 (./kapitel/introduction.aux) (./kapitel/figo.aux) (./kapitel/testing.aux)
-(./kapitel/testSheets.aux) (./kapitel/nodejs.aux) (./kapitel/contribution.aux)
-(./kapitel/grafiken.aux) (./kapitel/erklaerung.aux)
-(./kapitel/abtretungserklaerung.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 199.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 199.
+(./kapitel/testSheets.aux) (./kapitel/realTime.aux) (./kapitel/nodejs.aux)
+(./kapitel/oop_fp.aux) (./kapitel/contribution.aux) (./kapitel/grafiken.aux)
+(./kapitel/erklaerung.aux) (./kapitel/abtretungserklaerung.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 200.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 200.
 Package rerunfilecheck Info: File `arbeit.out' has not changed.
-(rerunfilecheck)             Checksum: EBA322C9361B822D4CDBCD877B70DF8E;2025.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 199.
+(rerunfilecheck)             Checksum: 5E18A238AB3C071EE3EF9D61EC7FFE03;4935.
+
+
+LaTeX Warning: There were undefined references.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 200.
  ) 
 Here is how much of TeX's memory you used:
- 11207 strings out of 493089
- 170806 string characters out of 6134842
- 381314 words of memory out of 5000000
- 14257 multiletter control sequences out of 15000+600000
+ 11405 strings out of 493089
+ 174048 string characters out of 6134842
+ 382738 words of memory out of 5000000
+ 14340 multiletter control sequences out of 15000+600000
  9030 words of font info for 32 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,11n,56p,856b,1941s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,11n,56p,2417b,1941s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb>
@@ -1389,10 +1680,10 @@ cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local
 /texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/
 texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on arbeit.pdf (49 pages, 263766 bytes).
+Output written on arbeit.pdf (87 pages, 347977 bytes).
 PDF statistics:
- 675 PDF objects out of 1000 (max. 8388607)
- 604 compressed objects within 7 object streams
- 178 named destinations out of 1000 (max. 500000)
- 278 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1128 PDF objects out of 1200 (max. 8388607)
+ 1015 compressed objects within 11 object streams
+ 279 named destinations out of 1000 (max. 500000)
+ 598 words of extra memory for PDF output out of 10000 (max. 10000000)
 

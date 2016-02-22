@@ -4,8 +4,10 @@ var mocha = require('mocha');
 var sinon = require('sinon');
 
 var template = require('../lib/template');
+var compareAndReport = require('../lib/compare_and_report').f;
 
 var testSheetObject = require('./doublers/basicSheetObject');
+var generated = require('./doublers/generated');
 
 describe('Test coverage for template module', function() {
   it('should export an object', function(done) {
@@ -21,8 +23,18 @@ describe('Test coverage for template module', function() {
       done();
     });
 
-    it('should accept two parameters', function(done) {
-      assert.equal(template.applyTemplate.length, 2);
+    it('should accept three parameters', function(done) {
+      assert.equal(template.applyTemplate.length, 3);
+
+      done();
+    });
+
+    it('should generate string content for executable javascript file', function(done) {
+      assert.deepEqual(template.applyTemplate(testSheetObject.Sheets.Sheet1, testSheetObject.transformedScheme, testSheetObject.refScheme),
+      template.addDescription('Create new bank account')
+      + generated.requires
+      + generated.assignment
+      + generated.callback_hell);
 
       done();
     });
@@ -42,7 +54,7 @@ describe('Test coverage for template module', function() {
     });
 
     it('should return string with description enclosed in comment', function(done) {
-      assert.equal(template.addDescription('description'), '/*\n description \n */');
+      assert.equal(template.addDescription('description'), '/*\n description \n */\n');
 
       done();
     });
@@ -62,33 +74,30 @@ describe('Test coverage for template module', function() {
     });
 
     it('should return string with require applied to the input parameter', function(done) {
-      assert.equal(template.makeRequires(), 'var scrapBase = require(\'../../banking/scraping/nodeBase\');'
-      + '\n var assert = require(\'assert\');'
-      + '\n');
+      assert.equal(template.makeRequires(), generated.requires);
 
       done();
     });
   });
 
-  // describe('Test coverage for makeCall', function() {
-  //   it('should have makeCall function', function(done) {
-  //     assert.equal(typeof template.makeCall, 'function');
-  //
-  //     done();
-  //   });
-  //
-  //   it('should accept two parameters', function(done) {
-  //     assert.equal(template.makeCall.length, 2);
-  //
-  //     done();
-  //   });
-  //
-  //   it('should return call string', function(done) {
-  //     assert.equal(template.makeCall('script', 'arguments'), 'scrapBase.prototype.execScript(this, \'script\', arguments, ' + template.compare.toString() + ');');
-  //
-  //     done();
-  //   });
-  // });
+  describe('Test coverage for makeCalls', function() {
+    it('should have makeCalls function', function(done) {
+      assert.equal(typeof template.makeCalls, 'function');
+
+      done();
+    });
+
+    it('should accept four parameters', function(done) {
+      assert.equal(template.makeCalls.length, 4);
+
+      done();
+    });
+    it('should recurively build callback-hell of calls', function(done) {
+      assert.equal(template.makeCalls(testSheetObject.Sheets.Sheet1, testSheetObject.transformedSchemeCallsOnly, 0, ''), generated.callback_hell);
+
+      done();
+    });
+  });
 
   describe('Test coverage for getValue function', function() {
     it('should have getValue function', function(done) {
@@ -110,43 +119,42 @@ describe('Test coverage for template module', function() {
     });
   });
 
-  describe('Test coverage for function getRow', function() {
-    it('should have function getRow', function(done) {
-      assert.equal(typeof template.getRow, 'function');
+  describe('Test coverage for schemeToArray function', function() {
+    it('should have schemeToArray function', function(done) {
+      assert.equal(typeof template.schemeToArray, 'function');
 
       done();
     });
 
-    it('should accept three parameters', function(done) {
-      assert.equal(template.getRow.length, 3);
+    it('should accept one paramter scheme', function(done) {
+      assert.equal(template.schemeToArray.length, 1);
 
       done();
     });
 
-    it('should return object with values from the provided row in a provided sheet', function(done) {
-      assert.deepEqual(template.getRow(testSheetObject.Sheets.Sheet1, 1, testSheetObject.transformedScheme), { description: 'Create new bank account' });
-
-      assert.deepEqual(template.getRow(testSheetObject.Sheets.Sheet1, 2, testSheetObject.transformedScheme), { moduleUnderTest: 'module_under_test.js' });
-
-      assert.deepEqual(template.getRow(testSheetObject.Sheets.Sheet1, 3, testSheetObject.transformedScheme), testSheetObject.thirdRow);
+    it('should transform scheme object to array of objects each of which represents a line below service lines', function(done){
+      assert.deepEqual(template.schemeToArray(testSheetObject.transformedScheme), testSheetObject.transformedSchemeCallsOnly);
 
       done();
     });
   });
 
-  describe('Test coverage for translateRow function', function() {
-    it('should have translateRow function', function(done) {
-      assert.equal(typeof template.translateRow, 'function');
+  describe('Test coverage for makeDeclarations function', function(){
+    it('should have makeDeclarations function', function(done) {
+      assert.equal(typeof template.makeDeclarations, 'function');
+
+      done();
+    });
+    it('should accept two parameters', function(done) {
+      assert.equal(template.makeDeclarations.length, 2);
 
       done();
     });
 
-    it('should accpet one parameter', function(done) {
-      assert.equal(template.translateRow.length, 1);
+    it('should assign value of each non-service cell except to the variable with name of its cordinates', function(done) {
+      assert.equal(template.makeDeclarations(testSheetObject.Sheets.Sheet1, testSheetObject.refScheme), generated.assignment);
 
       done();
     });
   });
-
-
 });

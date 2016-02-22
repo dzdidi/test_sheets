@@ -25,7 +25,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 */
 
-var readStream = require('./lib/read_stream');
-var writeStream = require('./lib/write_stream');
+var stream = require('./lib/stream');
 
-readStream('./simpleTS').pipe(writeStream);
+
+stream.read('./simpleTS').pipe(stream.transform).pipe(stream.write);

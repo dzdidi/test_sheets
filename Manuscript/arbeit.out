@@ -7,28 +7,68 @@
 \BOOKMARK [1][-]{section.2.1}{General Information}{chapter.2}% 7
 \BOOKMARK [1][-]{section.2.2}{IT infrastructure}{chapter.2}% 8
 \BOOKMARK [2][-]{subsection.2.2.1}{Banking Server Architecture}{section.2.2}% 9
-\BOOKMARK [2][-]{subsection.2.2.2}{Web scraping}{section.2.2}% 10
-\BOOKMARK [2][-]{subsection.2.2.3}{CasperJS}{section.2.2}% 11
-\BOOKMARK [0][-]{chapter.3}{Testing}{}% 12
-\BOOKMARK [1][-]{section.3.1}{Test Driven Development}{chapter.3}% 13
-\BOOKMARK [1][-]{section.3.2}{Requirements for tests \(F. I. R. S. T.\)}{chapter.3}% 14
-\BOOKMARK [1][-]{section.3.3}{Dependability lyu}{chapter.3}% 15
-\BOOKMARK [1][-]{section.3.4}{Real Time Testing}{chapter.3}% 16
-\BOOKMARK [1][-]{section.3.5}{Reliability testing}{chapter.3}% 17
-\BOOKMARK [0][-]{chapter.4}{Test Sheets}{}% 18
-\BOOKMARK [1][-]{section.4.1}{Basic Test Sheets}{chapter.4}% 19
-\BOOKMARK [1][-]{section.4.2}{High Order, Parameterized Test Sheets}{chapter.4}% 20
-\BOOKMARK [0][-]{chapter.5}{NodeJS}{}% 21
-\BOOKMARK [0][-]{chapter.6}{Contributions}{}% 22
-\BOOKMARK [1][-]{section.6.1}{Requirements analysis}{chapter.6}% 23
-\BOOKMARK [1][-]{section.6.2}{Conventions}{chapter.6}% 24
-\BOOKMARK [1][-]{section.6.3}{Use Case}{chapter.6}% 25
-\BOOKMARK [1][-]{section.6.4}{Architecture}{chapter.6}% 26
-\BOOKMARK [1][-]{section.6.5}{Design and Implementation}{chapter.6}% 27
-\BOOKMARK [2][-]{subsection.6.5.1}{Reader}{section.6.5}% 28
-\BOOKMARK [2][-]{subsection.6.5.2}{Writer}{section.6.5}% 29
-\BOOKMARK [0][-]{chapter.7}{Implementierung}{}% 30
-\BOOKMARK [0][-]{appendix*.21}{Bibliography}{}% 31
-\BOOKMARK [-1][-]{section*.22}{Appendix}{}% 32
-\BOOKMARK [0][-]{appendix.A}{First class of appendices}{section*.22}% 33
-\BOOKMARK [1][-]{section.A.1}{Some appendix}{appendix.A}% 34
+\BOOKMARK [0][-]{chapter.3}{Testing}{}% 10
+\BOOKMARK [1][-]{section.3.1}{Test Driven Development}{chapter.3}% 11
+\BOOKMARK [1][-]{section.3.2}{Requirements for tests \(F. I. R. S. T.\)}{chapter.3}% 12
+\BOOKMARK [1][-]{section.3.3}{Reliability testing}{chapter.3}% 13
+\BOOKMARK [0][-]{chapter.4}{Test Sheets}{}% 14
+\BOOKMARK [1][-]{section.4.1}{Basic Test Sheets}{chapter.4}% 15
+\BOOKMARK [1][-]{section.4.2}{High Order, Parameterized Test Sheets}{chapter.4}% 16
+\BOOKMARK [0][-]{chapter.5}{Real Time Software}{}% 17
+\BOOKMARK [1][-]{section.5.1}{Dependability lyu}{chapter.5}% 18
+\BOOKMARK [1][-]{section.5.2}{Real Time Testing}{chapter.5}% 19
+\BOOKMARK [0][-]{chapter.6}{Technology}{}% 20
+\BOOKMARK [1][-]{section.6.1}{Web scraping}{chapter.6}% 21
+\BOOKMARK [2][-]{subsection.6.1.1}{CasperJS}{section.6.1}% 22
+\BOOKMARK [1][-]{section.6.2}{NodeJS and Ansynchronous programming}{chapter.6}% 23
+\BOOKMARK [2][-]{subsection.6.2.1}{NodeJS}{section.6.2}% 24
+\BOOKMARK [2][-]{subsection.6.2.2}{Event handling}{section.6.2}% 25
+\BOOKMARK [1][-]{section.6.3}{General Theory of Reactivity}{chapter.6}% 26
+\BOOKMARK [2][-]{subsection.6.3.1}{Concepts}{section.6.3}% 27
+\BOOKMARK [2][-]{subsection.6.3.2}{Singular and plural}{section.6.3}% 28
+\BOOKMARK [2][-]{subsection.6.3.3}{Plural and temporal}{section.6.3}% 29
+\BOOKMARK [2][-]{subsection.6.3.4}{Primitives}{section.6.3}% 30
+\BOOKMARK [3][-]{subsubsection.6.3.4.1}{Iterators}{subsection.6.3.4}% 31
+\BOOKMARK [3][-]{subsubsection.6.3.4.2}{Generator Functions}{subsection.6.3.4}% 32
+\BOOKMARK [3][-]{subsubsection.6.3.4.3}{Generators}{subsection.6.3.4}% 33
+\BOOKMARK [3][-]{subsubsection.6.3.4.4}{Asynchronous Values}{subsection.6.3.4}% 34
+\BOOKMARK [3][-]{subsubsection.6.3.4.5}{Asynchronous Functions}{subsection.6.3.4}% 35
+\BOOKMARK [3][-]{subsubsection.6.3.4.6}{Promise Queues}{subsection.6.3.4}% 36
+\BOOKMARK [3][-]{subsubsection.6.3.4.7}{Semaphores}{subsection.6.3.4}% 37
+\BOOKMARK [3][-]{subsubsection.6.3.4.8}{Promise Buffers}{subsection.6.3.4}% 38
+\BOOKMARK [3][-]{subsubsection.6.3.4.9}{Promise Iterators}{subsection.6.3.4}% 39
+\BOOKMARK [3][-]{subsubsection.6.3.4.10}{Promise Generators}{subsection.6.3.4}% 40
+\BOOKMARK [3][-]{subsubsection.6.3.4.11}{Asynchronous Generator Functions}{subsection.6.3.4}% 41
+\BOOKMARK [3][-]{subsubsection.6.3.4.12}{Observables}{subsection.6.3.4}% 42
+\BOOKMARK [3][-]{subsubsection.6.3.4.13}{Observables and Signals}{subsection.6.3.4}% 43
+\BOOKMARK [3][-]{subsubsection.6.3.4.14}{Behaviors}{subsection.6.3.4}% 44
+\BOOKMARK [3][-]{subsubsection.6.3.4.15}{Cases}{subsection.6.3.4}% 45
+\BOOKMARK [2][-]{subsection.6.3.5}{Summary}{section.6.3}% 46
+\BOOKMARK [2][-]{subsection.6.3.6}{Further Work}{section.6.3}% 47
+\BOOKMARK [1][-]{section.6.4}{Approaches for asynchronous information flow handling}{chapter.6}% 48
+\BOOKMARK [1][-]{section.6.5}{Stream}{chapter.6}% 49
+\BOOKMARK [2][-]{subsection.6.5.1}{Anatomy of Streams}{section.6.5}% 50
+\BOOKMARK [2][-]{subsection.6.5.2}{Piping patterns}{section.6.5}% 51
+\BOOKMARK [1][-]{section.6.6}{Performance measurements by Gorgi Kosev}{chapter.6}% 52
+\BOOKMARK [1][-]{section.6.7}{Asynchronous Programming}{chapter.6}% 53
+\BOOKMARK [0][-]{chapter.7}{OOP and FP}{}% 54
+\BOOKMARK [1][-]{section.7.1}{Object Oriented Programming}{chapter.7}% 55
+\BOOKMARK [2][-]{subsection.7.1.1}{Design Principles}{section.7.1}% 56
+\BOOKMARK [2][-]{subsection.7.1.2}{Design Patterns}{section.7.1}% 57
+\BOOKMARK [1][-]{section.7.2}{Functional Programming}{chapter.7}% 58
+\BOOKMARK [1][-]{section.7.3}{Streams}{chapter.7}% 59
+\BOOKMARK [2][-]{subsection.7.3.1}{Anatomy of Streams}{section.7.3}% 60
+\BOOKMARK [2][-]{subsection.7.3.2}{Piping patterns}{section.7.3}% 61
+\BOOKMARK [0][-]{chapter.8}{Contributions}{}% 62
+\BOOKMARK [1][-]{section.8.1}{Requirements analysis}{chapter.8}% 63
+\BOOKMARK [1][-]{section.8.2}{Conventions}{chapter.8}% 64
+\BOOKMARK [1][-]{section.8.3}{Use Case}{chapter.8}% 65
+\BOOKMARK [1][-]{section.8.4}{Architecture}{chapter.8}% 66
+\BOOKMARK [1][-]{section.8.5}{Design and Implementation}{chapter.8}% 67
+\BOOKMARK [2][-]{subsection.8.5.1}{Reader}{section.8.5}% 68
+\BOOKMARK [2][-]{subsection.8.5.2}{Writer}{section.8.5}% 69
+\BOOKMARK [0][-]{chapter.9}{Implementierung}{}% 70
+\BOOKMARK [0][-]{appendix*.34}{Bibliography}{}% 71
+\BOOKMARK [-1][-]{section*.35}{Appendix}{}% 72
+\BOOKMARK [0][-]{appendix.A}{First class of appendices}{section*.35}% 73
+\BOOKMARK [1][-]{section.A.1}{Some appendix}{appendix.A}% 74
