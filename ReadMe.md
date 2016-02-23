@@ -24,6 +24,8 @@ Following conventions should be followed for Test Sheet passed verification.
  * Number of columns within one TS should not exceed 26 columns *(from A to Z)*;
  * Invocation delimiters must be allocated within single column the *(aligned to the longest row)*;
  * References to the columns with expected returns columns will take as value actual return value obtained from method execution;
+ * References should be defined only to cells in one of the previous row;
+ * Order of input parameters is following 1)`credentials`, 2)`pin`, 3)`tan`, 4)`port` (some are optional);
  * Files extensions should be `.xlsx`.
 
 ###  Basic Test Sheets

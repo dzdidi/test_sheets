@@ -31,7 +31,7 @@ describe('Test coverage for template module', function() {
 
     it('should generate string content for executable javascript file', function(done) {
       assert.deepEqual(template.applyTemplate(testSheetObject.Sheets.Sheet1, testSheetObject.transformedScheme, testSheetObject.refScheme),
-      template.addDescription('Create new bank account')
+      template.addDescription('Test for tranlation to js file')
       + generated.requires
       + generated.assignment
       + generated.callback_hell);
@@ -113,8 +113,8 @@ describe('Test coverage for template module', function() {
     });
 
     it('should return value from the cell in provided sheet', function(done) {
-      assert.equal(template.getValue(testSheetObject.Sheets.Sheet1, 'A1'), 'Create new bank account');
-      assert.equal(template.getValue(testSheetObject.Sheets.Sheet1, 'C4'), 'input1');
+      assert.equal(template.getValue(testSheetObject.Sheets.Sheet1, 'A1'), 'Test for tranlation to js file');
+      assert.equal(template.getValue(testSheetObject.Sheets.Sheet1, 'C4'), ' {  "countryCode": "280",\n    "custID": "",\n    "custID2": "",\n    "hbciVersion": "0",\n    "language": 1,\n    "url": "bawagPSK.js",\n    "userID": "64769092",\n    "pin": "38567" }');
       done();
     });
   });
@@ -152,9 +152,43 @@ describe('Test coverage for template module', function() {
     });
 
     it('should assign value of each non-service cell except to the variable with name of its cordinates', function(done) {
-      assert.equal(template.makeDeclarations(testSheetObject.Sheets.Sheet1, testSheetObject.refScheme), generated.assignment);
+      var scheme = template.schemeToArray(testSheetObject.transformedScheme);
+      assert.equal(template.makeDeclarations(testSheetObject.Sheets.Sheet1, scheme), generated.assignment);
 
       done();
     });
   });
+
+  // describe('Test coverage for getScrappingInputs function', function() {
+  //   it('should have getScrappingInputs function', function(done) {
+  //     assert.equal(typeof template.getScrappingInputs, 'function');
+  //
+  //     done();
+  //   });
+  //
+  //   it('should accept two parameters', function(done) {
+  //     assert.equal(template.getScrappingInputs.length, 2);
+  //
+  //     done();
+  //   });
+  //
+  //   it('should return object', function(done) {
+  //     assert.equal(typeof template.getScrappingInputs(testSheetObject.Sheets.Sheet1, testSheetObject.transformedScheme[3]), 'object');
+  //
+  //     done();
+  //   });
+  //
+  //   it('should from input cells of the sheet have \'credentials\', \'pin\', \'tasks\', \'port\', \'tan\'', function(done) {
+  //     var res = template.getScrappingInputs(testSheetObject.Sheets.Sheet1, testSheetObject.transformedScheme[3]);
+  //     var expected = {  script: 'BankAustria',
+  //                       credentials: 'C3',
+  //                       pin: 'D3',
+  //                       tasks: [ 'getAccounts' ],
+  //                       port: null,
+  //                       tan: 'E3' };
+  //
+  //     assert.deepEqual(res, expected);
+  //     done();
+  //   });
+  // });
 });
