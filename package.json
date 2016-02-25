@@ -4,8 +4,7 @@
   "description": "Master Thesis project for implementation of a software for generation of a real-time web-page tests from a provided test sheets.",
   "main": "index.js",
   "scripts": {
-    "test": " NODE_ENV=testing mocha",
-    "poststart" : "npm install -g ./compare_and_report"
+    "test": " NODE_ENV=testing mocha"
   },
   "repository": {
     "type": "git",

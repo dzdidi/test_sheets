@@ -59,40 +59,40 @@ describe('Test coverage for template module', function() {
     });
   });
 
-  describe('Test coverage for a makeRequires', function() {
-    it('should have makeRequires function', function(done) {
-      assert.equal(typeof template.makeRequires, 'function');
+  describe('Test coverage for a addRequires', function() {
+    it('should have addRequires function', function(done) {
+      assert.equal(typeof template.addRequires, 'function');
 
       done();
     });
 
     it('should accept zero parameters', function(done) {
-      assert.equal(template.makeRequires.length, 0);
+      assert.equal(template.addRequires.length, 0);
 
       done();
     });
 
     it('should return string with require applied to the input parameter', function(done) {
-      assert.equal(template.makeRequires(), generated.requires);
+      assert.equal(template.addRequires(), generated.requires);
 
       done();
     });
   });
 
-  describe('Test coverage for makeCalls', function() {
-    it('should have makeCalls function', function(done) {
-      assert.equal(typeof template.makeCalls, 'function');
+  describe('Test coverage for addCalls', function() {
+    it('should have addCalls function', function(done) {
+      assert.equal(typeof template.addCalls, 'function');
 
       done();
     });
 
     it('should accept four parameters', function(done) {
-      assert.equal(template.makeCalls.length, 4);
+      assert.equal(template.addCalls.length, 4);
 
       done();
     });
     it('should recurively build callback-hell of calls', function(done) {
-      assert.equal(template.makeCalls(testSheetObject.Sheets.Sheet1, testSheetObject.transformedSchemeCallsOnly, 0, ''), generated.callback_hell);
+      assert.equal(template.addCalls(testSheetObject.Sheets.Sheet1, testSheetObject.transformedSchemeCallsOnly, 0, ''), generated.callback_hell);
 
       done();
     });
@@ -138,56 +138,23 @@ describe('Test coverage for template module', function() {
     });
   });
 
-  describe('Test coverage for makeDeclarations function', function(){
-    it('should have makeDeclarations function', function(done) {
-      assert.equal(typeof template.makeDeclarations, 'function');
+  describe('Test coverage for addDeclarations function', function(){
+    it('should have addDeclarations function', function(done) {
+      assert.equal(typeof template.addDeclarations, 'function');
 
       done();
     });
     it('should accept two parameters', function(done) {
-      assert.equal(template.makeDeclarations.length, 2);
+      assert.equal(template.addDeclarations.length, 2);
 
       done();
     });
 
     it('should assign value of each non-service cell except to the variable with name of its cordinates', function(done) {
       var scheme = template.schemeToArray(testSheetObject.transformedScheme);
-      assert.equal(template.makeDeclarations(testSheetObject.Sheets.Sheet1, scheme), generated.assignment);
+      assert.equal(template.addDeclarations(testSheetObject.Sheets.Sheet1, scheme), generated.assignment);
 
       done();
     });
   });
-
-  // describe('Test coverage for getScrappingInputs function', function() {
-  //   it('should have getScrappingInputs function', function(done) {
-  //     assert.equal(typeof template.getScrappingInputs, 'function');
-  //
-  //     done();
-  //   });
-  //
-  //   it('should accept two parameters', function(done) {
-  //     assert.equal(template.getScrappingInputs.length, 2);
-  //
-  //     done();
-  //   });
-  //
-  //   it('should return object', function(done) {
-  //     assert.equal(typeof template.getScrappingInputs(testSheetObject.Sheets.Sheet1, testSheetObject.transformedScheme[3]), 'object');
-  //
-  //     done();
-  //   });
-  //
-  //   it('should from input cells of the sheet have \'credentials\', \'pin\', \'tasks\', \'port\', \'tan\'', function(done) {
-  //     var res = template.getScrappingInputs(testSheetObject.Sheets.Sheet1, testSheetObject.transformedScheme[3]);
-  //     var expected = {  script: 'BankAustria',
-  //                       credentials: 'C3',
-  //                       pin: 'D3',
-  //                       tasks: [ 'getAccounts' ],
-  //                       port: null,
-  //                       tan: 'E3' };
-  //
-  //     assert.deepEqual(res, expected);
-  //     done();
-  //   });
-  // });
 });

@@ -1,9 +1,8 @@
 /*
 TODO
 
-1) Proper implementation of makeComparisonAndWriteResult
-2) Proper implementation of report
-3) Handling for references
+1) Proper implementation of report
+
 */
 
 var assert = require('assert');
