@@ -4,7 +4,6 @@ var mocha = require('mocha');
 var sinon = require('sinon');
 
 var template = require('../lib/template');
-var compareAndReport = require('../lib/compare_and_report').f;
 
 var testSheetObject = require('./doublers/basicSheetObject');
 var generated = require('./doublers/generated');
