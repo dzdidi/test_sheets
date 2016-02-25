@@ -3,7 +3,7 @@ var assert = require('chai').assert;
 var mocha = require('mocha');
 var sinon = require('sinon');
 
-var schemeReference = require('../lib/scheme_reference');
+var schemeReference = require('../lib/scheme').makeReference;
 
 var testSheetObject = require('./doublers/basicSheetObject');
 

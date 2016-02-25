@@ -1,0 +1,37 @@
+\chapter{Implementierung}
+
+Zusammen mit dem Betreuer werden use-cases entwickelt anhand deren die
+Software programmiert werden soll. Diese dienen auch als Bewertungsgrundlage.\\
+\\
+Die allgemein empfohlene Verzeichnisstruktur eines Projektes sieht wie folgt
+aus:
+
+\begin{itemize}
+\item projektname
+  \begin{itemize}
+  \item bin
+  \item doc
+  \item lib
+  \item src
+  \end{itemize}
+\end{itemize}
+
+Die zu erstellende Software soll im package
+de.uni\_mannheim.informatik.swt.\texttt{projektname} unter \texttt{src} liegen.\\
+\\
+Bei der Programmierung sollte durchgängig die englische Sprache verwendet
+werden. Hierzu zählen insbesondere Kommentare im Quellcode, Namen von
+Funktionen, Variable, Menüpunkte im Benutzerinterface, kurze
+Hilfestellungen und Ausgaben von Programmen.\\
+\\
+Der Code sollte mit Hilfe von \texttt{lstinputlisting} formatiert und ausgegeben werden, wie in folgendem Beispiel:
+
+\lstinputlisting[
+  language=Java, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
+  basicstyle=\footnotesize,
+  numberstyle=\tiny,
+  caption={GuestbookForm.java},
+  captionpos=b,
+  label=GuestbookForm
+]
+{code/GuestbookForm.java.txt}

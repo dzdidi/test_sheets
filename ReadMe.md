@@ -21,8 +21,12 @@ Execution stages:
  # Conventions for definitions of Test Sheets
 Following conventions should be followed for Test Sheet passed verification.
 ### General
- * Number of columns within one TS should not exceed 26 columns *(from A to Z)*
- * Invocation delimiters must be allocated within single column the *(aligned to the longest row)*
+ * Number of columns within one TS should not exceed 26 columns *(from A to Z)*;
+ * Invocation delimiters must be allocated within single column the *(aligned to the longest row)*;
+ * References to the columns with expected returns columns will take as value actual return value obtained from method execution;
+ * References should be defined only to cells in one of the previous row;
+ * Order of input parameters is following 1)`credentials`, 2)`pin`, 3)`tan`, 4)`port` (some are optional);
+ * Files extensions should be `.xlsx`.
 
 ###  Basic Test Sheets
  * file extension .xlsx
@@ -31,7 +35,7 @@ Following conventions should be followed for Test Sheet passed verification.
  * `A3..n` - name of the class/object under the test;
  * `B3..n` - name of the method from representative class *(same row)* under the test;
  * `C2..n` to **Invocation Column**   - input parameters for representative method *(same row)* under the test;
- * **Invocation Column** - the column for separation of input values from expected output value*(s)* filled with `|` (pipe) as a cells values until the last line which includes objects under tests;
+ * **Invocation Column** - the column for separation of input values from expected output value(s) filled with `|` (pipe)(for comparison by scheme and data types) `||` (two pipes)(for deep comparison - by scheme, data types and values) as a cells values until the last line which includes objects under tests;
  * **Expected Return** - column*(s)* after invocation line.
 
  ### Non-Linear Test Sheets

@@ -1,0 +1,86 @@
+\chapter{How to use the template}
+\label{chap:howto}
+
+In this first chapter a very short overview on basic handling of this template is given. All users of kile are lucky as configuration instructions are provided only for this latex editor.
+\section{General structure}
+\label{sec:generalStructure}
+The structure provided with this template and recommended for use is as follows: The main TeX file ``arbeit.tex" is placed in the root directory of the project. All configuration tasks should be done in this main file. This way, one may concentrate on writing rather than bothering with formatting the layout in the single chapters. Figures are placed in the folder ''grafiken`` and the chapters as single files in ''kapitel``. In the directory ''literatur`` there are bibliography styles and the bib file ''lit.bib`` that contains your references. More detailed information on some packages used by the template can be found in directory ''doc``. 
+
+\section{Compilation}
+\label{sec:compilation}
+This template should be used with latex/pdflatex (text, figures), bibtex (bibliography) and makeindex (table of contents). It is recommendable to use a compilation sequence for the root file as follows: latex (2x), bibtex, makeindex, latex(2x). If you want to create a pdf file just run pdflatex after a full compilation sequence.
+
+Furthermore, you must configure your invocation of makeindex. It should look like: ''makeindex arbeit.nlo -s nomencl.ist -o arbeit.nls''. For kile you may configure the options of makeindex in Settings -- Configure Kile -- Tools -- Build -- MakeIndex to ''\%S.nlo -s nomencl.ist -o \%S.nls``. The files arbeit.nlo and arbeit.nls must be present but may be empty. So if there are no files with the main file's name and the extensions nlo and nls just create empty ones.
+
+It is convenient to work with dvi files as working copies and to run pdf latex only once in a while to see a pdf file with hyperlinks.
+
+ To define a compilation sequence in kile go to Settings -- Configure Kile -- Tools -- Build -- QuickBuild. There you may set the sequence, e.g.\ to: latex, latex, bibtex, makeindex, latex, latex, xdvi (where xdvi is a dvi viewing program). 
+ 
+ In short, there are two possible compilation sequences.
+ 
+ Compilation sequence for dvi:
+ \begin{enumerate}
+  \item latex
+  \item latex
+  \item bibtex
+  \item makeindex (make sure it is configured correctly or you will catch odd errors)
+  \item latex
+  \item latex
+ \end{enumerate}
+ 
+ Compilation sequence for pdf:
+ \begin{enumerate}
+  \item latex
+  \item latex
+  \item bibtex
+  \item makeindex (make sure it is configured correctly or you will catch odd errors)
+  \item latex
+  \item latex
+  \item pdflatex
+ \end{enumerate}
+  
+
+
+\section{Languages}
+\label{sec:languages}
+This template is configurable for English and German papers. The entire configuration should be done in the root file ''arbeit.tex``. To set a language, there are three commands to edit in the root file: \begin{enumerate}
+                                                                                                             \item the bibliography style at the end of the document must fit the language. For each language there is at least one predefined version you may choose. Look for the ''bibliographystyle`` tag. Comments are in place explaining what they are about.
+\item change the headline of the list of abbreviations to a suitable version. Look for the ''nomname`` tag.
+\item use an appropriate selectlanguage command and remove the other ones.
+                                                                                                             \end{enumerate}
+
+
+\section{Abbreviations}
+\label{sec:abbreviations}
+
+The package nomencl is used to create a list of abbreviations. To add an entry to the list use ``abbrev``. This is an example for ''telecommunications company''\abbrev{TC}{telecommunications company}. To create the list run (pdf-)latex twice, then run ''makeindex myfile.nlo -s nomencl.ist -o myfile.nls`` where ''myfile`` is to be replaced with the name of the root file (e.g.\ ''arbeit''). Run latex twice more and the list of abbreviations is complete.
+
+
+\section{Citations}
+\label{sec:citations}
+
+The citation style used is called natbib and can be used to do numerical and author-year citations. To create the bibliography the bibliography style natdin is used as a basis. The respective .sty-file is located in the directory literatur. More information can be found on \url{http://merkel.zoneo.net/Latex/natbib.php} or in the directory ``doc''. Adjust the file arbeit.tex to fit your needs. Read the comments, some may help you. 
+
+\subsection{The bib file}
+\label{subsec:theBibFile}
+
+The bibliography file is placed in the directory literatur and is called lit.bib. In the lit.bib file you will find different annotations to be used for different kinds of papers. This effects their representation in the bibliography.
+
+\subsection{Citations}
+\label{subsec:citations}
+
+Talking about a paper one may want to do a citation in the text using citet as in \citet{COMITY}. Alternatively parenthesis may be useful \citep{tannenbaum}. It is also possible to add more information like the pages of a book one refers to \citep[pp. 222-333]{tannenbaum}. \citet{ECORA}, \citet{random}, \citet{habil} and \citet{master} are in text citations. There is the Web Ontology Language \abbrev{OWL}{Web Ontology Language} \citep{OWL} as an example of an electronic resource.
+
+There are three slightly different bib styles in the directory literatur. First, the native natdin.bst for DIN citations in German. Second, a slightly modified version ''natdinCustomized''. This style has minor changes in punctuation and is therefore not conform to DIN 1505. Third, an English translation of the latter is provided. Choose your bibliographystyle at the end of the root file (arbeit.tex).
+
+Several options for citations and the bibliography may be configured in the root file as usepackage parameters for natbib, e.g.\ the type of brackets used. See natnotes.pdf in the directory ``doc'' for more information. Additionally, for very detailed configuration it is possible to use the file ``natbib.cfg'' in the root directory to override predefined parameters.
+
+\section{Table of Contents}
+\label{sec:toc}
+
+To create a nice table of contents the package tocstyle is used. Configuration options can be found in tocstyle.pdf located in ``doc''.
+
+\section{Troubleshooting}
+\label{sec:troubleshooting}
+
+Use the provided information in log messages. If changes you made do not appear in the document, recompile twice (including 2x latex, bibtex, makeindex).

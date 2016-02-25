@@ -3,7 +3,7 @@ var assert = require('chai').assert;
 var mocha = require('mocha');
 var sinon = require('sinon');
 
-var schemeTransformer = require('../lib/scheme_transformer');
+var schemeTransformer = require('../lib/scheme').transform;
 
 var testSheetObject = require('./doublers/basicSheetObject');
 

@@ -1,0 +1,207 @@
+\begin{thebibliography}{10}
+
+\bibitem{nodejsabout}
+About node.js®.
+\newblock \url{https://nodejs.org/en/about/}.
+
+\bibitem{asyncA}
+Analysis of generators and other async patterns in node.
+
+\bibitem{DaveAPI}
+The bank business model for apis: Identity.
+\newblock
+  \url{http://tomorrowstransactions.com/2015/03/the-bank-business-model-for-apis-identity/}.
+
+\bibitem{casperjs}
+Casperjs.
+\newblock \url{http://casperjs.org/}.
+
+\bibitem{PSD2}
+Eur-lex - 32015l2366 - en - eur-lex.
+\newblock
+  \url{http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32015L2366s}.
+
+\bibitem{figoAngel}
+figo | angel list.
+\newblock \url{https://angel.co/figo-1}.
+
+\bibitem{figoCB}
+figo | crunchbase.
+\newblock \url{https://www.crunchbase.com/organization/figo\#/entity}.
+
+\bibitem{figoAPI}
+figo api reference.
+\newblock \url{http://docs.figo.io/}.
+
+\bibitem{finTS}
+Fints - wikipedia, free encyclopedia.
+\newblock \url{https://en.wikipedia.org/wiki/FinTS}.
+
+\bibitem{figoFAQVision}
+Ich möchte mehr zu eurer vision erfahren!
+\newblock
+  \url{https://figo.zendesk.com/hc/de/articles/200974801-Ich-m\%C3\%B6chte-mehr-zu-eurer-Vision-erfahren-}.
+
+\bibitem{ieeeTesting}
+Ieee sa - 829-2008 - ieee standard for software and system test documentation.
+
+\bibitem{tdd}
+Iintroduction to test driven development (tdd).
+\newblock \url{http://www.agiledata.org/essays/tdd.html}.
+
+\bibitem{libuvBasic}
+An introduction to libuv: Basics of libuv.
+\newblock \url{http://nikhilm.github.io/uvbook/basics.html}.
+
+\bibitem{mozillaJS}
+Javascript.
+\newblock \url{https://developer.mozilla.org/en-US/docs/Web/JavaScript}.
+
+\bibitem{LarsAPI}
+Lars markull's answer to what are the benefits of an api for a consumer bank? -
+  quora.
+\newblock
+  \url{https://www.quora.com/What-are-the-benefits-of-an-API-for-a-consumer-bank/answer/Lars-Markull?srid=hmj2\&share=267222bd}.
+
+\bibitem{oosite}
+Object oriented design patterns.
+\newblock \url{http://www.oodesign.com/}.
+
+\bibitem{TimAPI}
+Open banking apis: Threat and opportunity | consult hyperion.
+\newblock \url{http://www.chyp.com/open-banking-apis-threat-and-opportunity/}.
+
+\bibitem{nodejsstreams}
+Stream: Node.js v5.4.1 documentation.
+
+\bibitem{ts}
+Test sheets.
+\newblock
+  \url{http://swt.informatik.uni-mannheim.de/de/research/research-topics/test-sheets/}.
+
+\bibitem{tsb}
+Test sheets.
+\newblock
+  \url{http://swt.informatik.uni-mannheim.de/de/research/research-topics/test-sheets/basic-test-sheets/}.
+
+\bibitem{tsh}
+Test sheets.
+\newblock
+  \url{http://swt.informatik.uni-mannheim.de/de/research/research-topics/test-sheets/parameterized-and-higher-order-test-sheets/}.
+
+\bibitem{nodejscontributors}
+Top npm contributors by number of packages.
+
+\bibitem{w3cDOM}
+W3c document object notation.
+\newblock \url{https://www.w3.org/DOM/#what}.
+
+\bibitem{figoFAQWhat}
+Was ist figo und was macht ihr?
+\newblock
+  \url{https://figo.zendesk.com/hc/de/articles/200862101-Was-ist-figo-und-was-macht-ihr-}.
+
+\bibitem{wikiScraping}
+Web scraping - wikipedia free encyclopedia.
+\newblock \url{https://en.wikipedia.org/wiki/Web_scraping}.
+
+\bibitem{libuv}
+Welcome to the libuv api documentation.
+\newblock \url{http://docs.libuv.org/en/v1.x/\#features}.
+
+\bibitem{figoFAQPartners}
+Wer sind eure partner? wie kann ich figo dort nutzen?
+\newblock
+  \url{https://figo.zendesk.com/hc/de/articles/200907292-Wer-sind-eure-Partner-Wie-kann-ich-figo-dort-nutzen-}.
+
+\bibitem{sicp}
+Harold Abelson and Gerald~J. Sussman.
+\newblock {\em Structure and Interpretation of Computer Programs}.
+\newblock MIT Press, Cambridge, MA, USA, 2nd edition, 1996.
+
+\bibitem{IntroductionST}
+Paul Ammann and Jeff Offutt.
+\newblock {\em Introduction to Software Testing}.
+\newblock Cambridge University Press, New York, NY, USA, 1 edition, 2008.
+
+\bibitem{TDDPractical}
+Dave Astels.
+\newblock {\em Test Driven Development: A Practical Guide}.
+\newblock Prentice Hall Professional Technical Reference, 2003.
+
+\bibitem{Lecture1}
+Colin Atkinson.
+\newblock L1-introduction.
+\newblock 2015.
+
+\bibitem{Lecture2}
+Colin Atkinson.
+\newblock L2-testingintroduction.
+\newblock 2015.
+
+\bibitem{nodejsbook}
+Mario Casciaro.
+\newblock {\em NodeJS Design Patterns}.
+\newblock Packt Publishing, 2014.
+
+\bibitem{cota}
+\'{E}rika Cota.
+\newblock Embedded software testing: What kind of problem is this?
+\newblock In {\em Proceedings of the Conference on Design, Automation and Test
+  in Europe}, DATE '10, pages 1486--1486, 3001 Leuven, Belgium, Belgium, 2010.
+  European Design and Automation Association.
+
+\bibitem{Dooley}
+John Dooley.
+\newblock {\em Software Development and Professional Practice}.
+\newblock Apress, Berkely, CA, USA, 1st edition, 2011.
+
+\bibitem{DesignPatterns}
+Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides.
+\newblock {\em Design Patterns: Elements of Reusable Object-oriented Software}.
+\newblock Addison-Wesley Longman Publishing Co., Inc., Boston, MA, USA, 1995.
+
+\bibitem{RealTimeTesting}
+Robert~L. Glass.
+\newblock Real-time: The \&ldquo;lost world\&rdquo; of software debugging and
+  testing.
+\newblock {\em Commun. ACM}, 23(5):264--271, May 1980.
+
+\bibitem{Hudak}
+Paul Hudak.
+\newblock Conception, evolution, and application of functional programming
+  languages.
+\newblock {\em ACM Comput. Surv.}, 21(3):359--411, September 1989.
+
+\bibitem{STCraft}
+P.C. Jorgensen.
+\newblock {\em Software Testing: A Craftsman’s Approach, Fourth Edition}.
+\newblock An Auerbach book. Taylor \& Francis, 2013.
+
+\bibitem{lyu}
+Michael~R. Lyu, editor.
+\newblock {\em Handbook of Software Reliability Engineering}.
+\newblock McGraw-Hill, Inc., Hightstown, NJ, USA, 1996.
+
+\bibitem{MartinClean}
+Robert~C. Martin.
+\newblock {\em Clean Code: A Handbook of Agile Software Craftsmanship}.
+\newblock Prentice Hall PTR, Upper Saddle River, NJ, USA, 1 edition, 2008.
+
+\bibitem{MartinASD}
+Robert~Cecil Martin.
+\newblock {\em Agile Software Development: Principles, Patterns, and
+  Practices}.
+\newblock Prentice Hall PTR, Upper Saddle River, NJ, USA, 2003.
+
+\bibitem{concepts}
+Robert~W. Sebesta.
+\newblock {\em Concepts of Programming Languages}.
+\newblock Addison-Wesley Publishing Company, USA, 9th edition, 2009.
+
+\bibitem{vouk}
+Mladen~A Vouk et~al.
+\newblock Software reliability engineering.
+\newblock 2000.
+
+\end{thebibliography}
