@@ -28,20 +28,17 @@ describe('Test coverage for transform stream function', function(){
     done();
   });
 
-  it('should call applyTemplate, transformScheme and makeReferenceScheme', function(done){
+  it('should call applyTemplate and transformScheme ', function(done){
     var applyTemplateStub = sinon.stub(template, 'applyTemplate');
     var transformSchemeStub = sinon.stub(schemeTransformer, 'transformScheme');
-    var makeReferenceSchemeStub = sinon.stub(schemeReference, 'makeReferenceScheme');
 
     transformStream.call(through.obj(transformStream), data, null, function(){});
 
     assert.equal(applyTemplateStub.called, true);
     assert.equal(transformSchemeStub.called, true);
-    assert.equal(makeReferenceSchemeStub.called, true);
 
     applyTemplateStub.restore();
     transformSchemeStub.restore();
-    makeReferenceSchemeStub.restore();
     done();
   });
 });

@@ -16,4 +16,4 @@ var stream = require('./lib/stream');
 
 stream.read('./simpleTS').pipe(stream.transform).pipe(stream.write);
 
-exec('sudo npm install -g ./compare_and_report\n', function () {});
+// exec('sudo npm install -g ./compare_and_report\n', function () {});

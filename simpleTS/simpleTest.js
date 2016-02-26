@@ -28,7 +28,7 @@ var makeComparisonAndWriteResult = require('compare_and_report');
     "userID": "64769092",
     "pin": "38567" };
 
- var C4 =  {  "countryCode": "280",
+ var C4 = {  "countryCode": "280",
     "custID": "",
     "custID2": "",
     "hbciVersion": "0",
@@ -46,7 +46,7 @@ var makeComparisonAndWriteResult = require('compare_and_report');
     "userID": "64769092",
     "pin": "38567" };
 
- var C5 =  {  "countryCode": "280",
+ var C5 = {  "countryCode": "280",
     "custID": "",
     "custID2": "",
     "hbciVersion": "0",
