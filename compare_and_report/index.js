@@ -1,3 +1,3 @@
-var compareAndReport = require('./test/compare_and_report');
+var compareAndReport = require('./lib/compare_and_report');
 
 module.exports = compareAndReport;

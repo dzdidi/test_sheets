@@ -16,4 +16,8 @@ var stream = require('./lib/stream');
 
 stream.read('./simpleTS').pipe(stream.transform).pipe(stream.write);
 
-// exec('sudo npm install -g ./compare_and_report\n', function () {});
+// if (process.env.NODE_CASE === 'xlsx_out') {
+//   exec('sudo npm install -g ./compare_and_write\n', function () {});
+// } else {
+//   exec('sudo npm install -g ./compare_and_report\n', function () {});
+// }

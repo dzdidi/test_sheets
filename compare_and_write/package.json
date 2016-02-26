@@ -1,0 +1,17 @@
+{
+  "name": "compare_and_write",
+  "version": "1.0.0",
+  "description": "Perform comparison and write its result to xlsx file",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "NODE_ENV=testing mocha"
+  },
+  "author": {
+    "name": "Denys Zaliskyi",
+    "email": "dz@figo.io"
+  },
+  "license": "ISC"
+}
