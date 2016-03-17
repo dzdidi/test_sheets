@@ -6,17 +6,39 @@ var assert = require('assert');
 var fs = require('fs');
 var xlsx = require('xlsx');
 
+// refactor
+
 function makeComparisonAndWriteResult(expected, returned, deepness, scriptName, file, variable){
   var result = compare(expected, returned, deepness);
-  report(file, variable, result);
-  // console.log(expected, returned, deepness, result);
+  var res = "";
+  result ? res = "#00FF00" : res = "#FFFF00";
+  var testSheet = xlsx.readFile(file, {'cellStyles': true});
+  if(!result){
+    testSheet.Sheets.Sheet1[variable].v = JSON.stringify(expected) + '|' + JSON.stringify(returned);
+    xlsx.writeFile(testSheet, file, {'cellStyles': true});
+  };
+
+  // testSheet.Sheets.Sheet1[variable].s = {
+  //     "patternType":"solid",
+  //     "fgColor":{
+  //         "rgb":"66FF00"
+  //     },
+  //     "bgColor":{
+  //         "rgb":res
+  //     }
+  // };
+
+
+  console.log(expected, returned, deepness, result);
 
   return(result);
 };
 
-function report(file, variable, result) {
+function report(file, variable, result, returned) {
   result ? result = "#00FF00" : result = "#FFFF00";
   var testSheet = xlsx.readFile(file, {'cellStyles': true});
+  var val = testSheet.Sheets.Sheet1[variable].v;
+  testSheet.Sheets.Sheet1[variable].v =
   testSheet.Sheets.Sheet1[variable].s = {
       "patternType":"solid",
       "fgColor":{

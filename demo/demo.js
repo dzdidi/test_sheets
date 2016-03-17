@@ -5,24 +5,24 @@ var makeComparisonAndWriteResult = require('../compare_and_write');
 var tmp = {};
 
  var A3 = require('./stack');
- var F3 = {size: 0};
+ var F3 = {"size":0};
  var A4 = require('./stack');
  var C4 = {el: 1};
  var F4 = {};
  var A5 = require('./stack');
- var F5 = {size: 1};
+ var F5 = {"size":1};
  var A6 = require('./stack');
- var F6 = {el: 100};
+ var F6 = {"el":100};
  var A7 = require('./stack');
- var F7 = {size: 1};
+ var F7 = {"size":1};
  var A8 = require('./stack');
- var F8 = {el: 1};
+ var F8 = {"el":1};
  var A9 = require('./stack');
- var F9 = {size: 1};
+ var F9 = {"size":1};
  var A10 = require('./stack');
- var F10 = {el: 1};
+ var F10 = {"el":1};
  var A11 = require('./stack');
- var F11 = {size: 0};
+ var F11 = {"size":0};
 A3.size.call(this, function(err, data){
   if(err)  return(err, null);
   if(makeComparisonAndWriteResult(F3, data, '||', 'stack size', 'demo/demo.xlsx', 'F3')){
