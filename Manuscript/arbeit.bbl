@@ -4,7 +4,7 @@
 About node.js®.
 \newblock \url{https://nodejs.org/en/about/}.
 
-\bibitem{asyncA}
+\bibitem{asyncPerformance}
 Analysis of generators and other async patterns in node.
 
 \bibitem{DaveAPI}
@@ -12,9 +12,18 @@ The bank business model for apis: Identity.
 \newblock
   \url{http://tomorrowstransactions.com/2015/03/the-bank-business-model-for-apis-identity/}.
 
+\bibitem{listOfBanks}
+Banks in germany.
+
+\bibitem{toyota}
+A case study of toyota unintended acceleration and software safety.
+
 \bibitem{casperjs}
 Casperjs.
 \newblock \url{http://casperjs.org/}.
+
+\bibitem{cuceRef}
+Cucumber: Reference.
 
 \bibitem{PSD2}
 Eur-lex - 32015l2366 - en - eur-lex.
@@ -37,6 +46,15 @@ figo api reference.
 Fints - wikipedia, free encyclopedia.
 \newblock \url{https://en.wikipedia.org/wiki/FinTS}.
 
+\bibitem{fit}
+Fit.
+
+\bibitem{fitIntro}
+Fit.
+
+\bibitem{zalgo}
+glog.isz.me - designing apis for asynchrony.
+
 \bibitem{figoFAQVision}
 Ich möchte mehr zu eurer vision erfahren!
 \newblock
@@ -45,9 +63,8 @@ Ich möchte mehr zu eurer vision erfahren!
 \bibitem{ieeeTesting}
 Ieee sa - 829-2008 - ieee standard for software and system test documentation.
 
-\bibitem{tdd}
-Iintroduction to test driven development (tdd).
-\newblock \url{http://www.agiledata.org/essays/tdd.html}.
+\bibitem{asyncArticle}
+Introduction to asynchronous programming.
 
 \bibitem{libuvBasic}
 An introduction to libuv: Basics of libuv.
@@ -57,11 +74,17 @@ An introduction to libuv: Basics of libuv.
 Javascript.
 \newblock \url{https://developer.mozilla.org/en-US/docs/Web/JavaScript}.
 
+\bibitem{gtor}
+kriskowal/gtor: A general theory of reactivity.
+
 \bibitem{LarsAPI}
 Lars markull's answer to what are the benefits of an api for a consumer bank? -
   quora.
 \newblock
   \url{https://www.quora.com/What-are-the-benefits-of-an-API-for-a-consumer-bank/answer/Lars-Markull?srid=hmj2\&share=267222bd}.
+
+\bibitem{moduleCounts}
+Module counts.
 
 \bibitem{oosite}
 Object oriented design patterns.
@@ -71,8 +94,8 @@ Object oriented design patterns.
 Open banking apis: Threat and opportunity | consult hyperion.
 \newblock \url{http://www.chyp.com/open-banking-apis-threat-and-opportunity/}.
 
-\bibitem{nodejsstreams}
-Stream: Node.js v5.4.1 documentation.
+\bibitem{costOfErrors}
+The real cost of software errors.
 
 \bibitem{ts}
 Test sheets.
@@ -83,14 +106,6 @@ Test sheets.
 Test sheets.
 \newblock
   \url{http://swt.informatik.uni-mannheim.de/de/research/research-topics/test-sheets/basic-test-sheets/}.
-
-\bibitem{tsh}
-Test sheets.
-\newblock
-  \url{http://swt.informatik.uni-mannheim.de/de/research/research-topics/test-sheets/parameterized-and-higher-order-test-sheets/}.
-
-\bibitem{nodejscontributors}
-Top npm contributors by number of packages.
 
 \bibitem{w3cDOM}
 W3c document object notation.
@@ -103,7 +118,7 @@ Was ist figo und was macht ihr?
 
 \bibitem{wikiScraping}
 Web scraping - wikipedia free encyclopedia.
-\newblock \url{https://en.wikipedia.org/wiki/Web_scraping}.
+\newblock \url{https://en.wikipedia.org/wiki/Web\_scraping}.
 
 \bibitem{libuv}
 Welcome to the libuv api documentation.
@@ -114,6 +129,15 @@ Wer sind eure partner? wie kann ich figo dort nutzen?
 \newblock
   \url{https://figo.zendesk.com/hc/de/articles/200907292-Wer-sind-eure-Partner-Wie-kann-ich-figo-dort-nutzen-}.
 
+\bibitem{asyncPerformance_2}
+Why i am switching to promises.
+
+\bibitem{xunitFowler}
+Xunit.
+
+\bibitem{xunitWiki}
+xunit - wikipedia, free encyclopedia.
+
 \bibitem{sicp}
 Harold Abelson and Gerald~J. Sussman.
 \newblock {\em Structure and Interpretation of Computer Programs}.
@@ -123,11 +147,6 @@ Harold Abelson and Gerald~J. Sussman.
 Paul Ammann and Jeff Offutt.
 \newblock {\em Introduction to Software Testing}.
 \newblock Cambridge University Press, New York, NY, USA, 1 edition, 2008.
-
-\bibitem{TDDPractical}
-Dave Astels.
-\newblock {\em Test Driven Development: A Practical Guide}.
-\newblock Prentice Hall Professional Technical Reference, 2003.
 
 \bibitem{Lecture1}
 Colin Atkinson.
@@ -173,15 +192,10 @@ Paul Hudak.
   languages.
 \newblock {\em ACM Comput. Surv.}, 21(3):359--411, September 1989.
 
-\bibitem{STCraft}
-P.C. Jorgensen.
-\newblock {\em Software Testing: A Craftsman’s Approach, Fourth Edition}.
-\newblock An Auerbach book. Taylor \& Francis, 2013.
-
-\bibitem{lyu}
-Michael~R. Lyu, editor.
-\newblock {\em Handbook of Software Reliability Engineering}.
-\newblock McGraw-Hill, Inc., Hightstown, NJ, USA, 1996.
+\bibitem{therac}
+N.~G. Leveson and C.~S. Turner.
+\newblock An investigation of the therac-25 accidents.
+\newblock {\em Computer}, 26(7):18--41, July 1993.
 
 \bibitem{MartinClean}
 Robert~C. Martin.
@@ -194,14 +208,20 @@ Robert~Cecil Martin.
   Practices}.
 \newblock Prentice Hall PTR, Upper Saddle River, NJ, USA, 2003.
 
+\bibitem{xunit}
+Gerard Meszaros.
+\newblock {\em xUnit test patterns refactoring test code}.
+\newblock Safari Books Online. Addison-Wesley, Upper Saddle River, N.J., 2007.
+
 \bibitem{concepts}
 Robert~W. Sebesta.
 \newblock {\em Concepts of Programming Languages}.
 \newblock Addison-Wesley Publishing Company, USA, 9th edition, 2009.
 
-\bibitem{vouk}
-Mladen~A Vouk et~al.
-\newblock Software reliability engineering.
-\newblock 2000.
+\bibitem{rtSandD}
+J.~J.~P. Tsai, K.~Y. Fang, and Y.~D. Bi.
+\newblock On real-time software testing and debugging.
+\newblock In {\em Computer Software and Applications Conference, 1990. COMPSAC
+  90. Proceedings., Fourteenth Annual International}, pages 512--518, Oct 1990.
 
 \end{thebibliography}

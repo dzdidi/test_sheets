@@ -14,10 +14,14 @@ var exec = require('child_process').exec;
 
 var stream = require('./lib/stream');
 
-stream.read('./simpleTS').pipe(stream.transform).pipe(stream.write);
+stream.read('./demo').pipe(stream.transform).pipe(stream.write);
 
 // if (process.env.NODE_CASE === 'xlsx_out') {
 //   exec('sudo npm install -g ./compare_and_write\n', function () {});
+//   exec('npm link compare_and_write\n', function () {});
+//   exec('sudo npm install -g xlsx\n', function () {});
+//   exec('npm link xlsx\n', function () {});
 // } else {
 //   exec('sudo npm install -g ./compare_and_report\n', function () {});
+//   exec('npm link compare_and_report\n', function () {});
 // }

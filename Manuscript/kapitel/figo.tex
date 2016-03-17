@@ -1,8 +1,8 @@
 \chapter{figo GmbH}
 \section{General Information}
-The figo GmbH’s mission is to “build the backbone of next generation financial services"\cite{figoFAQVision}, company was founded in 2012 and has its headquarter in Hamburg. Total Equity Funding: \$778.660 in 3 Rounds from 7 Investors (November 3, 2015). Currently, the API is fully functional in Germany and partly in Austria.\cite{figoAngel}\cite{figoCB}
+ According to Banks Germany\cite{listOfBanks} "The German banking system is divided by three large sectors: private, public, and cooperative. The cooperative sector is represented by 1,144 credit unions and 2 cooperative central banks. The public sector employs 431 savings bank, 10 land banks and other institutions. Private banks represented 4 transnational banks, 42 investment banks, and 176 regional and other banks. There is also operating are 167 registered branches of foreign banks, including 60 investment banks." While introduction of Payment Services Directive (PSD) and PSD2 by European Commission in European Union together with initiatives of  UK Government regarding API provision and standardization have obligated Banks with the implementation of on-line access points to their services\cite{LarsAPI}\cite{TimAPI}\cite{DaveAPI}. Within the Single European Payment Area acceptance of directive by European Bank Authority scheduled within 2017 year\cite{PSD2}.
 
-figo Connect API was created to accelerate innovation in the FinTech area and to allow figo's partners to offer products with real added value. It enables developers, startups and even banks to connect to every financial service provider. These partners can access every bank account (current, savings, loan, securities, ...), credit card, eWallet and other financial services like PayPal through one single REST-API. \cite{figoFAQWhat}\cite{figoFAQVision}\cite{figoFAQPartners}
+figo GmbH is a financial technology company with headquarter in Hamburg. It was founded in 2012  with the mission to “build the backbone of next generation financial services"\cite{figoFAQVision}.  Currently, the API is fully functional in Germany, partly in Austria and England.\cite{figoAngel}\cite{figoCB}
 
 Functions available through API:\cite{figoAPI}
 \begin{itemize}
@@ -13,8 +13,9 @@ Functions available through API:\cite{figoAPI}
 	\item Read, Update  Bank account(s) securities;
 	\item Create, Read, Update, Delete Bank payment(s);
 \end{itemize}
-List of partners of figo API with their use-cases: \url{http://figo.io/use_cases.html} 
+To see the list of figo's partners and customers with their use-cases please visit \url{http://figo.io/use\_cases.html}.
 
+figo Connect API was created to accelerate innovations in the FinTech area and to allow figo's partners to offer products with real added value\cite{figoFAQWhat}. It enables developers, startups and even banks to connect to every financial service provider. These partners can access every bank account (current, savings, loan, securities, ...), credit card, eWallet and other financial services like PayPal through one single REST-API. \cite{figoFAQWhat}\cite{figoFAQVision}\cite{figoFAQPartners}
 
 
 %"The Figo GmbH was founded in 2012 and has its headquarters in Hamburg.
@@ -32,33 +33,28 @@ List of partners of figo API with their use-cases: \url{http://figo.io/use_cases
 
 %"Our banking API enables developers, startups and even banks to connect to every financial service provider. These partners can access every bank account (current, savings, loan, securities, ...), credit card, eWallet and other financial services through one single REST-API. It is possible to extract account information and initiate bank transfers \& direct debits. With our API, old and new players of the financial service industry are able to easily develop and test new services without the inconvenience of connecting to every single bank."\cite{figoCB}
 
-\section{IT infrastructure}
-Information technology infrastructure of figo GmbH has two parts related to the external connections. \textbf{API Server} - implements interfaces to figo's customers and partners for accessing banking inforamtion and services. \textbf{Banking Server} - implements connection to banks via three possible communication channels. This particular part lays in scope of this research as a part where implemented system is running. Below provided description introduces basic concepts of Banking Service Architecture. For more information regarding IT infrastructure please use (pics with arch scheme attached)
-	\subsection{Banking Server Architecture}
-	\paragraph{Custom-API.} Introduction of Directive on Payment Services (PSD) and PSD2 by European Commission in European Union and initiatives of Government in United Kingdom regarding provision of API by Banks and its standartization obligated with providing of online access points to their services.\cite{LarsAPI}\cite{TimAPI}\cite{DaveAPI} Some of the banks already implemented Application Program Interfaces to access their services. Some of which provide full functionality while some only partial. Within the Single European Payment Area acceptance of directive by European Bank Authority scheduled within 2017 year. \cite{PSD2} All this APIs very in their structure and functionality, and connection process lays out of the scope of this research.
+\section{IT infrastructure. Banking Server}
+The high level IT infrastructure of figo GmbH consists two parts (Fig. \ref{fig:figoArch}). The \textbf{API Server} - implements interfaces to figo's customers and partners for accessing banking information and services (lays outside of this paper's scope). The \textbf{Banking Server} - implements connection to banks via three possible communication channels, they are description provided below together with basic motivation for each of them.
+\begin{figure}[ht]
+  	\label{fig:figoArch}
+    \centering
+    \includegraphics[scale=0.3]{grafiken/figoArch.png}
+     \caption{figo GmbH high level architecture}
+\end{figure}
+
+\subsection{Banking Server Architecture}
 	
-Moreover some of the banks implements standardized programmable entry point. 
+	Banking server has three parts for communication with banks via three separate channels. Each of them is a realization of different technology: \textbf{\textit{Custom-API}} is responsible for connection to custom APIs provided by banks, \textbf{\textit{HBCI/FinTS}} is responsible for connection to banks' interfaces via FinTS/HBCI, \textbf{\textit{Web-banking Engine}} is responsible for communication with banks which does not provide API or HBCI.
+
+	\paragraph{Custom-API} implements the client for custom banks APIs. Some of them provide full functionality while some only partial. All this APIs vary in their structure and functionality but most of them implements REST API specification.
 	
-	\paragraph{HBCI+/FinTS} - bank-independent protocol for online banking, developed and used by German banks.  Home Banking Computer Interface (HBCI) was originally designed by the two German banking groups Sparkasse and Volksbanken und Raiffeisenbanken and German higher-level associations as the Bundesverband deutscher Banken e.V.. The result of this effort was an open protocol specification, which is publicly available. The standardisation effort was necessary to replace the huge number of deprecated homemade software clients and servers (some of them still using BTX emulation). While IFX (Interactive Financial Exchange), OFX (Open Financial Exchange) and SET are tailored for the North American market, HBCI is designed to meet the requirements of the European market.\cite{finTS}\\
-	Features\cite{finTS}:\\
-	\begin{itemize}
-		\item Support for online-banking using PIN/TAN one time passwords.
-		\item Support for online-banking with SWIFT.
-		\item DES and RSA encryption and signatures.
-		\item Making use of XML and SOAP for data-exchange, encryption and signatures.
-		\item Implemented on top of HTTP, HTTPS and SMTP as communication layer.
-		\item Multibanking: The software clients are designed to support accounts on multiple banking companies.
-		\item Platform Independency: The specification allows software development for various types of clients.
-		\item Storage of the encryption keys on an external physical device (smart card) for improved security.
-		\item Possibility to use so called "Secoder" smart card readers to allow the user to cross check the transaction data on a secure device before signing it to uncover manipulations caused by malware. To use Secoder the bank as well as the home banking software have to support the Secoder protocol extension of FinTS
-	\end{itemize}
-	Low level vocabulary for message communication is defined by ISO20022 for more information please have a look to \url{https://www.iso20022.org/}
+	\paragraph{HBCI+/FinTS} is an implementation of an adapter OOP pattern for jsHBCI library. Home Banking Computer Interface (HBCI) is an open publicly available protocol. Its specification was originally designed by the two German banking groups \textit{Sparkasse and Volksbanken und Raiffeisenbanken} and \textit{German higher-level associations as the Bundesverband deutscher Banken e.V.}.  \cite{finTS}
 	
-	% For banks which do not provide HBCI/FinTS end point  but has their own tailored API connection is implemented via provided interface. 
-	\paragraph{Web-Banking Engine.} Since not all of the banks provide API nor HBCI figo uses web scraping technology (implemented within Web-Banking Engine) to access account's information and perform interaction with internet banking web page.
-	From the banks perspective interaction completely looks like directly with user, while user does not feel the difference between interaction via Custom-API or HBCI or Web-Banking Engine.\\
-	In a same time this is the most sensitive part from the developer's perspective since every change to the bank's web page can leads to failure of the specific scripts. The critical part to recognize such significant for scraping changes before any user's interaction and notify a developer regarding part of the script which failed. Exactly for this purpose testing scripts generated from Test Sheets are used as a (demon task/crown job) in real time fashion with recording unexpected behavior to the general log and notification of the developer (email/slack). Next chapter provides general information regarding web scraping and high-level description of scraping tool used by figo Gmbh.
+	\paragraph{Web-Banking Engine} is an implementation of a factory OOP pattern for scraping libraries which responsible for communication with banks which does not provide API or HBCI. Here figo GmbH uses web scraping technology to perform interaction with internet banking web page.
+	From the banks perspective an interaction looks completely like direct communication with an user, while an user does not feel the difference between interaction via Custom-API or HBCI or Web-Banking Engine.
+	This is the most sensitive part from the developer's perspective since every change to the bank's web page can leads to failure of the specific scripts. \\
 	
+	The aim of this paper is an application of Test Sheet for early (before any user's interaction will take place) recognition of page changes  and notification of developers regarding failed part of the script. Testing scripts generated from Test Sheets are used as a (demon task/crown job) in timely fashion with notification of the developer in case of unexpected behavior of the scripts via (email/slack) communication channel. 
 
 	
 	%\subsection{Banking Technology Stack}

@@ -1,15 +1,46 @@
-\chapter{Real Time Software}
-\section{Dependability \cite{lyu}}
-Dependability is defined as the trustwothiness of a computer system such that reliance can justifiably be place on the service it delivers. The service delivered by a system is its behaviour as it is perceptible by its users(s); a user is another system (human or physical) iwth the former.\\
-Depening on applications inteded for the system, a different emphasis mau be put on the various facets fo dependability, that is dependablility can be veiwed according to different, but complementary properties which enable the attributes of dependability to be defined:
+\chapter{Real-Time Software. Web scrapping}
+Donald Gillies defined a real-time software as a system : \textit{"[...] in which the correctness of the computations not only depends upon the logical correctness of the computation but also upon the time at which the result is produced. If the timing constraints of the system are not met, system failure is said to have occurred."}
+
+While Robert L. Glass\cite{RealTimeTesting} defines this term as: \textit{"[...] a software that drives a computer which interacts with functioning external devices or objects. It is called real-time because the software actions control activities that are occurring in an ongoing process".}
+
+Within this research we will define  \textit{Real-Time software} as a combination of this to definitions which covers both logical and time correctness as well as an interaction with external systems controlled by the ongoing process.
+
+The Web-Banking engine of figo GmbH matches this definition due to the following facts. First it performs communication with external systems (Web Banking HTML pages). Next its result correctness depends time restrictions (if child process responsible for script execution was not finished within 1200 seconds, and with each task performed within 0.5 seconds it is treated as failed) as well as logical correctness depended upon ability of the script to perform necessary actions for a fulfillment of a requested task.
+
+%Within the scope of this research under Real-Time software we will mean the software that interact with external systems and its correctness depends on logical correctness of execution result as well as result production time.
+
+%Not only do the programmers have to look at black/white box testing but also the timing of the data \& the parallelism of the projects. In lots of situations testing data for real-time technique may raise errors when the technique is in four state but to in others.\cite{strategicRT}
+
+%"During the development of a real-time application, a testing step is necessary to check the conformity of the implementation in accordance with its specification. "\cite{trts}
+
+%In general the special characteristic of real-time systems makes them a main challenge when it comes to testing. The time-dependent type of real-time applications adds a new difficult element to testing.
+
+Tsai, Fang and Bi\cite{rtSandD} state that testing and debugging of real-time software are very difficult because of timing constraints and non-deterministic execution behavior. In a real-time system, the processes receive inputs from real world processes as a result of asynchronous interrupts and it is almost impossible to precisely predict the exact program execution points at which the inputs will be supplied to the system. Consequently, the system may not exhibit the same behavior upon repeated execution of the program. In addition, in a real-time system, the pace of execution of processes is determined not only by internal criteria, but also by real world processes and their timing constraints.
+
+\section{Web scraping}
+!!!give some motivation
+
+	"Web scraping (web harvesting or web data extraction) is a computer software technique of extracting information from websites. Usually, such software programs simulate human exploration of the World Wide Web by either implementing low-level Hypertext Transfer Protocol (HTTP), or embedding a fully-fledged web browser, such as Mozilla Firefox.\\
+
+Web scraping is the process of automatically collecting information from the World Wide Web. It is a field with active developments sharing a common goal with the semantic web vision, an ambitious initiative that still requires breakthroughs in text processing, semantic understanding, artificial intelligence and human-computer interactions. Current web scraping solutions range from the ad-hoc, requiring human effort, to fully automated systems that are able to convert entire web sites into structured information, with limitations." \cite{wikiScraping}
+
+"The Document Object Model is a platform- and language-neutral interface that will allow programs and scripts to dynamically access and update the content, structure and style of documents." \cite{w3cDOM}
+
+
+?!?!?! add alternative technologies and compare them from the companies perspective!
+\subsection{CasperJS}
+		\cite{casperjs}
+		CasperJS is an open source navigation scripting \& testing utility written in JavaScript for the PhantomJS WebKit headless browser and SlimerJS (Gecko). It eases the process of defining a full navigation scenario and provides useful high-level functions, methods \& syntactic sugar for doing common tasks such as:
 \begin{itemize}
-	\item \textit{The readiness for usage} leads to \textbf{availability}
-	\item \textit{The continuity of service} leads to \textbf{reliability}
-	\item \textit{The nonoccurence of catastrophic consequences on the environment} leads to \textbf{safety}
-	\item \textit{The nonoccirence of unauthorized disclosure of information} leads to \textbf{confidentiality}
-	\item \textit{The nonoccurrence of improper information} leads to \textbf{integrity}
-	\item \textit{The ability to undergo repeairs and evelutions} leads to \textbf{maintainability}
+	\item defining \& ordering browsing navigation steps
+	\item filling \& submitting forms
+	\item clicking \& following links
+	\item capturing screenshots of a page (or part of it)
+	\item testing remote DOM
+	\item logging events
+	\item downloading resources, including binary ones
+	\item writing functional test suites, saving results as JUnit XML
+	\item scraping Web contents
 \end{itemize}
 
-\section{Real Time Testing}
-"Real-time software is a software thaht dries a computer which intercats  with functioning external devices or objects. It is called real-time because the software actions control activities that are accuring in an ongoing process."\cite{RealTimeTesting}
+!!! Add a conclusion

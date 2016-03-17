@@ -40,6 +40,8 @@ var makeComparisonAndWriteResult = require('compare_and_write');
     "userID": "64769092",
     "pin": "38567" };
 
+ var D4 = "dtyui";
+
  var G4 =  {  "countryCode": "280",
     "custID": "",
     "custID2": "",
@@ -77,7 +79,7 @@ A3.getAccounts.call(this, C3,D3,E3, function(err, data){
   } else {
     return;
   };
-  A4.getAccounts.call(this, C4, function(err, data){
+  A4.getAccounts.call(this, C4,D4, function(err, data){
     if(err)  return(err, null);
     if(makeComparisonAndWriteResult(G4, data, '|', 'BankAustria getAccounts', 'simpleTS/simpleTest.xlsx', 'G4')){
       G4 = data;
@@ -91,7 +93,7 @@ A3.getAccounts.call(this, C3,D3,E3, function(err, data){
       } else {
         return;
       };
-
-});
-});
+      function(err, data){if(err) return err;};
+    });
+  });
 });
