@@ -6,12 +6,10 @@ var mocha = require('mocha');
 var sinon = require('sinon');
 
 var readStream = require('../lib/stream').read;
-var schemeMaker = require('../lib/scheme').make;
 
 var readStreamSpy = sinon.spy(readStream);
 var fsSpy = sinon.spy(fs, 'readdir');
 var extnameSpy = sinon.spy(path, 'extname');
-var basicSchemeSpy = sinon.spy(schemeMaker, 'createBasicScheme');
 
 describe('Test coverage for readStream', function() {
   it('should export a function', function(done) {
@@ -52,15 +50,6 @@ describe('Test coverage for readStream', function() {
     assert.equal(extnameSpy.called, true);
 
     extnameSpy.restore();
-    done();
-  });
-
-  it('should call schemeMaker createBasicScheme', function(done) {
-    readStream('./test/doublers');
-
-    assert.equal(basicSchemeSpy.called, true);
-
-    basicSchemeSpy.restore();
     done();
   });
 });

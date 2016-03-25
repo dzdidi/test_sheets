@@ -4,8 +4,7 @@ var sinon = require('sinon');
 var fs = require('fs');
 var through = require('through2');
 
-var schemeTransformer = require('../lib/scheme').transform;
-var schemeReference = require('../lib/scheme').makeReference;
+var scheme = require('../lib/scheme');
 var template = require('../lib/template');
 
 var transformStream = require('../lib/stream').transform;
@@ -28,17 +27,17 @@ describe('Test coverage for transform stream function', function(){
     done();
   });
 
-  it('should call applyTemplate and transformScheme ', function(done){
+  it('should call applyTemplate and makeScheme ', function(done){
     var applyTemplateStub = sinon.stub(template, 'applyTemplate');
-    var transformSchemeStub = sinon.stub(schemeTransformer, 'transformScheme');
+    var createSchemeStub = sinon.stub(scheme, 'createScheme');
 
     transformStream.call(through.obj(transformStream), data, null, function(){});
 
     assert.equal(applyTemplateStub.called, true);
-    assert.equal(transformSchemeStub.called, true);
+    assert.equal(createSchemeStub.called, true);
 
     applyTemplateStub.restore();
-    transformSchemeStub.restore();
+    createSchemeStub.restore();
     done();
   });
 });

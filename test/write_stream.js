@@ -35,9 +35,6 @@ describe('Test coverage for a writeStream', function(){
   });
 
   it('should call fs.writeFile', function(done) {
-    var statStub = sinon.stub(fs, 'statSync', function() {
-      return { mtime: 1 };
-    });
     var writeFileStub = sinon.stub(fs, 'writeFile', function () {});
 
     writeStream(data, {}, function(){});
@@ -45,7 +42,6 @@ describe('Test coverage for a writeStream', function(){
     assert.equal(writeFileStub.called, true);
 
     writeFileStub.restore();
-    statStub.restore();
     done();
   });
 });
