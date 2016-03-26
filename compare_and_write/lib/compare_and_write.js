@@ -1,12 +1,14 @@
 /*
-TODO:
+  S. - Single Responsibility Principle - can be changed only due to the change invocation type of a function (spawns child process)
+  O. - Open Close Principle - Closed for changes / no additions can be detected
+  L. - Liscov Substitution Principle - invoked as a helper function
+  I. - Interface Segregation Principle - invoked as a helper function
+  D. - Dependency Inversion Principle - testing script does not depend on implementation of this function
 */
 
 var assert = require('assert');
 var fs = require('fs');
 var xlsx = require('xlsx');
-
-// refactor
 
 function makeComparisonAndWriteResult(expected, returned, deepness, scriptName, file, variable){
   var result = compare(expected, returned, deepness);
@@ -14,20 +16,9 @@ function makeComparisonAndWriteResult(expected, returned, deepness, scriptName, 
   result ? res = "#00FF00" : res = "#FFFF00";
   var testSheet = xlsx.readFile(file, {'cellStyles': true});
   if(!result){
-    testSheet.Sheets.Sheet1[variable].v = JSON.stringify(expected) + '|' + JSON.stringify(returned);
+    testSheet.Sheets.Sheet1[variable].v = JSON.stringify(expected) + '\\' + JSON.stringify(returned);
     xlsx.writeFile(testSheet, file, {'cellStyles': true});
   };
-
-  // testSheet.Sheets.Sheet1[variable].s = {
-  //     "patternType":"solid",
-  //     "fgColor":{
-  //         "rgb":"66FF00"
-  //     },
-  //     "bgColor":{
-  //         "rgb":res
-  //     }
-  // };
-
 
   console.log(expected, returned, deepness, result);
 
