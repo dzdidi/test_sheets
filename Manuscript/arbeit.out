@@ -4,9 +4,9 @@
 \BOOKMARK [0][-]{chapter*.4}{List of Abbreviations}{}% 4
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 5
 \BOOKMARK [0][-]{chapter.2}{figo GmbH}{}% 6
-\BOOKMARK [1][-]{section.2.1}{General Information}{chapter.2}% 7
-\BOOKMARK [1][-]{section.2.2}{IT infrastructure. Banking Server}{chapter.2}% 8
-\BOOKMARK [2][-]{subsection.2.2.1}{Banking Server Architecture}{section.2.2}% 9
+\BOOKMARK [1][-]{section.2.1}{IT infrastructure. Banking Server}{chapter.2}% 7
+\BOOKMARK [2][-]{subsection.2.1.1}{Banking Server Architecture}{section.2.1}% 8
+\BOOKMARK [1][-]{section.2.2}{Requirements}{chapter.2}% 9
 \BOOKMARK [0][-]{chapter.3}{Testing. Existing approaches. Test Sheets}{}% 10
 \BOOKMARK [1][-]{section.3.1}{Software testing}{chapter.3}% 11
 \BOOKMARK [1][-]{section.3.2}{Existing approaches for test definitions}{chapter.3}% 12
@@ -15,33 +15,23 @@
 \BOOKMARK [2][-]{subsection.3.2.3}{Cucumber}{section.3.2}% 15
 \BOOKMARK [1][-]{section.3.3}{Test Sheets}{chapter.3}% 16
 \BOOKMARK [2][-]{subsection.3.3.1}{Basic Test Sheets}{section.3.3}% 17
-\BOOKMARK [0][-]{chapter.4}{Real-Time Software. Web scrapping}{}% 18
-\BOOKMARK [1][-]{section.4.1}{Web scraping}{chapter.4}% 19
-\BOOKMARK [2][-]{subsection.4.1.1}{CasperJS}{section.4.1}% 20
-\BOOKMARK [0][-]{chapter.5}{Asynchronous programming. Node.js. Strategies and performance}{}% 21
-\BOOKMARK [1][-]{section.5.1}{Asynchronous programming}{chapter.5}% 22
-\BOOKMARK [1][-]{section.5.2}{Node.js}{chapter.5}% 23
-\BOOKMARK [2][-]{subsection.5.2.1}{Event}{section.5.2}% 24
-\BOOKMARK [2][-]{subsection.5.2.2}{Event handling}{section.5.2}% 25
-\BOOKMARK [1][-]{section.5.3}{Asynchronous handling strategies}{chapter.5}% 26
-\BOOKMARK [2][-]{subsection.5.3.1}{Callbacks}{section.5.3}% 27
-\BOOKMARK [2][-]{subsection.5.3.2}{Data focused strategies / Imperative}{section.5.3}% 28
-\BOOKMARK [1][-]{section.5.4}{Performance}{chapter.5}% 29
-\BOOKMARK [0][-]{chapter.6}{OOP and FP}{}% 30
-\BOOKMARK [1][-]{section.6.1}{Object Oriented Programming}{chapter.6}% 31
-\BOOKMARK [2][-]{subsection.6.1.1}{Design Principles}{section.6.1}% 32
-\BOOKMARK [2][-]{subsection.6.1.2}{Design Patterns}{section.6.1}% 33
-\BOOKMARK [1][-]{section.6.2}{Functional Programming}{chapter.6}% 34
-\BOOKMARK [0][-]{chapter.7}{Contributions}{}% 35
-\BOOKMARK [1][-]{section.7.1}{Requirements analysis}{chapter.7}% 36
-\BOOKMARK [1][-]{section.7.2}{Conventions}{chapter.7}% 37
-\BOOKMARK [1][-]{section.7.3}{Use Case}{chapter.7}% 38
-\BOOKMARK [1][-]{section.7.4}{Architecture}{chapter.7}% 39
-\BOOKMARK [1][-]{section.7.5}{Design and Implementation}{chapter.7}% 40
-\BOOKMARK [2][-]{subsection.7.5.1}{Reader}{section.7.5}% 41
-\BOOKMARK [2][-]{subsection.7.5.2}{Writer}{section.7.5}% 42
-\BOOKMARK [0][-]{chapter.8}{Implementierung}{}% 43
-\BOOKMARK [0][-]{appendix*.19}{Bibliography}{}% 44
-\BOOKMARK [-1][-]{section*.20}{Appendix}{}% 45
-\BOOKMARK [0][-]{appendix.A}{First class of appendices}{section*.20}% 46
-\BOOKMARK [1][-]{section.A.1}{Some appendix}{appendix.A}% 47
+\BOOKMARK [0][-]{chapter.4}{Real-Time Software and its Testing. Web scrapping}{}% 18
+\BOOKMARK [1][-]{section.4.1}{Web scraping. CasperJS}{chapter.4}% 19
+\BOOKMARK [0][-]{chapter.5}{Asynchronous programming. Strategies and performance}{}% 20
+\BOOKMARK [1][-]{section.5.1}{Asynchronous programming}{chapter.5}% 21
+\BOOKMARK [2][-]{subsection.5.1.1}{Event handling}{section.5.1}% 22
+\BOOKMARK [1][-]{section.5.2}{Asynchronous handling strategies}{chapter.5}% 23
+\BOOKMARK [2][-]{subsection.5.2.1}{Continuation passing}{section.5.2}% 24
+\BOOKMARK [2][-]{subsection.5.2.2}{Imperative}{section.5.2}% 25
+\BOOKMARK [1][-]{section.5.3}{Performance}{chapter.5}% 26
+\BOOKMARK [0][-]{chapter.6}{Architecture}{}% 27
+\BOOKMARK [0][-]{chapter.7}{Implementation}{}% 28
+\BOOKMARK [1][-]{section.7.1}{Read Stream}{chapter.7}% 29
+\BOOKMARK [1][-]{section.7.2}{Transform Stream}{chapter.7}% 30
+\BOOKMARK [1][-]{section.7.3}{Write Stream}{chapter.7}% 31
+\BOOKMARK [1][-]{section.7.4}{Compare and Write module}{chapter.7}% 32
+\BOOKMARK [0][-]{chapter.8}{Implementierung}{}% 33
+\BOOKMARK [0][-]{appendix*.13}{Bibliography}{}% 34
+\BOOKMARK [-1][-]{section*.14}{Appendix}{}% 35
+\BOOKMARK [0][-]{appendix.A}{First class of appendices}{section*.14}% 36
+\BOOKMARK [1][-]{section.A.1}{Some appendix}{appendix.A}% 37

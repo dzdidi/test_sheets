@@ -1,16 +1,33 @@
-\chapter{OOP and FP}
+\chapter{Programming approaches. Design principles and patterns}
 \section{Object Oriented Programming}
-"Programming languages with objects and classes typically provide dynamic lookup, abstraction, subtyping, and inheritance. These are the four main language concepts for object-oriented programming. They may be summarized in the following manner:
+"Programming languages with objects and classes typically provide dynamic lookup, abstraction, sub-typing, and inheritance. These are the four main language concepts for object-oriented programming. They may be summarized in the following manner:
 \textit{Dynamic lookup} means that when a message is sent to an object, the function code (or method) to be executed is determined by the way that the object is implemented, not some static property of the pointer or variable used to name the object. In other words, the object “chooses” how to respond to a message, and different objects may respond to the same message in different ways.
 \textit{Abstraction} means that implementation details are hidden inside a program unit with a specific interface. For objects, the interface usually consists of a set of public functions (or public methods) that manipulate hidden data.
 \textit{Subtyping} means that if some object a has all of the functionality of another object b, then we may use a in any context expecting b.
 \textit{Inheritance} is the ability to reuse the definition of one kind of object to define another kind of object.
 "\cite{concepts}
 
-\subsection{Design Principles}
+\section{Functional Programming}
+Functional Programming languages are languages which supports functions as a first-class citizens. Which mean that language provides an opportunity to store them in data structures, pass and return them from functions they are higher-order functions\cite{Hudak}.
+
+Declarative languages in contrast to imperative ones  are characterized as having no implicit state. Functional languages are declarative languages whose underlaying computational model is the function.\cite{Hudak}
+
+The most fundamental influence developing of functional languages was the work of Alnso Church on lambda calculus. "Church’s lambda calculus was the first suitable treatment of the computational aspects of functions."\cite{Hudak}\\
+
+Introduction of lambda functions to Java SE 8 as a new and important feature\cite{javase} indicates the growing need of imperative programming benefits in an Enterprise Software development.\\
+
+"Modeling with objects is powerful and intuitive, largely because this matches the perception of interacting with a world of which we are part. However, as we've seen repeatedly throughout this chapter, these models raise thorny problems of constraining the order of events and of synchronizing multiple processes. The possibility of avoiding these problems has stimulated the development of functional programming languages, which do not include any provision for assignment or mutable data. In such a language, all procedures implement well-defined mathematical functions of their arguments, whose behavior does not change. The functional approach is extremely attractive for dealing with concurrent systems." \cite{sicp}\\
+
+"John Backus, the inventor of Fortran, gave high visibility to functional programming when he was awarded the ACM Turing award in 1978. His acceptance speech (Backus 1978) strongly advocated the functional approach. A good overview of functional programming is given in Henderson 1980 and in Darlington, Henderson, and Turner 1982."\cite{sicp}\\
+
+
+\section{Design Principles. Patterns}
+
+\subsection{Design principles}
+The principles which were taken in to account during the system implementation.
 
 Agile design is a process, not an event.
-It's the continous application of principles, patterns, and practices to improve the structure and readability of the software. 
+It's the continuous application of principles, patterns, and practices to improve the structure and readability of the software. 
 It is the dedication to keep the design of the system as simple, clean, and expressive as possible at all times.\cite{MartinASD}
 
 Symptoms of not agile design \cite{MartinASD}:
@@ -111,7 +128,7 @@ Interpreter (translation from ts to js) - "The Interpreter is one of the Design 
 \item Given a language, define a representation for its grammar along with an interpreter that uses the representation to interpret sentences in the language.
 \item Map a domain to a language, the language to a grammar, and the grammar to a hierarchical object-oriented design
 \end{itemize}"\cite{oosite}\\
-Strategy (multipiping/piping of streams) - "lets the algorithm vary independently from clients that use it."\cite{oosite}\\
+Strategy (multiing/piping of streams) - "lets the algorithm vary independently from clients that use it."\cite{oosite}\\
 Observer (event emitor) - "The Observer Design Pattern can be used whenever a subject has to be observed by one or more observers."\cite{oosite}
 Visitor  - "\begin{itemize}
 \item Represents an operation to be performed on the elements of an object structure.
@@ -119,16 +136,12 @@ Visitor  - "\begin{itemize}
 \end{itemize}
 "\cite{oosite}\\
 
+Piping patterns
+"As in real-life plumbing, Node.js streams also can be piped together following different patterns; we can, in fact, merge the flow of two different streams into one, split the flow of one stream into two or more pipes, or redirect the flow based on a condition. In this section, we are going to explore the most important plumbing techniques that can be applied to Node.js streams."\cite{nodejsbook}
 
-\section{Functional Programming}
-Functional Programming languages are languages which supports functions as a first-class citizens. Which mean that languge provides an opotunity to store them in data strucutures, pass and return them from functions they are higher-order functions\cite{Hudak}.
+\paragraph{Combining streams} - encapsulation of sequentualy connected streams in to single looking stream with single I/O points and single error handling mechanism by pipeing readable stream in to writable stream.\cite{nodejsbook}
+\paragraph{Forking streams} - piping single readable in to multiple writable streams.\cite{nodejsbook}
+\paragraph{Merging streams} - piping multiple readable streams in to single writable stream.\cite{nodejsbook}
+\paragraph{Multiplexing and demultiplexing} - forking and merging pattern which provides shared communication channel for entities from different streams.\cite{nodejsbook}
+\cite{nodejsbook}
 
-Declarative languages in contrast to imperative ones  are characterized as having no implicit state. Functional languages are declarative languages whose underlaying computational model is the function.\cite{Hudak}
-
-The most fundamental influence developing of functional languages was the work of Alnso Church on lambda calculus. "Church’s lambda calculus was the first suitable treatment of the computational aspects of functions."\cite{Hudak}\\
-
-Introduction of lambda functions to Java SE 8 as a new and important feature\cite{javase} indicates the growing need of imperative programming benefits in an Enterprise Software development.\\
-
-"Modeling with objects is powerful and intuitive, largely because this matches the perception of interacting with a world of which we are part. However, as we've seen repeatedly throughout this chapter, these models raise thorny problems of constraining the order of events and of synchronizing multiple processes. The possibility of avoiding these problems has stimulated the development of functional programming languages, which do not include any provision for assignment or mutable data. In such a language, all procedures implement well-defined mathematical functions of their arguments, whose behavior does not change. The functional approach is extremely attractive for dealing with concurrent systems." \cite{sicp}\\
-
-"John Backus, the inventor of Fortran, gave high visibility to functional programming when he was awarded the ACM Turing award in 1978. His acceptance speech (Backus 1978) strongly advocated the functional approach. A good overview of functional programming is given in Henderson 1980 and in Darlington, Henderson, and Turner 1982."\cite{sicp}\\

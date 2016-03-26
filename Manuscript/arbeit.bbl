@@ -7,6 +7,9 @@ About node.js®.
 \bibitem{asyncPerformance}
 Analysis of generators and other async patterns in node.
 
+\bibitem{conScrap}
+Are you screen scraping or data mining?
+
 \bibitem{DaveAPI}
 The bank business model for apis: Identity.
 \newblock
@@ -14,9 +17,6 @@ The bank business model for apis: Identity.
 
 \bibitem{listOfBanks}
 Banks in germany.
-
-\bibitem{toyota}
-A case study of toyota unintended acceleration and software safety.
 
 \bibitem{casperjs}
 Casperjs.
@@ -30,6 +30,9 @@ Eur-lex - 32015l2366 - en - eur-lex.
 \newblock
   \url{http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32015L2366s}.
 
+\bibitem{events}
+Events node.js.
+
 \bibitem{figoAngel}
 figo | angel list.
 \newblock \url{https://angel.co/figo-1}.
@@ -37,10 +40,6 @@ figo | angel list.
 \bibitem{figoCB}
 figo | crunchbase.
 \newblock \url{https://www.crunchbase.com/organization/figo\#/entity}.
-
-\bibitem{figoAPI}
-figo api reference.
-\newblock \url{http://docs.figo.io/}.
 
 \bibitem{finTS}
 Fints - wikipedia, free encyclopedia.
@@ -60,19 +59,12 @@ Ich möchte mehr zu eurer vision erfahren!
 \newblock
   \url{https://figo.zendesk.com/hc/de/articles/200974801-Ich-m\%C3\%B6chte-mehr-zu-eurer-Vision-erfahren-}.
 
-\bibitem{ieeeTesting}
-Ieee sa - 829-2008 - ieee standard for software and system test documentation.
-
 \bibitem{asyncArticle}
 Introduction to asynchronous programming.
 
 \bibitem{libuvBasic}
 An introduction to libuv: Basics of libuv.
 \newblock \url{http://nikhilm.github.io/uvbook/basics.html}.
-
-\bibitem{mozillaJS}
-Javascript.
-\newblock \url{https://developer.mozilla.org/en-US/docs/Web/JavaScript}.
 
 \bibitem{gtor}
 kriskowal/gtor: A general theory of reactivity.
@@ -85,10 +77,6 @@ Lars markull's answer to what are the benefits of an api for a consumer bank? -
 
 \bibitem{moduleCounts}
 Module counts.
-
-\bibitem{oosite}
-Object oriented design patterns.
-\newblock \url{http://www.oodesign.com/}.
 
 \bibitem{TimAPI}
 Open banking apis: Threat and opportunity | consult hyperion.
@@ -138,16 +126,6 @@ Xunit.
 \bibitem{xunitWiki}
 xunit - wikipedia, free encyclopedia.
 
-\bibitem{sicp}
-Harold Abelson and Gerald~J. Sussman.
-\newblock {\em Structure and Interpretation of Computer Programs}.
-\newblock MIT Press, Cambridge, MA, USA, 2nd edition, 1996.
-
-\bibitem{IntroductionST}
-Paul Ammann and Jeff Offutt.
-\newblock {\em Introduction to Software Testing}.
-\newblock Cambridge University Press, New York, NY, USA, 1 edition, 2008.
-
 \bibitem{Lecture1}
 Colin Atkinson.
 \newblock L1-introduction.
@@ -163,44 +141,16 @@ Mario Casciaro.
 \newblock {\em NodeJS Design Patterns}.
 \newblock Packt Publishing, 2014.
 
-\bibitem{cota}
-\'{E}rika Cota.
-\newblock Embedded software testing: What kind of problem is this?
-\newblock In {\em Proceedings of the Conference on Design, Automation and Test
-  in Europe}, DATE '10, pages 1486--1486, 3001 Leuven, Belgium, Belgium, 2010.
-  European Design and Automation Association.
-
 \bibitem{Dooley}
 John Dooley.
 \newblock {\em Software Development and Professional Practice}.
 \newblock Apress, Berkely, CA, USA, 1st edition, 2011.
-
-\bibitem{DesignPatterns}
-Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides.
-\newblock {\em Design Patterns: Elements of Reusable Object-oriented Software}.
-\newblock Addison-Wesley Longman Publishing Co., Inc., Boston, MA, USA, 1995.
 
 \bibitem{RealTimeTesting}
 Robert~L. Glass.
 \newblock Real-time: The \&ldquo;lost world\&rdquo; of software debugging and
   testing.
 \newblock {\em Commun. ACM}, 23(5):264--271, May 1980.
-
-\bibitem{Hudak}
-Paul Hudak.
-\newblock Conception, evolution, and application of functional programming
-  languages.
-\newblock {\em ACM Comput. Surv.}, 21(3):359--411, September 1989.
-
-\bibitem{therac}
-N.~G. Leveson and C.~S. Turner.
-\newblock An investigation of the therac-25 accidents.
-\newblock {\em Computer}, 26(7):18--41, July 1993.
-
-\bibitem{MartinClean}
-Robert~C. Martin.
-\newblock {\em Clean Code: A Handbook of Agile Software Craftsmanship}.
-\newblock Prentice Hall PTR, Upper Saddle River, NJ, USA, 1 edition, 2008.
 
 \bibitem{MartinASD}
 Robert~Cecil Martin.
@@ -212,11 +162,6 @@ Robert~Cecil Martin.
 Gerard Meszaros.
 \newblock {\em xUnit test patterns refactoring test code}.
 \newblock Safari Books Online. Addison-Wesley, Upper Saddle River, N.J., 2007.
-
-\bibitem{concepts}
-Robert~W. Sebesta.
-\newblock {\em Concepts of Programming Languages}.
-\newblock Addison-Wesley Publishing Company, USA, 9th edition, 2009.
 
 \bibitem{rtSandD}
 J.~J.~P. Tsai, K.~Y. Fang, and Y.~D. Bi.

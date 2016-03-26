@@ -1,21 +1,11 @@
 \chapter{figo GmbH}
-\section{General Information}
- According to Banks Germany\cite{listOfBanks} "The German banking system is divided by three large sectors: private, public, and cooperative. The cooperative sector is represented by 1,144 credit unions and 2 cooperative central banks. The public sector employs 431 savings bank, 10 land banks and other institutions. Private banks represented 4 transnational banks, 42 investment banks, and 176 regional and other banks. There is also operating are 167 registered branches of foreign banks, including 60 investment banks." While introduction of Payment Services Directive (PSD) and PSD2 by European Commission in European Union together with initiatives of  UK Government regarding API provision and standardization have obligated Banks with the implementation of on-line access points to their services\cite{LarsAPI}\cite{TimAPI}\cite{DaveAPI}. Within the Single European Payment Area acceptance of directive by European Bank Authority scheduled within 2017 year\cite{PSD2}.
+The German banking system is divided by three large sectors: private, public, and cooperative. The cooperative sector is represented by 1,144 credit unions and 2 cooperative central banks. The public sector employs 431 savings bank, 10 land banks and other institutions. Private banks represented 4 transnational banks, 42 investment banks, and 176 regional and other banks. There is also operating are 167 registered branches of foreign banks, including 60 investment banks\cite{listOfBanks}.   
 
-figo GmbH is a financial technology company with headquarter in Hamburg. It was founded in 2012  with the mission to “build the backbone of next generation financial services"\cite{figoFAQVision}.  Currently, the API is fully functional in Germany, partly in Austria and England.\cite{figoAngel}\cite{figoCB}
+The introduction of Payment Services Directive (PSD) and PSD2 by European Commission in EU together with initiatives of UK Government regarding API provision and standardization have obligated banks with the implementation of on-line access points to their services\cite{LarsAPI}\cite{TimAPI}\cite{DaveAPI}. Within the Single European Payment Area acceptance of directive by European Bank Authority scheduled within 2017 year\cite{PSD2}.
 
-Functions available through API:\cite{figoAPI}
-\begin{itemize}
-	\item Create, Read, Update, Delete Bank account(s);
-	\item Read, Update, Delete Bank account(s) transactions;
-	\item Create, Read, Update, Delete Bank account(s) standing orders;
-	\item Create, Read, Update, Delete Bank account(s) direct debits;
-	\item Read, Update  Bank account(s) securities;
-	\item Create, Read, Update, Delete Bank payment(s);
-\end{itemize}
-To see the list of figo's partners and customers with their use-cases please visit \url{http://figo.io/use\_cases.html}.
+figo GmbH is a financial technology (FinTech) company with the headquarter located Hamburg, Germany. It was founded in 2012  with the mission “to build the backbone of next generation financial services"\cite{figoFAQVision}.  Currently, the API is fully functional in Germany, partly in Austria and England\cite{figoAngel}\cite{figoCB}.
 
-figo Connect API was created to accelerate innovations in the FinTech area and to allow figo's partners to offer products with real added value\cite{figoFAQWhat}. It enables developers, startups and even banks to connect to every financial service provider. These partners can access every bank account (current, savings, loan, securities, ...), credit card, eWallet and other financial services like PayPal through one single REST-API. \cite{figoFAQWhat}\cite{figoFAQVision}\cite{figoFAQPartners}
+figo Connect API was created with the aim to accelerate innovations in the FinTech area and to allow figo's partners to offer products with real added value\cite{figoFAQWhat}. It enables developers, startups and even banks to connect to every financial service. These partners can access every bank account (current, savings, loan, securities, etc), credit card, eWallet and other financial services l(i.e. PayPal) through one single REST-API \cite{figoFAQWhat}\cite{figoFAQVision}\cite{figoFAQPartners}. The list of figo's partners and customers  together with there use cases can be found via following link: \url{http://figo.io/use\_cases.html}.
 
 
 %"The Figo GmbH was founded in 2012 and has its headquarters in Hamburg.
@@ -34,31 +24,67 @@ figo Connect API was created to accelerate innovations in the FinTech area and t
 %"Our banking API enables developers, startups and even banks to connect to every financial service provider. These partners can access every bank account (current, savings, loan, securities, ...), credit card, eWallet and other financial services through one single REST-API. It is possible to extract account information and initiate bank transfers \& direct debits. With our API, old and new players of the financial service industry are able to easily develop and test new services without the inconvenience of connecting to every single bank."\cite{figoCB}
 
 \section{IT infrastructure. Banking Server}
-The high level IT infrastructure of figo GmbH consists two parts (Fig. \ref{fig:figoArch}). The \textbf{API Server} - implements interfaces to figo's customers and partners for accessing banking information and services (lays outside of this paper's scope). The \textbf{Banking Server} - implements connection to banks via three possible communication channels, they are description provided below together with basic motivation for each of them.
+The high level IT infrastructure of figo GmbH consists two parts (Fig. \ref{fig:figoArch}). The \textbf{API Server} implements interfaces to figo's customers and partners for accessing banking information and services (lays outside of the paper's scope). The \textbf{Banking Server} implements connection to banks via three possible communication channels, their description provided below together with basic motivation for each of them.
 \begin{figure}[ht]
   	\label{fig:figoArch}
     \centering
-    \includegraphics[scale=0.3]{grafiken/figoArch.png}
+    \includegraphics[scale=0.7]{grafiken/figoArch}
      \caption{figo GmbH high level architecture}
 \end{figure}
 
 \subsection{Banking Server Architecture}
-	
-	Banking server has three parts for communication with banks via three separate channels. Each of them is a realization of different technology: \textbf{\textit{Custom-API}} is responsible for connection to custom APIs provided by banks, \textbf{\textit{HBCI/FinTS}} is responsible for connection to banks' interfaces via FinTS/HBCI, \textbf{\textit{Web-banking Engine}} is responsible for communication with banks which does not provide API or HBCI.
+	Banking server has three parts for communication with banks via three separate channels. Each of them is a realization of different technology in a same programming language - javascript.  
 
-	\paragraph{Custom-API} implements the client for custom banks APIs. Some of them provide full functionality while some only partial. All this APIs vary in their structure and functionality but most of them implements REST API specification.
+	\paragraph{Custom-API} is responsible for connection to custom APIs provided by banks. It implements the client for custom banks APIs. Some of them provide full functionality while some only partial. All this APIs vary in their structure and functionality but most of them  are an implementation of REST-API specification.
 	
-	\paragraph{HBCI+/FinTS} is an implementation of an adapter OOP pattern for jsHBCI library. Home Banking Computer Interface (HBCI) is an open publicly available protocol. Its specification was originally designed by the two German banking groups \textit{Sparkasse and Volksbanken und Raiffeisenbanken} and \textit{German higher-level associations as the Bundesverband deutscher Banken e.V.}.  \cite{finTS}
+	\paragraph{HBCI+/FinTS} is responsible for connection to banks' interfaces via Home Banking Computer Interface (HBCI). It is an implementation of an \textit{adapter OOP pattern} for jsHBCI library.  HBCI is an open publicly available protocol. Its specification was originally designed by the two German banking groups \textit{Sparkasse and Volksbanken und Raiffeisenbanken} and \textit{German higher-level associations as the Bundesverband deutscher Banken e.V.}.  \cite{finTS}
 	
-	\paragraph{Web-Banking Engine} is an implementation of a factory OOP pattern for scraping libraries which responsible for communication with banks which does not provide API or HBCI. Here figo GmbH uses web scraping technology to perform interaction with internet banking web page.
-	From the banks perspective an interaction looks completely like direct communication with an user, while an user does not feel the difference between interaction via Custom-API or HBCI or Web-Banking Engine.
+	\paragraph{Web-Banking Engine} is responsible for communication with banks which does not provide API or HBCI. This is an implementation of a \textit{factory OOP pattern} for scraping libraries. Here figo GmbH uses \textit{web scraping} technology to perform interaction with internet-banking web pages.
+	From the banks perspective the interaction looks completely like direct communication with an user, while an user does not feel the difference between interaction via Custom-API or HBCI or Web-Banking Engine while accessing his bank or service via figo API.
 	This is the most sensitive part from the developer's perspective since every change to the bank's web page can leads to failure of the specific scripts. \\
 	
-	The aim of this paper is an application of Test Sheet for early (before any user's interaction will take place) recognition of page changes  and notification of developers regarding failed part of the script. Testing scripts generated from Test Sheets are used as a (demon task/crown job) in timely fashion with notification of the developer in case of unexpected behavior of the scripts via (email/slack) communication channel. 
-
+%	The aim of this paper is an application of Test Sheet for early (before any user's interaction will take place) recognition of page changes  and notification of developers regarding failed part of the script.
 	
 	%\subsection{Banking Technology Stack}
 	%banking server only
 	
-	
+\section{Requirements}
+\label{sec:reqiorements}
+
+Company's \textbf{business requirement} were a realization of mechanism for detection of changes in banks web-pages. 
+The tool should provide business staff of the company to define business scenarios in a non-technical way. After definition such scenarios must be executed over web-page. Create, Read, Update, Delete (CRUD) operations for this scenarios must be performed with minimal involvement of software developers.
+
+\textbf{Technical requirements} introduced by figo GmbH were following: First, test execution must be performed in a timely fashion for an opportunity to detect changes as early as possible to prevent attempts of customers' communication with not available banks or services. Consequently tests execution have to be fast. 
+Next software developers must be notified about script failure as soon as it was detected to improve response time. 
+Next, scraping scripts are communicating with web-pages in a real-time and asynchronous fashion. 
+Further, the language of implementation must be javascript for low entry level of developers in a future maintenance process. 
+Last but not least, due to the nature of data represented on a web page the comparison between actual and expected results must have two possible options: object keys comparison and object key-value comparison.
+
+
+
+
+%and analyses the difference in requirements differences defined by Test Sheets concept and introduced by figo GmbH.
+
+%Firstly the platform of the implementation must be node.js its conceptual differences with such enterprise languages as Java or C# can be understood from the paltform description provided earlier in this paper but it worth to highlight them explicitly. The language of implementation is javascript which is the language with \textit{prototype based inheritance}. The \textit{event-loop mechanism} placed in core of the platform makes it asynchronous. Support of f\textit{unctions as a first-class citizens} provides an ability of confrontational function passing which is a pattern of functional programming. The language is relatively new for implementation of server-side applications.
+
+
+
+%Test Sheets were originally designed for test definitions of OOP languages. And all available examples describes tests definitions for Java Classes. While figo GmbH case requires implementation of tests for nodeJS/casperJS, which are based on JavaScript - Object Oriented, imperative, Functional Oriented programming language with asynchronous information flow.
+%Moreover figo GmbH requires input of test results to be recorded in to LogStash logs database. 
+
+%Testing of real-time software
+
+
+%The execution requirements from figo GmbH are such that tests defined via Test Sheets should be automatically executed in a time manner (every 2 mins or so), while normal software testing is performed on demand.
+%The figo's requirement for comparison is such that while defining a Test Sheet user should be able to select from two types of comparison: 1) Strict comparison - complete comparison of objects including both properties' structure and their values. 2) Not-Strict comparison - scheme comparison of objects.
+
+%(Probably should go to different section)
+%Scraping scripts implement callback based approach for handling asynchronous data flow. This provides an opportunity to perform result comparison within the custom callback defined on a implementation stage.
+%Standard convention for callback definitions limitates number of input parameters of a callback (error, data), while comparison requires compare data parameter with expected outputs from Test Sheet. The opportunity to resolve this issue lays in a JavaScript's support of functions as a class citizens, the function implementation of module for comparison and report: module exports function which invoked with single parameters (expected\_output) / ( + script name) and returns function which is used as a callback for scrapping script, this callback function performs comparison and writes its result to TestSheet or logstash depending on environment in which the program was executed
+
+
+%%!!! update conventions and align this list to them!
+%\begin{enumerate}
+%	\item asynchronous software in combination with reference mechanism of test sheets
+%\end{enumerate}
 

@@ -6,58 +6,42 @@
 \contentsline {chapter}{List of Abbreviations}{x}{chapter*.4}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {chapter}{\numberline {2}figo GmbH}{3}{chapter.2}
-\contentsline {section}{\numberline {2.1}General Information}{3}{section.2.1}
-\contentsline {section}{\numberline {2.2}IT infrastructure. Banking Server}{4}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Banking Server Architecture}{5}{subsection.2.2.1}
-\contentsline {paragraph}{\nonumberline Custom-API}{5}{section*.5}
+\contentsline {section}{\numberline {2.1}IT infrastructure. Banking Server}{4}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Banking Server Architecture}{4}{subsection.2.1.1}
+\contentsline {paragraph}{\nonumberline Custom-API}{4}{section*.5}
 \contentsline {paragraph}{\nonumberline HBCI+/FinTS}{5}{section*.6}
 \contentsline {paragraph}{\nonumberline Web-Banking Engine}{5}{section*.7}
+\contentsline {section}{\numberline {2.2}Requirements}{5}{section.2.2}
 \contentsline {chapter}{\numberline {3}Testing. Existing approaches. Test Sheets}{7}{chapter.3}
 \contentsline {section}{\numberline {3.1}Software testing}{7}{section.3.1}
 \contentsline {paragraph}{\nonumberline The economical costs}{7}{section*.8}
-\contentsline {paragraph}{\nonumberline The human causalities}{8}{section*.9}
-\contentsline {section}{\numberline {3.2}Existing approaches for test definitions}{9}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}xUnit}{9}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Fit}{10}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Cucumber}{11}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3}Test Sheets}{12}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Basic Test Sheets}{12}{subsection.3.3.1}
-\contentsline {chapter}{\numberline {4}Real-Time Software. Web scrapping}{15}{chapter.4}
-\contentsline {section}{\numberline {4.1}Web scraping}{16}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}CasperJS}{16}{subsection.4.1.1}
-\contentsline {chapter}{\numberline {5}Asynchronous programming. Node.js. Strategies and performance}{19}{chapter.5}
-\contentsline {section}{\numberline {5.1}Asynchronous programming}{19}{section.5.1}
-\contentsline {section}{\numberline {5.2}Node.js}{19}{section.5.2}
-\contentsline {paragraph}{\nonumberline Node core}{21}{section*.10}
-\contentsline {paragraph}{\nonumberline Bindings}{21}{section*.11}
-\contentsline {paragraph}{\nonumberline Non blocking I/O}{21}{section*.12}
-\contentsline {paragraph}{\nonumberline V8/Chakra}{21}{section*.13}
-\contentsline {subsection}{\numberline {5.2.1}Event}{22}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Event handling}{22}{subsection.5.2.2}
-\contentsline {section}{\numberline {5.3}Asynchronous handling strategies}{23}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Callbacks}{23}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Data focused strategies / Imperative}{24}{subsection.5.3.2}
-\contentsline {paragraph}{\nonumberline Value}{24}{section*.14}
-\contentsline {paragraph}{\nonumberline Collection}{25}{section*.15}
-\contentsline {paragraph}{\nonumberline Deferred}{25}{section*.16}
-\contentsline {paragraph}{\nonumberline Stream}{25}{section*.17}
-\contentsline {section}{\numberline {5.4}Performance}{26}{section.5.4}
-\contentsline {chapter}{\numberline {6}OOP and FP}{29}{chapter.6}
-\contentsline {section}{\numberline {6.1}Object Oriented Programming}{29}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Design Principles}{29}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Design Patterns}{30}{subsection.6.1.2}
-\contentsline {section}{\numberline {6.2}Functional Programming}{32}{section.6.2}
-\contentsline {chapter}{\numberline {7}Contributions}{35}{chapter.7}
-\contentsline {section}{\numberline {7.1}Requirements analysis}{35}{section.7.1}
-\contentsline {section}{\numberline {7.2}Conventions}{36}{section.7.2}
-\contentsline {section}{\numberline {7.3}Use Case}{37}{section.7.3}
-\contentsline {section}{\numberline {7.4}Architecture}{37}{section.7.4}
-\contentsline {section}{\numberline {7.5}Design and Implementation}{38}{section.7.5}
-\contentsline {subsection}{\numberline {7.5.1}Reader}{38}{subsection.7.5.1}
-\contentsline {paragraph}{\nonumberline Correspondence to design principles:}{39}{section*.18}
-\contentsline {subsection}{\numberline {7.5.2}Writer}{39}{subsection.7.5.2}
-\contentsline {chapter}{\numberline {8}Implementierung}{41}{chapter.8}
-\contentsline {chapter}{\nonumberline Bibliography}{43}{appendix*.19}
-\contentsline {part}{\nonumberline Appendix}{47}{section*.20}
-\contentsline {chapter}{\numberline {A}First class of appendices}{49}{appendix.A}
-\contentsline {section}{\numberline {A.1}Some appendix}{49}{section.A.1}
+\contentsline {section}{\numberline {3.2}Existing approaches for test definitions}{8}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}xUnit}{8}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Fit}{9}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Cucumber}{9}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}Test Sheets}{10}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Basic Test Sheets}{11}{subsection.3.3.1}
+\contentsline {chapter}{\numberline {4}Real-Time Software and its Testing. Web scrapping}{13}{chapter.4}
+\contentsline {section}{\numberline {4.1}Web scraping. CasperJS}{15}{section.4.1}
+\contentsline {paragraph}{\nonumberline CasperJS}{15}{section*.9}
+\contentsline {chapter}{\numberline {5}Asynchronous programming. Strategies and performance}{17}{chapter.5}
+\contentsline {section}{\numberline {5.1}Asynchronous programming}{17}{section.5.1}
+\contentsline {paragraph}{\nonumberline Node.js}{17}{section*.10}
+\contentsline {subsection}{\numberline {5.1.1}Event handling}{19}{subsection.5.1.1}
+\contentsline {section}{\numberline {5.2}Asynchronous handling strategies}{20}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Continuation passing}{20}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Imperative}{21}{subsection.5.2.2}
+\contentsline {paragraph}{\nonumberline Synchronous:}{22}{section*.11}
+\contentsline {paragraph}{\nonumberline Asynchronous:}{22}{section*.12}
+\contentsline {section}{\numberline {5.3}Performance}{23}{section.5.3}
+\contentsline {chapter}{\numberline {6}Architecture}{25}{chapter.6}
+\contentsline {chapter}{\numberline {7}Implementation}{29}{chapter.7}
+\contentsline {section}{\numberline {7.1}Read Stream}{31}{section.7.1}
+\contentsline {section}{\numberline {7.2}Transform Stream}{32}{section.7.2}
+\contentsline {section}{\numberline {7.3}Write Stream}{32}{section.7.3}
+\contentsline {section}{\numberline {7.4}Compare and Write module}{32}{section.7.4}
+\contentsline {chapter}{\numberline {8}Implementierung}{33}{chapter.8}
+\contentsline {chapter}{\nonumberline Bibliography}{35}{appendix*.13}
+\contentsline {part}{\nonumberline Appendix}{39}{section*.14}
+\contentsline {chapter}{\numberline {A}First class of appendices}{41}{appendix.A}
+\contentsline {section}{\numberline {A.1}Some appendix}{41}{section.A.1}

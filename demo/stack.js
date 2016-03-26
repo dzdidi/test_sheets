@@ -23,6 +23,6 @@ module.exports = {
     size: function(cb){
         return setTimeout(function(){
             return cb(null, {size: stack.length});
-        })
+        }, 10)
     },
 }

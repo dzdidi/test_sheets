@@ -3,21 +3,19 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: arbeit.aux
 A level-1 auxiliary file: kapitel/titel.aux
 A level-1 auxiliary file: kapitel/abstract.aux
-A level-1 auxiliary file: kapitel/content.aux
 A level-1 auxiliary file: kapitel/introduction.aux
 A level-1 auxiliary file: kapitel/figo.aux
 A level-1 auxiliary file: kapitel/testing.aux
 A level-1 auxiliary file: kapitel/realTime.aux
 A level-1 auxiliary file: kapitel/async.aux
-A level-1 auxiliary file: kapitel/oop_fp.aux
+A level-1 auxiliary file: kapitel/architectureDesign.aux
+A level-1 auxiliary file: kapitel/implementationTestCoverage.aux
 A level-1 auxiliary file: kapitel/contribution.aux
 A level-1 auxiliary file: kapitel/grafiken.aux
 The style file: plain.bst
 A level-1 auxiliary file: kapitel/erklaerung.aux
 A level-1 auxiliary file: kapitel/abtretungserklaerung.aux
 Database file #1: literatur/lit.bib
-Warning--I didn't find a database entry for "events"
-Warning--I didn't find a database entry for "javase"
 Warning--to sort, need author or key in moduleCounts
 Warning--to sort, need author or key in gtor
 Warning--to sort, need author or key in asyncPerformance_2
@@ -30,71 +28,68 @@ Warning--to sort, need author or key in PSD2
 Warning--to sort, need author or key in figoFAQVision
 Warning--to sort, need author or key in figoAngel
 Warning--to sort, need author or key in figoCB
-Warning--to sort, need author or key in figoAPI
 Warning--to sort, need author or key in figoFAQWhat
 Warning--to sort, need author or key in figoFAQPartners
 Warning--to sort, need author or key in finTS
-Warning--to sort, need author or key in ieeeTesting
 Warning--to sort, need author or key in costOfErrors
-Warning--to sort, need author or key in toyota
-Warning--to sort, need author or key in ts
 Warning--to sort, need author or key in xunitFowler
 Warning--to sort, need author or key in xunitWiki
 Warning--to sort, need author or key in fit
 Warning--to sort, need author or key in fitIntro
 Warning--to sort, need author or key in cuceRef
+Warning--to sort, need author or key in ts
 Warning--to sort, need author or key in tsb
 Warning--to sort, need author or key in wikiScraping
+Warning--to sort, need author or key in conScrap
 Warning--to sort, need author or key in w3cDOM
 Warning--to sort, need author or key in casperjs
 Warning--to sort, need author or key in asyncArticle
 Warning--to sort, need author or key in nodejsabout
-Warning--to sort, need author or key in mozillaJS
 Warning--to sort, need author or key in libuv
 Warning--to sort, need author or key in libuvBasic
+Warning--to sort, need author or key in events
 Warning--to sort, need author or key in zalgo
-Warning--to sort, need author or key in oosite
 Warning--empty note in Lecture1
 Warning--empty note in Lecture2
-You've used 52 entries,
+You've used 41 entries,
             2118 wiz_defined-function locations,
-            741 strings with 9382 characters,
-and the built_in function-call counts, 9979 in all, are:
-= -- 933
-> -- 193
-< -- 2
-+ -- 105
-- -- 48
-* -- 438
-:= -- 1317
-add.period$ -- 107
-call.type$ -- 52
-change.case$ -- 176
+            672 strings with 7968 characters,
+and the built_in function-call counts, 7125 in all, are:
+= -- 649
+> -- 100
+< -- 1
++ -- 64
+- -- 20
+* -- 275
+:= -- 873
+add.period$ -- 76
+call.type$ -- 41
+change.case$ -- 130
 chr.to.int$ -- 0
-cite$ -- 90
-duplicate$ -- 453
-empty$ -- 1211
-format.name$ -- 48
-if$ -- 2338
+cite$ -- 76
+duplicate$ -- 325
+empty$ -- 938
+format.name$ -- 20
+if$ -- 1705
 int.to.chr$ -- 0
-int.to.str$ -- 52
-missing$ -- 23
-newline$ -- 212
-num.names$ -- 32
-pop$ -- 374
+int.to.str$ -- 41
+missing$ -- 10
+newline$ -- 160
+num.names$ -- 16
+pop$ -- 305
 preamble$ -- 1
-purify$ -- 128
+purify$ -- 92
 quote$ -- 0
-skip$ -- 447
+skip$ -- 354
 stack$ -- 0
-substring$ -- 398
-swap$ -- 71
-text.length$ -- 2
+substring$ -- 261
+swap$ -- 49
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 190
-warning$ -- 38
-while$ -- 42
-width$ -- 54
-write$ -- 404
-(There were 40 warnings)
+type$ -- 156
+warning$ -- 35
+while$ -- 20
+width$ -- 43
+write$ -- 288
+(There were 35 warnings)

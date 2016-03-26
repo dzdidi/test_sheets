@@ -1,11 +1,7 @@
-\chapter{Real-Time Software. Web scrapping}
-Donald Gillies defined a real-time software as a system : \textit{"[...] in which the correctness of the computations not only depends upon the logical correctness of the computation but also upon the time at which the result is produced. If the timing constraints of the system are not met, system failure is said to have occurred."}
+\chapter{Real-Time Software and its Testing. Web scrapping}
+Donald Gillies defined a real-time software as a system: \textit{"[...] in which the correctness of the computations not only depends upon the logical correctness of the computation but also upon the time at which the result is produced. If the timing constraints of the system are not met, system failure is said to have occurred."} While Robert L. Glass\cite{RealTimeTesting} defines this term as: \textit{"[...] a software that drives a computer which interacts with functioning external devices or objects. It is called real-time because the software actions control activities that are occurring in an ongoing process".} Within this research we will define  \textit{Real-Time software} as a combination of this to definitions which covers both logical and time correctness as well as an interaction with external systems controlled by the ongoing process.
 
-While Robert L. Glass\cite{RealTimeTesting} defines this term as: \textit{"[...] a software that drives a computer which interacts with functioning external devices or objects. It is called real-time because the software actions control activities that are occurring in an ongoing process".}
-
-Within this research we will define  \textit{Real-Time software} as a combination of this to definitions which covers both logical and time correctness as well as an interaction with external systems controlled by the ongoing process.
-
-The Web-Banking engine of figo GmbH matches this definition due to the following facts. First it performs communication with external systems (Web Banking HTML pages). Next its result correctness depends time restrictions (if child process responsible for script execution was not finished within 1200 seconds, and with each task performed within 0.5 seconds it is treated as failed) as well as logical correctness depended upon ability of the script to perform necessary actions for a fulfillment of a requested task.
+The Web-Banking engine of figo GmbH matches this definition due to the following facts. First, it performs communication with external systems (Web Banking HTML pages). Next, its result correctness depends time restrictions (if child process responsible for script execution was not finished within 1200 seconds, and with each task performed within 0.5 seconds it is treated as failed) as well as logical correctness depended upon ability of the script to perform necessary actions for a fulfillment of a requested task.
 
 %Within the scope of this research under Real-Time software we will mean the software that interact with external systems and its correctness depends on logical correctness of execution result as well as result production time.
 
@@ -15,22 +11,29 @@ The Web-Banking engine of figo GmbH matches this definition due to the following
 
 %In general the special characteristic of real-time systems makes them a main challenge when it comes to testing. The time-dependent type of real-time applications adds a new difficult element to testing.
 
-Tsai, Fang and Bi\cite{rtSandD} state that testing and debugging of real-time software are very difficult because of timing constraints and non-deterministic execution behavior. In a real-time system, the processes receive inputs from real world processes as a result of asynchronous interrupts and it is almost impossible to precisely predict the exact program execution points at which the inputs will be supplied to the system. Consequently, the system may not exhibit the same behavior upon repeated execution of the program. In addition, in a real-time system, the pace of execution of processes is determined not only by internal criteria, but also by real world processes and their timing constraints.
+Tsai, Fang and Bi\cite{rtSandD} state that testing and debugging of real-time software are very difficult because of timing constraints and non-deterministic execution behavior. In a real-time system, the processes receive inputs from real world processes as a result of asynchronous interrupts and it is almost impossible to precisely predict the exact program execution points at which the inputs will be supplied to the system. Consequently, the system may not exhibit the same behavior upon repeated execution of the program. In addition, in a real-time system, the pace of an execution of processes is determined not only by internal criteria, but also by real world processes and their timing constraints. 
 
-\section{Web scraping}
-!!!give some motivation
+The general testing and debugging strategy (Fig. \ref{fig:GeneralTestingAndDebugging}) described by Tsai, Fang and Bi \cite{rtSandD} consists of four steps.
+At the \textit{first} step, a set of events which can be used to represent the program's execution behavior at a specific abstraction level and the event key values which describe these events are identified. 
+At the \textit{second} step, the execution data, containing the event key values identified in the fist step, is collected using the real-time monitoring system. 
+The first and second steps constitute the monitoring phase. After the data is collected, at the \textit{third} step, the collected data is processed in an off-line mode to construct logical views to represent the program's execution behavior.
+At the \textit{fourth} step, analysis algorithms will be employed to identify fault units and to report to the user. 
+Finally, the user can use this report to decide next monitoring and debugging cycle for a lower level abstraction.
+In this paper the provided strategy is applied for each individual test.
 
-	"Web scraping (web harvesting or web data extraction) is a computer software technique of extracting information from websites. Usually, such software programs simulate human exploration of the World Wide Web by either implementing low-level Hypertext Transfer Protocol (HTTP), or embedding a fully-fledged web browser, such as Mozilla Firefox.\\
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.7\linewidth]{grafiken/GeneralTestingAndDebugging}
+	\label{fig:GeneralTestingAndDebugging}
+	\caption{General Testing and Debugging Strategy\cite{rtSandD}}
+\end{figure}
 
-Web scraping is the process of automatically collecting information from the World Wide Web. It is a field with active developments sharing a common goal with the semantic web vision, an ambitious initiative that still requires breakthroughs in text processing, semantic understanding, artificial intelligence and human-computer interactions. Current web scraping solutions range from the ad-hoc, requiring human effort, to fully automated systems that are able to convert entire web sites into structured information, with limitations." \cite{wikiScraping}
+\section{Web scraping. CasperJS}
+Web scraping is a method for extracting information from web pages\cite{wikiScraping}. This technique is useful when you want to do real-time, price and product comparisons, archive web pages, or acquire data sets that you want to evaluate or filter\cite{conScrap}.
 
-"The Document Object Model is a platform- and language-neutral interface that will allow programs and scripts to dynamically access and update the content, structure and style of documents." \cite{w3cDOM}
+Web scraping works via interaction with Document Object Model (DOM) of the web page it is an useful technique for real-time data extraction from human readable web-pages. W3Council defines DOM\cite{w3cDOM} as "... a platform- and language-neutral interface that will allow programs and scripts to dynamically access and update the content, structure and style of documents." 
 
-
-?!?!?! add alternative technologies and compare them from the companies perspective!
-\subsection{CasperJS}
-		\cite{casperjs}
-		CasperJS is an open source navigation scripting \& testing utility written in JavaScript for the PhantomJS WebKit headless browser and SlimerJS (Gecko). It eases the process of defining a full navigation scenario and provides useful high-level functions, methods \& syntactic sugar for doing common tasks such as:
+\paragraph{CasperJS} is an open source navigation scripting \& testing utility written in javascript for the headless browsing. It eases the process of defining a full navigation scenario and provides useful high-level functions, methods \& syntactic sugar for doing common tasks for interaction with DOM of the web page\cite{casperjs}:
 \begin{itemize}
 	\item defining \& ordering browsing navigation steps
 	\item filling \& submitting forms
@@ -43,4 +46,4 @@ Web scraping is the process of automatically collecting information from the Wor
 	\item scraping Web contents
 \end{itemize}
 
-!!! Add a conclusion
+Usage of this tool gives an ability for figo GmbH to pragmatically imitate user behavior on a web page. Which includes filling login forms, filing forms for retrieving service information and perform other business activity available via a service web site. CasperJS instantiates web-page or its part defined as tree of DOM selectors.  Page content includes both HTML and javascript/jQuery code from the web-page addressed with provided URL. Instantiated page or its part is stored in memory and can be accessed for further manipulation by CasperJS methods as any other object instance.
