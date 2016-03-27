@@ -37,11 +37,19 @@
 \contentsline {chapter}{\numberline {6}Architecture}{25}{chapter.6}
 \contentsline {chapter}{\numberline {7}Implementation}{29}{chapter.7}
 \contentsline {section}{\numberline {7.1}Read Stream}{31}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Test Coverage}{32}{subsection.7.1.1}
 \contentsline {section}{\numberline {7.2}Transform Stream}{32}{section.7.2}
-\contentsline {section}{\numberline {7.3}Write Stream}{32}{section.7.3}
-\contentsline {section}{\numberline {7.4}Compare and Write module}{32}{section.7.4}
-\contentsline {chapter}{\numberline {8}Implementierung}{33}{chapter.8}
-\contentsline {chapter}{\nonumberline Bibliography}{35}{appendix*.13}
-\contentsline {part}{\nonumberline Appendix}{39}{section*.14}
-\contentsline {chapter}{\numberline {A}First class of appendices}{41}{appendix.A}
-\contentsline {section}{\numberline {A.1}Some appendix}{41}{section.A.1}
+\contentsline {subsection}{\numberline {7.2.1}Test Coverage}{33}{subsection.7.2.1}
+\contentsline {section}{\numberline {7.3}Schema}{33}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Test Coverage}{36}{subsection.7.3.1}
+\contentsline {section}{\numberline {7.4}Template}{37}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}Test Coverage}{39}{subsection.7.4.1}
+\contentsline {section}{\numberline {7.5}Write Stream}{40}{section.7.5}
+\contentsline {subsection}{\numberline {7.5.1}Test Coverage}{43}{subsection.7.5.1}
+\contentsline {section}{\numberline {7.6}Reporting mechanism}{43}{section.7.6}
+\contentsline {subsection}{\numberline {7.6.1}Implementation}{44}{subsection.7.6.1}
+\contentsline {subsection}{\numberline {7.6.2}Test coverage}{45}{subsection.7.6.2}
+\contentsline {chapter}{\nonumberline Bibliography}{47}{appendix*.13}
+\contentsline {part}{\nonumberline Appendix}{51}{section*.14}
+\contentsline {chapter}{\numberline {A}First class of appendices}{53}{appendix.A}
+\contentsline {section}{\numberline {A.1}Some appendix}{53}{section.A.1}

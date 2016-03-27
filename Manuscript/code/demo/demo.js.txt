@@ -2,7 +2,6 @@
  Demonstaration 
  */
 var makeComparisonAndWriteResult = require('../compare_and_write');
-var tmp = {};
 
  var A3 = require('./stack');
  var F3 = {"size":0};
@@ -18,7 +17,7 @@ var tmp = {};
  var A8 = require('./stack');
  var F8 = {"el":1};
  var A9 = require('./stack');
- var F9 = {"size":1};
+ var F9 = {"el":100};
  var A10 = require('./stack');
  var F10 = {"el":1};
  var A11 = require('./stack');
@@ -53,9 +52,9 @@ A3.size.call(this, function(err, data){
             if(makeComparisonAndWriteResult(F8, data, '||', 'stack top', 'demo/demo.xlsx', 'F8')){
               F8 = data;
             };
-            A9.size.call(this, function(err, data){
+            A9.top.call(this, function(err, data){
               if(err)  return(err, null);
-              if(makeComparisonAndWriteResult(F9, data, '||', 'stack size', 'demo/demo.xlsx', 'F9')){
+              if(makeComparisonAndWriteResult(F9, data, '||', 'stack top', 'demo/demo.xlsx', 'F9')){
                 F9 = data;
               };
               A10.pop.call(this, function(err, data){

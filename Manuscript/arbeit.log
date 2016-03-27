@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.25)  26 MAR 2016 18:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.25)  27 MAR 2016 22:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -703,8 +703,7 @@ Package scrkbase Warning: `pagehead' is only an alias of `pageheadfoot'.
 
 LaTeX Warning: Label `demo' multiply defined.
 
-) (./kapitel/contribution.aux) (./kapitel/grafiken.aux)
-(./kapitel/erklaerung.aux) (./kapitel/abtretungserklaerung.aux))
+) (./kapitel/erklaerung.aux) (./kapitel/abtretungserklaerung.aux))
 \openout1 = `arbeit.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 153.
@@ -870,7 +869,7 @@ Package tocstyle Info: prepare \l@figure for redefinition on input line 153.
 \openout2 = `kapitel/titel.aux'.
 
  (./kapitel/titel.tex
-<grafiken/unilogo.png, id=151, 1445.4pt x 281.05pt>
+<grafiken/unilogo.png, id=183, 1445.4pt x 281.05pt>
 File: grafiken/unilogo.png Graphic file (type png)
  <use grafiken/unilogo.png>
 Package pdftex.def Info: grafiken/unilogo.png used on input line 10.
@@ -1050,22 +1049,54 @@ m (toc, 1): 27.02475pt
 C (toc, 1): 17.25pt
 a (toc, 1): 27.08583pt
 A (toc, 1): 20.69444pt
+m (toc, 2): 37.59956pt
+C (toc, 2): 41.40253pt
+a (toc, 2): 33.29132pt
+A (toc, 2): 41.40253pt
 m (toc, 1): 27.02475pt
 C (toc, 1): 17.25pt
 a (toc, 1): 27.08583pt
 A (toc, 1): 20.69444pt
+m (toc, 2): 37.59956pt
+C (toc, 2): 41.40253pt
+a (toc, 2): 33.29132pt
+A (toc, 2): 41.40253pt
 m (toc, 1): 27.02475pt
 C (toc, 1): 17.25pt
 a (toc, 1): 27.08583pt
 A (toc, 1): 20.69444pt
+m (toc, 2): 37.59956pt
+C (toc, 2): 41.40253pt
+a (toc, 2): 33.29132pt
+A (toc, 2): 41.40253pt
 m (toc, 1): 27.02475pt
 C (toc, 1): 17.25pt
 a (toc, 1): 27.08583pt
 A (toc, 1): 20.69444pt
-m (toc, 0): 17.62482pt
-C (toc, 0): 0.0pt
-a (toc, 0): 20.69444pt
-A (toc, 0): 0.0pt
+m (toc, 2): 37.59956pt
+C (toc, 2): 41.40253pt
+a (toc, 2): 33.29132pt
+A (toc, 2): 41.40253pt
+m (toc, 1): 27.02475pt
+C (toc, 1): 17.25pt
+a (toc, 1): 27.08583pt
+A (toc, 1): 20.69444pt
+m (toc, 2): 37.59956pt
+C (toc, 2): 41.40253pt
+a (toc, 2): 33.29132pt
+A (toc, 2): 41.40253pt
+m (toc, 1): 27.02475pt
+C (toc, 1): 17.25pt
+a (toc, 1): 27.08583pt
+A (toc, 1): 20.69444pt
+m (toc, 2): 37.59956pt
+C (toc, 2): 41.40253pt
+a (toc, 2): 33.29132pt
+A (toc, 2): 41.40253pt
+m (toc, 2): 37.59956pt
+C (toc, 2): 41.40253pt
+a (toc, 2): 33.29132pt
+A (toc, 2): 41.40253pt
 m (toc, 0): 17.62482pt
 C (toc, 0): 0.0pt
 a (toc, 0): 20.69444pt
@@ -1087,6 +1118,34 @@ A (toc, 1): 20.69444pt
 \openout5 = `arbeit.toc'.
 
  [6] (./arbeit.lof
+m (lof, 1): 27.02475pt
+C (lof, 1): 17.62482pt
+a (lof, 1): 24.15253pt
+A (lof, 1): 17.62482pt
+m (lof, 1): 27.02475pt
+C (lof, 1): 17.62482pt
+a (lof, 1): 24.15253pt
+A (lof, 1): 17.62482pt
+m (lof, 1): 27.02475pt
+C (lof, 1): 17.62482pt
+a (lof, 1): 24.15253pt
+A (lof, 1): 17.62482pt
+m (lof, 1): 27.02475pt
+C (lof, 1): 17.62482pt
+a (lof, 1): 24.15253pt
+A (lof, 1): 17.62482pt
+m (lof, 1): 27.02475pt
+C (lof, 1): 17.62482pt
+a (lof, 1): 24.15253pt
+A (lof, 1): 17.62482pt
+m (lof, 1): 27.02475pt
+C (lof, 1): 17.62482pt
+a (lof, 1): 24.15253pt
+A (lof, 1): 17.62482pt
+m (lof, 1): 27.02475pt
+C (lof, 1): 17.62482pt
+a (lof, 1): 24.15253pt
+A (lof, 1): 17.62482pt
 m (lof, 1): 27.02475pt
 C (lof, 1): 17.62482pt
 a (lof, 1): 24.15253pt
@@ -1173,7 +1232,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--30
 
  (./kapitel/figo.tex
 Chapter 2.
-<grafiken/figoArch.pdf, id=297, 233.87375pt x 351.3125pt>
+<grafiken/figoArch.pdf, id=352, 233.87375pt x 351.3125pt>
 File: grafiken/figoArch.pdf Graphic file (type pdf)
 
 <use grafiken/figoArch.pdf>
@@ -1215,7 +1274,7 @@ Overfull \hbox (4.81258pt too wide) in paragraph at lines 61--62
 tests automation[[]][[]].
  []
 
-[8] [9] [10] <grafiken/basic_test_sheet.pdf, id=394, 720.6925pt x 310.15875pt>
+[8] [9] [10] <grafiken/basic_test_sheet.pdf, id=448, 720.6925pt x 310.15875pt>
 File: grafiken/basic_test_sheet.pdf Graphic file (type pdf)
 
 <use grafiken/basic_test_sheet.pdf>
@@ -1231,7 +1290,7 @@ Chapter 4.
 
 
 ]
-<grafiken/GeneralTestingAndDebugging.pdf, id=426, 276.03125pt x 294.09875pt>
+<grafiken/GeneralTestingAndDebugging.pdf, id=481, 276.03125pt x 294.09875pt>
 File: grafiken/GeneralTestingAndDebugging.pdf Graphic file (type pdf)
 
 <use grafiken/GeneralTestingAndDebugging.pdf>
@@ -1256,21 +1315,21 @@ Overfull \hbox (0.96123pt too wide) in paragraph at lines 3--4
 op-er-a-tions should
  []
 
-<grafiken/modulecounts.png, id=467, 619.31375pt x 435.6275pt>
+<grafiken/modulecounts.png, id=521, 619.31375pt x 435.6275pt>
 File: grafiken/modulecounts.png Graphic file (type png)
 
 <use grafiken/modulecounts.png>
 Package pdftex.def Info: grafiken/modulecounts.png used on input line 23.
 (pdftex.def)             Requested size: 412.56503pt x 290.21378pt.
  [17]
-<grafiken/nodeArchitecture.png, id=478, 253.94875pt x 233.87375pt>
+<grafiken/nodeArchitecture.png, id=532, 253.94875pt x 233.87375pt>
 File: grafiken/nodeArchitecture.png Graphic file (type png)
 
 <use grafiken/nodeArchitecture.png>
 Package pdftex.def Info: grafiken/nodeArchitecture.png used on input line 31.
 (pdftex.def)             Requested size: 253.94812pt x 233.87315pt.
  [18 <./grafiken/modulecounts.png>]
-<grafiken/nodeEventHandling.png, id=496, 495.8525pt x 347.2975pt>
+<grafiken/nodeEventHandling.png, id=550, 495.8525pt x 347.2975pt>
 File: grafiken/nodeEventHandling.png Graphic file (type png)
 
 <use grafiken/nodeEventHandling.png>
@@ -1283,7 +1342,7 @@ Overfull \hbox (40.21019pt too wide) in paragraph at lines 77--78
 / Lang-[]NEXT-[]2014 / Keynote-[]Duality$[][]
  []
 
-<grafiken/dualityMatrix.pdf, id=520, 366.36874pt x 316.18124pt>
+<grafiken/dualityMatrix.pdf, id=574, 366.36874pt x 316.18124pt>
 File: grafiken/dualityMatrix.pdf Graphic file (type pdf)
 
 <use grafiken/dualityMatrix.pdf>
@@ -1304,7 +1363,7 @@ s they use vanilla callbacks"[[]]
 
 ]
 Chapter 6.
-<grafiken/TSGeneratorArchitecture.pdf, id=582, 225.84375pt x 301.125pt>
+<grafiken/TSGeneratorArchitecture.pdf, id=636, 225.84375pt x 301.125pt>
 File: grafiken/TSGeneratorArchitecture.pdf Graphic file (type pdf)
 
 <use grafiken/TSGeneratorArchitecture.pdf>
@@ -1329,131 +1388,189 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 13.
 )
-<grafiken/demoTS.png, id=639, 480.79625pt x 195.73125pt>
+<grafiken/demoTS.png, id=693, 480.79625pt x 195.73125pt>
 File: grafiken/demoTS.png Graphic file (type png)
 
 <use grafiken/demoTS.png>
 Package pdftex.def Info: grafiken/demoTS.png used on input line 34.
-(pdftex.def)             Requested size: 336.55507pt x 137.01093pt.
+(pdftex.def)             Requested size: 412.56503pt x 167.95822pt.
 
 Underfull \vbox (badness 4765) has occurred while \output is active []
 
  [30]
-(./code/lib/stream/readStream.js.txt [31 <./grafiken/demoTS.png>])) [32]
-\openout2 = `kapitel/contribution.aux'.
+(./code/readOut.js.txt
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 2.
 
-
-(./kapitel/contribution.tex)
-\openout2 = `kapitel/grafiken.aux'.
-
- (./kapitel/grafiken.tex
-Chapter 8.
-
-Underfull \hbox (badness 10000) in paragraph at lines 3--8
-
- []
-
-
-Overfull \hbox (41.16516pt too wide) in paragraph at lines 19--28
-[]\OT1/cmr/m/n/12 Die zu er-stel-lende Soft-ware soll im pack-age de.uni[]mannh
-eim.informatik.swt.\OT1/cmtt/m/n/12 projektname
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 19--28
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 19--28
-
- []
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2014/09/06 1.5e listings language file
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-(./code/GuestbookForm.java.txt [33
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 2.
+) [31 <./grafiken/demoTS.png>] <grafiken/testReadStream.png, id=746, 479.7925pt
+ x 148.555pt>
+File: grafiken/testReadStream.png Graphic file (type png)
+
+<use grafiken/testReadStream.png>
+Package pdftex.def Info: grafiken/testReadStream.png used on input line 83.
+(pdftex.def)             Requested size: 412.56503pt x 127.7412pt.
+ (./code/writeIn.js.txt [32 <./grafiken/testReadStream.png>]) <grafiken/testTra
+nsform.png, id=757, 349.305pt x 82.3075pt>
+File: grafiken/testTransform.png Graphic file (type png)
+
+<use grafiken/testTransform.png>
+Package pdftex.def Info: grafiken/testTransform.png used on input line 143.
+(pdftex.def)             Requested size: 412.56503pt x 97.21994pt.
+ (./code/firstSchema.js.txt [33 <./grafiken/testTransform.png>]) (./code/scheme
+.js.txt [34]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [35])
+<grafiken/testScheme.png, id=849, 551.05875pt x 644.4075pt>
+File: grafiken/testScheme.png Graphic file (type png)
+
+<use grafiken/testScheme.png>
+Package pdftex.def Info: grafiken/testScheme.png used on input line 198.
+(pdftex.def)             Requested size: 412.56503pt x 482.46864pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [36]
+[37 <./grafiken/testScheme.png>] (./code/lib/template/template.js.txt [38])
+<grafiken/testTemplate.png, id=879, 794.97pt x 538.01pt>
+File: grafiken/testTemplate.png Graphic file (type png)
+
+<use grafiken/testTemplate.png>
+Package pdftex.def Info: grafiken/testTemplate.png used on input line 241.
+(pdftex.def)             Requested size: 412.56503pt x 279.21678pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [39]
+[40 <./grafiken/testTemplate.png>] (./code/demo/demo.js.txt
+LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [41]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [42])
+<grafiken/testWriteStream.png, id=993, 638.385pt x 120.45pt>
+File: grafiken/testWriteStream.png Graphic file (type png)
+
+<use grafiken/testWriteStream.png>
+Package pdftex.def Info: grafiken/testWriteStream.png used on input line 288.
+(pdftex.def)             Requested size: 412.56503pt x 77.84311pt.
+ [43 <./grafiken/testWriteStream.png>]
+(./code/report.js.txt)
+<grafiken/testSheetResult.png, id=1007, 556.0775pt x 222.8325pt>
+File: grafiken/testSheetResult.png Graphic file (type png)
+
+<use grafiken/testSheetResult.png>
+Package pdftex.def Info: grafiken/testSheetResult.png used on input line 324.
+(pdftex.def)             Requested size: 412.56503pt x 165.32529pt.
+
+<grafiken/testReport.png, id=1009, 436.63126pt x 264.99pt>
+File: grafiken/testReport.png Graphic file (type png)
+
+<use grafiken/testReport.png>
+Package pdftex.def Info: grafiken/testReport.png used on input line 335.
+(pdftex.def)             Requested size: 412.56503pt x 250.38452pt.
+ [44 <./grafiken/testSheetResult.png>]) [45 <./grafiken/testReport.png>] (./arb
+eit.bbl [46
 
 
+]
+Underfull \hbox (badness 10000) in paragraph at lines 8--11
+[]\OT1/cmr/m/n/12 Analysis of gen-er-a-tors and other async pat-
+ []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 8--11
+\OT1/cmr/m/n/12 terns in node.  [][]$\OT1/cmtt/m/n/12 https : / / spion . githu
+b . io / posts /
+ []
 
-])) [34] (./arbeit.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 14--17
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--21
 []\OT1/cmr/m/n/12 The bank busi-ness model for apis: Iden-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--17
+Underfull \hbox (badness 10000) in paragraph at lines 18--21
 \OT1/cmr/m/n/12 tity.  [][]$\OT1/cmtt/m/n/12 http : / / tomorrowstransactions .
  com / 2015 / 03 /
  []
 
 
-Underfull \hbox (badness 2197) in paragraph at lines 29--32
+Underfull \hbox (badness 2197) in paragraph at lines 35--38
 []\OT1/cmr/m/n/12 Eur-lex - 32015l2366 - en - eur-lex.  [][]$\OT1/cmtt/m/n/12 h
 ttp : / / eur-[]lex . europa . eu /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--61
+Underfull \hbox (badness 10000) in paragraph at lines 69--72
 []\OT1/cmr/m/n/12 Ich m^^?ochte mehr zu eu-rer vi-sion er-fahren!  [][]$\OT1/cm
 tt/m/n/12 https :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--61
+Underfull \hbox (badness 10000) in paragraph at lines 69--72
 \OT1/cmtt/m/n/12 / / figo . zendesk . com / hc / de / articles / 200974801-[]Ic
 h-[]m % C3 %
  []
 
-[35
+[47]
+Underfull \hbox (badness 2181) in paragraph at lines 74--76
+[]\OT1/cmr/m/n/12 Introduction to asyn-chronous pro-gram-ming.  [][]$\OT1/cmtt/
+m/n/12 http : / / cs . brown . edu /
+ []
 
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 73--77
+Underfull \hbox (badness 10000) in paragraph at lines 86--90
 []\OT1/cmr/m/n/12 Lars markull's an-swer to what are the ben-e-fits of an api
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 73--77
+Underfull \hbox (badness 10000) in paragraph at lines 86--90
 \OT1/cmr/m/n/12 for a con-sumer bank? - quora.  [][]$\OT1/cmtt/m/n/12 https : /
  / www . quora . com /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 73--77
+Underfull \hbox (badness 10000) in paragraph at lines 86--90
 \OT1/cmtt/m/n/12 What-[]are-[]the-[]benefits-[]of-[]an-[]API-[]for-[]a-[]consum
 er-[]bank / answer /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--119
+Underfull \hbox (badness 10000) in paragraph at lines 131--134
 []\OT1/cmr/m/n/12 Wer sind eure part-ner? wie kann ich figo dort
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--119
+Underfull \hbox (badness 10000) in paragraph at lines 131--134
 \OT1/cmr/m/n/12 nutzen?  [][]$\OT1/cmtt/m/n/12 https : / / figo . zendesk . com
  / hc / de / articles /
  []
 
 
-Overfull \hbox (3.20154pt too wide) in paragraph at lines 116--119
+Overfull \hbox (3.20154pt too wide) in paragraph at lines 131--134
 \OT1/cmtt/m/n/12 200907292-[]Wer-[]sind-[]eure-[]Partner-[]Wie-[]kann-[]ich-[]f
 igo-[]dort-[]nutzen-[]$[][]\OT1/cmr/m/n/12 . 
  []
 
-[36]) [37] [38
+[48]) [49] [50
 
-] [39] [40] (./kapitel/append.tex
+] [51] [52] (./kapitel/append.tex
 Appendix A.
-) [41
+) [53
 
 ]
 \openout2 = `kapitel/erklaerung.aux'.
 
- (./kapitel/erklaerung.tex [42
+ (./kapitel/erklaerung.tex [54
 
 
 ])
@@ -1461,10 +1578,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--229
 
  []
 
-[43]
+[55]
 \openout2 = `kapitel/abtretungserklaerung.aux'.
 
- (./kapitel/abtretungserklaerung.tex [44
+ (./kapitel/abtretungserklaerung.tex [56
 
 
 
@@ -1485,19 +1602,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--232
 
  []
 
-[45]
+[57]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 234.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 234.
  (./arbeit.aux (./kapitel/titel.aux) (./kapitel/abstract.aux)
 (./kapitel/introduction.aux) (./kapitel/figo.aux) (./kapitel/testing.aux)
 (./kapitel/realTime.aux) (./kapitel/async.aux)
 (./kapitel/architectureDesign.aux) (./kapitel/implementationTestCoverage.aux)
-(./kapitel/contribution.aux) (./kapitel/grafiken.aux) (./kapitel/erklaerung.aux
-) (./kapitel/abtretungserklaerung.aux))
+(./kapitel/erklaerung.aux) (./kapitel/abtretungserklaerung.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 234.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 234.
 Package rerunfilecheck Info: File `arbeit.out' has not changed.
-(rerunfilecheck)             Checksum: 8201506BB82A4B18A1266F2344DFE1F9;2332.
+(rerunfilecheck)             Checksum: E23252EDC4F11F0C8D425A8AB7A3D217;2854.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1505,29 +1621,31 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 234.
  ) 
 Here is how much of TeX's memory you used:
- 11561 strings out of 493089
- 177795 string characters out of 6134842
- 408922 words of memory out of 5000000
- 14477 multiletter control sequences out of 15000+600000
- 9557 words of font info for 34 fonts, out of 8000000 for 9000
+ 11741 strings out of 493089
+ 180984 string characters out of 6134842
+ 462744 words of memory out of 5000000
+ 14478 multiletter control sequences out of 15000+600000
+ 9903 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,11n,56p,1269b,1943s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,11n,56p,1492b,1901s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
-></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
-sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/
-local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loc
-al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
-l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local
-/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/
-texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on arbeit.pdf (55 pages, 563484 bytes).
+></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
+usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
+r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/l
+ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loca
+l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
+/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/
+texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/t
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/te
+xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on arbeit.pdf (67 pages, 808441 bytes).
 PDF statistics:
- 951 PDF objects out of 1000 (max. 8388607)
- 836 compressed objects within 9 object streams
- 273 named destinations out of 1000 (max. 500000)
- 347 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1290 PDF objects out of 1440 (max. 8388607)
+ 1144 compressed objects within 12 object streams
+ 444 named destinations out of 1000 (max. 500000)
+ 446 words of extra memory for PDF output out of 10000 (max. 10000000)
 

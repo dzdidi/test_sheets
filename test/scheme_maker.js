@@ -1,11 +1,10 @@
-var assert = require('chai').assert;
+var assert = require('assert');
 
 var mocha = require('mocha');
 var sinon = require('sinon');
 
 var scheme = require('../lib/scheme');
 
-// should be molved to before hook
 var descriptionSpy = sinon.spy(scheme, 'getDescription');
 var moduleUnderTestSpy = sinon.spy(scheme, 'getModuleUnderTest');
 var objectsUnderTestSpy = sinon.spy(scheme, 'getObjectsUnderTest');
@@ -15,7 +14,7 @@ var outputsSpy = sinon.spy(scheme, 'getOutputs');
 
 var testSheetObject = require('./doublers/basicSheetObject');
 
-describe('Creation of Test Sheet object', function() {
+describe('Creation of Test Sheet scheme', function() {
 
   describe('getDescription function', function() {
     it('should have getDescription function', function(done) {

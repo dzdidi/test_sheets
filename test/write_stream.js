@@ -23,7 +23,7 @@ describe('Test coverage for a writeStream', function(){
   });
 
   it('should check files stat', function(done){
-    var statStub = sinon.stub(fs, 'statSync');
+    var statStub = sinon.stub(fs, 'statSync', function() {});
     var writeFileStub = sinon.stub(fs, 'writeFile', function () {});
 
     writeStream(data, {}, function(){});
@@ -34,12 +34,23 @@ describe('Test coverage for a writeStream', function(){
     done();
   });
 
-  it('should call fs.writeFile', function(done) {
+  it('should call fs.writeFile if file is newly crearted or Test Sheet file was updated', function(done) {
     var writeFileStub = sinon.stub(fs, 'writeFile', function () {});
 
     writeStream(data, {}, function(){});
 
     assert.equal(writeFileStub.called, true);
+
+    writeFileStub.restore();
+    done();
+  });
+
+  it('should not call fs.writeFile if file exists and Test Sheet file was not updated', function(done) {
+    var writeFileStub = sinon.stub(fs, 'writeFile', function () {});
+
+    writeStream({fileName: '/doublers/Basic.xlsx'}, {}, function(){});
+
+    assert.equal(writeFileStub.called, false);
 
     writeFileStub.restore();
     done();

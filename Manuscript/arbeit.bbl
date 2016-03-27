@@ -6,9 +6,13 @@ About node.js®.
 
 \bibitem{asyncPerformance}
 Analysis of generators and other async patterns in node.
+\newblock
+  \url{https://spion.github.io/posts/analysis-generators-and-other-async-patterns-node.html}.
 
 \bibitem{conScrap}
 Are you screen scraping or data mining?
+\newblock
+  \url{http://www.connotate.com/are-you-screen-scraping-or-data-mining/}.
 
 \bibitem{DaveAPI}
 The bank business model for apis: Identity.
@@ -17,6 +21,7 @@ The bank business model for apis: Identity.
 
 \bibitem{listOfBanks}
 Banks in germany.
+\newblock \url{http://banksgermany.com/}.
 
 \bibitem{casperjs}
 Casperjs.
@@ -24,6 +29,7 @@ Casperjs.
 
 \bibitem{cuceRef}
 Cucumber: Reference.
+\newblock \url{https://cucumber.io/docs/reference}.
 
 \bibitem{PSD2}
 Eur-lex - 32015l2366 - en - eur-lex.
@@ -32,6 +38,7 @@ Eur-lex - 32015l2366 - en - eur-lex.
 
 \bibitem{events}
 Events node.js.
+\newblock \url{https://nodejs.org/api/events.html}.
 
 \bibitem{figoAngel}
 figo | angel list.
@@ -47,12 +54,16 @@ Fints - wikipedia, free encyclopedia.
 
 \bibitem{fit}
 Fit.
+\newblock \url{http://fit.c2.com/}.
 
 \bibitem{fitIntro}
 Fit.
+\newblock \url{http://fit.c2.com/wiki.cgi?IntroductionToFit}.
 
 \bibitem{zalgo}
 glog.isz.me - designing apis for asynchrony.
+\newblock
+  \url{http://blog.izs.me/post/59142742143/designing-apis-for-asynchrony}.
 
 \bibitem{figoFAQVision}
 Ich möchte mehr zu eurer vision erfahren!
@@ -61,6 +72,7 @@ Ich möchte mehr zu eurer vision erfahren!
 
 \bibitem{asyncArticle}
 Introduction to asynchronous programming.
+\newblock \url{http://cs.brown.edu/courses/cs168/s12/handouts/async.pdf}.
 
 \bibitem{libuvBasic}
 An introduction to libuv: Basics of libuv.
@@ -68,6 +80,7 @@ An introduction to libuv: Basics of libuv.
 
 \bibitem{gtor}
 kriskowal/gtor: A general theory of reactivity.
+\newblock \url {https://github.com/kriskowal/gtor/}.
 
 \bibitem{LarsAPI}
 Lars markull's answer to what are the benefits of an api for a consumer bank? -
@@ -77,6 +90,7 @@ Lars markull's answer to what are the benefits of an api for a consumer bank? -
 
 \bibitem{moduleCounts}
 Module counts.
+\newblock \url{http://www.modulecounts.com/}.
 
 \bibitem{TimAPI}
 Open banking apis: Threat and opportunity | consult hyperion.
@@ -84,6 +98,7 @@ Open banking apis: Threat and opportunity | consult hyperion.
 
 \bibitem{costOfErrors}
 The real cost of software errors.
+\newblock \url{http://hdl.handle.net/1721.1/74607}.
 
 \bibitem{ts}
 Test sheets.
@@ -119,12 +134,16 @@ Wer sind eure partner? wie kann ich figo dort nutzen?
 
 \bibitem{asyncPerformance_2}
 Why i am switching to promises.
+\newblock
+  \url{https://spion.github.io/posts/why-i-am-switching-to-promises.html}.
 
 \bibitem{xunitFowler}
 Xunit.
+\newblock \url{http://www.martinfowler.com/bliki/Xunit.html}.
 
 \bibitem{xunitWiki}
 xunit - wikipedia, free encyclopedia.
+\newblock \url{https://en.wikipedia.org/wiki/XUnit}.
 
 \bibitem{Lecture1}
 Colin Atkinson.

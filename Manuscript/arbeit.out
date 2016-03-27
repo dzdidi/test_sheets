@@ -27,11 +27,19 @@
 \BOOKMARK [0][-]{chapter.6}{Architecture}{}% 27
 \BOOKMARK [0][-]{chapter.7}{Implementation}{}% 28
 \BOOKMARK [1][-]{section.7.1}{Read Stream}{chapter.7}% 29
-\BOOKMARK [1][-]{section.7.2}{Transform Stream}{chapter.7}% 30
-\BOOKMARK [1][-]{section.7.3}{Write Stream}{chapter.7}% 31
-\BOOKMARK [1][-]{section.7.4}{Compare and Write module}{chapter.7}% 32
-\BOOKMARK [0][-]{chapter.8}{Implementierung}{}% 33
-\BOOKMARK [0][-]{appendix*.13}{Bibliography}{}% 34
-\BOOKMARK [-1][-]{section*.14}{Appendix}{}% 35
-\BOOKMARK [0][-]{appendix.A}{First class of appendices}{section*.14}% 36
-\BOOKMARK [1][-]{section.A.1}{Some appendix}{appendix.A}% 37
+\BOOKMARK [2][-]{subsection.7.1.1}{Test Coverage}{section.7.1}% 30
+\BOOKMARK [1][-]{section.7.2}{Transform Stream}{chapter.7}% 31
+\BOOKMARK [2][-]{subsection.7.2.1}{Test Coverage}{section.7.2}% 32
+\BOOKMARK [1][-]{section.7.3}{Schema}{chapter.7}% 33
+\BOOKMARK [2][-]{subsection.7.3.1}{Test Coverage}{section.7.3}% 34
+\BOOKMARK [1][-]{section.7.4}{Template}{chapter.7}% 35
+\BOOKMARK [2][-]{subsection.7.4.1}{Test Coverage}{section.7.4}% 36
+\BOOKMARK [1][-]{section.7.5}{Write Stream}{chapter.7}% 37
+\BOOKMARK [2][-]{subsection.7.5.1}{Test Coverage}{section.7.5}% 38
+\BOOKMARK [1][-]{section.7.6}{Reporting mechanism}{chapter.7}% 39
+\BOOKMARK [2][-]{subsection.7.6.1}{Implementation}{section.7.6}% 40
+\BOOKMARK [2][-]{subsection.7.6.2}{Test coverage}{section.7.6}% 41
+\BOOKMARK [0][-]{appendix*.13}{Bibliography}{}% 42
+\BOOKMARK [-1][-]{section*.14}{Appendix}{}% 43
+\BOOKMARK [0][-]{appendix.A}{First class of appendices}{section*.14}% 44
+\BOOKMARK [1][-]{section.A.1}{Some appendix}{appendix.A}% 45
