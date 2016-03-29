@@ -19,27 +19,26 @@
 \BOOKMARK [1][-]{section.4.1}{Web scraping. CasperJS}{chapter.4}% 19
 \BOOKMARK [0][-]{chapter.5}{Asynchronous programming. Strategies and performance}{}% 20
 \BOOKMARK [1][-]{section.5.1}{Asynchronous programming}{chapter.5}% 21
-\BOOKMARK [2][-]{subsection.5.1.1}{Event handling}{section.5.1}% 22
-\BOOKMARK [1][-]{section.5.2}{Asynchronous handling strategies}{chapter.5}% 23
-\BOOKMARK [2][-]{subsection.5.2.1}{Continuation passing}{section.5.2}% 24
-\BOOKMARK [2][-]{subsection.5.2.2}{Imperative}{section.5.2}% 25
-\BOOKMARK [1][-]{section.5.3}{Performance}{chapter.5}% 26
-\BOOKMARK [0][-]{chapter.6}{Architecture}{}% 27
-\BOOKMARK [0][-]{chapter.7}{Implementation}{}% 28
-\BOOKMARK [1][-]{section.7.1}{Read Stream}{chapter.7}% 29
-\BOOKMARK [2][-]{subsection.7.1.1}{Test Coverage}{section.7.1}% 30
-\BOOKMARK [1][-]{section.7.2}{Transform Stream}{chapter.7}% 31
-\BOOKMARK [2][-]{subsection.7.2.1}{Test Coverage}{section.7.2}% 32
-\BOOKMARK [1][-]{section.7.3}{Schema}{chapter.7}% 33
-\BOOKMARK [2][-]{subsection.7.3.1}{Test Coverage}{section.7.3}% 34
-\BOOKMARK [1][-]{section.7.4}{Template}{chapter.7}% 35
-\BOOKMARK [2][-]{subsection.7.4.1}{Test Coverage}{section.7.4}% 36
-\BOOKMARK [1][-]{section.7.5}{Write Stream}{chapter.7}% 37
-\BOOKMARK [2][-]{subsection.7.5.1}{Test Coverage}{section.7.5}% 38
-\BOOKMARK [1][-]{section.7.6}{Reporting mechanism}{chapter.7}% 39
-\BOOKMARK [2][-]{subsection.7.6.1}{Implementation}{section.7.6}% 40
-\BOOKMARK [2][-]{subsection.7.6.2}{Test coverage}{section.7.6}% 41
-\BOOKMARK [0][-]{appendix*.13}{Bibliography}{}% 42
-\BOOKMARK [-1][-]{section*.14}{Appendix}{}% 43
-\BOOKMARK [0][-]{appendix.A}{First class of appendices}{section*.14}% 44
-\BOOKMARK [1][-]{section.A.1}{Some appendix}{appendix.A}% 45
+\BOOKMARK [2][-]{subsection.5.1.1}{Node.js}{section.5.1}% 22
+\BOOKMARK [2][-]{subsection.5.1.2}{Event handling}{section.5.1}% 23
+\BOOKMARK [1][-]{section.5.2}{Asynchronous handling strategies}{chapter.5}% 24
+\BOOKMARK [2][-]{subsection.5.2.1}{Continuation passing}{section.5.2}% 25
+\BOOKMARK [2][-]{subsection.5.2.2}{Imperative}{section.5.2}% 26
+\BOOKMARK [1][-]{section.5.3}{Performance}{chapter.5}% 27
+\BOOKMARK [0][-]{chapter.6}{Architecture}{}% 28
+\BOOKMARK [0][-]{chapter.7}{Implementation}{}% 29
+\BOOKMARK [1][-]{section.7.1}{Read Stream}{chapter.7}% 30
+\BOOKMARK [2][-]{subsection.7.1.1}{Test Coverage}{section.7.1}% 31
+\BOOKMARK [1][-]{section.7.2}{Transform Stream}{chapter.7}% 32
+\BOOKMARK [2][-]{subsection.7.2.1}{Test Coverage}{section.7.2}% 33
+\BOOKMARK [1][-]{section.7.3}{Schema}{chapter.7}% 34
+\BOOKMARK [2][-]{subsection.7.3.1}{Test Coverage}{section.7.3}% 35
+\BOOKMARK [1][-]{section.7.4}{Template}{chapter.7}% 36
+\BOOKMARK [2][-]{subsection.7.4.1}{Test Coverage}{section.7.4}% 37
+\BOOKMARK [1][-]{section.7.5}{Write Stream}{chapter.7}% 38
+\BOOKMARK [2][-]{subsection.7.5.1}{Test Coverage}{section.7.5}% 39
+\BOOKMARK [1][-]{section.7.6}{Reporting mechanism}{chapter.7}% 40
+\BOOKMARK [2][-]{subsection.7.6.1}{Implementation}{section.7.6}% 41
+\BOOKMARK [2][-]{subsection.7.6.2}{Test coverage}{section.7.6}% 42
+\BOOKMARK [0][-]{appendix*.13}{Bibliography}{}% 43
+\BOOKMARK [-1][-]{section*.14}{Appendix}{}% 44

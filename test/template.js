@@ -22,14 +22,14 @@ describe('Test coverage for template module', function() {
       done();
     });
 
-    it('should accept three parameters', function(done) {
-      assert.equal(template.applyTemplate.length, 3);
+    it('should accept four parameters', function(done) {
+      assert.equal(template.applyTemplate.length, 4);
 
       done();
     });
 
     it('should generate string content for executable javascript file', function(done) {
-      assert.deepEqual(template.applyTemplate(testSheetObject.Sheets.Sheet1, testSheetObject.transformedScheme),
+      assert.deepEqual(template.applyTemplate(testSheetObject.Sheets.Sheet1, testSheetObject.transformedScheme, testSheetObject.refScheme,'file'),
       template.addDescription('Demonstaration')
       + generated.requires
       + generated.assignment
@@ -92,7 +92,7 @@ describe('Test coverage for template module', function() {
       done();
     });
     it('should recurively build callback-hell of calls', function(done) {
-      assert.equal(template.addCalls(testSheetObject.Sheets.Sheet1, testSheetObject.transformedSchemeCallsOnly, 0, ''), generated.callback_hell);
+      assert.equal(template.addCalls(testSheetObject.Sheets.Sheet1, testSheetObject.transformedSchemeCallsOnly, 0, '', 'file'), generated.callback_hell);
 
       done();
     });
@@ -138,7 +138,7 @@ describe('Test coverage for template module', function() {
     });
   });
 
-  describe('Test coverage for addDeclarations function', function(){
+  describe('Test coverage for addDeclarations function', function() {
     it('should have addDeclarations function', function(done) {
       assert.equal(typeof template.addDeclarations, 'function');
 
@@ -154,6 +154,25 @@ describe('Test coverage for template module', function() {
       var scheme = template.schemeToArray(testSheetObject.transformedScheme);
       assert.equal(template.addDeclarations(testSheetObject.Sheets.Sheet1, scheme), generated.assignment);
 
+      done();
+    });
+  });
+
+  describe('Test coverage for mergeSchemes function', function() {
+    it('should have mergeSchemes function', function(done) {
+      assert.equal(typeof template.mergeSchemes, 'function');
+
+      done();
+    });
+
+    it('should accept two parameters', function(done) {
+      assert.equal(template.mergeSchemes.length, 2);
+
+      done();
+    });
+
+    it('should return object with two feils, "linear and nested"', function(done) {
+      // var res = template.mergeSchemes(testSheetObject.transformedScheme, )
       done();
     });
   });

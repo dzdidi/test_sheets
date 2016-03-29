@@ -10,12 +10,20 @@ A level-1 auxiliary file: kapitel/realTime.aux
 A level-1 auxiliary file: kapitel/async.aux
 A level-1 auxiliary file: kapitel/architectureDesign.aux
 A level-1 auxiliary file: kapitel/implementationTestCoverage.aux
-A level-1 auxiliary file: kapitel/contribution.aux
-A level-1 auxiliary file: kapitel/grafiken.aux
 The style file: plain.bst
 A level-1 auxiliary file: kapitel/erklaerung.aux
 A level-1 auxiliary file: kapitel/abtretungserklaerung.aux
 Database file #1: literatur/lit.bib
+I was expecting a `,' or a `}'---line 562 of file literatur/lit.bib
+ :  
+ :  howpublished={\url{http://news.softpedia.com/news/node-js-package-manager-vulnerable-to-malicious-worm-packages-502216.shtml}},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 568 of file literatur/lit.bib
+ :  
+ :  howpublished={\url{http://news.softpedia.com/news/annoyed-developer-brings-down-thousands-of-javascript-node-js-projects-502075.shtml}},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Warning--to sort, need author or key in moduleCounts
 Warning--to sort, need author or key in gtor
 Warning--to sort, need author or key in asyncPerformance_2
@@ -45,51 +53,54 @@ Warning--to sort, need author or key in w3cDOM
 Warning--to sort, need author or key in casperjs
 Warning--to sort, need author or key in asyncArticle
 Warning--to sort, need author or key in nodejsabout
+Warning--to sort, need author or key in mdnProto
+Warning--to sort, need author or key in mdnOOP
 Warning--to sort, need author or key in libuv
 Warning--to sort, need author or key in libuvBasic
 Warning--to sort, need author or key in events
 Warning--to sort, need author or key in zalgo
 Warning--empty note in Lecture1
 Warning--empty note in Lecture2
-You've used 41 entries,
+Warning--empty booktitle in npmHydra
+You've used 46 entries,
             2118 wiz_defined-function locations,
-            687 strings with 8722 characters,
-and the built_in function-call counts, 7290 in all, are:
-= -- 694
-> -- 100
+            706 strings with 9375 characters,
+and the built_in function-call counts, 8222 in all, are:
+= -- 775
+> -- 123
 < -- 1
-+ -- 64
-- -- 20
-* -- 275
-:= -- 918
-add.period$ -- 91
-call.type$ -- 41
-change.case$ -- 130
++ -- 75
+- -- 26
+* -- 303
+:= -- 1052
+add.period$ -- 102
+call.type$ -- 46
+change.case$ -- 148
 chr.to.int$ -- 0
-cite$ -- 76
-duplicate$ -- 325
-empty$ -- 938
-format.name$ -- 20
-if$ -- 1750
+cite$ -- 84
+duplicate$ -- 366
+empty$ -- 1054
+format.name$ -- 26
+if$ -- 1963
 int.to.chr$ -- 0
-int.to.str$ -- 41
-missing$ -- 10
-newline$ -- 175
-num.names$ -- 16
-pop$ -- 305
+int.to.str$ -- 46
+missing$ -- 11
+newline$ -- 196
+num.names$ -- 22
+pop$ -- 346
 preamble$ -- 1
-purify$ -- 92
+purify$ -- 105
 quote$ -- 0
-skip$ -- 324
+skip$ -- 367
 stack$ -- 0
-substring$ -- 261
-swap$ -- 49
+substring$ -- 286
+swap$ -- 54
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 156
-warning$ -- 35
-while$ -- 20
-width$ -- 43
-write$ -- 318
-(There were 35 warnings)
+type$ -- 176
+warning$ -- 38
+while$ -- 26
+width$ -- 48
+write$ -- 355
+(There were 2 error messages)

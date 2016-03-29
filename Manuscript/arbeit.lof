@@ -9,9 +9,9 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces General Testing and Debugging Strategy\cite {rtSandD}}}{14}{figure.4.1}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces npm comparison with other package managers\cite {moduleCounts}}}{18}{figure.5.1}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Node.js architecture \cite {nodejsbook}}}{19}{figure.5.2}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Node.js event handling system \cite {nodejsbook}}}{20}{figure.5.3}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces npm comparison with other package managers\cite {moduleCounts}}}{19}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Node.js architecture \cite {nodejsbook}}}{20}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Node.js event handling system \cite {nodejsbook}}}{21}{figure.5.3}
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Duality Matrix \cite {gtor}}}{22}{figure.5.4}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Information flow}}{25}{figure.6.1}
@@ -22,6 +22,5 @@
 \contentsline {figure}{\numberline {7.4}{\ignorespaces Test coverage for scheme.js}}{37}{figure.7.4}
 \contentsline {figure}{\numberline {7.5}{\ignorespaces Test coverage for template.js}}{40}{figure.7.5}
 \contentsline {figure}{\numberline {7.6}{\ignorespaces Test coverage for write\_stream.js}}{43}{figure.7.6}
-\contentsline {figure}{\numberline {7.7}{\ignorespaces Result Test Sheet for stack.js}}{44}{figure.7.7}
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Result Test Sheet for stack.js}}{45}{figure.7.7}
 \contentsline {figure}{\numberline {7.8}{\ignorespaces Test coverage for report mechanism}}{45}{figure.7.8}
-\addvspace {10\p@ }

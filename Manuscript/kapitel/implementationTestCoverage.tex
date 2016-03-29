@@ -208,7 +208,7 @@ The \textbf{first stage} is adding a description from the first element of the s
 
 The \textbf{second stage} is adding require of reporting module for representation of execution of the tests result.
 The \textbf{third stage} is adding declarations of the module scope variables. The variable names are taken from the coordinates of cells which store input and output parameters in a Test Sheet. The values of this variables are taken as from the cells with respective addresses.
-The \textbf{fourth stage} is adding calls of the methods (Listing: \ref{template}). This stage is the most important part of this module. It is implemented as \textit{addCalls} function. This is recursive function whiich accepts four parameter: \textit{sheet, scheme, indentation, accumulator, fileName}. First two parameters are necessary to access the values represented in a Test Sheet. Next parameter is an indentation level which represents the deepness of a function call by adding representative amount of spaces for each line of generated code. Accumulator parameter is a string to which will be appended result of each recursive call of the function. The last parameter is necessary for report mechanism which allows to record result of the test execution to appropriate file. The report mechanism (e.g \textit{makeComparisonAndWriteResuld}) will be described in details within  the next section. However it is important to mention here how it works as a 'black box'. It is binary function which accepts  six parameters. First parameter is an expected return value. Second is an actual returned value received by the callback function, third is a deepness of comparison will be performed for this their values. The function returns \textbf{true} in case of match and after redefinition of the variable takes place. This mechanism allows usage of references within the Test Sheet for asynchronous functions.
+The \textbf{fourth stage} is adding calls of the methods (Listing: \ref{template}). This stage is the most important part of this module. It is implemented as \textit{addCalls} function. This is recursive function which accepts four parameter: \textit{sheet, scheme, indentation, accumulator, fileName}. First two parameters are necessary to access the values represented in a Test Sheet. Next parameter is an indentation level which represents the deepness of a function call by adding representative amount of spaces for each line of generated code. Accumulator parameter is a string to which will be appended result of each recursive call of the function. The last parameter is necessary for report mechanism which allows to record result of the test execution to appropriate file. The report mechanism (e.g \textit{makeComparisonAndWriteResult}) will be described in details within  the next section. However it is important to mention here how it works as a 'black box'. It is binary function which accepts  six parameters. First parameter is an expected return value. Second is an actual returned value received by the callback function, third is a deepness of comparison will be performed for this their values. The function returns \textbf{true} in case of match and after redefinition of the variable takes place. This mechanism allows usage of references within the Test Sheet for asynchronous functions.
 \lstinputlisting[
 language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
 basicstyle=\footnotesize,
@@ -219,7 +219,7 @@ label=template
 ]
 {code/lib/template/template.js.txt}
 
-
+Note that functions in the generated code are not called directly but via \textit{call} method of the function's prototype. This method provides an opportunity to call the function from different context (environment). In current example the implementation of \textit{stack} module does not depend on the environment in which it was called. But in some cases the result of function's invocation can depend on the environment in which it was invoked. One of such cases can be creation of child process, when it is necessary to provide environment manually. 
 
 
 \subsection{Test Coverage}
@@ -258,6 +258,7 @@ label=demo
 ]
 {code/demo/demo.js.txt}
 
+Note that functions are not called directly but via \textit{call} method.
 
 %\lstinputlisting[
 %language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 

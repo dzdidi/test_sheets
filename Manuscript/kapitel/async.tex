@@ -11,10 +11,17 @@ Generally asynchronous systems are easier to control and to develop rather then 
 	\item Tasks are independent from one another;
  \end{itemize}
 
-\paragraph{Node.js} is an asynchronous event driven framework designed to build scalable network applications.
+
+
+\subsection{Node.js}
+Node.js is an asynchronous event driven framework designed to build scalable network applications.
 Node.js is similar in design to and influenced by systems like Ruby's Event Machine or Python's Twisted with difference that it presents the event loop as a language construct instead of as a library\cite{nodejsabout}.
 
 Node.js applications are written in javascript - a lightweight dynamic scripting multi-paradigm language with first-class functions and prototype-based inheritance which provides both object oriented and functional programming approaches.
+
+\paragraph{Prototype.} When it comes to inheritance, JavaScript only has one construct: objects\cite{mdnProto}.
+Also called classless, prototype-oriented, or instance-based programming\cite{mdnOOP}. Each object has an internal link to another object called its prototype. That prototype object has a prototype of its own, and so on until an object is reached with \textbf{null} as its prototype. \textbf{null}, by definition, has no prototype, and acts as the final link in this prototype chain. JavaScript objects are dynamic "bags" of properties (referred to as own properties). javascript objects have a link to a prototype object. When trying to access a property of an object, the property will not only be sought on the object but on the prototype of the object, the prototype of the prototype, and so on until either a property with a matching name is found or the end of the prototype chain is reached\cite{mdnProto} This type of inheritance provide objects inherit both instance and class methods and properties.
+
  
 This framework has powerful ecosystem - npm which includes \textit{npm} - package manager for node.js, \textit{npm Registry} - public collection of packages of open-source code, \textit{npm comand line clinet} which allows developers to install and publish those packages. On a diagram (\ref{fig:npmStat}) stated the comparison of npm with other package managers made by module counts, for more up to date information please visit \url{http://www.modulecounts.com/}
 \begin{figure}[ht]
@@ -24,6 +31,7 @@ This framework has powerful ecosystem - npm which includes \textit{npm} - packag
      \caption{npm comparison with other package managers\cite{moduleCounts}}
   \end{figure}
 
+In the same time there is a downside of such ecosystem. The case of \textit{left-pad} the module which was deleted from the npm due to copyright concerns caused to failure during the build process for thousands of projects\cite{npmDown}. Further, there are three factors explained by Sam Saccone \cite{npmHydra} \cite{npmSoft} which make npm a root source of hackers attack. The first reason is caused by usage of SemVer for version controlling which does not lock dependencies to a specific version \cite{npmHydra}. The second reason is the lack of automatic npm user log-out.  Since npm can run arbitrary scripts on install that means that any user who is currently logged in and types npm install is allowing any module to execute arbitrary publish commands \cite{npmHydra}. The last reason is dependent on that fact that a singular npm registry is used by the the large majority of the node.js ecosystem on a daily basis \cite{npmHydra}.
 The high-level architecture of node.js looks following:(\ref{fig:nodeArch}). 
 \begin{figure}[ht]
   	\label{fig:nodeArch}
@@ -41,7 +49,7 @@ Which is "a multi-platform support library with a focus on asynchronous I/O. "\c
 \begin{itemize}
 \item Abstract operations, not events
 \item Support different nonblocking I/O models
-\item Focus on embeddability and perfomace
+\item Focus on extendability and performance
 \end{itemize}
 
 \textit{V8/Chakra} the JavaScript engine originally developed by Google for the Chrome browser/ Microsoft for IE 9 browser"\cite{nodejsbook} 

@@ -4,11 +4,12 @@ var sinon = require('sinon');
 var fs = require('fs');
 var through = require('through2');
 
-var scheme = require('../lib/scheme');
+var scheme_lib = require('../lib/scheme');
 var template = require('../lib/template');
 
 var transformStream = require('../lib/stream').transform;
 
+var testSheetObject = require('./doublers/basicSheetObject');
 var data = {
   sheet: '',
   scheme: '',
@@ -27,17 +28,24 @@ describe('Test coverage for transform stream function', function(){
     done();
   });
 
-  it('should call applyTemplate and makeScheme ', function(done){
-    var applyTemplateStub = sinon.stub(template, 'applyTemplate');
-    var createSchemeStub = sinon.stub(scheme, 'createScheme');
-
+  it('should call applyTemplate createScheme and makeReferenceScheme', function(done){
+    var applyTemplateStub = sinon.stub(template, 'applyTemplate', function(){});
+    var createSchemeStub = sinon.stub(scheme_lib.scheme, 'createScheme', function(){});
+    var makeReferenceSchemeStub = sinon.stub(scheme_lib.reference_scheme, 'makeReferenceScheme', function(){});
+    var data = {
+      sheet: testSheetObject.Sheets.Sheet1,
+      meta: {},
+      fileName: 'file'
+    }
     transformStream.call(through.obj(transformStream), data, null, function(){});
 
     assert.equal(applyTemplateStub.called, true);
     assert.equal(createSchemeStub.called, true);
+    assert.equal(makeReferenceSchemeStub.called, true);
 
     applyTemplateStub.restore();
     createSchemeStub.restore();
+    makeReferenceSchemeStub.restore();
     done();
   });
 });
