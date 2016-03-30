@@ -22,18 +22,15 @@ describe('Test coverage for template module', function() {
       done();
     });
 
-    it('should accept four parameters', function(done) {
-      assert.equal(template.applyTemplate.length, 4);
+    it('should accept three parameters', function(done) {
+      assert.equal(template.applyTemplate.length, 3);
 
       done();
     });
 
     it('should generate string content for executable javascript file', function(done) {
-      assert.deepEqual(template.applyTemplate(testSheetObject.Sheets.Sheet1, testSheetObject.transformedScheme, testSheetObject.refScheme,'file'),
-      template.addDescription('Demonstaration')
-      + generated.requires
-      + generated.assignment
-      + generated.callback_hell);
+      assert.deepEqual(template.applyTemplate(testSheetObject.Sheets.Sheet1, testSheetObject.execOrder, 'file'),
+      generated.content);
 
       done();
     });

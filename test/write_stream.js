@@ -44,15 +44,4 @@ describe('Test coverage for a writeStream', function(){
     writeFileStub.restore();
     done();
   });
-
-  it('should not call fs.writeFile if file exists and Test Sheet file was not updated', function(done) {
-    var writeFileStub = sinon.stub(fs, 'writeFile', function () {});
-
-    writeStream({fileName: '/doublers/Basic.xlsx'}, {}, function(){});
-
-    assert.equal(writeFileStub.called, false);
-
-    writeFileStub.restore();
-    done();
-  });
 });
