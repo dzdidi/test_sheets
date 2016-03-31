@@ -16,7 +16,12 @@ function makeComparisonAndWriteResult(expected, returned, deepness, scriptName, 
   result ? res = "#00FF00" : res = "#FFFF00";
   var testSheet = xlsx.readFile(file, {'cellStyles': true});
   if(!result){
-    testSheet.Sheets.Sheet1[variable].v = JSON.stringify(expected) + '\\' + JSON.stringify(returned);
+    if (testSheet.Sheets.Sheet1[variable].f) {
+      console.log(testSheet.Sheets.Sheet1[variable].f)
+    } else {
+      testSheet.Sheets.Sheet1[variable].v = JSON.stringify(expected) + '\\' + JSON.stringify(returned);
+    }
+
     xlsx.writeFile(testSheet, file, {'cellStyles': true});
   };
 

@@ -28,10 +28,10 @@ captionpos=b,
 label=demo
 ]
 {code/demo/stack.js.txt}
-The Test Sheet for test coverage of this module looks as following (Figure: \ref{fig:demoTS}). Note that in invocation line \textbf{E} there are both types of comparison.
+The Test Sheet for test coverage of this module looks as following (Figure: \ref{fig:demoTS}). Note that this test coverage was made with purpose to show handling of asynchronous testing of real-time software but not to cover stack module. There are both types of comparison in invocation line \textbf{D}. Red arrows indicates references withing this test sheet.
 \begin{figure}[H]
 \centering
-\includegraphics[width=\linewidth]{grafiken/demoTS}
+\includegraphics[width=\linewidth]{grafiken/demoTS.pdf}
 \caption{Test Sheet coverage for stack.js}
 \label{fig:demoTS}
 \end{figure}
@@ -150,6 +150,7 @@ The result of test execution:
 This part of the system creates a schema object from the Test Sheet object, the only parameter accepted by the main function of this module. Due to the structure of object  returned after reading of xlsx file was taken decision to perform creation of the schema in two stages.
 
 The \textbf{first stage} is creation of javascript object with Test Sheet properties (e. g. \textit{description, moduleUnderTest, objectsUnderTest, methodsUnderTest, inputs, outputs, invocations}) value of each property except \textit{description} and \textit{moduleUnderTest} are arrays of string with values which represent cell addresses for representative property of the Test Sheet. For first two properties the values are strings with values (in a Test Sheet) from the cells \textit{A1} and \textit{A2} respectively(Listing: \ref{firstScheme}).
+
 \lstinputlisting[
 language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
 basicstyle=\footnotesize,
@@ -199,6 +200,30 @@ The result of test execution:
 	\caption{Test coverage for scheme.js}
 	\label{fig:testScheme}
 \end{figure}
+
+\section{Execution Order}
+\lstinputlisting[
+language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
+basicstyle=\footnotesize,
+numberstyle=\tiny,
+caption={Result of the scheme creation  for Test Sheet},
+captionpos=b,
+label=scheme
+]
+{code/executionOrderSchema.js.txt}
+\subsection{Test coverage}
+
+\section{Execution Schema}
+\lstinputlisting[
+language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
+basicstyle=\footnotesize,
+numberstyle=\tiny,
+caption={Result of the scheme creation  for Test Sheet},
+captionpos=b,
+label=scheme
+]
+{code/executionSchema.js.txt}
+\subsection{Test Coverage}
 
 
 \section{Template}
