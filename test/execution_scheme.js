@@ -19,7 +19,6 @@ describe('Test coverage for executionScheme', function() {
     });
 
     it('should return an execution scheme', function(done) {
-      // console.log(executionScheme.create(testSheetObject.transformedScheme, testSheetObject.refScheme));
       assert.deepEqual(executionScheme.create(testSheetObject.transformedScheme, testSheetObject.orderScheme), testSheetObject.execOrder);
 
       done();

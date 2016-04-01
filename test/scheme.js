@@ -183,7 +183,7 @@ describe('Creation of Test Sheet scheme', function() {
       done();
     });
   });
-  describe('test coverage for transformScheme', function() {
+  describe('transformScheme function', function() {
     it('should have transformScheme function', function(done) {
       assert.equal(typeof scheme.scheme.transformScheme, 'function');
 
@@ -203,7 +203,7 @@ describe('Creation of Test Sheet scheme', function() {
     });
   });
 
-  describe('test coverage for getRowFromField', function() {
+  describe('getRowFromField function', function() {
     it('should have getRowFromField function', function(done) {
       assert.equal(typeof scheme.scheme.getRowFromField, 'function');
 
