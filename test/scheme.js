@@ -16,7 +16,7 @@ var testSheetObject = require('./doublers/basicSheetObject');
 
 describe('Creation of Test Sheet scheme', function() {
 
-  describe('getDescription function', function() {
+  describe('Test coverage for getDescription function', function() {
     it('should have getDescription function', function(done) {
       assert.equal(typeof (scheme.scheme.getDescription), 'function');
       done();
@@ -39,7 +39,7 @@ describe('Creation of Test Sheet scheme', function() {
     });
   });
 
-  describe('getModuleUnderTest function', function() {
+  describe('Test coverage for getModuleUnderTest function', function() {
     it('should have getModuleUnderTest function', function(done) {
       assert.equal(typeof (scheme.scheme.getModuleUnderTest), 'function');
 
@@ -63,7 +63,7 @@ describe('Creation of Test Sheet scheme', function() {
     });
   });
 
-  describe('getObjectsUnderTest function', function() {
+  describe('Test coverage for getObjectsUnderTest function', function() {
     it('should have getObjectsUnderTest function', function(done) {
       assert.equal(typeof (scheme.scheme.getObjectsUnderTest), 'function');
 
@@ -87,7 +87,7 @@ describe('Creation of Test Sheet scheme', function() {
     });
   });
 
-  describe('getMethodsUnderTest function', function() {
+  describe('Test coverage for getMethodsUnderTest function', function() {
     it('should have getMethodsUnderTest function', function(done) {
       assert.equal(typeof (scheme.scheme.getMethodsUnderTest), 'function');
 
@@ -111,7 +111,7 @@ describe('Creation of Test Sheet scheme', function() {
     });
   });
 
-  describe('getInputs function', function() {
+  describe('Test coverage for getInputs function', function() {
     it('should have getInputs function', function(done) {
       assert.equal(typeof (scheme.scheme.getInputs), 'function');
 
@@ -135,7 +135,7 @@ describe('Creation of Test Sheet scheme', function() {
     });
   });
 
-  describe('getOutputs function', function() {
+  describe('Test coverage for getOutputs function', function() {
     it('should have getOutputs function', function(done) {
       assert.equal(typeof (scheme.scheme.getOutputs), 'function');
 
@@ -159,7 +159,7 @@ describe('Creation of Test Sheet scheme', function() {
     });
   });
 
-  describe('getInvocationCells function', function() {
+  describe('Test coverage for getInvocationCells function', function() {
     it('should have getInvocationCells function', function() {
       assert.equal(typeof (scheme.scheme.getInvocationCells), 'function');
     });
@@ -183,7 +183,7 @@ describe('Creation of Test Sheet scheme', function() {
       done();
     });
   });
-  describe('transformScheme function', function() {
+  describe('Test coverage for transformScheme function', function() {
     it('should have transformScheme function', function(done) {
       assert.equal(typeof scheme.scheme.transformScheme, 'function');
 
@@ -203,7 +203,7 @@ describe('Creation of Test Sheet scheme', function() {
     });
   });
 
-  describe('getRowFromField function', function() {
+  describe('Test coverage for getRowFromField function', function() {
     it('should have getRowFromField function', function(done) {
       assert.equal(typeof scheme.scheme.getRowFromField, 'function');
 

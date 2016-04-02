@@ -3,21 +3,18 @@ var template = require('../template');
 var scheme = require('../scheme');
 
 function transform(data, enc, callback) {
+  var generalScheme = scheme.scheme.createScheme(data.sheet);
+  var orderScheme = scheme.order.makeOrder(data.sheet, generalScheme);
+  var executionScheme = scheme.executionScheme.create(generalScheme, orderScheme);
   var res = {
     fileName: data.fileName,
     meta: data.meta,
     content: template.applyTemplate(
         data.sheet,
-        scheme.createScheme(data.sheet),
+        executionScheme,
         data.fileName),
   };
 
   this.push(res);
   callback();
-};
-
-if (process.env.NODE_ENV === 'testing') {
-  module.exports = transform;
-} else {
-  module.exports = through.obj(transform);
 };

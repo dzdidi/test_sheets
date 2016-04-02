@@ -17,10 +17,12 @@
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Information flow}}{25}{figure.6.1}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {7.1}{\ignorespaces Test Sheet coverage for stack.js}}{31}{figure.7.1}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Test coverage for read\_stream.js}}{32}{figure.7.2}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Test coverage for transform\_stream.js}}{33}{figure.7.3}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Test coverage for scheme.js}}{36}{figure.7.4}
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Test coverage for template.js}}{41}{figure.7.5}
-\contentsline {figure}{\numberline {7.6}{\ignorespaces Test coverage for write\_stream.js}}{44}{figure.7.6}
-\contentsline {figure}{\numberline {7.7}{\ignorespaces Result Test Sheet for stack.js}}{45}{figure.7.7}
-\contentsline {figure}{\numberline {7.8}{\ignorespaces Test coverage for report mechanism}}{46}{figure.7.8}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Test coverage for read\_stream.js}}{33}{figure.7.2}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Test coverage for transform\_stream.js}}{35}{figure.7.3}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Test coverage for scheme.js}}{39}{figure.7.4}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Test coverage for order.js}}{44}{figure.7.5}
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Test coverage for creation of execution scheme}}{45}{figure.7.6}
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Test coverage for template.js}}{49}{figure.7.7}
+\contentsline {figure}{\numberline {7.8}{\ignorespaces Test coverage for write\_stream.js}}{53}{figure.7.8}
+\contentsline {figure}{\numberline {7.9}{\ignorespaces Result Test Sheet for stack.js}}{55}{figure.7.9}
+\contentsline {figure}{\numberline {7.10}{\ignorespaces Test coverage for report mechanism}}{56}{figure.7.10}

@@ -11,7 +11,7 @@ var xlsx = require('xlsx');
 var readStreamSpy = sinon.spy(readStream);
 var extnameSpy = sinon.spy(path, 'extname');
 var xlsxStub = sinon.stub(xlsx, 'readFile', function() {});
-// var fsStatStub = sinon.stub(fs, 'statSync', function() {});
+var fsStatStub = sinon.stub(fs, 'statSync', function() {});
 var fsStub = sinon.stub(fs, 'readdir', function(file) {
   if(typeof(file) != 'string') throw ('fsReaddir: expect `root` to be string');
 });
@@ -59,7 +59,7 @@ describe('Test coverage for readStream', function() {
   });
 
   it('should read meta data of the file', function(done) {
-    readStream('./test/doublers');
+    // readStream('./test/doublers');
     // assert.equal(fsStatStub.called, true);
 
     // fsStatStub.restore();
@@ -67,7 +67,7 @@ describe('Test coverage for readStream', function() {
   });
 
   it('should call xlsx.readFile', function(done) {
-    readStream('./test/doublers');
+    // readStream('./test/doublers');
     // assert.equal(xlsxStub.called, true);
 
     // xlsxStub.restore();

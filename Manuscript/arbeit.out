@@ -26,23 +26,31 @@
 \BOOKMARK [2][-]{subsection.5.2.2}{Imperative}{section.5.2}% 26
 \BOOKMARK [1][-]{section.5.3}{Performance}{chapter.5}% 27
 \BOOKMARK [0][-]{chapter.6}{Architecture}{}% 28
-\BOOKMARK [0][-]{chapter.7}{Implementation}{}% 29
+\BOOKMARK [0][-]{chapter.7}{Design and Implementation}{}% 29
 \BOOKMARK [1][-]{section.7.1}{Read Stream}{chapter.7}% 30
 \BOOKMARK [2][-]{subsection.7.1.1}{Test Coverage}{section.7.1}% 31
-\BOOKMARK [1][-]{section.7.2}{Transform Stream}{chapter.7}% 32
-\BOOKMARK [2][-]{subsection.7.2.1}{Test Coverage}{section.7.2}% 33
-\BOOKMARK [1][-]{section.7.3}{Schema}{chapter.7}% 34
-\BOOKMARK [2][-]{subsection.7.3.1}{Test Coverage}{section.7.3}% 35
-\BOOKMARK [1][-]{section.7.4}{Execution Order}{chapter.7}% 36
-\BOOKMARK [2][-]{subsection.7.4.1}{Test coverage}{section.7.4}% 37
-\BOOKMARK [1][-]{section.7.5}{Execution Schema}{chapter.7}% 38
-\BOOKMARK [2][-]{subsection.7.5.1}{Test Coverage}{section.7.5}% 39
-\BOOKMARK [1][-]{section.7.6}{Template}{chapter.7}% 40
-\BOOKMARK [2][-]{subsection.7.6.1}{Test Coverage}{section.7.6}% 41
-\BOOKMARK [1][-]{section.7.7}{Write Stream}{chapter.7}% 42
-\BOOKMARK [2][-]{subsection.7.7.1}{Test Coverage}{section.7.7}% 43
-\BOOKMARK [1][-]{section.7.8}{Reporting mechanism}{chapter.7}% 44
-\BOOKMARK [2][-]{subsection.7.8.1}{Implementation}{section.7.8}% 45
-\BOOKMARK [2][-]{subsection.7.8.2}{Test coverage}{section.7.8}% 46
-\BOOKMARK [0][-]{appendix*.13}{Bibliography}{}% 47
-\BOOKMARK [-1][-]{section*.14}{Appendix}{}% 48
+\BOOKMARK [2][-]{subsection.7.1.2}{Correspondence to design principles}{section.7.1}% 32
+\BOOKMARK [1][-]{section.7.2}{Transform Stream}{chapter.7}% 33
+\BOOKMARK [2][-]{subsection.7.2.1}{Test Coverage}{section.7.2}% 34
+\BOOKMARK [2][-]{subsection.7.2.2}{Correspondence to design principles}{section.7.2}% 35
+\BOOKMARK [1][-]{section.7.3}{Schema}{chapter.7}% 36
+\BOOKMARK [2][-]{subsection.7.3.1}{Test Coverage}{section.7.3}% 37
+\BOOKMARK [2][-]{subsection.7.3.2}{Correspondence to design principles}{section.7.3}% 38
+\BOOKMARK [1][-]{section.7.4}{Execution Order}{chapter.7}% 39
+\BOOKMARK [2][-]{subsection.7.4.1}{Test coverage}{section.7.4}% 40
+\BOOKMARK [2][-]{subsection.7.4.2}{Correspondence to design principles}{section.7.4}% 41
+\BOOKMARK [1][-]{section.7.5}{Execution Schema}{chapter.7}% 42
+\BOOKMARK [2][-]{subsection.7.5.1}{Test Coverage}{section.7.5}% 43
+\BOOKMARK [2][-]{subsection.7.5.2}{Correspondence to design principles}{section.7.5}% 44
+\BOOKMARK [1][-]{section.7.6}{Template}{chapter.7}% 45
+\BOOKMARK [2][-]{subsection.7.6.1}{Test Coverage}{section.7.6}% 46
+\BOOKMARK [2][-]{subsection.7.6.2}{Correspondence to design principles}{section.7.6}% 47
+\BOOKMARK [1][-]{section.7.7}{Write Stream}{chapter.7}% 48
+\BOOKMARK [2][-]{subsection.7.7.1}{Test Coverage}{section.7.7}% 49
+\BOOKMARK [2][-]{subsection.7.7.2}{Correspondence to design principles}{section.7.7}% 50
+\BOOKMARK [1][-]{section.7.8}{Reporting mechanism}{chapter.7}% 51
+\BOOKMARK [2][-]{subsection.7.8.1}{Implementation}{section.7.8}% 52
+\BOOKMARK [2][-]{subsection.7.8.2}{Test coverage}{section.7.8}% 53
+\BOOKMARK [2][-]{subsection.7.8.3}{Correspondence to design principles}{section.7.8}% 54
+\BOOKMARK [0][-]{appendix*.13}{Bibliography}{}% 55
+\BOOKMARK [-1][-]{section*.14}{Appendix}{}% 56

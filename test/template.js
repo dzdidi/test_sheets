@@ -95,7 +95,6 @@ describe('Test coverage for template module', function() {
 
       var call = template.makeCall(sheet, scheme, 0, '', 'file');
 
-      // console.log(call);
       assert.equal(call, generated.singleCall);
 
       done();
@@ -131,25 +130,6 @@ describe('Test coverage for template module', function() {
     it('should accept two parameters', function(done) {
       assert.equal(template.addDeclarations.length, 2);
 
-      done();
-    });
-  });
-
-  describe('Test coverage for mergeSchemes function', function() {
-    it('should have mergeSchemes function', function(done) {
-      assert.equal(typeof template.mergeSchemes, 'function');
-
-      done();
-    });
-
-    it('should accept two parameters', function(done) {
-      assert.equal(template.mergeSchemes.length, 2);
-
-      done();
-    });
-
-    it('should return object with two feils, "linear and nested"', function(done) {
-      // var res = template.mergeSchemes(testSheetObject.transformedScheme, )
       done();
     });
   });

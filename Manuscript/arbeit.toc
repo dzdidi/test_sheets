@@ -1,9 +1,9 @@
 \select@language {ngerman}
 \select@language {english}
 \contentsline {chapter}{\nonumberline Abstract}{iii}{chapter*.1}
-\contentsline {chapter}{\nonumberline List of Figures}{vii}{chapter*.3}
-\contentsline {chapter}{\nonumberline List of Tables}{ix}{chapter*.4}
-\contentsline {chapter}{List of Abbreviations}{x}{chapter*.4}
+\contentsline {chapter}{\nonumberline List of Figures}{ix}{chapter*.3}
+\contentsline {chapter}{\nonumberline List of Tables}{xi}{chapter*.4}
+\contentsline {chapter}{List of Abbreviations}{xii}{chapter*.4}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {chapter}{\numberline {2}figo GmbH}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}IT infrastructure. Banking Server}{4}{section.2.1}
@@ -36,23 +36,31 @@
 \contentsline {paragraph}{\nonumberline Asynchronous:}{23}{section*.12}
 \contentsline {section}{\numberline {5.3}Performance}{23}{section.5.3}
 \contentsline {chapter}{\numberline {6}Architecture}{25}{chapter.6}
-\contentsline {chapter}{\numberline {7}Implementation}{29}{chapter.7}
-\contentsline {section}{\numberline {7.1}Read Stream}{31}{section.7.1}
+\contentsline {chapter}{\numberline {7}Design and Implementation}{29}{chapter.7}
+\contentsline {section}{\numberline {7.1}Read Stream}{32}{section.7.1}
 \contentsline {subsection}{\numberline {7.1.1}Test Coverage}{32}{subsection.7.1.1}
-\contentsline {section}{\numberline {7.2}Transform Stream}{32}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}Test Coverage}{33}{subsection.7.2.1}
-\contentsline {section}{\numberline {7.3}Schema}{33}{section.7.3}
-\contentsline {subsection}{\numberline {7.3.1}Test Coverage}{35}{subsection.7.3.1}
-\contentsline {section}{\numberline {7.4}Execution Order}{37}{section.7.4}
-\contentsline {subsection}{\numberline {7.4.1}Test coverage}{37}{subsection.7.4.1}
-\contentsline {section}{\numberline {7.5}Execution Schema}{37}{section.7.5}
-\contentsline {subsection}{\numberline {7.5.1}Test Coverage}{38}{subsection.7.5.1}
-\contentsline {section}{\numberline {7.6}Template}{38}{section.7.6}
-\contentsline {subsection}{\numberline {7.6.1}Test Coverage}{40}{subsection.7.6.1}
-\contentsline {section}{\numberline {7.7}Write Stream}{41}{section.7.7}
-\contentsline {subsection}{\numberline {7.7.1}Test Coverage}{44}{subsection.7.7.1}
-\contentsline {section}{\numberline {7.8}Reporting mechanism}{44}{section.7.8}
-\contentsline {subsection}{\numberline {7.8.1}Implementation}{45}{subsection.7.8.1}
-\contentsline {subsection}{\numberline {7.8.2}Test coverage}{45}{subsection.7.8.2}
-\contentsline {chapter}{\nonumberline Bibliography}{47}{appendix*.13}
-\contentsline {part}{\nonumberline Appendix}{51}{section*.14}
+\contentsline {subsection}{\numberline {7.1.2}Correspondence to design principles}{33}{subsection.7.1.2}
+\contentsline {section}{\numberline {7.2}Transform Stream}{34}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Test Coverage}{35}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}Correspondence to design principles}{35}{subsection.7.2.2}
+\contentsline {section}{\numberline {7.3}Schema}{36}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Test Coverage}{38}{subsection.7.3.1}
+\contentsline {subsection}{\numberline {7.3.2}Correspondence to design principles}{39}{subsection.7.3.2}
+\contentsline {section}{\numberline {7.4}Execution Order}{40}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}Test coverage}{43}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.4.2}Correspondence to design principles}{44}{subsection.7.4.2}
+\contentsline {section}{\numberline {7.5}Execution Schema}{45}{section.7.5}
+\contentsline {subsection}{\numberline {7.5.1}Test Coverage}{45}{subsection.7.5.1}
+\contentsline {subsection}{\numberline {7.5.2}Correspondence to design principles}{45}{subsection.7.5.2}
+\contentsline {section}{\numberline {7.6}Template}{46}{section.7.6}
+\contentsline {subsection}{\numberline {7.6.1}Test Coverage}{48}{subsection.7.6.1}
+\contentsline {subsection}{\numberline {7.6.2}Correspondence to design principles}{49}{subsection.7.6.2}
+\contentsline {section}{\numberline {7.7}Write Stream}{50}{section.7.7}
+\contentsline {subsection}{\numberline {7.7.1}Test Coverage}{53}{subsection.7.7.1}
+\contentsline {subsection}{\numberline {7.7.2}Correspondence to design principles}{53}{subsection.7.7.2}
+\contentsline {section}{\numberline {7.8}Reporting mechanism}{54}{section.7.8}
+\contentsline {subsection}{\numberline {7.8.1}Implementation}{54}{subsection.7.8.1}
+\contentsline {subsection}{\numberline {7.8.2}Test coverage}{55}{subsection.7.8.2}
+\contentsline {subsection}{\numberline {7.8.3}Correspondence to design principles}{56}{subsection.7.8.3}
+\contentsline {chapter}{\nonumberline Bibliography}{59}{appendix*.13}
+\contentsline {part}{\nonumberline Appendix}{63}{section*.14}

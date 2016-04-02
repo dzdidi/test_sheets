@@ -1,0 +1,26 @@
+function transform(array) {
+  for (var i = 0; i < array.length; i++) {
+    if (array[i][0] && array[i][1]) {
+      for (var j = 0; j < array[i][1].length; j++) {
+        for (var k = i + 1; k < array.length; k++) {
+          if (array[i][1][j] == array[k][0]) {
+            array[i][1][j] = [array[i][1][j], array[k][1]];
+            array.splice(k, 1);
+          };
+        };
+      };
+    } else if(Array.isArray(array[0])) {
+      if (isIn(array[i], array[0])) {
+        array.splice(i, 1);
+        i--;
+      };
+    };
+    if(Array.isArray(array[i])){
+      for (var j = 0; j < array[i].length; j++) {
+        if(Array.isArray(array[i][j]))
+          transform(array[i][j]);
+      };
+    };
+  };
+  return array;
+};

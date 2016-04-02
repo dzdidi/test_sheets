@@ -1,10 +1,3 @@
-/*
-TODO
-
-1) Proper implementation of report
-
-*/
-
 var assert = require('assert');
 
 // not covered probably should also accept all the info from above stream
