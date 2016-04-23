@@ -1,8 +1,7 @@
 var array = ['1',['2','3']]
+var s = require('~/Masterthesis/test_sheets/demo/demo.js');
+console.log(JSON.stringify(s));
 var array2 = ['4', ['5', ['6']]]
-// function(input,str){
-//   for (
-// }
 var final = [array, array2];
 
 function bar(a){
@@ -27,6 +26,3 @@ function foo(arr, str){
 }
 
 console.log(bar(final))
- "<1 <2> <3> >"
-
- "<1><<2><3><1><<2><3><4><<5><<6>"

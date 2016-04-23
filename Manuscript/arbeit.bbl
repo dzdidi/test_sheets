@@ -71,7 +71,7 @@ Ich möchte mehr zu eurer vision erfahren!
   \url{https://figo.zendesk.com/hc/de/articles/200974801-Ich-m\%C3\%B6chte-mehr-zu-eurer-Vision-erfahren-}.
 
 \bibitem{mdnProto}
-Inheritance and the prototype chain.
+Inheritance and the prototype chain | mdn.
 \newblock
   \url{https://developer.mozilla.org/en/docs/Web/JavaScript/Inheritance\_and\_the\_prototype\_chain}.
 
@@ -84,9 +84,13 @@ An introduction to libuv: Basics of libuv.
 \newblock \url{http://nikhilm.github.io/uvbook/basics.html}.
 
 \bibitem{mdnOOP}
-Introduction to object-oriented javascript.
+Introduction to object-oriented javascript | mdn.
 \newblock
   \url{https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction\_to\_Object-Oriented\_JavaScript}.
+
+\bibitem{mdnJS}
+Javascript | mdn.
+\newblock \url{https://developer.mozilla.org/en-US/docs/Web/JavaScript}.
 
 \bibitem{gtor}
 kriskowal/gtor: A general theory of reactivity.
@@ -189,6 +193,31 @@ Robert~L. Glass.
 \newblock Real-time: The \&ldquo;lost world\&rdquo; of software debugging and
   testing.
 \newblock {\em Commun. ACM}, 23(5):264--271, May 1980.
+
+\bibitem{MES10}
+Alexander Maedche.
+\newblock L10-intro es use.
+\newblock 2014.
+
+\bibitem{MES5}
+Alexander Maedche.
+\newblock L5-intro es transformation.
+\newblock 2014.
+
+\bibitem{MES6}
+Alexander Maedche.
+\newblock L6-intro es development.
+\newblock 2014.
+
+\bibitem{MES7}
+Alexander Maedche.
+\newblock L7-intro es adoption.
+\newblock 2014.
+
+\bibitem{MES9}
+Alexander Maedche.
+\newblock L9-intro es converion.
+\newblock 2014.
 
 \bibitem{MartinASD}
 Robert~Cecil Martin.

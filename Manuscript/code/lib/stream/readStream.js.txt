@@ -1,11 +1,3 @@
-var path = require('path');
-var fs = require('fs');
-
-var xlsx = require('xlsx');
-var fsReaddir = require('fs-readdir');
-var through = require('through2');
-var multipipe = require('multipipe');
-
 function getFilesStream(dirPath) {
   return fsReaddir(dirPath)
     .on('error', function(obj) {

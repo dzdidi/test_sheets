@@ -6,51 +6,79 @@
 \BOOKMARK [0][-]{chapter.2}{figo GmbH}{}% 6
 \BOOKMARK [1][-]{section.2.1}{IT infrastructure. Banking Server}{chapter.2}% 7
 \BOOKMARK [2][-]{subsection.2.1.1}{Banking Server Architecture}{section.2.1}% 8
-\BOOKMARK [1][-]{section.2.2}{Requirements}{chapter.2}% 9
-\BOOKMARK [0][-]{chapter.3}{Testing. Existing approaches. Test Sheets}{}% 10
-\BOOKMARK [1][-]{section.3.1}{Software testing}{chapter.3}% 11
-\BOOKMARK [1][-]{section.3.2}{Existing approaches for test definitions}{chapter.3}% 12
-\BOOKMARK [2][-]{subsection.3.2.1}{xUnit}{section.3.2}% 13
-\BOOKMARK [2][-]{subsection.3.2.2}{Fit}{section.3.2}% 14
-\BOOKMARK [2][-]{subsection.3.2.3}{Cucumber}{section.3.2}% 15
-\BOOKMARK [1][-]{section.3.3}{Test Sheets}{chapter.3}% 16
-\BOOKMARK [2][-]{subsection.3.3.1}{Basic Test Sheets}{section.3.3}% 17
-\BOOKMARK [0][-]{chapter.4}{Real-Time Software and its Testing. Web scrapping}{}% 18
-\BOOKMARK [1][-]{section.4.1}{Web scraping. CasperJS}{chapter.4}% 19
-\BOOKMARK [0][-]{chapter.5}{Asynchronous programming. Strategies and performance}{}% 20
-\BOOKMARK [1][-]{section.5.1}{Asynchronous programming}{chapter.5}% 21
-\BOOKMARK [2][-]{subsection.5.1.1}{Node.js}{section.5.1}% 22
-\BOOKMARK [2][-]{subsection.5.1.2}{Event handling}{section.5.1}% 23
-\BOOKMARK [1][-]{section.5.2}{Asynchronous handling strategies}{chapter.5}% 24
-\BOOKMARK [2][-]{subsection.5.2.1}{Continuation passing}{section.5.2}% 25
-\BOOKMARK [2][-]{subsection.5.2.2}{Imperative}{section.5.2}% 26
-\BOOKMARK [1][-]{section.5.3}{Performance}{chapter.5}% 27
-\BOOKMARK [0][-]{chapter.6}{Architecture}{}% 28
-\BOOKMARK [0][-]{chapter.7}{Design and Implementation}{}% 29
-\BOOKMARK [1][-]{section.7.1}{Read Stream}{chapter.7}% 30
-\BOOKMARK [2][-]{subsection.7.1.1}{Test Coverage}{section.7.1}% 31
-\BOOKMARK [2][-]{subsection.7.1.2}{Correspondence to design principles}{section.7.1}% 32
-\BOOKMARK [1][-]{section.7.2}{Transform Stream}{chapter.7}% 33
-\BOOKMARK [2][-]{subsection.7.2.1}{Test Coverage}{section.7.2}% 34
-\BOOKMARK [2][-]{subsection.7.2.2}{Correspondence to design principles}{section.7.2}% 35
-\BOOKMARK [1][-]{section.7.3}{Schema}{chapter.7}% 36
+\BOOKMARK [1][-]{section.2.2}{Transformation project}{chapter.2}% 9
+\BOOKMARK [2][-]{subsection.2.2.1}{Test Sheets project}{section.2.2}% 10
+\BOOKMARK [2][-]{subsection.2.2.2}{Technical requirements}{section.2.2}% 11
+\BOOKMARK [0][-]{chapter.3}{Testing. Existing approaches. Test Sheets}{}% 12
+\BOOKMARK [1][-]{section.3.1}{Software testing}{chapter.3}% 13
+\BOOKMARK [1][-]{section.3.2}{Existing approaches for test definitions}{chapter.3}% 14
+\BOOKMARK [2][-]{subsection.3.2.1}{xUnit}{section.3.2}% 15
+\BOOKMARK [2][-]{subsection.3.2.2}{Fit}{section.3.2}% 16
+\BOOKMARK [2][-]{subsection.3.2.3}{Cucumber}{section.3.2}% 17
+\BOOKMARK [1][-]{section.3.3}{Test Sheets}{chapter.3}% 18
+\BOOKMARK [2][-]{subsection.3.3.1}{Basic Test Sheets}{section.3.3}% 19
+\BOOKMARK [0][-]{chapter.4}{Real-Time Software and its Testing. Web scrapping}{}% 20
+\BOOKMARK [1][-]{section.4.1}{Real-Time Software}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.2}{Testing Real-Time software}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.3}{Web scraping. CasperJS}{chapter.4}% 23
+\BOOKMARK [0][-]{chapter.5}{Asynchronous programming. Strategies and performance}{}% 24
+\BOOKMARK [1][-]{section.5.1}{Asynchronous programming}{chapter.5}% 25
+\BOOKMARK [2][-]{subsection.5.1.1}{node.js}{section.5.1}% 26
+\BOOKMARK [2][-]{subsection.5.1.2}{Event handling}{section.5.1}% 27
+\BOOKMARK [1][-]{section.5.2}{Asynchronous handling strategies}{chapter.5}% 28
+\BOOKMARK [2][-]{subsection.5.2.1}{Continuation passing}{section.5.2}% 29
+\BOOKMARK [2][-]{subsection.5.2.2}{Imperative}{section.5.2}% 30
+\BOOKMARK [2][-]{subsection.5.2.3}{Performance}{section.5.2}% 31
+\BOOKMARK [0][-]{chapter.6}{Architecture}{}% 32
+\BOOKMARK [0][-]{chapter.7}{Design and Implementation}{}% 33
+\BOOKMARK [1][-]{section.7.1}{Conventions for definitions of Test Sheets}{chapter.7}% 34
+\BOOKMARK [1][-]{section.7.2}{Implementation and input example}{chapter.7}% 35
+\BOOKMARK [1][-]{section.7.3}{Read Stream}{chapter.7}% 36
 \BOOKMARK [2][-]{subsection.7.3.1}{Test Coverage}{section.7.3}% 37
 \BOOKMARK [2][-]{subsection.7.3.2}{Correspondence to design principles}{section.7.3}% 38
-\BOOKMARK [1][-]{section.7.4}{Execution Order}{chapter.7}% 39
-\BOOKMARK [2][-]{subsection.7.4.1}{Test coverage}{section.7.4}% 40
+\BOOKMARK [1][-]{section.7.4}{Transform Stream}{chapter.7}% 39
+\BOOKMARK [2][-]{subsection.7.4.1}{Test Coverage}{section.7.4}% 40
 \BOOKMARK [2][-]{subsection.7.4.2}{Correspondence to design principles}{section.7.4}% 41
-\BOOKMARK [1][-]{section.7.5}{Execution Schema}{chapter.7}% 42
+\BOOKMARK [1][-]{section.7.5}{Scheme}{chapter.7}% 42
 \BOOKMARK [2][-]{subsection.7.5.1}{Test Coverage}{section.7.5}% 43
 \BOOKMARK [2][-]{subsection.7.5.2}{Correspondence to design principles}{section.7.5}% 44
-\BOOKMARK [1][-]{section.7.6}{Template}{chapter.7}% 45
-\BOOKMARK [2][-]{subsection.7.6.1}{Test Coverage}{section.7.6}% 46
+\BOOKMARK [1][-]{section.7.6}{Execution Order}{chapter.7}% 45
+\BOOKMARK [2][-]{subsection.7.6.1}{Test coverage}{section.7.6}% 46
 \BOOKMARK [2][-]{subsection.7.6.2}{Correspondence to design principles}{section.7.6}% 47
-\BOOKMARK [1][-]{section.7.7}{Write Stream}{chapter.7}% 48
+\BOOKMARK [1][-]{section.7.7}{Execution Scheme}{chapter.7}% 48
 \BOOKMARK [2][-]{subsection.7.7.1}{Test Coverage}{section.7.7}% 49
 \BOOKMARK [2][-]{subsection.7.7.2}{Correspondence to design principles}{section.7.7}% 50
-\BOOKMARK [1][-]{section.7.8}{Reporting mechanism}{chapter.7}% 51
-\BOOKMARK [2][-]{subsection.7.8.1}{Implementation}{section.7.8}% 52
-\BOOKMARK [2][-]{subsection.7.8.2}{Test coverage}{section.7.8}% 53
-\BOOKMARK [2][-]{subsection.7.8.3}{Correspondence to design principles}{section.7.8}% 54
-\BOOKMARK [0][-]{appendix*.13}{Bibliography}{}% 55
-\BOOKMARK [-1][-]{section*.14}{Appendix}{}% 56
+\BOOKMARK [1][-]{section.7.8}{Template}{chapter.7}% 51
+\BOOKMARK [2][-]{subsection.7.8.1}{Test Coverage}{section.7.8}% 52
+\BOOKMARK [2][-]{subsection.7.8.2}{Correspondence to design principles}{section.7.8}% 53
+\BOOKMARK [1][-]{section.7.9}{Write Stream}{chapter.7}% 54
+\BOOKMARK [2][-]{subsection.7.9.1}{Test Coverage}{section.7.9}% 55
+\BOOKMARK [2][-]{subsection.7.9.2}{Correspondence to design principles}{section.7.9}% 56
+\BOOKMARK [1][-]{section.7.10}{Reporting mechanism}{chapter.7}% 57
+\BOOKMARK [2][-]{subsection.7.10.1}{Implementation}{section.7.10}% 58
+\BOOKMARK [2][-]{subsection.7.10.2}{Test coverage}{section.7.10}% 59
+\BOOKMARK [2][-]{subsection.7.10.3}{Correspondence to design principles}{section.7.10}% 60
+\BOOKMARK [0][-]{chapter.8}{System fit and benefits}{}% 61
+\BOOKMARK [1][-]{section.8.1}{Task-Technology Fit}{chapter.8}% 62
+\BOOKMARK [2][-]{subsection.8.1.1}{Task characteristics}{section.8.1}% 63
+\BOOKMARK [2][-]{subsection.8.1.2}{Technology Characterisitcs}{section.8.1}% 64
+\BOOKMARK [2][-]{subsection.8.1.3}{Individual Characterisitcs:}{section.8.1}% 65
+\BOOKMARK [2][-]{subsection.8.1.4}{Task-Technology-Fit:}{section.8.1}% 66
+\BOOKMARK [2][-]{subsection.8.1.5}{Utilization:}{section.8.1}% 67
+\BOOKMARK [2][-]{subsection.8.1.6}{Performance Impact:}{section.8.1}% 68
+\BOOKMARK [1][-]{section.8.2}{Mistfits}{chapter.8}% 69
+\BOOKMARK [2][-]{subsection.8.2.1}{Functionality missfits}{section.8.2}% 70
+\BOOKMARK [2][-]{subsection.8.2.2}{Data misfits}{section.8.2}% 71
+\BOOKMARK [2][-]{subsection.8.2.3}{Usability misfits}{section.8.2}% 72
+\BOOKMARK [2][-]{subsection.8.2.4}{Role misfits}{section.8.2}% 73
+\BOOKMARK [2][-]{subsection.8.2.5}{Control misfits}{section.8.2}% 74
+\BOOKMARK [2][-]{subsection.8.2.6}{Organizational culture}{section.8.2}% 75
+\BOOKMARK [1][-]{section.8.3}{Benefits and affecting factors}{chapter.8}% 76
+\BOOKMARK [2][-]{subsection.8.3.1}{Short-term factor}{section.8.3}% 77
+\BOOKMARK [2][-]{subsection.8.3.2}{Long-term factor}{section.8.3}% 78
+\BOOKMARK [0][-]{chapter.9}{Limitations and Future Work. Planned product usage}{}% 79
+\BOOKMARK [1][-]{section.9.1}{Limitations and Future Work}{chapter.9}% 80
+\BOOKMARK [1][-]{section.9.2}{Planned product usage}{chapter.9}% 81
+\BOOKMARK [0][-]{chapter.10}{Conclusion}{}% 82
+\BOOKMARK [0][-]{appendix*.33}{Bibliography}{}% 83
+\BOOKMARK [-1][-]{section*.34}{Appendix}{}% 84

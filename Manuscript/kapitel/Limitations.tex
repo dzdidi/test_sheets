@@ -1,0 +1,23 @@
+\chapter{Limitations and Future Work. Planned product usage}
+\label{chap:limits}
+\section{Limitations and Future Work}
+This paper provide prove of concept for usage of Basic Test Sheets only for asynchronous testing of real-time software. The same process can be applied for Higher-Order/Parametrized Test Sheets in a straight forward way since such test sheets just provide additional level of data abstraction without changing generation and execution processes.
+
+However, an application of Non-Linear Test Sheets for such purpose can be non-trivial task due to the finite automates used for definitions of test steps order. In this case, two uncertainties are laying on a surface. First, which event should be taken in to account for calculation of counts one test step was executed (call event or return event). Second, how to minimize system's time in idle state while it is waiting for response from external system.
+ 
+The implementation  of system described in this paper is bounded to node.js framework, which does not allow to use main benefit of javascript language, an ability to be executed inside of the web browser. In such case browser plug-in for Test Sheets can be developed to work with cloud-based spreadsheet editors. Three changes should be done to make it possible. First is changing the connector library for reading spreadsheet files, same should be done just in case of changing spreadsheet editor. Next, translation software must be compiled to reduce the load on the browser's javascript engine. Furthermore, the compilation have to be done over generated javascript files and they must be recorded into the browser's cache.
+
+All tests are running in a main process. However, in case of figo GmbH each test step creates a child process, this is done automatically as invocation of every script creates child process and Test Sheets are just performing calls to the interface responsible for invocation of the scripts. Further it is impossible to define time constraints for script execution since they are predefined on stage of the script development process and are immutable. In case if script (child process) does not provide a result withing specified period of time it automatically treated as failed script by the part of the system responsible for its invocation.
+
+Further, all code covered by tests should be located on the computer where generated javascript files are stored with relative paths to the modules under test. This is caused by the fact that node.js' require module works only with relative paths. Moreover system uses standard fs module for I/O operations, but it is common case to store code within remote repositories. In combination with web-browser plug-in it is possible to create system for remote work with code base from any device which has an Internet connection and able to run web browser which supports javascript.
+
+Last but not least, all asynchronous functions covered by tests implements callback for handling events. This pattern is de facto standard in node.js and creation of promises or stream chunks can be done inside of the callback. However it is possible that function with asynchronous behavior returns promise object for deferred value, in such case the implementation of template library and reporting mechanism should be redesigned.
+
+\section{Planned product usage}
+Developed prove of concept will be used by figo GmbH in the following use cases.
+
+\paragraph{Internal product management testing tool.} This is an original Test Sheet concept was designed for.
+\paragraph{Automation tool} for customers to automate routine with creation of testing data within sandbox environment via implementing calls to API.
+\paragraph{Verification tool.} Using Test Sheets employees from business department of the company define test steps for verification of the scrapping scripts with respect to banking web pages. Test files execution is performed as a crown job and automatically executed every five minutes. Verification failure (failed tests) are reported directly to developers.
+
+

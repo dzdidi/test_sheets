@@ -10,6 +10,9 @@ A level-1 auxiliary file: kapitel/realTime.aux
 A level-1 auxiliary file: kapitel/async.aux
 A level-1 auxiliary file: kapitel/architectureDesign.aux
 A level-1 auxiliary file: kapitel/implementationTestCoverage.aux
+A level-1 auxiliary file: kapitel/performance.aux
+A level-1 auxiliary file: kapitel/Limitations.aux
+A level-1 auxiliary file: kapitel/Conclusion.aux
 The style file: plain.bst
 A level-1 auxiliary file: kapitel/erklaerung.aux
 A level-1 auxiliary file: kapitel/abtretungserklaerung.aux
@@ -24,6 +27,10 @@ I was expecting a `,' or a `}'---line 568 of file literatur/lit.bib
  :  howpublished={\url{http://news.softpedia.com/news/annoyed-developer-brings-down-thousands-of-javascript-node-js-projects-502075.shtml}},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+Warning--to sort, need author or key in moduleCounts
+Warning--to sort, need author or key in gtor
+Warning--to sort, need author or key in asyncPerformance_2
+Warning--to sort, need author or key in asyncPerformance
 Warning--to sort, need author or key in listOfBanks
 Warning--to sort, need author or key in LarsAPI
 Warning--to sort, need author or key in TimAPI
@@ -49,58 +56,60 @@ Warning--to sort, need author or key in w3cDOM
 Warning--to sort, need author or key in casperjs
 Warning--to sort, need author or key in asyncArticle
 Warning--to sort, need author or key in nodejsabout
+Warning--to sort, need author or key in mdnJS
 Warning--to sort, need author or key in mdnProto
 Warning--to sort, need author or key in mdnOOP
-Warning--to sort, need author or key in moduleCounts
 Warning--to sort, need author or key in libuv
 Warning--to sort, need author or key in libuvBasic
 Warning--to sort, need author or key in events
 Warning--to sort, need author or key in zalgo
-Warning--to sort, need author or key in gtor
-Warning--to sort, need author or key in asyncPerformance
-Warning--to sort, need author or key in asyncPerformance_2
 Warning--empty note in Lecture1
 Warning--empty note in Lecture2
+Warning--empty note in MES10
+Warning--empty note in MES5
+Warning--empty note in MES6
+Warning--empty note in MES7
+Warning--empty note in MES9
 Warning--empty booktitle in npmHydra
-You've used 46 entries,
+You've used 52 entries,
             2118 wiz_defined-function locations,
-            706 strings with 9375 characters,
-and the built_in function-call counts, 8222 in all, are:
-= -- 775
-> -- 123
+            729 strings with 9708 characters,
+and the built_in function-call counts, 9256 in all, are:
+= -- 880
+> -- 159
 < -- 1
-+ -- 75
-- -- 26
-* -- 303
-:= -- 1052
-add.period$ -- 102
-call.type$ -- 46
-change.case$ -- 148
++ -- 91
+- -- 36
+* -- 348
+:= -- 1249
+add.period$ -- 119
+call.type$ -- 52
+change.case$ -- 171
 chr.to.int$ -- 0
-cite$ -- 84
-duplicate$ -- 366
-empty$ -- 1054
-format.name$ -- 26
-if$ -- 1963
+cite$ -- 96
+duplicate$ -- 403
+empty$ -- 1132
+format.name$ -- 36
+if$ -- 2163
 int.to.chr$ -- 0
-int.to.str$ -- 46
+int.to.str$ -- 52
 missing$ -- 11
-newline$ -- 196
-num.names$ -- 22
-pop$ -- 346
+newline$ -- 225
+num.names$ -- 32
+pop$ -- 364
 preamble$ -- 1
-purify$ -- 105
+purify$ -- 122
 quote$ -- 0
-skip$ -- 367
+skip$ -- 400
 stack$ -- 0
-substring$ -- 286
-swap$ -- 54
+substring$ -- 316
+swap$ -- 55
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 176
-warning$ -- 38
-while$ -- 26
-width$ -- 48
-write$ -- 355
+type$ -- 200
+warning$ -- 44
+while$ -- 36
+width$ -- 54
+write$ -- 407
 (There were 2 error messages)

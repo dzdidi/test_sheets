@@ -1,6 +1,7 @@
 \chapter{Architecture} 
-\label{sec:architectureDesign}
-The system consist of three piped object streams \ref{fig:tsGenArch}. Streams piping implements the idea of pipe '|' in Unix systems invented by Douglas Mcllroy. It enables the output of one program to be connected to the input of the next program. \textit{Object stream (Stream in a object mode)} is a stream in which data treated as a sequence of discrete javascript objects. Further, piping of object streams allows to perform parallel executions which can be beneficial from the performance perspective. 
+\label{chap:architectureDesign}
+
+The system consist of three piped object streams \ref{fig:tsGenArch}. Streams piping implements the idea of pipe "$|$" in Unix systems invented by Douglas Mcllroy. It enables the output of one program to be connected to the input of the next program. \textit{Object stream (Stream in a object mode)} is a stream in which data treated as a sequence of discrete javascript objects. Further, piping of object streams allows to perform parallel executions which can be beneficial from the performance perspective. 
 
 \begin{figure}[ht]
 	\label{fig:tsGenArch}
@@ -82,3 +83,4 @@ label=index
 ]
 {code/index.js.txt}
 
+Program is invoked from the command line interface accepts one parameter - path to the folder with predefined xlsx files with defined Test Sheets.

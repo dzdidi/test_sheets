@@ -28,7 +28,7 @@ describe('Test coverage for transform stream function', function(){
     done();
   });
 
-  it('should call applyTemplate and create general-, order- and execution- schemes ', function(done){
+  it('should call applyTemplate', function(done){
     var applyTemplateStub = sinon.stub(template, 'applyTemplate', function(){});
 
     var createSchemeStub = sinon.stub(scheme_lib.scheme, 'createScheme', function(){});
