@@ -1,27 +1,38 @@
-function addCalls(sheet, scheme, indent, res, fileName){
-  if (scheme.length === 0) {
-    return res.concat('\n');
-  } else {
-    return res.concat('  '.repeat(indent) + scheme[0].objectsUnderTest[0],
-    '.' + getValue(sheet, scheme[0].methodsUnderTest),
-    '.' + 'call(this' + getCallInputs(sheet, scheme[0])
+function makeNestedCall(sheet, nestedCalls, fileName, str, indent){
+  for (var i = 0; i < nestedCalls.length; i++) {
+    str += makeCall(sheet, nestedCalls[i], 0, '', fileName)
+    if(Array.isArray(nestedCalls[i+1])){
+      return str += makeNestedCall(sheet, nestedCalls[i+1], fileName, '', 0) + '\n});\n';
+    } else {
+      str += '\n});\n'
+    }
+  }
+  return str;
+}
+
+function makeLinearCalls(sheet, linearCalls, fileName){
+  var res = '';
+  for (var i = 0; i < linearCalls.length; i++) {
+    res += makeCall(sheet, linearCalls[i], 0, '', fileName) + '\n});\n'
+  };
+  return res;
+}
+
+function makeCall(sheet, scheme, indent, res, fileName) {
+  return res.concat('  '.repeat(indent) + scheme.objectsUnderTest[0],
+    '.' + getValue(sheet, scheme.methodsUnderTest),
+    '.call(' + scheme.objectsUnderTest[0] + getCallInputs(sheet, scheme)
       + ', function(err, data){\n'
       + '  '.repeat(indent + 1)
       + 'if(err)'
       + '  ' + 'return(err, null);\n'
       + '  '.repeat(indent + 1)
-      + 'if(makeComparisonAndWriteResult('
-      + scheme[0].outputs
+      + 'makeComparisonAndWriteResult('
+      + scheme.outputs
       + ', data, '
-      + '\'' + getValue(sheet, scheme[0].invocations, true) + '\'' + ', '
-      + '\'' + getValue(sheet, scheme[0].objectsUnderTest) + ' ' + getValue(sheet, scheme[0].methodsUnderTest)+ '\', ' + '\'' + fileName +'\', '+ '\'' + scheme[0].outputs + '\'' + ')){\n'
-      + '  '.repeat(indent + 2)
-      + scheme[0].outputs
-      + ' = data;\n'
+      + '\'' + getValue(sheet, scheme.invocations, true) + '\'' + ', '
+      + '\'' + getValue(sheet, scheme.objectsUnderTest) + ' ' + getValue(sheet, scheme.methodsUnderTest)+ '\', ' + '\'' + fileName +'\', '+ '\'' + scheme.outputs + '\'' + ');\n'
       + '  '.repeat(indent + 1)
-      + '};\n'
-      + addCalls(sheet, scheme.slice(1, Object.keys(scheme).length), indent + 1, res, fileName)
-      + '  '.repeat(indent)
-      + '});\n');
-  };
+      + scheme.outputs
+      + ' = data;\n');
 };
