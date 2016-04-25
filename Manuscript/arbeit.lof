@@ -28,7 +28,11 @@
 \contentsline {figure}{\numberline {7.9}{\ignorespaces Result Test Sheet for stack.js}}{61}{figure.7.9}
 \contentsline {figure}{\numberline {7.10}{\ignorespaces Test coverage for report mechanism}}{62}{figure.7.10}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Generation performance for files within single folder}}{66}{figure.8.1}
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Generation performance for files within nested folders}}{67}{figure.8.2}
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Execution performance for independent test steps}}{68}{figure.8.3}
+\contentsline {figure}{\numberline {8.4}{\ignorespaces Execution performance for interdependent test steps}}{69}{figure.8.4}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {9.1}{\ignorespaces Task-Technology Fit model\cite {MES10}}}{67}{figure.9.1}
+\contentsline {figure}{\numberline {9.1}{\ignorespaces Task-Technology Fit model\cite {MES10}}}{71}{figure.9.1}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

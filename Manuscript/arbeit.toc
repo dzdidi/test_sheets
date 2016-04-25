@@ -81,39 +81,45 @@
 \contentsline {chapter}{\numberline {8}Performance and User Experience}{65}{chapter.8}
 \contentsline {section}{\numberline {8.1}Performance}{65}{section.8.1}
 \contentsline {subsection}{\numberline {8.1.1}Generation performance}{65}{subsection.8.1.1}
+\contentsline {paragraph}{\nonumberline Single folder}{65}{section*.23}
+\contentsline {paragraph}{\nonumberline Nested folder}{65}{section*.24}
 \contentsline {subsection}{\numberline {8.1.2}Executions performance}{65}{subsection.8.1.2}
-\contentsline {section}{\numberline {8.2}User Experience}{65}{section.8.2}
-\contentsline {chapter}{\numberline {9}System fit and benefits}{67}{chapter.9}
-\contentsline {section}{\numberline {9.1}Task-Technology Fit}{67}{section.9.1}
-\contentsline {subsection}{\numberline {9.1.1}Task characteristics}{68}{subsection.9.1.1}
-\contentsline {subsection}{\numberline {9.1.2}Technology Characterisitcs}{68}{subsection.9.1.2}
-\contentsline {subsection}{\numberline {9.1.3}Individual Characterisitcs:}{68}{subsection.9.1.3}
-\contentsline {subsection}{\numberline {9.1.4}Task-Technology-Fit:}{68}{subsection.9.1.4}
-\contentsline {subsection}{\numberline {9.1.5}Utilization:}{68}{subsection.9.1.5}
-\contentsline {subsection}{\numberline {9.1.6}Performance Impact:}{68}{subsection.9.1.6}
-\contentsline {section}{\numberline {9.2}Mistfits}{69}{section.9.2}
-\contentsline {subsection}{\numberline {9.2.1}Functionality missfits}{69}{subsection.9.2.1}
-\contentsline {subsection}{\numberline {9.2.2}Data misfits}{69}{subsection.9.2.2}
-\contentsline {subsection}{\numberline {9.2.3}Usability misfits}{69}{subsection.9.2.3}
-\contentsline {subsection}{\numberline {9.2.4}Role misfits}{69}{subsection.9.2.4}
-\contentsline {subsection}{\numberline {9.2.5}Control misfits}{69}{subsection.9.2.5}
-\contentsline {subsection}{\numberline {9.2.6}Organizational culture}{70}{subsection.9.2.6}
-\contentsline {section}{\numberline {9.3}Benefits and affecting factors}{70}{section.9.3}
-\contentsline {paragraph}{\nonumberline Organizational benefits}{70}{section*.23}
-\contentsline {subsection}{\numberline {9.3.1}Short-term factor}{70}{subsection.9.3.1}
-\contentsline {paragraph}{\nonumberline Functional Fit}{70}{section*.24}
-\contentsline {paragraph}{\nonumberline Oevercoming Organizational Inertia}{70}{section*.25}
-\contentsline {subsection}{\numberline {9.3.2}Long-term factor}{71}{subsection.9.3.2}
-\contentsline {paragraph}{\nonumberline Integration}{71}{section*.26}
-\contentsline {paragraph}{\nonumberline Process optimization}{71}{section*.27}
-\contentsline {paragraph}{\nonumberline Improved access to information}{71}{section*.28}
-\contentsline {paragraph}{\nonumberline On-going major enterprise system improvement projects}{71}{section*.29}
-\contentsline {chapter}{\numberline {10}Limitations and Future Work. Planned product usage}{73}{chapter.10}
-\contentsline {section}{\numberline {10.1}Limitations and Future Work}{73}{section.10.1}
-\contentsline {section}{\numberline {10.2}Planned product usage}{74}{section.10.2}
-\contentsline {paragraph}{\nonumberline Internal product management testing tool.}{74}{section*.30}
-\contentsline {paragraph}{\nonumberline Automation tool}{74}{section*.31}
-\contentsline {paragraph}{\nonumberline Verification tool.}{74}{section*.32}
-\contentsline {chapter}{\numberline {11}Conclusion}{77}{chapter.11}
-\contentsline {chapter}{\nonumberline Bibliography}{79}{appendix*.33}
-\contentsline {part}{\nonumberline Appendix}{83}{section*.34}
+\contentsline {paragraph}{\nonumberline Independent test steps}{65}{section*.25}
+\contentsline {paragraph}{\nonumberline Chain relationship}{66}{section*.26}
+\contentsline {section}{\numberline {8.2}User Experience}{66}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}After Scenario Questionnaire}{66}{subsection.8.2.1}
+\contentsline {subsection}{\numberline {8.2.2}Post Study System Usability Questionnaire}{67}{subsection.8.2.2}
+\contentsline {chapter}{\numberline {9}System fit and benefits}{71}{chapter.9}
+\contentsline {section}{\numberline {9.1}Task-Technology Fit}{71}{section.9.1}
+\contentsline {subsection}{\numberline {9.1.1}Task characteristics}{72}{subsection.9.1.1}
+\contentsline {subsection}{\numberline {9.1.2}Technology Characterisitcs}{72}{subsection.9.1.2}
+\contentsline {subsection}{\numberline {9.1.3}Individual Characterisitcs:}{72}{subsection.9.1.3}
+\contentsline {subsection}{\numberline {9.1.4}Task-Technology-Fit:}{72}{subsection.9.1.4}
+\contentsline {subsection}{\numberline {9.1.5}Utilization:}{72}{subsection.9.1.5}
+\contentsline {subsection}{\numberline {9.1.6}Performance Impact:}{72}{subsection.9.1.6}
+\contentsline {section}{\numberline {9.2}Mistfits}{73}{section.9.2}
+\contentsline {subsection}{\numberline {9.2.1}Functionality missfits}{73}{subsection.9.2.1}
+\contentsline {subsection}{\numberline {9.2.2}Data misfits}{73}{subsection.9.2.2}
+\contentsline {subsection}{\numberline {9.2.3}Usability misfits}{73}{subsection.9.2.3}
+\contentsline {subsection}{\numberline {9.2.4}Role misfits}{73}{subsection.9.2.4}
+\contentsline {subsection}{\numberline {9.2.5}Control misfits}{73}{subsection.9.2.5}
+\contentsline {subsection}{\numberline {9.2.6}Organizational culture}{74}{subsection.9.2.6}
+\contentsline {section}{\numberline {9.3}Benefits and affecting factors}{74}{section.9.3}
+\contentsline {paragraph}{\nonumberline Organizational benefits}{74}{section*.27}
+\contentsline {subsection}{\numberline {9.3.1}Short-term factor}{74}{subsection.9.3.1}
+\contentsline {paragraph}{\nonumberline Functional Fit}{74}{section*.28}
+\contentsline {paragraph}{\nonumberline Oevercoming Organizational Inertia}{74}{section*.29}
+\contentsline {subsection}{\numberline {9.3.2}Long-term factor}{75}{subsection.9.3.2}
+\contentsline {paragraph}{\nonumberline Integration}{75}{section*.30}
+\contentsline {paragraph}{\nonumberline Process optimization}{75}{section*.31}
+\contentsline {paragraph}{\nonumberline Improved access to information}{75}{section*.32}
+\contentsline {paragraph}{\nonumberline On-going major enterprise system improvement projects}{75}{section*.33}
+\contentsline {chapter}{\numberline {10}Limitations and Future Work. Planned product usage}{77}{chapter.10}
+\contentsline {section}{\numberline {10.1}Limitations and Future Work}{77}{section.10.1}
+\contentsline {section}{\numberline {10.2}Planned product usage}{78}{section.10.2}
+\contentsline {paragraph}{\nonumberline Internal product management testing tool.}{78}{section*.34}
+\contentsline {paragraph}{\nonumberline Automation tool}{78}{section*.35}
+\contentsline {paragraph}{\nonumberline Verification tool.}{78}{section*.36}
+\contentsline {chapter}{\numberline {11}Conclusion}{81}{chapter.11}
+\contentsline {chapter}{\nonumberline Bibliography}{83}{appendix*.37}
+\contentsline {part}{\nonumberline Appendix}{87}{section*.38}
