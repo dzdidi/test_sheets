@@ -56,7 +56,9 @@ describe('Test coverage for order librarary', function() {
     });
 
     it('should return merged array from binary nested array', function(done) {
-      assert.deepEqual(order.transform([[1, [2, 4]],[2, 3],[5, 6]]), [[1, [[2, 3], 4]], [5, 6]]);
+      input = testSheetObject.transform_input;
+      output = testSheetObject.transform_output;
+      assert.deepEqual(order.transform(input), output);
 
       done();
     });

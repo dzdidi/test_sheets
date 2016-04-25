@@ -31,7 +31,7 @@ describe('Test coverage for transform stream function', function(){
   it('should call applyTemplate', function(done){
     var applyTemplateStub = sinon.stub(template, 'applyTemplate', function(){});
 
-    var createSchemeStub = sinon.stub(scheme_lib.scheme, 'createScheme', function(){});
+    var createSchemeStub = sinon.stub(scheme_lib.schema, 'createScheme', function(){});
     var makeOrderStub = sinon.stub(scheme_lib.order, 'makeOrder', function(){});
     var executionStub = sinon.stub(scheme_lib.executionScheme, 'create', function(){});
     var data = {
