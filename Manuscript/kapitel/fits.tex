@@ -30,10 +30,10 @@ Task Technology Fit research introduced by Goodhue and Thompson in 1995 \cite{ME
 
 \subsection{Task-Technology-Fit:}
 \begin{itemize}
-	\item Test Sheet - 
-	\item Async node.js -
-	\item Optimization for real-time execution - 
-	\item Automatization of bug reporting process directly to the developer
+	\item Test Sheet is a representation for tests a developed with the goal to combine the power and completeness of formal programming language with a representation that is easy to understand and work with even for people with little IT knowledge\cite{ts}.
+	\item node.js is an asynchronous event-driven framework designed to build scalable network applications.
+	\item Optimization for real-time execution is done by changing test steps execution order and and position in the event loop with respect to their reference structure
+	\item Automatization of bug reporting process directly to the developer (not covered in paper probably should not be mentioned)
 \end{itemize}
 
 \subsection{Utilization:}
@@ -43,41 +43,49 @@ Task Technology Fit research introduced by Goodhue and Thompson in 1995 \cite{ME
 \end{itemize}
 
 \subsection{Performance Impact:}
-Time measurements for tests generation
-Time measurements for test executions and results representations
+\begin{itemize}
+	\item Better / automated quality assurance process
+	\item Wider spread of tasks and responsibility distributions amongst developers and managers
+	\item Increased awareness / technical understanding of product functionality for managers 
+	\item Time for training and using the test sheet required from managers
+	\item Change of job descriptions / new tasks and responsibilities for managers
+\end{itemize}
 
 \section{Mistfits}
-\subsection{Functionality missfits}
-Functionality misfits occur, when the way processes are executed using the ES leads to reduced efficiency and effectivenes compared to pre-ES outcomes 
+\paragraph{Functionality missfits} occur, when the way processes are executed using the ES leads to reduced efficiency and effectivenes compared to pre-ES outcomes 
+\begin{itemize}
+	\item No support for data validation by regular expressions
+\end{itemize}
 
-?
+\paragraph{Data misfits}  occur, when data or data characteristics stored in or needed by the ES leads to data quality issues such as inaccuracy, inconsistent representation, inaccessibility, lack of timeliness or inappropriateness for users' context
+\begin{itemize}
+	\item none
+\end{itemize}
 
-\subsection{Data misfits}
-Data misfits occur, when data or data characteristics stored in or needed by the ES leads to data quality issues such as inaccuracy, inconsistent representation, inaccessibility, lack of timeliness or inappropriateness for users' context 
+\paragraph{Usability misfits}  occur, when the interactions with the ES required for task execution are cumbersome or confusing, i.e. requiring extra steps that add no value or introduce difficulty in entering or extracting information 
+\begin{itemize}
+	\item It is necessary to manually set define JSON object to be sent to API
+	\item Test code should be stored on same machine as working system
+\end{itemize}
 
-Example:
-Expected: {“IBAN”: <String>}
-Return: {“IBAN”: “loren ipsum”}
 
-\subsection{Usability misfits}
-Usability misfits occur, when the interactions with the ES required for task execution are cumbersome or confusing, i.e. requiring extra steps that add no value or introduce difficulty in entering or extracting information 
+\paragraph{Role misfits} occur, when the roles in the ES are inconcsistent with the skills available, create imbalances in the workload leading to bottlenecks and idle time, or generate mismatches between responsibility and authority 
+\begin{itemize}
+	\item Requires managements to store up-to-date code on their workstation
+	\item Code generation requires call of command via CLI
+\end{itemize}
 
-- Local store of code
-- Local definitions of test
+\paragraph{Control misfits} occur, when the controls embedded in the ES provide too much control, inhibiting productivity, or too little control, leading to the inability to assess or monitor performance appropriately 
+\begin{itemize}
+		\item Requires managements to store up-to-date code on their workstation
+		\item It is necessary to manually set define JSON object to be sent to API
+\end{itemize}
 
-\subsection{Role misfits}
-Role misfits occur, when the roles in the ES are inconcsistent with the skills available, create imbalances in the workload leading to bottlenecks and idle time, or generate mismatches between responsibility and authority 
 
-Requires managements to store up-to-date code on their workstation
-
-\subsection{Control misfits}
-Control misfits occur, when the controls embedded in the ES provide too much control, inhibiting productivity, or too little control, leading to the inability to assess or monitor performance appropriately 
-
-?
-
-\subsection{Organizational culture}
-Organizational culture misfits occur, when the ES requires ways of operating that countervene organizational norms 
-?
+\paragraph{Organizational culture misfits}  occur, when the ES requires ways of operating that countervene organizational norms 
+\begin{itemize}
+	\item Fact that test steps defined by non-developers staff confuses developers
+\end{itemize}
 
 
 \section{Benefits and affecting factors}
@@ -92,91 +100,110 @@ Organizational culture misfits occur, when the ES requires ways of operating tha
 \paragraph{Process optimization} is any attepmt to improve the efficiency and effectiveness of an organizations processes, ultimately in support of strategic goals.
 \paragraph{Improved access to information} is any step take to increase the provision of timely, accurate, relevant information to key organizational decision making.
 \paragraph{On-going major enterprise system improvement projects} is a measure of the number and extent of investment in major business improvement projects that an organization ha undertaken for improving and extending uts enterprise system. Major business projects are those that lead to changes in the way that work is done in the business.
-\begin{table}[h]
-	\begin{center}
-		\begin{tabular}{| l | l |  }
-			\hline
-			\textbf{Cost reduction} & +  \\
-			\hline
-			\textbf{Cycle time reduction} & + \\
-			\hline
-			\textbf{Productivity improvement} & +  \\
-			\hline
-			\textbf{Quality improvement} & + \\
-			\hline 
-			\textbf{Customer Service improvement} & + \\
-			\hline
-		\end{tabular}
-	\end{center}
-	\caption{Operational Benefits of Test Sheets Use}
-\end{table}
 
-\begin{table}[h]
-	\begin{center}
-		\begin{tabular}{| l | l |  }
-			\hline
-			\textbf{Resource management} & +  \\
-			\hline
-			\textbf{Decision making and planning} & + \\
-			\hline
-			\textbf{Performance} & +  \\
-			\hline
-		\end{tabular}
-	\end{center}
-	\caption{Managerial Benefits of Test Sheets Use}
-\end{table}
+\paragraph{Operational Benefits of Test Sheets Use}
+\begin{itemize}
+	\item Cycle time reduction
+	\item Productivity improvement - Developers can concentrate more on creating and fixing code instead of running manual tests
+	\item Quality improvement - Errors are identified earlier due to automated monitoring, bugs are easier identified before deployments
+	\item Customer Service improvement - Less complaints from customers (!not descriptive "LESS")
+\end{itemize}
 
-\begin{table}[h]
-	\begin{center}
-		\begin{tabular}{| l | l |  }
-			\hline
-			\textbf{Business growth} & +  \\
-			\hline
-			\textbf{Business alliance} & + \\
-			\hline
-			\textbf{Building business innovations} & +  \\
-			\hline
-			\textbf{Building cost leadership} & + \\
-			\hline 
-			\textbf{Product differentiation} & + \\
-			\hline
-			\textbf{External linkages} & + \\
-			\hline
-		\end{tabular}
-	\end{center}
-	\caption{Strategic Benefits of Test Sheets Use}
-\end{table}
+\paragraph{Managerial:}
+\begin{itemize}
+	\item Resource management - No additional QA staff necessary
+\end{itemize}
 
-\begin{table}[h]
-	\begin{center}
-		\begin{tabular}{| l | l |  }
-			\hline
-			\textbf{Business flexibility for future challenges} & +  \\
-			\hline
-			\textbf{IT cost reduction} & + \\
-			\hline
-			\textbf{IT infrastructure capabilities} & +  \\
-			\hline
-		\end{tabular}
-	\end{center}
-	\caption{IT infrastructure Benefits of Test Sheets Use}
-\end{table}
-
-\begin{table}[h]
-	\begin{center}
-		\begin{tabular}{| l | l |  }
-			\hline
-			\textbf{Changing work patterns} & +  \\
-			\hline
-			\textbf{Facilitating organizational learning} & + \\
-			\hline
-			\textbf{Empowerment} & +  \\
-			\hline
-			\textbf{Building common vision} & + \\
-			\hline
-		\end{tabular}
-	\end{center}
-	\caption{Organizational Benefits of Test Sheets Use}
-\end{table}
+\paragraph{Organizational:}
+\begin{itemize}
+	\item Changing work patterns - Reduced workload on developers, increased product quality responsibility for managers
+	\item Facilitating organizational learning - Managers learn / gain more technical understanding and feel empowered by owning the responsibility for the testing
+\end{itemize}
+%\begin{table}[h]
+%	\begin{center}
+%		\begin{tabular}{| l | l |  }
+%			\hline
+%			\textbf{Cost reduction} & +  \\
+%			\hline
+%			\textbf{Cycle time reduction} & + \\
+%			\hline
+%			\textbf{Productivity improvement} & +  \\
+%			\hline
+%			\textbf{Quality improvement} & + \\
+%			\hline 
+%			\textbf{Customer Service improvement} & + \\
+%			\hline
+%		\end{tabular}
+%	\end{center}
+%	\caption{Operational Benefits of Test Sheets Use}
+%\end{table}
+%
+%\begin{table}[h]
+%	\begin{center}
+%		\begin{tabular}{| l | l |  }
+%			\hline
+%			\textbf{Resource management} & +  \\
+%			\hline
+%			\textbf{Decision making and planning} & + \\
+%			\hline
+%			\textbf{Performance} & +  \\
+%			\hline
+%		\end{tabular}
+%	\end{center}
+%	\caption{Managerial Benefits of Test Sheets Use}
+%\end{table}
+%
+%\begin{table}[h]
+%	\begin{center}
+%		\begin{tabular}{| l | l |  }
+%			\hline
+%			\textbf{Business growth} & +  \\
+%			\hline
+%			\textbf{Business alliance} & + \\
+%			\hline
+%			\textbf{Building business innovations} & +  \\
+%			\hline
+%			\textbf{Building cost leadership} & + \\
+%			\hline 
+%			\textbf{Product differentiation} & + \\
+%			\hline
+%			\textbf{External linkages} & + \\
+%			\hline
+%		\end{tabular}
+%	\end{center}
+%	\caption{Strategic Benefits of Test Sheets Use}
+%\end{table}
+%
+%\begin{table}[h]
+%	\begin{center}
+%		\begin{tabular}{| l | l |  }
+%			\hline
+%			\textbf{Business flexibility for future challenges} & +  \\
+%			\hline
+%			\textbf{IT cost reduction} & + \\
+%			\hline
+%			\textbf{IT infrastructure capabilities} & +  \\
+%			\hline
+%		\end{tabular}
+%	\end{center}
+%	\caption{IT infrastructure Benefits of Test Sheets Use}
+%\end{table}
+%
+%\begin{table}[h]
+%	\begin{center}
+%		\begin{tabular}{| l | l |  }
+%			\hline
+%			\textbf{Changing work patterns} & +  \\
+%			\hline
+%			\textbf{Facilitating organizational learning} & + \\
+%			\hline
+%			\textbf{Empowerment} & +  \\
+%			\hline
+%			\textbf{Building common vision} & + \\
+%			\hline
+%		\end{tabular}
+%	\end{center}
+%	\caption{Organizational Benefits of Test Sheets Use}
+%\end{table}
 
 

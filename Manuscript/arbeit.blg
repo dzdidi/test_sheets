@@ -11,6 +11,7 @@ A level-1 auxiliary file: kapitel/async.aux
 A level-1 auxiliary file: kapitel/architectureDesign.aux
 A level-1 auxiliary file: kapitel/implementationTestCoverage.aux
 A level-1 auxiliary file: kapitel/performance.aux
+A level-1 auxiliary file: kapitel/fits.aux
 A level-1 auxiliary file: kapitel/Limitations.aux
 A level-1 auxiliary file: kapitel/Conclusion.aux
 The style file: plain.bst
@@ -27,10 +28,6 @@ I was expecting a `,' or a `}'---line 568 of file literatur/lit.bib
  :  howpublished={\url{http://news.softpedia.com/news/annoyed-developer-brings-down-thousands-of-javascript-node-js-projects-502075.shtml}},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Warning--to sort, need author or key in moduleCounts
-Warning--to sort, need author or key in gtor
-Warning--to sort, need author or key in asyncPerformance_2
-Warning--to sort, need author or key in asyncPerformance
 Warning--to sort, need author or key in listOfBanks
 Warning--to sort, need author or key in LarsAPI
 Warning--to sort, need author or key in TimAPI
@@ -56,6 +53,7 @@ Warning--to sort, need author or key in w3cDOM
 Warning--to sort, need author or key in casperjs
 Warning--to sort, need author or key in asyncArticle
 Warning--to sort, need author or key in nodejsabout
+Warning--to sort, need author or key in moduleCounts
 Warning--to sort, need author or key in mdnJS
 Warning--to sort, need author or key in mdnProto
 Warning--to sort, need author or key in mdnOOP
@@ -63,6 +61,9 @@ Warning--to sort, need author or key in libuv
 Warning--to sort, need author or key in libuvBasic
 Warning--to sort, need author or key in events
 Warning--to sort, need author or key in zalgo
+Warning--to sort, need author or key in gtor
+Warning--to sort, need author or key in asyncPerformance
+Warning--to sort, need author or key in asyncPerformance_2
 Warning--empty note in Lecture1
 Warning--empty note in Lecture2
 Warning--empty note in MES10
@@ -73,7 +74,7 @@ Warning--empty note in MES9
 Warning--empty booktitle in npmHydra
 You've used 52 entries,
             2118 wiz_defined-function locations,
-            729 strings with 9708 characters,
+            730 strings with 9724 characters,
 and the built_in function-call counts, 9256 in all, are:
 = -- 880
 > -- 159
