@@ -1,34 +1,9 @@
-\chapter{Design and Implementation}
+\chapter{Design Principles}
 \label{chap:design}
-
-\section{Conventions for definitions of Test Sheets}
-\label{sec:convnetions}
-Following conventions were developed with respect to requirements defined by figo GmbH and must be followed by Test Sheet for proper work of developed system:
-\begin{itemize}
-	\item Number of columns within one Test Sheet should not exceed 26 columns (from A to Z);
-	\begin{itemize}
-		\item \textbf{A1} cell(optional) - description of the test case;
-		\item \textbf{A2} cell - module under testing with an extension *(.js)*;
-		\item \textbf{A3..n} cells - name of the class/object under the test;
-		\item \textbf{B3..n} cells - name of the method from representative class *(same row)* under the test;
-		\item \textbf{C2..n} cells to \textbf{Invocation Column}   - input parameters for representative method *(same row)* under the test;
-	\end{itemize}
-	\item Invocation delimiters must be allocated within single column the (aligned to the longest row);
-	\begin{itemize}
-		\item \textbf{Invocation Column} - the column for separation of input values from expected output value(s) filled with $|$ (pipe)(for comparison by scheme and data types) $||$ (two pipes)(for deep comparison - by scheme, data types and values) as a cells values until the last line which includes objects under tests;
-	\end{itemize}
-	\item \textbf{Expected Return} - column must be next after invocation line.
-	\item All functions under test should be asynchronous and accept callback as a last input parameter with standard signature for handling emitted event;
-	\item References to the columns with expected returns columns will take as value actual return value obtained from method execution;
-	\item References should be defined only to cells in one of the previous row;
-	\item Files extensions should be .xlsx.
-\end{itemize}
-
-\section{Implementation and input example}
-The implementation of each part of the system was made with application of Test Driven Development proper use of which guarantees full test coverage for the code. Used testing framework is \textit{mocha} \url{https://mochajs.org/}. For creation of doublers (mocks, stubs and spies) for object and method was used \textit{sinon.js }\url{http://sinonjs.org/}.
+The implementation of each part of the system was made with application of Test Driven Development.The testing framework is \textit{mocha} \url{https://mochajs.org/}. For the creation of doublers (mocks, stubs and spies) for object and method was used \textit{sinon.js }\url{http://sinonjs.org/}.
 
 
-The symptoms of not agile design defined Robet Cecil Martin\cite{MartinASD}:
+The symptoms of not agile design are by defined Robet Martin are following\cite{MartinASD}:
 \begin{itemize}
 	\item Rigidity - The design is difficult to change;
 	\item Fragility - The design is easy to break;
@@ -40,13 +15,13 @@ The symptoms of not agile design defined Robet Cecil Martin\cite{MartinASD}:
 \end{itemize}
 
 
-To avoid creation of such software John Dooley \cite{Dooley} and Rober Cecil Maritn \cite{MartinASD} defined  the principles of agile architecture:
+To avoid creation of such software John Dooley \cite{Dooley} and Rober Maritn \cite{MartinASD} defined  the principles of agile architecture:
 \begin{itemize}
 	\item Closing - Encapsulate things in your design that are likely to change.
 	\item Code to an Interface - rather then to an implementation. 
-	\item Do not repeat yourself - Avoid duplicate code.
-	\item The Single-Responsibility Principle - A class should have only one reason to change from the business perspective;
-	\item The Open/Closed Principle - Software entities (classes, modules, functions, etc.) should be open for extension but closed for modification
+	\item Do not repeat yourself - Avoid the duplication of the code.
+	\item The Single-Responsibility Principle - A class should has the only one reason to change from the business perspective;
+	\item The Open/Closed Principle - Software entities (classes, modules, functions, etc.) should be open for the extension but closed for modification
 	\item The Liskov Substitution Principle - Subtypes must be substitutable for their base types.
 	\item The Dependency-Inversion Principle - 		
 	\begin{itemize}
@@ -58,9 +33,34 @@ To avoid creation of such software John Dooley \cite{Dooley} and Rober Cecil Mar
 	\item Principle of Loose Coupling - object that interact should be loosely coupled with well-defined intefaces.
 \end{itemize}
 
-This principles have a suggestional nature and can not be strictly followed due to their mutually exclusive nature. Correspondence to each of them will be provided in the end of each section within this chapter.
+This principles are suggestional and can not be strictly followed due to their mutually exclusive nature.
 
-For the description of data structures processed by the system, we will use following module (Listing: \ref{demo}) which implements a stack with asynchronous methods (respond time for each method delayed 10 milliseconds). Usage of \textit{setTimeout()} method guarantees its asynchronism while the fact that timeframe for response hard coded into scraping scripts guarantees that this method is valid for usage as a proof of concept within the current research topic.
+\chapter{Conventions}
+\label{sec:convnetions}
+Following conventions were developed with respect to requirements defined by figo GmbH and must be followed by Test Sheet for proper work of developed system:
+\begin{itemize}
+	\item Number of columns within one Test Sheet should not exceed 26 columns (from A to Z);
+	\begin{itemize}
+		\item \textbf{A1} cell(optional) - description of the test case;
+		\item \textbf{A2} cell - module under testing with an extension *(.js)*;
+		\item \textbf{A3..n} cells - name of the class/object under the test;
+		\item \textbf{B3..n} cells - name of the method from representative class *(same row)* under the test;
+		\item \textbf{C2..n} cells to \textbf{Invocation Column}   - input parameters for representative method *(same row)* under the test;
+	\end{itemize}
+	\item Invocation delimiters must be allocated within the single column (aligned to the longest row);
+	\begin{itemize}
+		\item \textbf{Invocation Column} - the column for separation of input values from expected output value(s) filled with $|$ (pipe)(for comparison by scheme and data types) $||$ (two pipes)(for deep comparison - by scheme, data types and values) as a cells values until the last line which includes objects under tests;
+	\end{itemize}
+	\item \textbf{Expected Return} - column must be next after invocation line.
+	\item All functions under test should be asynchronous and accept callback as a last input parameter with standard signature for handling emitted event;
+	\item References to the columns with expected return values will accept as value the value obtained from the method execution;
+	\item References should be defined only to cells in one of the previous rows;
+	\item Files extensions should be .xlsx.
+\end{itemize}
+
+\chapter{Implementation}
+\label{chap:implementation}
+For the description of data structures processed by the system, we will use following module (Listing: \ref{demo}) which implements a stack with asynchronous methods (respond time for each method delayed 10 milliseconds). Usage of the \textit{setTimeout()} method guarantees its asynchronism. While the fact that the timeframe for the response hard coded into scraping scripts guarantees that this method is valid for usage as a proof of concept within the current research topic.
 \lstinputlisting[
 language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
 basicstyle=\footnotesize,
@@ -70,7 +70,7 @@ captionpos=b,
 label=demo
 ]
 {code/demo/stack.js.txt}
-The Test Sheet for test coverage of this module looks as following (Figure: \ref{fig:demoTS}). Note that this test coverage was made with purpose to show handling of asynchronous testing of real-time software but not to cover stack module. There are both types of comparison in invocation line \textbf{D}. Red arrows indicates references withing this test sheet.
+The Test Sheet for test coverage of this module looks as following (Figure: \ref{fig:demoTS}). Note that this test coverage was made with the  purpose to show handling of asynchronous testing of real-time software but not to cover stack module. There are both types of comparison in invocation line \textbf{D}. Red arrows indicate the references withing this test sheet.
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{grafiken/demoTS.pdf}
@@ -99,7 +99,7 @@ The system has following dependencies upon external npm packages:
 
 \section{Read Stream}
 \label{sec:read}
-This part of the system is an implementation of combining streams pattern. From the internal view, it consists of two streams. First stream performs a recursive search for files in a provided directory and returns array with absolute paths to them. Second stream reads content of files with \textit{xlsx} module \url{https://www.npmjs.com/package/xlsx} and meta data of the file using embedded node.js module \textit{fs} and pushes it to the next stream (Listing: \ref{readStream}).
+This part of the system is an implementation of combining streams pattern. From the internal view, it consists of two streams. First stream performs a recursive search for files in a provided directory and returns the array with absolute paths to them. Second stream reads content of files with \textit{xlsx} module and meta data of the file using embedded node.js module \textit{fs} and pushes it to the next stream (Listing: \ref{readStream}).
 
 \lstinputlisting[
 language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
@@ -111,10 +111,10 @@ label=readStream
 ]
 {code/lib/stream/readStream.js.txt}
 
-The \textbf{function getFilesStream} creates the readable stream for reading content of directory including nested directories and returns it. 
-The \textbf{variable getDataStream} defined by the stream in an object mode. For every file path, it accepts from the down stream  checks its extensions if its .xlsx then it reads it and obtains first sheet from the book, and reads meta data of the file and pushes it to the up stream.
+The \textbf{function getFilesStream} creates readable stream for reading content of directory including nested directories and returns it. 
+The \textbf{variable getDataStream} defined by the stream in an object mode. For every file path, it accepts from the down stream , it checks its extensions an if it is equal to .xlsx then it will read it and obtain first sheet from the book, further it will read the meta data of the file and push it to the up stream.
 These two streams are piped into combined stream using module \textit{multipipe} \url{https://www.npmjs.com/package/multipipe} and returned by the function exported by this module.
-In other words, this module exports function which accepts path to the directory and returns array of deferred values each of which is a javascript object with following structure (Listing \ref{readOut})
+In other words, this module exports function which accepts path to the directory and returns array of deferred values, each of which is a javascript object with following structure (Listing \ref{readOut})
 \lstinputlisting[
 language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
 basicstyle=\footnotesize,
@@ -126,7 +126,7 @@ label=readOut
 {code/readOut.js.txt}
 
 \subsection{Test Coverage}
-Following test cases show every step incrementally performed during the develop process. All calls to systems I/O (e. g. read file meta data, read file) are implemented using stubs. \textbf{Stub} is an implementation of \textit{proxy pattern} which allows to redefine functions behavior. This gives an opportunity to improve speed of tests by replacing functions with call to I/O with empty functions.
+Following test cases show every step incrementally performed during the development process. All calls to systems I/O (e. g. read file meta data, read file) are implemented using stubs. \textbf{Stub} is an implementation of \textit{proxy pattern} which allows to redefine functions behavior. This gives an opportunity to improve speed of tests by replacing functions with call to I/O with empty functions.
 %\lstinputlisting[
 %language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
 %basicstyle=\footnotesize,
@@ -147,12 +147,12 @@ The result of tests execution  for this module is following (Fig.: \ref{fig:test
 
 
 
-\subsection{Correspondence to design principles}
+\subsection{Correspondence to the design principles}
 \begin{itemize}
-	\item Closing - the part of the code responsible for the reading content of the file with concrete extension and concrete structure is encapsulated with \textit{getDataStream} function
+	\item Closing - the part of the code responsible for the reading content of the file with the concrete extension and the concrete structure is encapsulated with \textit{getDataStream} function
 	\item Code to an Interface - th communication is done vis standard stream interface.
 	\item Do not repeat yourself - no code duplication;
-	\item The Single-Responsibility Principle - can be changed only due to the change of input file's type and as a result parser library;
+	\item The Single-Responsibility Principle - can be changed only due to the introduction of new requirements for support multiple sheets within the one xlsx file;
 	\item The Open/Closed Principle - functionality of the library can be extended via adding new pipes with application of different piping patterns in a single place;
 	\item The Liskov Substitution Principle - object composition is used over inheritance (function wrapped in to pipe object);
 	\item The Dependency-Inversion Principle - communication with other modules is done via standard interface.
@@ -162,7 +162,7 @@ The result of tests execution  for this module is following (Fig.: \ref{fig:test
 		\end{itemize}
 	\item The Interface Segregation Principle - composition over inheritance and usage of standard interfaces;
 	\item Principles of Least Knowledge - communication done only with \textit{xlsx} files;
-	\item Principle of Loose Coupling - communication is done via standard file system and standard stream interfaces.
+	\item The Principle of Loose Coupling - communication is done via standard file system and standard stream interfaces.
 \end{itemize}
 %\begin{itemize}
 %	\item Closing - stream is closed over file extension, schema\_maker - object structure returned by 	\textit{xlsx} library;
@@ -190,7 +190,7 @@ The result of tests execution  for this module is following (Fig.: \ref{fig:test
 
 \section{Transform Stream}
 \label{sec:transform}
-This part of the system performs translation of the Test Sheet in to executable javascript code. In this realization of the Test Sheet concept translation performed in a four stages. 
+This part of the system performs translation of the Test Sheet into executable javascript code. In this realization of the Test Sheet concept translation performed in four stages. 
 
 
 \lstinputlisting[
@@ -203,7 +203,7 @@ label=writeIn
 ]
 {code/lib/stream/transformStream.js.txt}
 
-The first stage which is necessary for the translation is a creation of \textit{schema} object of the Test Sheet. Next stage is detection of execution order. The third stage is merging results from previous steps. The last stage is an application of a template to the content of Test Sheet together with the file name of the xlsx file and execution schema created on a previous stage. The result of this transformation is pulled by the downstream as a \textit{content} property of an object together with \textit{meta data} and \textit{fileName} obtained from the upstream (Listing: \ref{writeIn}).
+The first stage which is necessary for the translation is a creation of \textit{schema} object of the Test Sheet. The next stage is the detection of the execution order. The third stage is merging results from previous steps. The last stage is an application of a template to the content of Test Sheet together with the file name of the xlsx file and execution schema created on a previous stage. The result of this transformation is pulled by the downstream as a \textit{content} property of an object together with \textit{meta data} and \textit{fileName} obtained from the upstream (Listing: \ref{writeIn}).
 
 \lstinputlisting[
 language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
@@ -216,7 +216,7 @@ label=writeIn
 {code/writeIn.js.txt}
 
 \subsection{Test Coverage}
-Following test cases can show every step incrementally performed during the develop process. Including invocations of helper methods from \textit{scheme} and \textit{template} modules.
+Following test cases can show every step incrementally performed during the development process. Including invocations of helper methods from \textit{scheme} and \textit{template} modules.
 %\lstinputlisting[
 %language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
 %basicstyle=\footnotesize,
@@ -235,7 +235,7 @@ The result of test execution:
 	\label{fig:testTransofm}
 \end{figure}
 
-\subsection{Correspondence to design principles}
+\subsection{Correspondence to the design principles}
 \begin{itemize}
 	\item Closing - the creation of data structure to be transformed to the next stream is created in a single function;
 	\item Code to an Interface - the communication with external modules done via standard stream in an object mode. 
@@ -248,17 +248,18 @@ The result of test execution:
 					\item Higher level module \textit{index.js} does not depend on implementation current library;
 					\item Current library depends on the input object provided by the previous stream;
 				\end{itemize}
-	\item The Interface Segregation Principle -  does not depend on methods since only creates data object to be passed to the next stream;
+	\item The Interface Segregation Principle -  does not depend on methods since it only creates data object to be passed to the next stream;
 	\item Principles of Least Knowledge - direct communication done only with helper functions for schema creation and content generation. 
-	\item Principle of Loose Coupling - communication is done via the standard stream interface
+	\item The Principle of Loose Coupling - communication is done via the standard stream interface
 \end{itemize}
 
 
 \section{Scheme}
 \label{sec:scheme}
-This part of the system creates a scheme object from the Test Sheet object, the only parameter accepted by the main function of this module is a Test Sheet object (the content of xlsx file). Due to the structure of object was taken decision to perform creation of the scheme in two stages.
+This part of the system creates a scheme object from the Test Sheet object, the only parameter accepted by the main function of this module is a Test Sheet object (the content of xlsx file).
+The decision to perform scheme creation in two stages was made due to the structure of the input object.
 
-The \textbf{first stage} is creation of javascript object with Test Sheet properties (e. g. \textit{description, moduleUnderTest, objectsUnderTest, methodsUnderTest, inputs, outputs, invocations}) value of each property except \textit{description} and \textit{moduleUnderTest} are arrays of string with values which represent cell addresses for representative property of the Test Sheet. For the first two properties the values are strings with values (in a Test Sheet) from the cells \textit{A1} and \textit{A2} respectively(Listing: \ref{firstScheme}).
+The \textbf{first stage} is creation of javascript object with Test Sheet properties (e. g. \textit{description, moduleUnderTest, objectsUnderTest, methodsUnderTest, inputs, outputs, invocations}), the value of each property except \textit{description} and \textit{moduleUnderTest} are arrays of strings with values which represent cell addresses for representative property of the Test Sheet. For the first two properties the values are strings with values (in a Test Sheet) from the cells \textit{A1} and \textit{A2} respectively(Listing: \ref{firstScheme}).
 
 \lstinputlisting[
 language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
@@ -270,7 +271,7 @@ label=firstScheme
 ]
 {code/firstSchema.js.txt}
 
-The \textbf{sectod stage} is a pivot transformation of the scheme provided by the result of previous stage. The output of this transformation is an object with properties as a numbers of rows in the Test Sheet object. The values for first and second properties are values of \textit{description} and \textit{module} under test from the respective Test Sheet. While all next are objects which consists of following Test Sheet properties: \textit{objectUnderTest, methodUnderTest, inputs, outputs, invocations}. With values as single element arrays with coordinate of respective cell (Listing \ref{scheme}).
+The \textbf{sectod stage} is a pivot transformation of the scheme provided as the result of previous stage. The output of this transformation is an object with properties as a numbers of rows in the Test Sheet object. The values for first and second properties are values of \textit{description} and \textit{module} under test from the respective Test Sheet. While next of them are objects which consist of following Test Sheet properties: \textit{objectUnderTest, methodUnderTest, inputs, outputs, invocations}. With values as single element arrays with coordinate of respective cell (Listing \ref{scheme}).
 \lstinputlisting[
 language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
 basicstyle=\footnotesize,
@@ -291,7 +292,7 @@ label=scheme
 %]
 %{code/lib/scheme/index.js.txt}
 \subsection{Test Coverage}
-Following test cases can show every step incrementally performed during the develop process. Since object obtained during reading of xlsx file is passed from one part of the system to another (\textit{Object pool OOP pattern}) this module does not perform any I/O calls.
+Following test cases can show every step incrementally performed during the development process. Since the object obtained during reading of xlsx file is passed from one part of the system to another (\textit{Object pool OOP pattern}) this module does not perform any I/O calls.
 %\lstinputlisting[
 %language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
 %basicstyle=\footnotesize,
@@ -310,35 +311,35 @@ The result of test execution:
 	\label{fig:testScheme}
 \end{figure}
 
-\subsection{Correspondence to design principles}
+\subsection{Correspondence to the  design principles}
 \begin{itemize}
 	\item Closing - comparison type is closed within the \textit{getInvocationCells} function, all elements of Test Sheet are obtained via separate functions;
-	\item Code to an Interface - all methods have same minimal abstraction layer for object which represents the content of Test Sheet. All keys of the object should be named as a two dimensional addresses of the cells (i. e. \textit{A1}, \textit{D7} etc);
+	\item Code to an Interface - all methods have the same minimal abstraction layer for object which represents the content of Test Sheet. All keys of the object should be named as a two dimensional addresses of the cells (i. e. \textit{A1}, \textit{D7} etc);
 	\item Do not repeat yourself - no code repetition.
 	\item The Single-Responsibility Principle - the interface of the data object;
-	\item The Open/Closed Principle - violated in the two types comparison. For other types of Test Sheets either different scheme should be implemented or \textit{createScheme} should be enhanced with new functions;
+	\item The Open/Closed Principle - violated in the two types comparison. For other types of Test Sheets it either should be implemented with different schemes or \textit{createScheme} enhanced with new functions;
 	\item The Liskov Substitution Principle - no inheritance.
 	\item The Dependency-Inversion Principle - does not have any lower level modules;
 	\item The Interface Segregation Principle - does not have any lower level modules;
 	\item Principles of Least Knowledge - can be invoked only via direct import;
-	\item Principle of Loose Coupling - exports single function;
+	\item The Principle of Loose Coupling - exports single function;
 \end{itemize}
 
 \section{Execution Order}
 \label{sec:execOrder}
 This part of the system is responsible for the definition of an order for the test steps execution. In a general case, the execution order of tests within a Basic Test Sheet is defined by the order of test steps. 
-All Test Sheets support references which provides an ability to define input for one test step as an output of some of the previous steps.
+All Test Sheets support references it provides an ability to define input for one test step as an output of some of the previous steps.
 
 
-However, in \textit{asynchronous} software the moment when execution is completed comes after the period of time when next function is invoked. Moreover, \textit{real-time} systems have time constraints on their execution but do not provide an exact time within it will be completed. This two facts forces to define moment of each test step execution depending on the source of their input parameters. 
+However, in \textit{asynchronous} software the moment when execution is completed comes after the period of time when the next function is invoked. Moreover, \textit{real-time} systems have time constraints on their execution, but do not provide an exact time within it will be completed. This two factors force to define moment of each test step execution depending on the source of their input parameters. 
 
 
-For definition of test steps execution order was taken decision to separate test steps in two types. \textit{The first} type covers test steps whose behavior does not make influence to next steps (do not define input parameters for further test steps) and is not determined by any of previous test steps. \textit{The second} type covers test steps which execution result determines behavior of next test steps or defined by previous steps.
+For the definition of test steps execution order the decision was taken is to separate test steps in two types. \textit{The first} type covers test steps which behavior does not make influence to the next steps (do not define input parameters for further test steps) and is not determined by any of previous test steps. \textit{The second} type covers test steps which execution result determines behavior of the next test steps or is defined by previous steps.
 
 %
 % But the fact that in this case Basic Test Sheets are applied  for \textit{asynchronous} testing of \textit{real-time} software together with an ability to 
 %This shit is important for application for real time software.
-The process of order definition is following. Main function accepts two input parameters: \textit{sheet} - the content of xlsx file which defines test sheet and \textit{scheme} - the object generated by the main function from \textit{scheme.js} file (Listing: \ref{order}). Walking through the scheme elements stating with the third (skipping service rows) performs check for each cell in a sheet object for determining is behavior of test step defined by result of any previous test step. In this case such test step will be pushed to the \textit{chain} array as the first element and all dependent test steps will be pushed to the nested array as a list of dependent test steps. If \textit{chain} is not empty it will be pushed to global (in a function scope) \textit{chains}  array. All other rows will be pushed to the \textit{linear array}. Such approach guarantees saving order of rows and creates a record of tree as a list of direct child nodes.
+The process of order definition is following. Main function accepts two input parameters: \textit{sheet} - the content of xlsx file which defines the Test Sheet and \textit{scheme} - the object generated by the main function from \textit{scheme.js} file (Listing: \ref{order}). Walking through the scheme elements stating with the third (skipping service rows) performs the check for each cell in a sheet object for determining is behavior of test step defined by the result of any previous test step. In this case such test step will be pushed to the \textit{chain} array as the first element and all dependent test steps will be pushed to the nested array as a list of dependent test steps. If \textit{chain} is not empty it will be pushed to the global (in a function scope) \textit{chains}  array. All other rows will be pushed to the \textit{linear array}. Such approach guarantees the saving order of rows and creates a record of the tree as a list of direct child nodes.
 
 
 \lstinputlisting[
@@ -351,8 +352,8 @@ label=order
 ]
 {code/order.js.txt}
 
-For the further creation of test steps execution order the list of direct child nodes should be merged in to nested list for child nodes which has other child nodes. In terms of test steps this means that result one test step can define behavior of few test steps either directly or via some intermediate test steps. 
-The merging process is performed by the \textit{transformation} function (Listing \ref{transformation}). It accepts an array object (\textit{chains} array described previously) and performs iterative walk through with recursive call for each nested array. During each iteration this function iterates through values of childes (nested arrays) and checks is any of them is a parent for other childes (is it present as a first element in next arrays). In such case it takes list of its childes and creates a two dimensional array which replaces the the parent element in a list of childes with removing parent entry together with its childes from the current position. This operation of replacement performed recursively through all nested arrays using \textit{isIn} function which determines is given element a belongs to the provided array including nested arrays.
+For the further creation of test steps execution order the list of direct child nodes should be merged into nested list for child nodes which has other child nodes. In terms of test steps. This means that the result one test step can define the behavior of few next steps either directly or via some intermediate test steps. 
+The merging process is performed by the \textit{transformation} function (Listing \ref{transformation}). It accepts an array object (\textit{chains} array described previously) and performs iterative walk through with recursive call for each nested array. During each iteration this function iterates through values of childes (nested arrays) and checks if any of them is a parent for other child nodes (is it present as a first element in next arrays). In such case it takes list of its child nodes and creates a two dimensional array which replaces the the parent element in a list of childes with removing parent entry together with its child nodes from the current position. This operation of replacement performed recursively through all nested arrays using \textit{isIn} function which determines if given element belongs to the provided array including nested arrays.
 
 \lstinputlisting[
 language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
@@ -364,7 +365,7 @@ label=transformation
 ]
 {code/transformFunction.js.txt}
 
-The final step is concatenation of arrays from \textit{first} and \textit{second} test steps types. For our example, rows \textit{one} and \textit{two} belong to the first type as a service rows which does not define any test steps together with rows \textit{three} and \textit{four}. Note that input parameter for the test step defined it a row four is referenced by the expected output of the test step defined in a row five. However, the input parameter can not be changed by the execution process of test step and can be passed to the next step before starting execution without any execution logic violation. In the same time result of test step \textit{five} is an input parameter for the steps \textit{six}, \textit{seven} and \textit{ten} which in turn defines an input for the test step \textit{eleven} (Listing: \ref{orderSteps}).
+The final step is the  concatenation of arrays from the \textit{first} and the \textit{second} test steps types. In this example, rows \textit{one} and \textit{two} belong to the first type as a service rows which do not define any test steps together with rows \textit{three} and \textit{four}. Note that the input parameter for the test step defined in a row number four is referenced by the expected output of the test step that was defined in a row five. However, the input parameter can not be changed by the execution process of test step and can be passed to the next step before the execution starts without any execution logic violation. At the same time result of test step \textit{five} is an input parameter for the steps \textit{six}, \textit{seven} and \textit{ten} this in turn defines an input for the test step \textit{eleven} (Listing: \ref{orderSteps}).
 \lstinputlisting[
 language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
 basicstyle=\footnotesize,
@@ -378,7 +379,7 @@ label=orderSteps
 
 \subsection{Test coverage}
 
-Following test cases can show every step incrementally performed during the develop process. Here you also can see application of Object pool pattern which helped to get rid of call to I/O for reading content of xlsx file.
+The following test cases can show every step incrementally performed during the development process. Here you also can see application of Object pool pattern which helped to get rid of the call to I/O for the process of reading content from the .xlsx file.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{grafiken/testOrder.png}
@@ -386,7 +387,7 @@ Following test cases can show every step incrementally performed during the deve
 	\label{fig:testOrder}
 \end{figure}
 
-\subsection{Correspondence to design principles}
+\subsection{Correspondence to  the design principles}
 \begin{itemize}
 	\item Closing - nothing is likely to change;
 	\item Code to an Interface - exports a single function;
@@ -397,24 +398,24 @@ Following test cases can show every step incrementally performed during the deve
 	\item The Dependency-Inversion Principle - does not have any lower level modules;
 	\item The Interface Segregation Principle - does not have any lower level modules;
 	\item Principles of Least Knowledge -  can be invoked only via direct import;
-	\item Principle of Loose Coupling - exports a single function.
+	\item The Principle of Loose Coupling - exports a single function.
 \end{itemize}
 
 \section{Execution Scheme}
 \label{sec:execScheme}
-In this step performed recursive replacement of respective elements in an \textit{execution order} array with elements from the \textit{scheme} object. The function (Listing: \ref{execScheme}) accepts two arguments: \textit{scheme} object and \textit{order} array. If an element is of an input array is an array it performs recursive call.
+This step performs the recursive replacement of elements in an \textit{execution order} array with the elements from the \textit{scheme} object. The function (Listing: \ref{execScheme}) accepts two arguments: \textit{scheme} object and \textit{order} array. If an element is of an input array is an array it then performs recursive call.
 
 \lstinputlisting[
 language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
 basicstyle=\footnotesize,
 numberstyle=\tiny,
-caption={Result of the scheme creation  for Test Sheet},
+caption={Application of execution order to the scheme},
 captionpos=b,
 label=execScheme
 ]
 {code/executionSchema.js.txt}
 \subsection{Test Coverage}
-Following test cases can show each step incrementally performed during the develop process. It is also possible to combine all this three processes in to one performed inside main file within the module.
+Following test cases can show each step incrementally performed during the development process.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{grafiken/testCreate.png}
@@ -422,7 +423,7 @@ Following test cases can show each step incrementally performed during the devel
 	\label{fig:testCreate}
 \end{figure}
 
-\subsection{Correspondence to design principles}
+\subsection{Correspondence to the design principles}
 \begin{itemize}
 	\item Closing - nothing is likely to change;
 	\item Code to an Interface - exports a single function;
@@ -433,27 +434,27 @@ Following test cases can show each step incrementally performed during the devel
 	\item The Dependency-Inversion Principle - does not have any lower level modules;
 	\item The Interface Segregation Principle - does not have any lower level modules;
 	\item Principles of Least Knowledge -  can be invoked only via direct import;
-	\item Principle of Loose Coupling - exports a single function.
+	\item The Principle of Loose Coupling - exports a single function.
 \end{itemize}
 
 \section{Template}
 \label{sec:template}
-The translation to executable javascript file is made by apply the \textit{template} function. This function accepts three parameters \textit{sheet <Object>, scheme <Object>, fileName<String>}. \textit{Sheet} is a javascript object returned by reading the content of Test Sheet file. The \textit{scheme} is an execution order scheme. The \textit{fileName} is a path to the TestSheet file. This function creates a string content for javascript file based on provided parameters. The creation takes part in a four stages. 
+The translation to executable javascript file is made by the application of the \textit{template} function. This function accepts three parameters \textit{sheet $<$Object$>$, scheme $<$Object$>$, fileName$<$String$>$}. \textit{Sheet} is a javascript object returned by reading the content of Test Sheet file. The \textit{scheme} is an execution order scheme. The \textit{fileName} is a path to the TestSheet file. This function creates a string content for javascript file based on provided parameters. This function also make indentation and formating of generated file content. The creation takes part in a four stages. 
 
 
-The \textbf{first stage} is adding a description from the first element of the scheme object. It enclosed within the multiline comment symbols.
+The \textbf{first stage} is adding a description from the first element of the scheme object. It is enclosed within the multiline comment symbols.
 
 
 The \textbf{second stage} is adding require of reporting module for representation of execution of the tests result.
 
 
-The \textbf{third stage} is adding declarations of the module scope variables. The variable names are taken from the coordinates of cells which store input and output parameters in a Test Sheet. The values of this variables are taken as from the cells with respective addresses.
+The \textbf{third stage} is adding declarations of the module scope variables. The variable names are taken from the coordinates of cells which store input and output parameters in a Test Sheet. The values of the variables are taken from the cells with respective addresses.
 
 
-The \textbf{fourth stage} is adding calls to the methods (Listing: \ref{template}). This stage is the most important part of this module. Since there are two types of execution orders adding function calls performed in a two steps. 
+The \textbf{fourth stage} is adding calls to the methods (Listing: \ref{applyTemplate}). This stage is the most important part of this module. Since there are two types of execution orders adding function calls is performed in two steps described below. 
 
 
-The \textit{\textbf{first step}} is adding calls for independent test steps. This is made be iterative call of \textit{makeCall} function with appending closing brackets to the end of the result string during each iteration. This function simply performs mapping between \textit{sheet} object (content of xlsx file), \textit{scheme} entry (test step) and string with content for executable javascript file (Listing: \ref{makeCall}).
+The \textit{\textbf{first step}} is adding calls for independent test steps. This is made by iterative call of the \textit{makeCall} function with appending closing brackets to the end of the result string during each of iterations. This function simply performs mapping between \textit{sheet} object (content of xlsx file), \textit{scheme} entry (test step) and string with the content for executable javascript file (Listing: \ref{makeCall}).
 
 \lstinputlisting[
 language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
@@ -465,10 +466,23 @@ label=makeCall
 ]
 {code/makeCall.js.txt}
 
-Note that functions in the generated code are not called directly but via \textit{call} method of the function's prototype. This method provides an opportunity to call the function from different context (environment). In current example the implementation of \textit{stack} module does not depend on the environment in which it was called. But in some cases the result of function's invocation can depend on the environment in which it was invoked. One of such cases can be creation of child process. The environment for such calls should be passed as a \textit{object under test}.
+Note that functions in the generated code are not called directly but via the \textit{call} method of the function's prototype. This method provides an opportunity to call the function from the different context (environment). In the current example the implementation of \textit{stack} module does not depend on the environment in which it was called. But in some cases the result of function's invocation can depend on the environment in which it was invoked. One of such cases can be the creation of child process. The environment for such calls should be passed as an \textit{object under test}.
 
 
-The \textit{\textbf{second step}} is adding calls for interdependent test steps. For every  element of \textit{nestedCalls} array it calls \textit{makeCall} function and if next element is an array this functions performs recursive call with appending of the closing brackets to the result of this call. In case if next element is not an array it appends closing brackets and performs next iteration.
+The \textit{\textbf{second step}} is adding calls for interdependent test steps. For every  element of the \textit{nestedCalls} array it calls the  \textit{makeNestedCall} function and if the next element is an array then this function performs recursive call with an appending of the closing brackets to the result of this call. In case if next element is not an array the it appends closing brackets and performs next iteration (Listing: {\ref{applyTemplate}).
+
+
+
+\lstinputlisting[
+language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
+basicstyle=\footnotesize,
+numberstyle=\tiny,
+caption={Function applyTemplate from template module},
+captionpos=b,
+label=applyTemplate
+]
+{code/apply_template.js.txt}
+
 
 %
 %It is implemented as \textit{addCalls} function. This is recursive function which accepts four parameter: \textit{sheet, scheme, indentation, accumulator, fileName}. First two parameters are necessary to access the values represented in a Test Sheet. Next parameter is an indentation level which represents the deepness of a function call by adding representative amount of spaces for each line of generated code. Accumulator parameter is a string to which will be appended result of each recursive call of the function. The last parameter is necessary for report mechanism which allows to record result of the test execution to appropriate file. The report mechanism (e.g \textit{makeComparisonAndWriteResult}) will be described in details within  the next section. However it is important to mention here how it works as a 'black box'. It is binary function which accepts  six parameters. First parameter is an expected return value. Second is an actual returned value received by the callback function, third is a deepness of comparison will be performed for this their values. The function returns \textbf{true} in case of match and after redefinition of the variable takes place. This mechanism allows usage of references within the Test Sheet for asynchronous functions.
@@ -495,7 +509,7 @@ label=gentemplate
 {code/GeneralTemplate.js.txt}
 
 \subsection{Test Coverage}
-Following test cases can show each step incrementally performed during the develop process.
+Following test cases can show each step incrementally performed during the development process.
 
 %\lstinputlisting[
 %language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
@@ -515,7 +529,7 @@ The result of test execution:
 	\label{fig:testTemplate}
 \end{figure}
 
-\subsection{Correspondence to design principles}
+\subsection{Correspondence to the design principles}
 \begin{itemize}
 	\item Closing - content generation is enclosed within three independent functions;
 	\item Code to an Interface - exports a single function;
@@ -526,12 +540,12 @@ The result of test execution:
 	\item The Dependency-Inversion Principle - does not have any lower level dependencies;
 	\item The Interface Segregation Principle - composition over inheritance;
 	\item Principles of Least Knowledge - can be invoked only via direct import;
-	\item Principle of Loose Coupling - exports a single function.
+	\item The Principle of Loose Coupling - exports a single function.
 \end{itemize}
 
-\section{Write Stream}
+e\section{Write Stream}
 \label{sec:write}
-This part of the system implements on function and exports it wrapped into object stream. It receives an object from the up stream with following structure (Listing: \ref{writeIn}). It tries to read meta-data of the file with same name as Test Sheet file but with the .js extension, it possible only if the file exists. In other case, the exception will be thrown and caught by catch block which implements creation of the file with content received from the up stream, and notification of user about successfully created file via standard system output or an error if the file failed to create. If file already exists the function will be able to read its meta-data. After it, this meta-data will be compared with meta-data of the Test Sheet file received from the upstream. In case if modification date of the Test Sheet file is bigger then modification data of javascript file system will overwrite the javascript file with content received from the upstream. In other case (Tests sheet file was not updated after creation of representative javascript file) the system will switch to the next object received from the up-stream. The result javascript file generated from the provided Test Sheet looks as following (Listing: \ref{demo})
+This part of the system implements on function and exports it wrapped into object stream. It receives an object from the upstream with the following structure (Listing: \ref{writeIn}). It tries to read meta-data of the file with same name as Test Sheet file but with the .js extension, it is possible only if the file exists. In other case, the exception will be thrown and caught by the \textit{ catch} block which implements the creation of the file with the content received from the upstream, and the notification of the user about successfully created file via standard system output or with an error if the file failed to create. If the  file is already exists then the function will be able to read its meta-data. After it, this meta-data will be compared with meta-data of the Test Sheet file received from the upstream. In case if the modification date of the Test Sheet file is bigger then the modification data of the  .js file then the system will overwrite the js file with the content that was received from the upstream. In case when the Tests Sheet file was not updated after the creation of the representative js file the system will switch to the next object received from the upstream. The result javascript file generated from the provided Test Sheet looks as following (Listing: \ref{demo})
 
 \lstinputlisting[
 language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
@@ -554,7 +568,7 @@ label=demo
 %{code/lib/stream/writeStream.js.txt}
 
 \subsection{Test Coverage}
-Following test cases can show each step incrementally performed during the develop process. All calls to systems I/O (e. g. read file meta data, read file) are implemented using stubs.
+The following test cases can show each step incrementally performed during the development process. All calls to systems I/O (e. g. read file meta data, read file) are implemented using stubs.
 %\lstinputlisting[
 %language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
 %basicstyle=\footnotesize,
@@ -574,27 +588,27 @@ The result of tests execution  for this module is following (Fig.: \ref{fig:test
 	\label{fig:testWrite}
 \end{figure}
 
-\subsection{Correspondence to design principles}
+\subsection{Correspondence to the design principles}
 \begin{itemize}
-	\item Closing - module exports single stream object with wrapped function.
-	\item Code to an Interface - calls are done to the public functions of required objects. 
-	\item Do not repeat yourself - small code duplication in callbacks for file writing, avoiding which will add more complexity;
-	\item The Single-Responsibility Principle - can be changed only due to the change of output type (e. g. another output file extension)
+	\item Closing - module exports the single stream object with the wrapped function.
+	\item Code to an Interface - calls are done to the public functions of the required objects. 
+	\item Do not repeat yourself - small code duplication in callbacks for file writing, while avoiding this will add more complexity;
+	\item The Single-Responsibility Principle - can be changed due to the introduction of requirements for support of multiple sheets within the single xlsx file.
 	\item The Open/Closed Principle - performs writing to the file only;
 	\item The Liskov Substitution Principle - no inheritance;
 	\item The Dependency-Inversion Principle - 
 	\begin{itemize}
-		\item Higher level module \textit{index.js} does not depend on implementation current library
+		\item The Higher level module \textit{index.js} does not depend on implementation current library
 		\item Current library depends on the input type provided by the \textit{index.js}
 	\end{itemize}
 	\item The Interface Segregation Principle - no calls of unnecessary methods;
 	\item Principles of Least Knowledge - communication done only with js files;
-	\item Principle of Loose Coupling - communication is done via standard file system and standard stream interfaces.
+	\item The Principle of Loose Coupling - communication is done via standard file system and standard stream interfaces.
 \end{itemize}
 
 \section{Reporting mechanism}
 \label{sec:report}
-The reporting mechanism made as a standalone npm package which must me installed globally for being available at any place of the system where it is called by generated javascript files described in a previous section. 
+The reporting mechanism made as a standalone npm package which must be installed globally for it to be available at any place of the system where it is called by generated javascript files described in a previous section. 
 The folder/file structure of the application looks as following:
 \begin{itemize}
 	\item index.js
@@ -645,7 +659,7 @@ label=report
 
 
 \subsection{Test coverage}
-Following test cases can show each step incrementally performed during the develop process. All calls to systems I/O (e. g. read file meta data, read file) are implemented using stubs.
+The following test cases can show each step incrementally performed during the development process. All calls to systems I/O (e. g. read file meta data, read file) are implemented using stubs.
 The result of tests execution  for this module is following (Fig.: \ref{fig:testReport}): 
 \begin{figure}[H]
 	\centering
@@ -654,9 +668,9 @@ The result of tests execution  for this module is following (Fig.: \ref{fig:test
 	\label{fig:testReport}
 \end{figure}
 
-\subsection{Correspondence to design principles}
+\subsection{Correspondence to the  design principles}
 \begin{itemize}
-	\item Closing - comparison and reporting are done in a different independent functions
+	\item Closing - comparison and reporting processes done in the different independent functions;
 	\item Code to an Interface - exports a single function;
 	\item Do not repeat yourself - no code duplication;
 	\item The Single-Responsibility Principle - can be changed only due to the reporting media;
@@ -664,6 +678,6 @@ The result of tests execution  for this module is following (Fig.: \ref{fig:test
 	\item The Liskov Substitution Principle - no inheritance (required as an npm package);
 	\item The Dependency-Inversion Principle - requires standard \textit{assert}, \textit{files system} modules and \textit{xlsx} module;
 	\item The Interface Segregation Principle - does not have any lower level modules;
-	\item Principles of Least Knowledge -  can be invoked only via direct import;
-	\item Principle of Loose Coupling - exports a single function.
+	\item Principles of Least Knowledge -  can be invoked only via the  direct import;
+	\item The Principle of Loose Coupling - exports a single function.
 \end{itemize}

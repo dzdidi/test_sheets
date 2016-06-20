@@ -28,18 +28,23 @@ I was expecting a `,' or a `}'---line 568 of file literatur/lit.bib
  :  howpublished={\url{http://news.softpedia.com/news/annoyed-developer-brings-down-thousands-of-javascript-node-js-projects-502075.shtml}},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+Warning--to sort, need author or key in moduleCounts
+Warning--to sort, need author or key in gtor
+Warning--to sort, need author or key in asyncPerformance_2
+Warning--to sort, need author or key in asyncPerformance
 Warning--to sort, need author or key in listOfBanks
 Warning--to sort, need author or key in LarsAPI
 Warning--to sort, need author or key in TimAPI
 Warning--to sort, need author or key in DaveAPI
 Warning--to sort, need author or key in PSD2
-Warning--to sort, need author or key in figoFAQVision
 Warning--to sort, need author or key in figoAngel
 Warning--to sort, need author or key in figoCB
 Warning--to sort, need author or key in figoFAQWhat
+Warning--to sort, need author or key in figoFAQVision
 Warning--to sort, need author or key in figoFAQPartners
 Warning--to sort, need author or key in finTS
 Warning--to sort, need author or key in costOfErrors
+Warning--to sort, need author or key in toyota
 Warning--to sort, need author or key in xunitFowler
 Warning--to sort, need author or key in xunitWiki
 Warning--to sort, need author or key in fit
@@ -50,10 +55,10 @@ Warning--to sort, need author or key in tsb
 Warning--to sort, need author or key in wikiScraping
 Warning--to sort, need author or key in conScrap
 Warning--to sort, need author or key in w3cDOM
+Warning--to sort, need author or key in phantom
 Warning--to sort, need author or key in casperjs
 Warning--to sort, need author or key in asyncArticle
 Warning--to sort, need author or key in nodejsabout
-Warning--to sort, need author or key in moduleCounts
 Warning--to sort, need author or key in mdnJS
 Warning--to sort, need author or key in mdnProto
 Warning--to sort, need author or key in mdnOOP
@@ -61,9 +66,6 @@ Warning--to sort, need author or key in libuv
 Warning--to sort, need author or key in libuvBasic
 Warning--to sort, need author or key in events
 Warning--to sort, need author or key in zalgo
-Warning--to sort, need author or key in gtor
-Warning--to sort, need author or key in asyncPerformance
-Warning--to sort, need author or key in asyncPerformance_2
 Warning--empty note in Lecture1
 Warning--empty note in Lecture2
 Warning--empty note in MES10
@@ -72,45 +74,45 @@ Warning--empty note in MES6
 Warning--empty note in MES7
 Warning--empty note in MES9
 Warning--empty booktitle in npmHydra
-You've used 52 entries,
+You've used 55 entries,
             2118 wiz_defined-function locations,
-            730 strings with 9724 characters,
-and the built_in function-call counts, 9256 in all, are:
-= -- 880
-> -- 159
+            744 strings with 10061 characters,
+and the built_in function-call counts, 9885 in all, are:
+= -- 940
+> -- 174
 < -- 1
-+ -- 91
-- -- 36
-* -- 348
-:= -- 1249
-add.period$ -- 119
-call.type$ -- 52
-change.case$ -- 171
++ -- 100
+- -- 40
+* -- 383
+:= -- 1335
+add.period$ -- 126
+call.type$ -- 55
+change.case$ -- 182
 chr.to.int$ -- 0
-cite$ -- 96
-duplicate$ -- 403
-empty$ -- 1132
-format.name$ -- 36
-if$ -- 2163
+cite$ -- 101
+duplicate$ -- 428
+empty$ -- 1203
+format.name$ -- 40
+if$ -- 2307
 int.to.chr$ -- 0
-int.to.str$ -- 52
-missing$ -- 11
-newline$ -- 225
-num.names$ -- 32
-pop$ -- 364
+int.to.str$ -- 55
+missing$ -- 12
+newline$ -- 238
+num.names$ -- 34
+pop$ -- 383
 preamble$ -- 1
-purify$ -- 122
+purify$ -- 130
 quote$ -- 0
-skip$ -- 400
+skip$ -- 424
 stack$ -- 0
-substring$ -- 316
-swap$ -- 55
+substring$ -- 348
+swap$ -- 58
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 200
-warning$ -- 44
-while$ -- 36
-width$ -- 54
-write$ -- 407
+type$ -- 212
+warning$ -- 46
+while$ -- 39
+width$ -- 57
+write$ -- 432
 (There were 2 error messages)

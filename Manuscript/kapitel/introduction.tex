@@ -1,22 +1,39 @@
 \chapter{Introduction}
 \label{chap:intro}
-This paper shows the case of the Test Sheets' use for asynchronous testing of a real-time software. The approach of tests definition using Test Sheets is not widely used now and have not been applied for such kind of the problem yet.
-The end product introduced this paper is a proof of concept,  applicable for using Basic Test Sheets for asynchronous testing and for asynchronous testing of real-time software systems.
+This paper shows the case of the Test Sheets' use for asynchronous testing of a real-time software. Tests definition using Test Sheets is not widely used nowadays and has not been applied for such kind of the problems yet.
+The end product introduced in this paper is a proof of concept,  applicable for using Basic Test Sheets for asynchronous testing of real-time software systems.
 
-The wide spread of systems with time constraints imposed on their response time in a web development, caused an appearance of new technologies for asynchronous programming (i.e. node.js, python's tornado or twisted, ruby's event machine etc). This together with increasing level of code reuse raised the speed of software development process, and, as a result, the velocity of a new business requirements introduction. However, the processes for definitions of tests did not really change a lot. It still have high entry level for people who defines tests requiring some development background.This fact necessitates direct involvement of software developers in test definition and edition processes. Test Sheets is a new approach developed by Software Engineering group of the University of Mannheim. It combines  tool-free user experience of test definitions for business related staff via use of regular spreadsheets editors. As a result, it reduces involvement of technical staff into this process to minimum.
+The wide spread of systems with time constraints imposed on their response time in a web development caused an appearance of new technologies for asynchronous programming (i.e. node.js, python's tornado or twisted, ruby's event machine etc). 
+This, together with increasing level of code reuse raised the speed of software development process.
+As a result, it raised the velocity of a new business requirements introduction.
+However, the processes for definitions of tests did not change a lot. 
+It still has high entry level for people who define tests requiring development background.
+This fact necessitates direct involvement of software developers in the processes of test definition and editing.
+Test Sheets is a new approach developed by Software Engineering group of the University of Mannheim. 
+It combines  tool-free user experience of test definitions for business related staff via use of regular spreadsheets editors.
+As a result, it reduces involvement of technical staff to minimum.
 
 
-The work is based on researches of Michael Zhivich and Robert Cunningham in field of software testing. Papers of Robert Glass and Tsai, Fang  and Bi in scope of testing of real-time software systems. Description of asynchronous strategies is based on General Theory of Relativity, the research made by Chris Kowal and researches in field of reactive programming made by Erik Meijer, Conal Eliot and Mark S. Miller. Selection of the strategy for asynchronous event handling in node.js is based on  performance measurements made by Gorgi Kosev. System  architecture and design were made with respect to principles of agile architecture described by Robert  C. Marting and John Dolley. The implementation of the system was made according to Test Driven Development approach and guidances introduced by Robert C. Martin in his book "Clean Code: A Handbook of Agile Software Craftsmanship".
+This work describes the change project: development, adoption, conversion and use processes for an implementation of Test Sheets in figo GmbH. The research is based on works of Michael Zhivich and Robert Cunningham in the field of software testing, as well as papers of Robert Glass and Tsai, Fang  and Bi in scope of testing of real-time software systems.
+Description of asynchronous strategies is based on General Theory of Relativity, the research made by Chris Kowal and researches in field of reactive programming made by Erik Meijer, Cv
+onal Eliot and Mark S. Miller. 
+The selection of the strategy for asynchronous event handling in node.js based on the performance measurements made by Gorgi Kosev. 
+System  architecture and design made with respect to the principles of agile architecture described by Robert  C. Marting and John Dolley. 
+The implementation of the system made according to the Test Driven Development approach and guidances introduced by Robert C. Martin in his book "Clean Code: A Handbook of Agile Software Craftsmanship".
+The user experience collected by polling process based on After Scenario Questionnaire and Post Study System Usability Questionnaire.
+The representation of system fit based on Task-Technology Fit model.
 
-
-In scope of this paper was created guidance for code generation applicable for asynchronous testing of real-time software (Section \ref{sec:execOrder}). It provides an opportunity to use Test Sheets for testing such the kind of a software systems. The implemented system is a complete product used by figo GmbH. The conventions (Section \ref{sec:convnetions}) for Test Sheet definitions developed within the scope of this paper put some limitations on number of input/output parameters and reduce their type to javascript object. While enhancing the flexibility by introducing two types of comparison for actual and expected execution result. Within the process of this research and software implementation was made the integration of Basic Test Sheets into the business process of financial technology company (Chapter \ref{chaper:figo}).
-The description of project for Test Sheets introduction to the company (Section \ref{sec:transP}) is based concepts of enterprise systems transformations projects.
-Further, in this paper were made researches on comparison of Test Sheets to another widely used test definition approaches (Chapter \ref{chap:testing}). 
-Given definition of real-time software with respect to modern state of art in web development and made an investigation regarding specific of a testing process for real-time software systems (Chapter \ref{chap:rt}).
-The structure of event mechanism of node.js, and strategies for asynchronous event handling together with their performance were investigated (Chapter \ref{chap:async}). 
-Given motivation for system architecture (Chapter \ref{chap:architectureDesign}), design and implementation (Chapter \ref{chap:design}) together with principles and patterns this process was guided by. 
-During the research were done measurements of performance  and user experience (Chapter  \ref{chap:perfux}). 
-Paper describes system fits and misfits together with benefits analysis of system use (Chapter \ref{chap:fitsBenefits}).
+The results of the research introduced within the scope of this paper are stated below.
+The guidance of code generation for asynchronous testing of real-time software was created (Section \ref{sec:execOrder}). 
+The conventions (Section \ref{sec:convnetions}) for Test Sheet definitions created within the scope of this paper put limitations on a number of input/output parameters and reduce their type to javascript object (Section \ref{chap:limits}).
+While enhancing the flexibility by introducing two types of comparison of actual and expected execution result. 
+Within the scope of this research made the transofrmation project dedicated to introduction of Basic Test Sheets into the business process of financial technology company (Chapter \ref{chaper:figo}) (Section \ref{sec:transP}) .
+Further, this paper introduces the comparison of Test Sheets with another widely used test definition approaches(Chapter \ref{chap:testing}). 
+Given the definition of real-time software with respect to the modern state of art in web development and investigated specifics of a testing process for real-time software systems (Chapter \ref{chap:rt}).
+The structure of event mechanism of node.js showed in this paper . Elaborated strategies for asynchronous event handling together with their performance (Chapter \ref{chap:async}). 
+Described architecture (Chapter \ref{chap:architectureDesign}), design and implementation (Chapter \ref{chap:design}) together with principles and patterns this process was based on. 
+During the research, the measurements of performance and user experience were made (Chapter  \ref{chap:perfux}). 
+The paper describes system fits and misfits together with benefits analysis of system use (Chapter \ref{chap:fitsBenefits}).
 Described limitations with guidance for future work in chapter (Chapter \ref{chap:limits}) The paper is closing with (Chapter \ref{chap:conclusion}).
 
 

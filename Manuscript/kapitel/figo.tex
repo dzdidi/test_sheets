@@ -1,12 +1,21 @@
 \chapter{figo GmbH}
 \label{chaper:figo}
-The German banking system is divided into three large sectors: private, public, and cooperative. The cooperative sector is represented by 1,144 credit unions and 2 cooperative central banks. The public sector employs 431 savings bank, 10 land banks and other institutions. Private banks represented 4 transnational banks, 42 investment banks, and 176 regional and other banks. There is also operating are 167 registered branches of foreign banks, including 60 investment banks\cite{listOfBanks}.   
+The German banking system is divided into three large sectors: private, public, and cooperative. The cooperative sector is represented by 1,144 credit unions and 2 cooperative central banks. The public sector employs 431 savings bank, 10 land banks and other institutions. Private banks are represented by 4 transnational banks, 42 investment banks, and 176 regional and other banks. There is also operating are 167 registered branches of foreign banks, including 60 investment banks\cite{listOfBanks}.   
 
-The introduction of Payment Services Directive (PSD) and PSD2 by European Commission in EU together with initiatives of UK Government regarding API provision and standardization have obligated banks with the implementation of on-line access points to their services\cite{LarsAPI}\cite{TimAPI}\cite{DaveAPI}. Within the Single European Payment Area acceptance of directive by European Bank Authority scheduled within 2017 year\cite{PSD2}.
+An introduction of the Payment Services Directive (PSD) and PSD2 by European Commission together with initiatives of the UK Government regarding API provision and standardization have obligated banks with the implementation of on-line access points to their services\cite{LarsAPI}\cite{TimAPI}\cite{DaveAPI}. Within the Single European Payment Area acceptance of directive by European Bank Authority scheduled within the year 2017\cite{PSD2}.
 
-figo GmbH is a financial technology (FinTech) company with the headquarter located Hamburg, Germany. It was founded in 2012  with the mission “to build the backbone of next generation financial services"\cite{figoFAQVision}.  Currently, the API is fully functional in Germany, partly in Austria and England\cite{figoAngel}\cite{figoCB}.
 
-figo Connect API was created with the aim to accelerate innovations in the FinTech area and to allow figo's partners to offer products with real added value\cite{figoFAQWhat}. It enables developers, startups, and even banks to connect to every financial service. These partners can access every bank account (current, savings, loan, securities, etc), credit card, eWallet and other financial services l(i.e. PayPal) through one single REST-API \cite{figoFAQWhat}\cite{figoFAQVision}\cite{figoFAQPartners}. The list of figo's partners and customers  together with their use cases can be found via following link: \url{http://figo.io/use\_cases.html}.
+
+figo is a platform to access banking information and execute banking transactions in a regulated environment (PSD).  figo connects and translates services (APIs) from 99\% of German banks to a unified RESTful API for partners and third parties i.e. banks ans financial institutions, financial technology companies (FinTech))\cite{figoAngel}\cite{figoCB}\cite{figoFAQWhat}\cite{figoFAQVision}\cite{figoFAQPartners}.
+The list of figo's partners and customers  together with their use cases can be found via following link: \url{http://figo.io/use\_cases.html}.
+
+The figo platform can be used in two different ways: 
+\begin{itemize}
+	\item Access to account (XS2A) software as a service. That is the preferred and easiest model by developers and FinTech partners to get access to account;
+	\item XS2A API as white label technology  thats is the preferred model by banks since they can comply with PSD2 requirements, additionally, they have the big opportunity to benefit from an API platform infrastructure. 
+\end{itemize}
+
+figo GmbH is a FinTech company with the headquarter located Hamburg, Germany. It was founded in 2012  with the mission “to build the backbone of next generation financial services"\cite{figoFAQVision}.  Currently, the API is fully functional in Germany, partly in Austria and England\cite{figoAngel}\cite{figoCB}.
 
 
 %"The Figo GmbH was founded in 2012 and has its headquarters in Hamburg.
@@ -24,9 +33,9 @@ figo Connect API was created with the aim to accelerate innovations in the FinTe
 
 %"Our banking API enables developers, startups and even banks to connect to every financial service provider. These partners can access every bank account (current, savings, loan, securities, ...), credit card, eWallet and other financial services through one single REST-API. It is possible to extract account information and initiate bank transfers \& direct debits. With our API, old and new players of the financial service industry are able to easily develop and test new services without the inconvenience of connecting to every single bank."\cite{figoCB}
 
-\section{IT infrastructure. Banking Server}
+\section{IT infrastructure: Banking Server}
 \label{sec:infrastructure}
-The high-level IT infrastructure of figo GmbH consists two parts (Fig. \ref{fig:figoArch}). The \textbf{API Server} implements interfaces to figo's customers and partners for accessing banking information and services (lays outside of the paper's scope). The \textbf{Banking Server} implements the connections to banks via three possible communication channels, their description provided below together with basic motivation for each of them.
+The high-level IT infrastructure of figo GmbH consists of two parts (Fig. \ref{fig:figoArch}). The \textbf{API Server} implements interfaces to figo's customers and partners for accessing banking information and services (lays outside of the paper's scope). The \textbf{Banking Server} implements the connections to banks via three possible communication channels, their description provided below together with the basic motivation for each of them.
 \begin{figure}[ht]
   	\label{fig:figoArch}
     \centering
@@ -38,13 +47,13 @@ The high-level IT infrastructure of figo GmbH consists two parts (Fig. \ref{fig:
 \label{sec:bankingArch}
 	Banking server has three parts for communication with banks via three separate channels. Each of them is a realization of different technology in a same programming language - javascript.  
 
-	\paragraph{Custom-API} is responsible for connection to custom APIs provided by banks. It implements the client for custom banks APIs. Some of them provide full functionality while some only partial. All this APIs vary in their structure and functionality but most of them  are an implementation of REST-API specification.
+	\paragraph{Custom-API} is responsible for connection to custom APIs provided by banks. It implements the client for custom banks APIs. Some of them provide full functionality while some only partial. All this APIs vary in their structure and functionality, but most of them  are an implementation of REST-API specification.
 	
-	\paragraph{HBCI+/FinTS} is responsible for connection to banks' interfaces via Home Banking Computer Interface (HBCI). It is an implementation of an \textit{adapter OOP pattern} for the jsHBCI library.  HBCI is an open publicly available protocol. Its specification was originally designed by the two German banking groups \textit{Sparkasse and Volksbanken und Raiffeisenbanken} and \textit{German higher-level associations as the Bundesverband deutscher Banken e.V.}.  \cite{finTS}
+	\paragraph{HBCI+/FinTS} is responsible for connection to banks' interfaces via Home Banking Computer Interface (HBCI). It is an implementation of an \textit{adapter OOP pattern} for the jsHBCI library.  HBCI is an open publicly available protocol. Its specification was originally designed by the two German banking groups \textit{Sparkasse and Volksbanken und Raiffeisenbanken} and \textit{German higher-level associations such as the Bundesverband deutscher Banken e.V.}.  \cite{finTS}
 	
 	\paragraph{Web-Banking Engine} is responsible for communication with banks which does not provide API or HBCI. This is an implementation of a \textit{factory OOP pattern} for scraping libraries. Here figo GmbH uses \textit{web scraping} technology to perform interaction with internet-banking web pages.
-	From the banks perspective, the interaction looks completely like direct communication with an user, while a user does not feel the difference between interaction via Custom-API or HBCI or Web-Banking Engine while accessing his bank or service via figo API.
-	This is the most sensitive part from the developer's perspective since every change to the bank's web page can lead to failure of the specific scripts. \\
+	From the banks perspective, the interaction looks completely like direct communication with the user, while a user does not feel the difference between interaction via Custom-API, or HBCI or Web-Banking Engine while accessing his bank or service via figo API.
+	This is the most sensitive part from the developer's perspective, since every change to the bank's web page can lead to failure of the specific scripts. \\
 	
 %	The aim of this paper is an application of Test Sheet for early (before any user's interaction will take place) recognition of page changes  and notification of developers regarding failed part of the script.
 	
@@ -76,10 +85,10 @@ The high-level IT infrastructure of figo GmbH consists two parts (Fig. \ref{fig:
 %	\item asynchronous software in combination with reference mechanism of test sheets
 %\end{enumerate}
 
-\section{Transformation project}
+\chapter{Transformation project}
 \label{sec:transP}
-This section describes transformation project created by figo GmbH for use of Test Sheets within the organization.
-\textbf{Enterprise System Transformation} -  "is a hierarchic-sequential process involving all actions of individuals in an organization leveraging information technology to support the transition of an Enterprise System from its original O-I-T[(Fir.:\ref{fig:oit})] configuration [...] to an (enhanced) O-I-T[(Fir.:\ref{fig:oit})] configuration."\cite{MES5}
+This section describes the transformation project initiated by figo GmbH for use of Test Sheets.
+\textbf{Enterprise System Transformation} -  "is a hierarchic-sequential process involving all actions of individuals in an organization leveraging information technology to support the transition of an Enterprise System from its original O-I-T[(Fig.:\ref{fig:oit})] configuration [...] to an (enhanced) O-I-T[(Fig.:\ref{fig:oit})] configuration."\cite{MES5}
 
 \begin{figure}[ht]
 	\label{fig:oit}
@@ -88,7 +97,7 @@ This section describes transformation project created by figo GmbH for use of Te
 	\caption{O-I-T model\cite{MES5}}
 \end{figure}
 
-The transformation project includes within itself four processes:
+The transformation project includes four processes within itself:
 \paragraph{Development} focuses on the issue how information systems are developed. In contrast to software engineering, software development takes the socio-technical perspective on information systems\cite{MES6}.
 
 \paragraph{Adoption} is a process defined by three concepts\cite{MES7}
@@ -98,11 +107,11 @@ The transformation project includes within itself four processes:
 	\item \textbf{Assimilation} addresses how extensively the new technology is used and how deeply the firm's use of the technology alters processes, structures, and organizational culture
 \end{enumerate}
 
-\paragraph{Convertion} is a process of realization of transformation projects with goal of successful system transformations \cite{MES9}
+\paragraph{Convertion} is a process of realization of transformation projects with goal of successful system transformations \cite{MES9}.
 
-\paragraph{Use} continues process closely coupled with conversion process. It covers not only the process of the system usage by the individuals but also the impact of it on the organization in context of short- and long-term benefits. Individuals in the context of their performance and satisfaction.
+\paragraph{Use} is a continues process closely coupled with conversion process. It covers not only the process of the system usage by the individuals but also the impact of it on the organization in context of short- and long-term benefits, individuals in the context of their performance and satisfaction \cite{MES9}.
 
-\subsection{Test Sheets project}
+\section{Test Sheets project: Business perspective}
 
 
 
@@ -119,35 +128,35 @@ The transformation project includes within itself four processes:
 	\item Organizational culture fit
 \end{itemize}
 
-\paragraph{Rationale for project creation and focus.} 
+\paragraph{Rationale for project creation and focus:} 
 \begin{itemize}
 	\item High workload and time pressure in combination with limited technical resources leads to less time available on manual system monitoring. Non developers were not capable of testing the functionality;
 	\item Tests will help in estimation of time to fix errors.
 \end{itemize}
 
 
-\paragraph{Underlying assumptions.} Shift of responsibility for functionality  on managers will improve system maintenance process and customers' user experience. 
+\paragraph{Underlying assumptions:} Shift of responsibility for functionality  on managers will improve system maintenance process and customers' user experience. 
 
-\paragraph{Goal.} Routinization of product verification/testing process with respect to its business and functionality requirements by use of Test Sheets.
+\paragraph{Goal:} Routinization of product verification/testing process with respect to its business and functionality requirements by use of Test Sheets.
 \paragraph{Plan:}
 \begin{itemize}
 	\item Test Sheets concept introduction to the target customers
 	\item Requirements analysis 
 	\item Mapping requirements to the concept of Test Sheets
-	\item Dfinition of the development process
+	\item Definition of the development process
 	\item System design
 	\item Development:
 	\begin{itemize}
-		\item Alpha1 version without support of references and optimization for real-time testing
-		\item Alpha2 version with references support and optimization for real-time testing
-		\item BETA version with optimization for real-time testing
-		\item Reporting mechanism
+		\item Alpha1 version without support of references and linear tests execution;
+		\item Alpha2 version with references support and linear tests execution;
+		\item BETA version with optimization for real-time testing;
+		\item Reporting mechanism;
 	\end{itemize}
-	\item Demonstration
-	\item Performance measurements
-	\item Workshop on system installation and usage
-	\item Routinization
-	\item UX collection
+	\item Demonstration;
+	\item Performance measurements;
+	\item Workshop on system installation and usage;
+	\item Routinization;
+	\item User experience collection.
 \end{itemize}
 
 \paragraph{Success:}
@@ -159,11 +168,17 @@ The transformation project includes within itself four processes:
 \end{itemize}
 
 
-\subsection{Technical requirements}
-First, test execution must be performed in a timely fashion for an opportunity to detect changes as early as possible to prevent attempts of customers' communication with not available banks or services. Consequently, tests execution have to be fast. 
-Nextm software developers must be notified about script failure as soon as it was detected to improve response time. 
-Moreover, scraping scripts are communicating with web-pages in a real-time and asynchronous fashion. 
-Further, the language of implementation must be javascript for low entry level of developers in the future maintenance process. 
+\section{Test Sheets project: Technical perspective}
+Test execution must be performed in a timely fashion for an opportunity to detect changes as early as possible to prevent attempts of customers' communication with not available banks or services. Consequently, tests execution have to be fast.
+
+
+Software developers must be notified about script failure as soon as it was detected to improve the response time. 
+
+Scraping scripts are communicating with web-pages in a real-time and asynchronous fashion.
+
+
+The language of implementation must be javascript for low entry level of developers in the future maintenance process.
+
 Last but not least, due to the nature of data represented on a web page the comparison between actual and expected results must have two possible options: object keys comparison and object key-value comparison.
 
 

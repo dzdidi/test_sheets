@@ -1,7 +1,5 @@
-\chapter{Testing. Existing approaches. Test Sheets}
+\chapter{Software testing}
 \label{chap:testing}
-\section{Software testing}
-\label{sec:testing}
 %Oxford dictionary defines test as a procedure intended to establish the quality, performance, or reliability of something, especially before it is taken into widespread use. 
 Software testing is an important technique to evaluate and assess software's quality and reliability, it provides possibility to determine whether the development of product conform the requirements. The variety of tests coincides the variety of requirements for the software under test. At least 30\% of the price of a software project is the cost of software testing \cite{Lecture2}. 
 The general requirements to test definitions are following: fast, independent, repeatable, self-validating, timely.
@@ -16,11 +14,11 @@ More detailed information regarding requirements can be found via following URL:
 \textit{\textbf{In general,}} according to report made by US National Institute of Standards and Technology (NIST) in 2009 the estimated economy loses  were \$60 billion annually as associated with developing and distributing software patches and reinstalling systems that have been involved, together with losses in productivity due to errors and malware infections\cite{costOfErrors}.\\
 
 
-%\paragraph{The human causalities} caused by software misbehavior can rich dramatic scales.\\
-%\textit{\textbf{The case of Toyota}} unintended acceleration caused by software defect  in 2009 - 2011 led to 89 deaths and 57 injures.
-%Toyota was fined \$1.2 Billion for concealing safety defects\cite{toyota}.\\
-%\textit{\textbf{The Patriot,}} surface-to-air missile, system failed to track and intercept an incoming Scud missile on 25 of February 1991. As the result 28 soldiers were killed and around 100 were injured\cite{costOfErrors}.\\
-%\textit{\textbf{A Therac-25}}, linear accelerator, which failure caused to 6 know cases where cancer patients received deadly radiation overdoses during their treatment between June 1985 and January 1987. The dosages were 100 times exceeding typically used for treatment\cite{costOfErrors}\cite{therac}.\\
+\paragraph{The human causalities} caused by software misbehavior can rich dramatic scales.\\
+\textit{\textbf{The case of Toyota}} unintended acceleration caused by software defect  in 2009 - 2011 led to 89 deaths and 57 injures.
+Toyota was fined \$1.2 Billion for concealing safety defects\cite{toyota}.\\
+\textit{\textbf{The Patriot,}} surface-to-air missile, system failed to track and intercept an incoming Scud missile on 25 of February 1991. As the result 28 soldiers were killed and around 100 were injured\cite{costOfErrors}.\\
+\textit{\textbf{A Therac-25}}, linear accelerator, which failure caused to 6 know cases where cancer patients received deadly radiation overdoses during their treatment between June 1985 and January 1987. The dosages were 100 times exceeding typically used for treatment\cite{costOfErrors}\cite{therac}.\\
 
 %The variety of tests coincides the variety of requirements for the software under test. Test processes determine whether the software conform to the requirements and/or satisfies its intended use and user needs\cite{ieeeTesting}. As well as this is an important technique to evaluate and help to improve software quality, reliability and saftiness\cite{cota}.
 
@@ -56,12 +54,12 @@ More detailed information regarding requirements can be found via following URL:
 
 \section{Existing approaches for test definitions}
 \label{sec:testApproaches}
-In most of the cases developers are using testing frameworks or internal DSLs which requires usage of formal programming languages. This in a result makes writing of tests not different from the programming. It requires knowledge of languages and understanding of basic programming concepts from everyone who is involved in the creation of a test, reading its result or updating/deleting the test.
-Since it is common practice to base tests on top of business requirements tests should be used by different shareholders who define this requirements.
-Below provided brief overview of different testing approaches and their analysis with respect to modern business requirements.
+In most of the cases developers are using testing frameworks or internal DSLs which requires the use of formal programming languages. This, in a result, makes writing of tests not different from the programming. It requires knowledge of languages and understanding of the basic programming concepts from everyone who is involved in the creation of a test, reading its result or updating/deleting the test.
+%Since it is common practice to base tests on top of business requirements tests should be used by different shareholders who define those requirements.
+The brief overview of different testing approaches and their analysis with respect to modern business requirements is provided below.
 
 \subsection{xUnit}
-xUnit is a family of unit testing frameworks with shared architecture and functionality which is derived from Smalltalk's SUnit, designed for tests automation\cite{xunit}\cite{xunitFowler}. The general simplicity and lightweight made them popular tool for Test Driven Development\cite{xunitFowler}.
+xUnit is a family of unit testing frameworks with shared architecture and functionality which is derived from Smalltalk's SUnit, designed for tests automation\cite{xunit}\cite{xunitFowler}. The general simplicity and lightweight made them as a popular tool for Test Driven Development\cite{xunitFowler}.
 
 xUnit basic features implemented by all members of the family provide functionality to perform following tasks\cite{xunit}:
 \begin{enumerate}
@@ -75,23 +73,23 @@ Test \textbf{\textit{cases}} in xUnit are defined as a methods united in to \tex
 
 The family includes a wide variety of implementations for multiple programming languages, and diverse enhancement of functionality (e. g. code coverage statistics, assertion add-ons etc.)\cite{xunitWiki}.
 
-Definition of tests with formal general programming language from one side makes tests definition and execution fast but in a same time makes impossible the creation of tests for people without developer background. 
+Definition of tests with formal general programming language from one side makes tests definition and execution fast but at the same time makes impossible the creation of tests for people without developer background. 
 
 \subsection{Fit}
 Framework for Integrated Test (Fit) - is a way of defining test cases with HTML pages. It enhances the communication and collaboration connecting customers and programmers. Moreover, it creates a feedback loop between them. Fit automatically checks HTML pages against actual program\cite{fit}.
 
 Fit reads tables in HTML files, each table is interpreted by a \textit{fixture} written by programmers. This fixture checks the examples in the table by running the actual program\cite{fitIntro}.
 
-Programmers use a \textit{ColumnFixture} to map the columns in the table to variables and methods in the fixture. The first columns provide correspond to variables in the fixture. The last column has the expected result and corresponds to the method in the fixture\cite{fitIntro}.
+Programmers use a \textit{ColumnFixture} to map the columns in the table to variables and methods in the fixture. The first columns provide correspondence to variables in the fixture. The last column has the expected result and corresponds to the method in the fixture\cite{fitIntro}.
 
 Different implementations provide different user experience from Wiki pages (i.e. FitNess) to complete standalone application with internal functionality for tables definitions and tests execution (i.e. GuiRunner).
 
-With Fit, customers can provide more guidance in a development process by lending their subject matter expertise and imagination to the effort\cite{fit} requiring developer to write only \textit{fixture}, the middleware between tests and code. In the same time, it provides media between  CRUD operations over tests and the results of their execution for people without development experience.
+With Fit, customers can provide more guidance in a development process by lending their subject matter expertise and imagination to the effort\cite{fit} requiring developer to write only \textit{fixture}, the middleware between tests and code. At the same time, it provides media between  CRUD operations over tests and the results of their execution for people without development experience.
 
 \subsection{Cucumber}
 Cucumber is a Behavior Driven Development tool which allows users to define tests specifications with \textit{Gherkin}, the language which is structured plain text with support of internationalization for 60+ different languages\cite{cuceRef}.
 
-Feature files written in Gherkin consists of plain text and general key-words are used for identification of following concepts:
+Feature files written in Gherkin consist of plain text and general key-words are used for identification of following concepts:
 \begin{itemize}
 	\item Feature under the test: \textit{Feature};
 	\item Test scenario: \textit{Scenario};
@@ -110,11 +108,11 @@ Specific characters are used for identification of:
 
 Step definitions are written by developers. Definition parses feature file with attached pattern to link all the step matches and code executed by cucumber when match is met.
 
-Human readable input and output of the tests defined in gherkin makes cucumber a good media for communication between people who create requirements and those who are trying to meet them. But in a same time software development experience required for writing code with step definitions.
+Human readable input and output of the tests defined in gherkin makes cucumber a good media for communication between people who create requirements and those who are trying to meet them. But at the same time software development experience required for writing code with step definitions.
 
 \section{Test Sheets}
 \label{sec:testSheets}
-Test Sheets is a representation for tests a developed with the goal to combine the power and completeness of formal programming language with a representation that is easy to understand and work with even for people with little IT knowledge\cite{ts}.
+Test Sheets is a representation for tests developed with the goal to combine the power and completeness of formal programming language with a representation that is easy to understand and work with even for people with little IT knowledge\cite{ts}.
 
 Test Sheets approach uses a usual spreadsheet for a definition of test and representation of their result. 
 \begin{itemize}
@@ -123,7 +121,7 @@ Test Sheets approach uses a usual spreadsheet for a definition of test and repre
 \end{itemize}
 
 The actual content of a cell can be made dependent on other cells by addressing them via their location.
-Just like in Fit result of tests execution is provided in the same table with coloring and actual return are separated by "\textbackslash"\ symbol in case of failing test\cite{tsb}.
+Just like in Fit, the result of tests execution is provided in the same table with coloring and actual return are separated by "\textbackslash"\ symbol in case of failing test\cite{tsb}.
 
 There are three types of test sheets which can be used in combination:
 \begin{itemize}
@@ -134,7 +132,7 @@ There are three types of test sheets which can be used in combination:
 The main benefit of this approach over \textit{xUnit}, \textit{Cucumber}, \textit{Fit} is an exclusion of software developers from CRUD test operations which can be performed by a user without prior development experience with usage of any spreadsheet editor.
 
  \subsection{Basic Test Sheets}
-A Basic Test Sheet is a type of Test Sheets with sequential tests execution without parametrized values, but with possibility to use references between cells for definition of values.
+A Basic Test Sheet is a type of Test Sheets with sequential tests execution without parametrized values, but with the possibility to use references between cells for definition of values.
 The rows content is structured as following:
 \begin{itemize}
 	\item \textit{Test name} - first row;
@@ -142,7 +140,7 @@ The rows content is structured as following:
 	\item \textit{Test step} - all next rows represent method calls;
 \end{itemize}
 
-Values in columns cells of which belong to the test step has net purposes:
+The values in columns cells which belong to the test step has net purposes:
 \begin{itemize}
 	\item \textit{Object Under Test} - cells in a first column;
 	\item \textit{Method Under Test} - cells in a second column;
@@ -161,7 +159,7 @@ The description provided above is shown in a summarized example from the web sit
 
 
 
-The software developed within the scope of this research is a proof of concept for an usage of Test Sheets for scenario testing of asynchronous real-time software. The scope of this paper covers only Basic Test Sheets. For more details about Test Sheets and Research Topics of the Chair of Software Engineering please visit \url{http://swt.informatik.uni-mannheim.de/de/home/}.
+The software developed within the scope of this research is a proof of concept for the usage of Test Sheets for scenario testing of asynchronous real-time software. The scope of this paper covers only Basic Test Sheets. For more details about Test Sheets and Research Topics of the Chair of Software Engineering please visit \url{http://swt.informatik.uni-mannheim.de/de/home/}.
 
 % \paragraph{Non-Linear}
 %Similar to the invocation line (double line separating input parameters and expected return values) there is a double line below the last method invocation row.

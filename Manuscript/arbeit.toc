@@ -6,123 +6,123 @@
 \contentsline {chapter}{List of Abbreviations}{xii}{chapter*.4}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {chapter}{\numberline {2}figo GmbH}{3}{chapter.2}
-\contentsline {section}{\numberline {2.1}IT infrastructure. Banking Server}{4}{section.2.1}
+\contentsline {section}{\numberline {2.1}IT infrastructure: Banking Server}{4}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Banking Server Architecture}{4}{subsection.2.1.1}
-\contentsline {paragraph}{\nonumberline Custom-API}{4}{section*.5}
+\contentsline {paragraph}{\nonumberline Custom-API}{5}{section*.5}
 \contentsline {paragraph}{\nonumberline HBCI+/FinTS}{5}{section*.6}
 \contentsline {paragraph}{\nonumberline Web-Banking Engine}{5}{section*.7}
-\contentsline {section}{\numberline {2.2}Transformation project}{5}{section.2.2}
-\contentsline {paragraph}{\nonumberline Development}{5}{section*.8}
-\contentsline {paragraph}{\nonumberline Adoption}{5}{section*.9}
-\contentsline {paragraph}{\nonumberline Convertion}{6}{section*.10}
-\contentsline {paragraph}{\nonumberline Use}{6}{section*.11}
-\contentsline {subsection}{\numberline {2.2.1}Test Sheets project}{7}{subsection.2.2.1}
-\contentsline {paragraph}{\nonumberline Project definition:}{7}{section*.12}
-\contentsline {paragraph}{\nonumberline Project uncertainties:}{7}{section*.13}
-\contentsline {paragraph}{\nonumberline Rationale for project creation and focus.}{7}{section*.14}
-\contentsline {paragraph}{\nonumberline Underlying assumptions.}{7}{section*.15}
-\contentsline {paragraph}{\nonumberline Goal.}{7}{section*.16}
-\contentsline {paragraph}{\nonumberline Plan:}{7}{section*.17}
-\contentsline {paragraph}{\nonumberline Success:}{8}{section*.18}
-\contentsline {subsection}{\numberline {2.2.2}Technical requirements}{8}{subsection.2.2.2}
-\contentsline {chapter}{\numberline {3}Testing. Existing approaches. Test Sheets}{11}{chapter.3}
-\contentsline {section}{\numberline {3.1}Software testing}{11}{section.3.1}
+\contentsline {chapter}{\numberline {3}Transformation project}{7}{chapter.3}
+\contentsline {paragraph}{\nonumberline Development}{7}{section*.8}
+\contentsline {paragraph}{\nonumberline Adoption}{8}{section*.9}
+\contentsline {paragraph}{\nonumberline Convertion}{8}{section*.10}
+\contentsline {paragraph}{\nonumberline Use}{8}{section*.11}
+\contentsline {section}{\numberline {3.1}Test Sheets project: Business perspective}{8}{section.3.1}
+\contentsline {paragraph}{\nonumberline Project definition:}{8}{section*.12}
+\contentsline {paragraph}{\nonumberline Project uncertainties:}{8}{section*.13}
+\contentsline {paragraph}{\nonumberline Rationale for project creation and focus:}{9}{section*.14}
+\contentsline {paragraph}{\nonumberline Underlying assumptions:}{9}{section*.15}
+\contentsline {paragraph}{\nonumberline Goal:}{9}{section*.16}
+\contentsline {paragraph}{\nonumberline Plan:}{9}{section*.17}
+\contentsline {paragraph}{\nonumberline Success:}{10}{section*.18}
+\contentsline {section}{\numberline {3.2}Test Sheets project: Technical perspective}{10}{section.3.2}
+\contentsline {chapter}{\numberline {4}Software testing}{11}{chapter.4}
 \contentsline {paragraph}{\nonumberline The economic costs}{11}{section*.19}
-\contentsline {section}{\numberline {3.2}Existing approaches for test definitions}{12}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}xUnit}{12}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Fit}{13}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Cucumber}{13}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3}Test Sheets}{14}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Basic Test Sheets}{15}{subsection.3.3.1}
-\contentsline {chapter}{\numberline {4}Real-Time Software and its Testing. Web scrapping}{17}{chapter.4}
-\contentsline {section}{\numberline {4.1}Real-Time Software}{17}{section.4.1}
-\contentsline {section}{\numberline {4.2}Testing Real-Time software}{17}{section.4.2}
-\contentsline {section}{\numberline {4.3}Web scraping. CasperJS}{18}{section.4.3}
-\contentsline {paragraph}{\nonumberline CasperJS}{18}{section*.20}
-\contentsline {chapter}{\numberline {5}Asynchronous programming. Strategies and performance}{21}{chapter.5}
-\contentsline {section}{\numberline {5.1}Asynchronous programming}{21}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}node.js}{21}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Event handling}{24}{subsection.5.1.2}
-\contentsline {section}{\numberline {5.2}Asynchronous handling strategies}{26}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Continuation passing}{26}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Imperative}{26}{subsection.5.2.2}
-\contentsline {paragraph}{\nonumberline Synchronous:}{27}{section*.21}
-\contentsline {paragraph}{\nonumberline Asynchronous:}{27}{section*.22}
-\contentsline {subsection}{\numberline {5.2.3}Performance}{28}{subsection.5.2.3}
-\contentsline {chapter}{\numberline {6}Architecture}{31}{chapter.6}
-\contentsline {chapter}{\numberline {7}Design and Implementation}{35}{chapter.7}
-\contentsline {section}{\numberline {7.1}Conventions for definitions of Test Sheets}{35}{section.7.1}
-\contentsline {section}{\numberline {7.2}Implementation and input example}{36}{section.7.2}
-\contentsline {section}{\numberline {7.3}Read Stream}{39}{section.7.3}
-\contentsline {subsection}{\numberline {7.3.1}Test Coverage}{40}{subsection.7.3.1}
-\contentsline {subsection}{\numberline {7.3.2}Correspondence to design principles}{41}{subsection.7.3.2}
-\contentsline {section}{\numberline {7.4}Transform Stream}{42}{section.7.4}
-\contentsline {subsection}{\numberline {7.4.1}Test Coverage}{43}{subsection.7.4.1}
-\contentsline {subsection}{\numberline {7.4.2}Correspondence to design principles}{43}{subsection.7.4.2}
-\contentsline {section}{\numberline {7.5}Scheme}{44}{section.7.5}
-\contentsline {subsection}{\numberline {7.5.1}Test Coverage}{46}{subsection.7.5.1}
-\contentsline {subsection}{\numberline {7.5.2}Correspondence to design principles}{47}{subsection.7.5.2}
-\contentsline {section}{\numberline {7.6}Execution Order}{48}{section.7.6}
-\contentsline {subsection}{\numberline {7.6.1}Test coverage}{51}{subsection.7.6.1}
-\contentsline {subsection}{\numberline {7.6.2}Correspondence to design principles}{52}{subsection.7.6.2}
-\contentsline {section}{\numberline {7.7}Execution Scheme}{53}{section.7.7}
-\contentsline {subsection}{\numberline {7.7.1}Test Coverage}{53}{subsection.7.7.1}
-\contentsline {subsection}{\numberline {7.7.2}Correspondence to design principles}{54}{subsection.7.7.2}
-\contentsline {section}{\numberline {7.8}Template}{54}{section.7.8}
-\contentsline {subsection}{\numberline {7.8.1}Test Coverage}{56}{subsection.7.8.1}
-\contentsline {subsection}{\numberline {7.8.2}Correspondence to design principles}{57}{subsection.7.8.2}
-\contentsline {section}{\numberline {7.9}Write Stream}{58}{section.7.9}
-\contentsline {subsection}{\numberline {7.9.1}Test Coverage}{61}{subsection.7.9.1}
-\contentsline {subsection}{\numberline {7.9.2}Correspondence to design principles}{61}{subsection.7.9.2}
-\contentsline {section}{\numberline {7.10}Reporting mechanism}{62}{section.7.10}
-\contentsline {subsection}{\numberline {7.10.1}Implementation}{62}{subsection.7.10.1}
-\contentsline {subsection}{\numberline {7.10.2}Test coverage}{63}{subsection.7.10.2}
-\contentsline {subsection}{\numberline {7.10.3}Correspondence to design principles}{64}{subsection.7.10.3}
-\contentsline {chapter}{\numberline {8}Performance and User Experience}{67}{chapter.8}
-\contentsline {section}{\numberline {8.1}Performance}{67}{section.8.1}
-\contentsline {subsection}{\numberline {8.1.1}Generation performance}{67}{subsection.8.1.1}
-\contentsline {paragraph}{\nonumberline Single folder}{67}{section*.23}
-\contentsline {paragraph}{\nonumberline Nested folder}{67}{section*.24}
-\contentsline {subsection}{\numberline {8.1.2}Executions performance}{67}{subsection.8.1.2}
-\contentsline {paragraph}{\nonumberline Independent test steps}{67}{section*.25}
-\contentsline {paragraph}{\nonumberline Chain relationship}{68}{section*.26}
-\contentsline {section}{\numberline {8.2}User Experience}{68}{section.8.2}
-\contentsline {subsection}{\numberline {8.2.1}After Scenario Questionnaire}{68}{subsection.8.2.1}
-\contentsline {subsection}{\numberline {8.2.2}Post Study System Usability Questionnaire}{69}{subsection.8.2.2}
-\contentsline {chapter}{\numberline {9}System fit and benefits}{73}{chapter.9}
-\contentsline {section}{\numberline {9.1}Task-Technology Fit}{73}{section.9.1}
-\contentsline {subsection}{\numberline {9.1.1}Task characteristics}{74}{subsection.9.1.1}
-\contentsline {subsection}{\numberline {9.1.2}Technology Characterisitcs}{74}{subsection.9.1.2}
-\contentsline {subsection}{\numberline {9.1.3}Individual Characterisitcs:}{74}{subsection.9.1.3}
-\contentsline {subsection}{\numberline {9.1.4}Task-Technology-Fit:}{74}{subsection.9.1.4}
-\contentsline {subsection}{\numberline {9.1.5}Utilization:}{74}{subsection.9.1.5}
-\contentsline {subsection}{\numberline {9.1.6}Performance Impact:}{75}{subsection.9.1.6}
-\contentsline {section}{\numberline {9.2}Mistfits}{75}{section.9.2}
-\contentsline {paragraph}{\nonumberline Functionality missfits}{75}{section*.27}
-\contentsline {paragraph}{\nonumberline Data misfits}{75}{section*.28}
-\contentsline {paragraph}{\nonumberline Usability misfits}{75}{section*.29}
-\contentsline {paragraph}{\nonumberline Role misfits}{75}{section*.30}
-\contentsline {paragraph}{\nonumberline Control misfits}{76}{section*.31}
-\contentsline {paragraph}{\nonumberline Organizational culture misfits}{76}{section*.32}
-\contentsline {section}{\numberline {9.3}Benefits and affecting factors}{76}{section.9.3}
-\contentsline {paragraph}{\nonumberline Organizational benefits}{76}{section*.33}
-\contentsline {subsection}{\numberline {9.3.1}Short-term factor}{76}{subsection.9.3.1}
-\contentsline {paragraph}{\nonumberline Functional Fit}{76}{section*.34}
-\contentsline {paragraph}{\nonumberline Oevercoming Organizational Inertia}{77}{section*.35}
-\contentsline {subsection}{\numberline {9.3.2}Long-term factor}{77}{subsection.9.3.2}
-\contentsline {paragraph}{\nonumberline Integration}{77}{section*.36}
-\contentsline {paragraph}{\nonumberline Process optimization}{77}{section*.37}
-\contentsline {paragraph}{\nonumberline Improved access to information}{77}{section*.38}
-\contentsline {paragraph}{\nonumberline On-going major enterprise system improvement projects}{77}{section*.39}
-\contentsline {paragraph}{\nonumberline Operational Benefits of Test Sheets Use}{77}{section*.40}
-\contentsline {paragraph}{\nonumberline Managerial:}{78}{section*.41}
-\contentsline {paragraph}{\nonumberline Organizational:}{78}{section*.42}
-\contentsline {chapter}{\numberline {10}Limitations and Future Work. Planned product usage}{79}{chapter.10}
-\contentsline {section}{\numberline {10.1}Limitations and Future Work}{79}{section.10.1}
-\contentsline {section}{\numberline {10.2}Planned product usage}{80}{section.10.2}
-\contentsline {paragraph}{\nonumberline Internal product management testing tool.}{80}{section*.43}
-\contentsline {paragraph}{\nonumberline Automation tool}{80}{section*.44}
-\contentsline {paragraph}{\nonumberline Verification tool.}{80}{section*.45}
-\contentsline {chapter}{\numberline {11}Conclusion}{83}{chapter.11}
-\contentsline {chapter}{\nonumberline Bibliography}{85}{appendix*.46}
-\contentsline {part}{\nonumberline Appendix}{89}{section*.47}
+\contentsline {paragraph}{\nonumberline The human causalities}{11}{section*.20}
+\contentsline {section}{\numberline {4.1}Existing approaches for test definitions}{12}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}xUnit}{12}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Fit}{13}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Cucumber}{14}{subsection.4.1.3}
+\contentsline {section}{\numberline {4.2}Test Sheets}{14}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Basic Test Sheets}{15}{subsection.4.2.1}
+\contentsline {chapter}{\numberline {5}Real-Time Software and its testing}{17}{chapter.5}
+\contentsline {section}{\numberline {5.1}Real-Time Software}{17}{section.5.1}
+\contentsline {section}{\numberline {5.2}Testing Real-Time software}{17}{section.5.2}
+\contentsline {section}{\numberline {5.3}Web scraping}{18}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Web scraping tools}{19}{subsection.5.3.1}
+\contentsline {paragraph}{\nonumberline PhantomJS}{19}{section*.21}
+\contentsline {paragraph}{\nonumberline CasperJS}{20}{section*.22}
+\contentsline {chapter}{\numberline {6}Asynchronous programming strategies and their performance}{21}{chapter.6}
+\contentsline {section}{\numberline {6.1}Asynchronous programming}{21}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}node.js}{21}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Event handling}{24}{subsection.6.1.2}
+\contentsline {section}{\numberline {6.2}Asynchronous handling strategies}{25}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Declarative}{25}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Imperative}{26}{subsection.6.2.2}
+\contentsline {paragraph}{\nonumberline Synchronous:}{27}{section*.23}
+\contentsline {paragraph}{\nonumberline Asynchronous:}{27}{section*.24}
+\contentsline {section}{\numberline {6.3}Performance}{27}{section.6.3}
+\contentsline {chapter}{\numberline {7}Architecture}{29}{chapter.7}
+\contentsline {chapter}{\numberline {8}Design Principles}{33}{chapter.8}
+\contentsline {chapter}{\numberline {9}Conventions}{35}{chapter.9}
+\contentsline {chapter}{\numberline {10}Implementation}{37}{chapter.10}
+\contentsline {section}{\numberline {10.1}Read Stream}{39}{section.10.1}
+\contentsline {subsection}{\numberline {10.1.1}Test Coverage}{40}{subsection.10.1.1}
+\contentsline {subsection}{\numberline {10.1.2}Correspondence to the design principles}{40}{subsection.10.1.2}
+\contentsline {section}{\numberline {10.2}Transform Stream}{41}{section.10.2}
+\contentsline {subsection}{\numberline {10.2.1}Test Coverage}{42}{subsection.10.2.1}
+\contentsline {subsection}{\numberline {10.2.2}Correspondence to the design principles}{43}{subsection.10.2.2}
+\contentsline {section}{\numberline {10.3}Scheme}{44}{section.10.3}
+\contentsline {subsection}{\numberline {10.3.1}Test Coverage}{46}{subsection.10.3.1}
+\contentsline {subsection}{\numberline {10.3.2}Correspondence to the design principles}{47}{subsection.10.3.2}
+\contentsline {section}{\numberline {10.4}Execution Order}{48}{section.10.4}
+\contentsline {subsection}{\numberline {10.4.1}Test coverage}{51}{subsection.10.4.1}
+\contentsline {subsection}{\numberline {10.4.2}Correspondence to the design principles}{52}{subsection.10.4.2}
+\contentsline {section}{\numberline {10.5}Execution Scheme}{53}{section.10.5}
+\contentsline {subsection}{\numberline {10.5.1}Test Coverage}{53}{subsection.10.5.1}
+\contentsline {subsection}{\numberline {10.5.2}Correspondence to the design principles}{53}{subsection.10.5.2}
+\contentsline {section}{\numberline {10.6}Template}{54}{section.10.6}
+\contentsline {subsection}{\numberline {10.6.1}Test Coverage}{57}{subsection.10.6.1}
+\contentsline {subsection}{\numberline {10.6.2}Correspondence to the design principles}{58}{subsection.10.6.2}
+\contentsline {section}{\numberline {10.7}Write Stream}{59}{section.10.7}
+\contentsline {subsection}{\numberline {10.7.1}Test Coverage}{62}{subsection.10.7.1}
+\contentsline {subsection}{\numberline {10.7.2}Correspondence to the design principles}{62}{subsection.10.7.2}
+\contentsline {section}{\numberline {10.8}Reporting mechanism}{63}{section.10.8}
+\contentsline {subsection}{\numberline {10.8.1}Implementation}{63}{subsection.10.8.1}
+\contentsline {subsection}{\numberline {10.8.2}Test coverage}{64}{subsection.10.8.2}
+\contentsline {subsection}{\numberline {10.8.3}Correspondence to the design principles}{65}{subsection.10.8.3}
+\contentsline {chapter}{\numberline {11}Performance}{67}{chapter.11}
+\contentsline {section}{\numberline {11.1}Generation performance}{67}{section.11.1}
+\contentsline {paragraph}{\nonumberline Single folder}{67}{section*.25}
+\contentsline {paragraph}{\nonumberline Nested folder}{67}{section*.26}
+\contentsline {section}{\numberline {11.2}Executions performance}{68}{section.11.2}
+\contentsline {paragraph}{\nonumberline Independent test steps}{68}{section*.27}
+\contentsline {paragraph}{\nonumberline Chain relationship}{69}{section*.28}
+\contentsline {chapter}{\numberline {12}User Experience}{73}{chapter.12}
+\contentsline {section}{\numberline {12.1}After Scenario Questionnaire}{75}{section.12.1}
+\contentsline {section}{\numberline {12.2}Post Study System Usability Questionnaire}{75}{section.12.2}
+\contentsline {chapter}{\numberline {13}System fit and benefits}{79}{chapter.13}
+\contentsline {section}{\numberline {13.1}Task-Technology Fit}{79}{section.13.1}
+\contentsline {paragraph}{\nonumberline Task characteristics:}{79}{section*.29}
+\contentsline {paragraph}{\nonumberline Technology Characteristics:}{80}{section*.30}
+\contentsline {paragraph}{\nonumberline Individual Characteristics:}{80}{section*.31}
+\contentsline {paragraph}{\nonumberline Task-Technology-Fit:}{80}{section*.32}
+\contentsline {paragraph}{\nonumberline Utilization:}{80}{section*.33}
+\contentsline {paragraph}{\nonumberline Performance Impact:}{81}{section*.34}
+\contentsline {section}{\numberline {13.2}Misfits}{81}{section.13.2}
+\contentsline {paragraph}{\nonumberline Functionality misfits:}{81}{section*.35}
+\contentsline {paragraph}{\nonumberline Data misfits:}{81}{section*.36}
+\contentsline {paragraph}{\nonumberline Usability misfits:}{81}{section*.37}
+\contentsline {paragraph}{\nonumberline Role misfits}{81}{section*.38}
+\contentsline {paragraph}{\nonumberline Control misfits}{82}{section*.39}
+\contentsline {paragraph}{\nonumberline Organizational culture misfits}{82}{section*.40}
+\contentsline {section}{\numberline {13.3}Benefits and affecting factors}{82}{section.13.3}
+\contentsline {paragraph}{\nonumberline Organizational benefits}{82}{section*.41}
+\contentsline {subsection}{\numberline {13.3.1}Short-term factor}{82}{subsection.13.3.1}
+\contentsline {paragraph}{\nonumberline Functional Fit}{82}{section*.42}
+\contentsline {paragraph}{\nonumberline Overcoming Organizational Inertia}{83}{section*.43}
+\contentsline {subsection}{\numberline {13.3.2}Long-term factor}{83}{subsection.13.3.2}
+\contentsline {paragraph}{\nonumberline Integration}{83}{section*.44}
+\contentsline {paragraph}{\nonumberline Process optimization}{83}{section*.45}
+\contentsline {paragraph}{\nonumberline Improved access to information}{83}{section*.46}
+\contentsline {paragraph}{\nonumberline On-going major enterprise system improvement projects}{83}{section*.47}
+\contentsline {paragraph}{\nonumberline Operational Benefits of Test Sheets Use}{83}{section*.48}
+\contentsline {paragraph}{\nonumberline Managerial:}{84}{section*.49}
+\contentsline {paragraph}{\nonumberline Organizational:}{84}{section*.50}
+\contentsline {chapter}{\numberline {14}Limitations and Future Work}{85}{chapter.14}
+\contentsline {section}{\numberline {14.1}Planned product usage}{86}{section.14.1}
+\contentsline {paragraph}{\nonumberline Internal product management testing tool.}{86}{section*.51}
+\contentsline {paragraph}{\nonumberline Automation tool}{86}{section*.52}
+\contentsline {paragraph}{\nonumberline Verification tool.}{86}{section*.53}
+\contentsline {chapter}{\numberline {15}Conclusion}{87}{chapter.15}
+\contentsline {chapter}{\nonumberline Bibliography}{89}{appendix*.54}
+\contentsline {part}{\nonumberline Appendix}{93}{section*.55}

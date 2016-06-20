@@ -23,6 +23,11 @@ The bank business model for apis: Identity.
 Banks in germany.
 \newblock \url{http://banksgermany.com/}.
 
+\bibitem{toyota}
+A case study of toyota unintended acceleration and software safety.
+\newblock
+  \url{https://users.ece.cmu.edu/\~koopman/pubs/koopman14\_toyota\_ua\_slides.pdf}.
+
 \bibitem{casperjs}
 Casperjs.
 \newblock \url{http://casperjs.org/}.
@@ -110,6 +115,10 @@ Module counts.
 Open banking apis: Threat and opportunity | consult hyperion.
 \newblock \url{http://www.chyp.com/open-banking-apis-threat-and-opportunity/}.
 
+\bibitem{phantom}
+Phantomjs - scriptable headless webkit.
+\newblock \url{https://github.com/ariya/phantomjs/}.
+
 \bibitem{costOfErrors}
 The real cost of software errors.
 \newblock \url{http://hdl.handle.net/1721.1/74607}.
@@ -193,6 +202,11 @@ Robert~L. Glass.
 \newblock Real-time: The \&ldquo;lost world\&rdquo; of software debugging and
   testing.
 \newblock {\em Commun. ACM}, 23(5):264--271, May 1980.
+
+\bibitem{therac}
+N.~G. Leveson and C.~S. Turner.
+\newblock An investigation of the therac-25 accidents.
+\newblock {\em Computer}, 26(7):18--41, July 1993.
 
 \bibitem{MES10}
 Alexander Maedche.
