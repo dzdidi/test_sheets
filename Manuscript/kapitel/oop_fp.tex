@@ -1,16 +1,33 @@
-\chapter{OOP and FP}
+\chapter{Programming approaches. Design principles and patterns}
 \section{Object Oriented Programming}
-"Programming languages with objects and classes typically provide dynamic lookup, abstraction, subtyping, and inheritance. These are the four main language concepts for object-oriented programming. They may be summarized in the following manner:
+"Programming languages with objects and classes typically provide dynamic lookup, abstraction, sub-typing, and inheritance. These are the four main language concepts for object-oriented programming. They may be summarized in the following manner:
 \textit{Dynamic lookup} means that when a message is sent to an object, the function code (or method) to be executed is determined by the way that the object is implemented, not some static property of the pointer or variable used to name the object. In other words, the object “chooses” how to respond to a message, and different objects may respond to the same message in different ways.
 \textit{Abstraction} means that implementation details are hidden inside a program unit with a specific interface. For objects, the interface usually consists of a set of public functions (or public methods) that manipulate hidden data.
 \textit{Subtyping} means that if some object a has all of the functionality of another object b, then we may use a in any context expecting b.
 \textit{Inheritance} is the ability to reuse the definition of one kind of object to define another kind of object.
 "\cite{concepts}
 
-\subsection{Design Principles}
+\section{Functional Programming}
+Functional Programming languages are languages which supports functions as a first-class citizens. Which mean that language provides an opportunity to store them in data structures, pass and return them from functions they are higher-order functions\cite{Hudak}.
+
+Declarative languages in contrast to imperative ones  are characterized as having no implicit state. Functional languages are declarative languages whose underlaying computational model is the function.\cite{Hudak}
+
+The most fundamental influence developing of functional languages was the work of Alnso Church on lambda calculus. "Church’s lambda calculus was the first suitable treatment of the computational aspects of functions."\cite{Hudak}\\
+
+Introduction of lambda functions to Java SE 8 as a new and important feature\cite{javase} indicates the growing need of imperative programming benefits in an Enterprise Software development.\\
+
+"Modeling with objects is powerful and intuitive, largely because this matches the perception of interacting with a world of which we are part. However, as we've seen repeatedly throughout this chapter, these models raise thorny problems of constraining the order of events and of synchronizing multiple processes. The possibility of avoiding these problems has stimulated the development of functional programming languages, which do not include any provision for assignment or mutable data. In such a language, all procedures implement well-defined mathematical functions of their arguments, whose behavior does not change. The functional approach is extremely attractive for dealing with concurrent systems." \cite{sicp}\\
+
+"John Backus, the inventor of Fortran, gave high visibility to functional programming when he was awarded the ACM Turing award in 1978. His acceptance speech (Backus 1978) strongly advocated the functional approach. A good overview of functional programming is given in Henderson 1980 and in Darlington, Henderson, and Turner 1982."\cite{sicp}\\
+
+
+\section{Design Principles. Patterns}
+
+\subsection{Design principles}
+The principles which were taken in to account during the system implementation.
 
 Agile design is a process, not an event.
-It's the continous application of principles, patterns, and practices to improve the structure and readability of the software. 
+It's the continuous application of principles, patterns, and practices to improve the structure and readability of the software. 
 It is the dedication to keep the design of the system as simple, clean, and expressive as possible at all times.\cite{MartinASD}
 
 Symptoms of not agile design \cite{MartinASD}:
@@ -103,8 +120,7 @@ Factory - "The Factory Design Pattern is probably the most used design pattern i
 Abstract Factroy(for HO test sheets) - "Using this pattern a framework is defined, which produces objects that follow a general pattern and at runtime this factory is paired with any concrete factory to produce objects that follow the pattern of a certain country. In other words, the Abstract Factory is a super-factory which creates other factories (Factory of factories).
 Abstract Factory offers the interface for creating a family of related objects, without explicitly specifying their classes."\cite{oosite}\\
 
-ObjectPool (passes sheet object through streams) - "pattern offer a mechanism to reuse objects that are expensive to create. .
-"\cite{oosite}\\
+ObjectPool (passes sheet object through streams) - "pattern offer a mechanism to reuse objects that are expensive to create. "\cite{oosite}\\
 
 Behavior Patterns - bahaviour patters are concerned with algorithms and the assignmens of resposnibilities between objects. Beahvioral pattersndescribe not just patterns of objects or classes but also the patterns of communication between them, These patterns characterize complex control flow thats difficult to tfollow at run time. They shift your focus away from flow of control to let you concentrate just on the way objects are interconnected"\cite{DesignPatterns}
 Interpreter (translation from ts to js) - "The Interpreter is one of the Design Patterns published in the GoF which is not really used. Ussualy the Interpreter Pattern is described in terms of formal grammars, like it was described in the original form in the GoF but the area where this design pattern can be applied can be extended.
@@ -112,98 +128,20 @@ Interpreter (translation from ts to js) - "The Interpreter is one of the Design 
 \item Given a language, define a representation for its grammar along with an interpreter that uses the representation to interpret sentences in the language.
 \item Map a domain to a language, the language to a grammar, and the grammar to a hierarchical object-oriented design
 \end{itemize}"\cite{oosite}\\
-Strategy (multipiping/piping of streams) - "lets the algorithm vary independently from clients that use it."\cite{oosite}\\
+Strategy (multiing/piping of streams) - "lets the algorithm vary independently from clients that use it."\cite{oosite}\\
 Observer (event emitor) - "The Observer Design Pattern can be used whenever a subject has to be observed by one or more observers."\cite{oosite}
-Visitor (callbacks in JS) - "\begin{itemize}
+Visitor  - "\begin{itemize}
 \item Represents an operation to be performed on the elements of an object structure.
 \item Visitor lets you define a new operation without changing the classes of the elements on which it operates.
 \end{itemize}
 "\cite{oosite}\\
 
+Piping patterns
+"As in real-life plumbing, Node.js streams also can be piped together following different patterns; we can, in fact, merge the flow of two different streams into one, split the flow of one stream into two or more pipes, or redirect the flow based on a condition. In this section, we are going to explore the most important plumbing techniques that can be applied to Node.js streams."\cite{nodejsbook}
 
-\section{Functional Programming}
-Functional Programming languages are languages which supports functions as a first-class citizens. Which mean that languge provides an opotunity to store them in data strucutures, pass and return them from functions they are higher-order functions\cite{Hudak}.
+\paragraph{Combining streams} - encapsulation of sequentualy connected streams in to single looking stream with single I/O points and single error handling mechanism by pipeing readable stream in to writable stream.\cite{nodejsbook}
+\paragraph{Forking streams} - piping single readable in to multiple writable streams.\cite{nodejsbook}
+\paragraph{Merging streams} - piping multiple readable streams in to single writable stream.\cite{nodejsbook}
+\paragraph{Multiplexing and demultiplexing} - forking and merging pattern which provides shared communication channel for entities from different streams.\cite{nodejsbook}
+\cite{nodejsbook}
 
-Declarative languages in contrast to imperative ones  are characterized as having no implicit state. Functional languages are declarative languages whose underlaying computational model is the function.\cite{Hudak}
-
-The most fundamental influence developing of functional languages was the work of Alnso Church on lambda calculus. "Church’s lambda calculus was the first suitable treatment of the computational aspects of functions."\cite{Hudak}\\
-
-Introduction of lambda functions to Java SE 8 as a new and important feature\cite{javase} indicates the growing need of imperative programming benefits in an Enterprise Software development.\\
-
-"Modeling with objects is powerful and intuitive, largely because this matches the perception of interacting with a world of which we are part. However, as we've seen repeatedly throughout this chapter, these models raise thorny problems of constraining the order of events and of synchronizing multiple processes. The possibility of avoiding these problems has stimulated the development of functional programming languages, which do not include any provision for assignment or mutable data. In such a language, all procedures implement well-defined mathematical functions of their arguments, whose behavior does not change. The functional approach is extremely attractive for dealing with concurrent systems." \cite{sicp}\\
-
-"John Backus, the inventor of Fortran, gave high visibility to functional programming when he was awarded the ACM Turing award in 1978. His acceptance speech (Backus 1978) strongly advocated the functional approach. A good overview of functional programming is given in Henderson 1980 and in Darlington, Henderson, and Turner 1982."\cite{sicp}\\
-
-\section{Streams}
-"A stream is an abstract interface implemented by various objects in Node.js." \cite{nodejsstreams}
-"Dominic Tarr (one of top contributors to the Node.js community \cite{nodejscontributors}), defines streams as node's best and most misunderstood idea."\cite{nodejsbook}
-
-Streams are the classic example of Pipe-and-filter architecture.
-
-"In an event-based platform such as Node.js, the most efficient way to handle I/O is in real time, consuming the input as soon as it is available and sending the output as soon as it is produced by the application."\cite{nodejsbook}
-
-\begin{itemize}
-	\item Spatial efficiency
-	\item Time efficiency
-	\item Composability
-\end{itemize}
-
-
-%\paragraph{Spatial efficiency.}
-%"First of all, streams allow us to do things that would not be possible, by buffering data and processing it all at once. For example, consider the case in which we have to read a very big file, let's say, in the order of hundreds of megabytes or even gigabytes. Clearly, using an API that returns a big buffer when the file is completely read, is not a good idea.Imagine reading a few of these big files concurrently; our application will easily run out of memory. Besides that, buffers in V8 (default NodeJS engine) cannot be bigger than 0x3FFFFFFF bytes (a little bit less than 1 GB). So, we might hit a wall way before running out of physical memory." \cite{nodejsbook}
-
-%\paragraph{Time efficiency.}"Let's now consider the case of an application that compresses a file and uploads it to a remote HTTP server, which in turn decompresses and saves it on the filesystem.If our client was implemented using a buffered API, the upload would start only when the entire file has been read and compressed. On the other hand, the decompression will start on the server only when all the data has been received. A better solution to achieve the same result involves the use of streams. On the client machine, streams allows you to compress and send the data chunks as soon as they are read from the filesystem, whereas, on the server, it allows you to decompress every chunk as soon as it is received from the remote peer."\cite{nodejsbook}
-
-%\paragraph{Composability.}
-%"The code we have seen so far has already given us an overview of how streams can be composed, thanks to the pipe() method, which allows us to connect the different processing units, each being responsible for one single functionality in perfect Node.js style. 
-%This is possible because streams have a uniform interface, and they can understand each other in terms of API. The only prerequisite is that the next stream in the pipeline has to support the data type produced by the previous stream, which can be either binary, text, or even objects, as we will see later in the chapter.\\
-%For these reasons, streams are often used not just to deal with pure I/O, but also as a means to simplify and modularize the code."\cite{nodejsbook}
-
-\subsection{Anatomy of Streams}
-"Every stream in Node.js is an implementation of one of the four base abstract classes available in the stream core module:
-
-\begin{itemize}
-\item stream.Readable
-\item stream.Writable
-\item stream.Duplex
-\item stream.Transform
-\end{itemize}
-
-Each stream class is also an instance of EventEmitter. 
-Streams, in fact, can produce several types of events, such as end, when a Readable stream has finished reading, or error, when something goes wrong.
-
-One of the reasons why streams are so flexible is the fact that they can handle not only binary data, but practically, almost any JavaScript value; in fact they can support two operating modes:
-\begin{itemize}
-\item Binary mode: This mode is where data is streamed in the form of chunks, such as buffers or strings;
-\item Object mode: This mode is where the streaming data is treated as a sequence of discreet objects (allowing to use almost any JavaScript value).
-\end{itemize}
-
-\paragraph{Readable streams.}
-A readable stream represents a source of data; in Node.js, it's implemented using the Readable abstract class that is available in the stream module.
-
-\paragraph{Writable streams.}
-A writ[e]able stream represents a data destination; in Node.js, it's implemented using the Writ[e]able abstract class, which is available in the stream module.
-
-\paragraph{Duplex streams.}
-A Duplex stream is a stream that is both Readable and Writ[e]able.
-It is useful when we want to describe an entity that is both a data source and a data destination, as for example, network sockets. 
-Duplex streams inherit the methods of both stream.Readable and stream.Writable, so this is nothing new to us. 
-This means that we can read() or write() data, or listen for both the readable and drain events.
-
-\paragraph{Transform streams.}
-The Transform streams are a special kind of Duplex stream that are specifically designed to handle data transformations.
-In a simple Duplex stream, there is no immediate relationship between the data read from the stream and the data written into it (at least, the stream is agnostic to such a relationship).
-On the other side, Transform streams apply some kind of transformation to each chunk of data that they receive from their Writable side and then make the transformed data available on their Readable side.
-From the outside, the interface of a Transform stream is exactly like that of a Duplex stream.
-However, when we want to build a new Duplex stream we have to provide the read() and write() methods while, for implementing a new Transform stream, we have to fill in another pair of methods: transform() and flush()."\cite{nodejsbook}
-
-
-\subsection{Piping patterns}
-"As in real-life plumbing, Node.js streams also can be piped together following different patterns; we can, in fact, merge the flow of two different streams into one, split the flow of one stream into two or more pipes, or redirect the flow based on a condition. 
-In this section, we are going to explore the most important plumbing techniques that can be applied to Node.js streams."\cite{nodejsbook}
-\begin{itemize}
-	\item Combining streams - encapsulation of sequentualy connected streams in to single looking stream with single I/O points and single error handling mechanism by pipeing readable stream in to writable stream.\cite{nodejsbook}
-	\item Forking streams - piping single readable in to multiple writable streams.\cite{nodejsbook}
-	\item Merging streams - piping multiple readable streams in to single writable stream.\cite{nodejsbook}
-	\item Multiplexing and demultiplexing - forking and merging pattern which provides shared communication chanel for entities from different sreams.\cite{nodejsbook}
-\end{itemize}

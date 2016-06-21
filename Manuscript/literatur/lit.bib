@@ -109,6 +109,18 @@ fuer online quellen booklet verwenden
 
 
 Artikel aus Fachzeitschriften
+@ARTICLE{therac, 
+author={N. G. Leveson and C. S. Turner}, 
+journal={Computer}, 
+title={An investigation of the Therac-25 accidents}, 
+year={1993}, 
+volume={26}, 
+number={7}, 
+pages={18-41}, 
+keywords={accidents;government policies;linear accelerators;medical computing;radiation therapy;software engineering;systems engineering;Therac-25 medical electron accelerator;accidents;government regulation;radiation overdoses;safety-critical systems;software engineering;software-related overdoses;system development;system engineering;system operation;Accidents;Biomedical applications of radiation;Computer industry;Drugs;Electron accelerators;Food industry;Food manufacturing;History;Injuries;Software safety}, 
+doi={10.1109/MC.1993.274940}, 
+ISSN={0018-9162}, 
+month={July},}
 
  @article{RealTimeTesting,
  author = {Glass, Robert L.},
@@ -168,7 +180,7 @@ Artikel aus Fachzeitschriften
   author={Vouk, Mladen A and others},
   year={2000}
 }
-Sammelbaende. Vorsicht, immer *number* verwenden, nicht *volume*
+
 @Incollection{COMITY,
 title = {{C}{O}{M}{I}{T}{Y} - {C}onflict {A}voidance in {P}ervasive {C}omputing {E}nvironments.},
 author = {Verena Tuttlies and Gregor Schiele and Christian Becker},
@@ -308,7 +320,7 @@ title={Something that is not covered by any other annotation may be declared mis
 }
 @misc{wikiScraping,
 	title = {Web Scraping - Wikipedia Free Encyclopedia},
-	howpublished={\url{https://en.wikipedia.org/wiki/Web_scraping}},
+	howpublished={\url{https://en.wikipedia.org/wiki/Web\_scraping}},
 	url-date = {2016-01-27}
 }
 @misc{w3cDOM,
@@ -350,29 +362,281 @@ title={Something that is not covered by any other annotation may be declared mis
 }
 @misc{nodejscontributors,
 	title = {Top NPM contributors by number of packages},
-	url = {https://gist.github.com/michalbe/71f6f9e5938eeb781dc4},
+	howpublished={\url {https://gist.github.com/michalbe/71f6f9e5938eeb781dc4}},
 	url-date = {2016-1-18}
 }
 @misc{nodejsstreams,
 	title = {Stream: Node.js v5.4.1 Documentation},
-	url = {https://nodejs.org/docs/latest/api/stream.html},
+	howpublished={\url{https://nodejs.org/docs/latest/api/stream.html}},
 	url-date = {2016-1-18}
 }
 @misc{ieeeTesting,
 	title = {IEEE SA - 829-2008 - IEEE Standard for Software and System Test Documentation},
-	url = {https://standards.ieee.org/findstds/standard/829-2008.html},
+	howpublished={\url {https://standards.ieee.org/findstds/standard/829-2008.html}},
 	url-date = {2016-2-3}
 }
 @misc{gtor,
 	title = {kriskowal/gtor: A General Theory of Reactivity},
-	url = {https://github.com/kriskowal/gtor/},
+	howpublished={\url {https://github.com/kriskowal/gtor/}},
 	url-date = {2016-2-17}
 }
-@misc{asyncA,
-	title = {Analysis of generators and other async patterns in node},
-	url = {https://spion.github.io/posts/analysis-generators-and-other-async-patterns-node.html},
+@misc{asyncPerformance_2,
+	title = {Why I am switching to promises},
+	howpublished={\url{https://spion.github.io/posts/why-i-am-switching-to-promises.html}},
 	url-date = {2016-2-19}
 }
+@misc{asyncPerformance,
+	title = {Analysis of generators and other async patterns in node},
+	howpublished={\url{https://spion.github.io/posts/analysis-generators-and-other-async-patterns-node.html}},
+	url-date = {2016-2-19}
+}
+@misc{costOfErrors,
+	title = {The Real Cost of Software Errors},
+	howpublished={\url{http://hdl.handle.net/1721.1/74607}},
+	url-date = {2016-3-7}
+}
+@misc{toyota,
+	title = {A Case Study of Toyota Unintended Acceleration and Software Safety},
+	howpublished={\url{https://users.ece.cmu.edu/\~koopman/pubs/koopman14\_toyota\_ua\_slides.pdf}},
+	url-date = {2016-3-7},
+	date = {2014-9-18}
+}
+
+@book{xunit,
+title = "xUnit test patterns refactoring test code",
+author = "Meszaros, Gerard",
+publisher = "Addison-Wesley",
+address = "Upper Saddle River, N.J.",
+year = "2007",
+isbn = "9780131495050",
+keywords = "Software patterns, Computer software / Testing",
+series = "Safari Books Online",
+language = "eng",
+bibsource = "Primo, http://link.bib.uni-mannheim.de/primo/MAN\_ALMA51157610660002561",
+}
+
+@misc{xunitFowler,
+	title = {XUnit},
+	howpublished={\url{http://www.martinfowler.com/bliki/Xunit.html}},
+	url-date = {2016-3-8},
+}
+@misc{fit,
+	title = {Fit},
+	howpublished={\url{http://fit.c2.com/}},
+	url-date = {2016-3-8},
+}
+@misc{fitIntro,
+	title = {Fit},
+	howpublished={\url{http://fit.c2.com/wiki.cgi?IntroductionToFit}},
+	url-date = {2016-3-8},
+}
+@misc{cuceRef,
+	title = {Cucumber: Reference},
+		howpublished={\url{https://cucumber.io/docs/reference}},
+	url-date = {2016-3-8},
+}
+
+@misc{asyncArticle,
+	title = {Introduction to Asynchronous Programming},
+	howpublished={\url{http://cs.brown.edu/courses/cs168/s12/handouts/async.pdf}},
+	url-date = {2016-3-8},
+}
+@article{asyncGraph,
+ author = {Xie, Chenning and Chen, Rong and Guan, Haibing and Zang, Binyu and Chen, Haibo},
+ title = {SYNC or ASYNC: Time to Fuse for Distributed Graph-parallel Computation},
+ journal = {SIGPLAN Not.},
+ issue_date = {August 2015},
+ volume = {50},
+ number = {8},
+ month = jan,
+ year = {2015},
+ issn = {0362-1340},
+ pages = {194--204},
+ numpages = {11},
+ url = {http://doi.acm.org/10.1145/2858788.2688508},
+ doi = {10.1145/2858788.2688508},
+ acmid = {2688508},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {Computation Modes, Distributed Graph-parallel Computation},
+}
+@misc{npmAbout,
+	title = {About npm},
+		howpublished={\url{https://www.npmjs.com/about}},
+	url-date = {2016-3-9},
+}
+@misc{moduleCounts,
+	title = {Module Counts},
+	howpublished={\url{http://www.modulecounts.com/}},
+	url-date = {2016-3-9},
+}
+@misc{zalgo,
+	title = {glog.isz.me - Designing APIs for Asynchrony},
+	howpublished={\url{http://blog.izs.me/post/59142742143/designing-apis-for-asynchrony}},
+	url-date = {2016-3-10},
+}
+
+@misc{events,
+	title = {Events Node.js},
+		howpublished={\url{https://nodejs.org/api/events.html}},
+	url-date = {2016-3-11},
+}
+
+@misc{msRealTime,
+	title = {A Strategic Approach to Software Testing in Real- Time Systems},
+	howpublished={\url{https://msdn.microsoft.com/en-us/library/aa459157.aspx}},
+	url-date = {2016-3-14},
+}
+
+@misc{strategicRT,
+	title = {Testing Real-Time Systems in Microsoft Windows CE .NET},
+	howpublished={\url{http://www.softwaretestingnet.com/2009/10/strategic-approach-to-software-testing.html}},
+	url-date = {2016-3-14},
+}
+
+@proceedings{trts,
+ author = {Castanet, R and Laurencot, P},
+ title = {Testing real-Time Systems},
+ booktitle = {15th World Conference on Non-Destructive Testing},
+ series = {DATE 15-21 October},
+ year = {2000},
+ location = {Rome, Italy},
+ url = {http://www.ndt.net/article/wcndt00/papers/idn235/idn235.htm},
+ publisher = {Italian Society for Non-Destructive Testing and Monitoring Diagnostics},
+ address = {A.Foresti 5, 25127 Brescia, Italy}
+} 
+
+@article{draft, 
+journal={IEEE Unapproved Draft Std P829\_D9}, 
+title={Draft IEEE Standard for Software and System Test Documentation (Revision of IEEE 829-1998)}, 
+pages={}, 
+keywords={Testing;and life cycle;integrity level;test documentation}, 
+month={}
+}
+
+@INPROCEEDINGS{rtSandD, 
+author={J. J. P. Tsai and K. Y. Fang and Y. D. Bi}, 
+booktitle={Computer Software and Applications Conference, 1990. COMPSAC 90. Proceedings., Fourteenth Annual International}, 
+title={On real-time software testing and debugging}, 
+year={1990}, 
+pages={512-518}, 
+keywords={program debugging;program testing;real-time systems;debugging;dynamic analysis;nondeterministic behavior;noninterference monitoring system architecture;real-time software testing;run-time information;timing constraints;Computer errors;Debugging;Information analysis;Monitoring;Real time systems;Runtime;Software systems;Software testing;System testing;Timing}, 
+doi={10.1109/CMPSAC.1990.139423}, 
+month={Oct}
+}
+
+@misc{listOfBanks,
+	title = {Banks in Germany},
+	howpublished={\url{http://banksgermany.com/}},
+	url-date = {2016-3-16},
+}
+
+@misc{xunitWiki,
+	title = {xUnit - Wikipedia, free encyclopedia},
+	howpublished={\url{https://en.wikipedia.org/wiki/XUnit}},
+	url-date = {2016-3-16},
+}
+
+@misc{qSrap,
+	title = {What's difference between web scraping and data mining?},
+	howpublished={\url{https://www.quora.com/Whats-difference-between-web-scraping-and-data-mining}},
+	url-date = {2016-3-25},
+}
+
+@misc{conScrap,
+	title = {Are You Screen Scraping or Data Mining?},
+	howpublished={\url{http://www.connotate.com/are-you-screen-scraping-or-data-mining/}},
+	url-date = {2016-3-25},
+}
+
+@inproceedings{npmHydra,
+	title={npm hydra worm disclosure},
+	author={Sam Saccone},
+	year={2016},
+	howpublished={\url{http://www.kb.cert.org/CERT_WEB/services/vul-notes.nsf/6eacfaeab94596f5852569290066a50b/018dbb99def6980185257f820013f175/$FILE/npmwormdisclosure.pdf}},
+	url-date = {2016-3-29}
+}
+@misc{npmSoft,
+	title = {Node.js Package Manager Vulnerable to Malicious Worm Packages},
+	author = {Catalin Cimpanu}
+	howpublished={\url{http://news.softpedia.com/news/node-js-package-manager-vulnerable-to-malicious-worm-packages-502216.shtml}},
+	url-date = {2016-3-29},
+}
+@misc{npmDown,
+	title = {Annoyed Developer Brings Down Thousands of JavaScript \& Node.js Projects},
+	author = {Catalin Cimpanu}
+	howpublished={\url{http://news.softpedia.com/news/annoyed-developer-brings-down-thousands-of-javascript-node-js-projects-502075.shtml}},
+	url-date = {2016-3-29},
+}
+
+@misc{mdnJS,
+	title = {JavaScript | MDN},
+	howpublished={\url{https://developer.mozilla.org/en-US/docs/Web/JavaScript}},
+	url-date = {2016-3-29},
+}
+
+@misc{mdnProto,
+	title = {Inheritance and the prototype chain | MDN},
+	howpublished={\url{https://developer.mozilla.org/en/docs/Web/JavaScript/Inheritance\_and\_the\_prototype\_chain}},
+	url-date = {2016-3-29},
+}
+
+@misc{mdnOOP,
+	title = {Introduction to Object-Oriented JavaScript | MDN},
+	howpublished={\url{https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction\_to\_Object-Oriented\_JavaScript}},
+	url-date = {2016-3-29},
+}
+
+@misc{phantom,
+	title = {PhantomJS - Scriptable Headless WebKit},
+	howpublished={\url{https://github.com/ariya/phantomjs/}},
+	url-date = {2016-6-12},
+}
+
+
+@unpublished{MES5,
+	Author = {Maedche, Alexander},
+	Institution = {University of Mannheim},
+	Howpublished = {University Lecture},
+	Year = {2014},
+	Title = {L5-Intro ES Transformation}
+}
+@unpublished{MES6,
+	Author = {Maedche, Alexander},
+	Institution = {University of Mannheim},
+	Howpublished = {University Lecture},
+	Year = {2014},
+	Title = {L6-Intro ES Development}
+}
+@unpublished{MES7,
+	Author = {Maedche, Alexander},
+	Institution = {University of Mannheim},
+	Howpublished = {University Lecture},
+	Year = {2014},
+	Title = {L7-Intro ES Adoption}
+}
+@unpublished{MES9,
+	Author = {Maedche, Alexander},
+	Institution = {University of Mannheim},
+	Howpublished = {University Lecture},
+	Year = {2014},
+	Title = {L9-Intro ES Converion}
+}
+@unpublished{MES10,
+	Author = {Maedche, Alexander},
+	Institution = {University of Mannheim},
+	Howpublished = {University Lecture},
+	Year = {2014},
+	Title = {L10-Intro ES Use}
+}
+@unpublished{MES11,
+	Author = {Maedche, Alexander},
+	Institution = {University of Mannheim},
+	Howpublished = {University Lecture},
+	Year = {2014},
+	Title = {L11-Intro ES Use process value}
+}
+
 Liste der zulaessigen Felder
 
     address      %%  Verlagsort

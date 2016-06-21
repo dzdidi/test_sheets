@@ -1,0 +1,25 @@
+function applyTemplate(sheet, scheme, fileName) {
+  var res = '';
+
+  res += addDescription(scheme[0]);
+  scheme = scheme.slice(2);
+  res += addRequires();
+  res += addDeclarations(sheet, scheme);
+
+  var linearCalls = [];
+  var nestedCalls = [];
+  for (var i = 0; i < scheme.length; i++) {
+    if(Array.isArray(scheme[i])) {
+      nestedCalls.push(scheme[i]);
+    } else {
+      linearCalls.push(scheme[i]);
+    }
+  };
+
+  res += makeLinearCalls(sheet, linearCalls, fileName);
+  for (var i = 0; i < nestedCalls.length; i++){
+    res += makeNestedCall(sheet, nestedCalls[i], fileName, '', i);
+  };
+
+  return res;
+

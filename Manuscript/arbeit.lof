@@ -3,11 +3,41 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces figo GmbH high level architecture}}{4}{figure.2.1}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces O-I-T model\cite {MES5}}}{7}{figure.3.1}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Basic Test Sheet}}{16}{figure.4.1}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces General Testing and Debugging Strategy\cite {rtSandD}}}{19}{figure.5.1}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces npm comparison with other package managers\cite {moduleCounts}}}{22}{figure.6.1}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Node.js architecture \cite {nodejsbook}}}{23}{figure.6.2}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Node.js event handling system \cite {nodejsbook}}}{24}{figure.6.3}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Duality Matrix \cite {gtor}}}{26}{figure.6.4}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Information flow}}{29}{figure.7.1}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {10.1}{\ignorespaces Test Sheet coverage for stack.js}}{38}{figure.10.1}
+\contentsline {figure}{\numberline {10.2}{\ignorespaces Test coverage for read\_stream.js}}{40}{figure.10.2}
+\contentsline {figure}{\numberline {10.3}{\ignorespaces Test coverage for transform\_stream.js}}{43}{figure.10.3}
+\contentsline {figure}{\numberline {10.4}{\ignorespaces Test coverage for scheme.js}}{47}{figure.10.4}
+\contentsline {figure}{\numberline {10.5}{\ignorespaces Test coverage for order.js}}{52}{figure.10.5}
+\contentsline {figure}{\numberline {10.6}{\ignorespaces Test coverage for creation of execution scheme}}{53}{figure.10.6}
+\contentsline {figure}{\numberline {10.7}{\ignorespaces Test coverage for template.js}}{58}{figure.10.7}
+\contentsline {figure}{\numberline {10.8}{\ignorespaces Test coverage for write\_stream.js}}{62}{figure.10.8}
+\contentsline {figure}{\numberline {10.9}{\ignorespaces Result Test Sheet for stack.js}}{64}{figure.10.9}
+\contentsline {figure}{\numberline {10.10}{\ignorespaces Test coverage for report mechanism}}{65}{figure.10.10}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {11.1}{\ignorespaces Generation performance for files within single folder}}{68}{figure.11.1}
+\contentsline {figure}{\numberline {11.2}{\ignorespaces Generation performance for files within nested folders}}{69}{figure.11.2}
+\contentsline {figure}{\numberline {11.3}{\ignorespaces Execution performance for independent test steps}}{70}{figure.11.3}
+\contentsline {figure}{\numberline {11.4}{\ignorespaces Execution performance for interdependent test steps}}{71}{figure.11.4}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {13.1}{\ignorespaces Task-Technology Fit model\cite {MES10}}}{79}{figure.13.1}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

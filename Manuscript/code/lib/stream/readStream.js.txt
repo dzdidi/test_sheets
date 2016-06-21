@@ -1,0 +1,24 @@
+function getFilesStream(dirPath) {
+  return fsReaddir(dirPath)
+    .on('error', function(obj) {
+      console.error(obj);
+    })
+    .on('finish', function(obj) {});
+};
+
+var getDataStream = through.obj(function(files, enc, callback) {
+  for (var file of files) {
+    if (path.extname(file) === '.xlsx') {
+      var sheet = xlsx.readFile(file).Sheets.Sheet1;
+      var meta = fs.statSync(file);
+
+      this.push({ fileName: file, meta: meta, sheet: sheet });
+    };
+  };
+
+  callback();
+});
+
+module.exports = function(dir) {
+  return multipipe(getFilesStream(dir), getDataStream);
+};

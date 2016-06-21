@@ -1,34 +1,31 @@
-\chapter{Technology}
+\chapter{Asynchronous programming. Node.js. Reactive strategies and performance}
 
-\section{Web scraping}
-	"Web scraping (web harvesting or web data extraction) is a computer software technique of extracting information from websites. Usually, such software programs simulate human exploration of the World Wide Web by either implementing low-level Hypertext Transfer Protocol (HTTP), or embedding a fully-fledged web browser, such as Mozilla Firefox.\\
+A comparison between Sync and Async mode\cite{asyncGraph}
 
-Web scraping is the process of automatically collecting information from the World Wide Web. It is a field with active developments sharing a common goal with the semantic web vision, an ambitious initiative that still requires breakthroughs in text processing, semantic understanding, artificial intelligence and human-computer interactions. Current web scraping solutions range from the ad-hoc, requiring human effort, to fully automated systems that are able to convert entire web sites into structured information, with limitations." \cite{wikiScraping}
+\section{Asynchronous programming}
+"In this model, the tasks are interleaved with one another, but in a single thread of control. This is simpler
+than the threaded case because the programmer always knows that when one task is executing, another
+task is not. Although in a single-processor system a threaded program will also execute in an interleaved
+pattern, a programmer using threads should still think in terms of Figure 2, not Figure 3, lest the program
+work incorrectly when moved to a multi-processor system. But a single-threaded asynchronous system will
+always execute with interleaving, even on a multi-processor system.
+2The multi-threaded synchronous model is also referred to as “preemptive multitasking,” with the asynchronous model called
+“cooperative multitasking.”
+2
+CS168 Async Programming
+There is another difference between the asynchronous and threaded models. In a threaded system the
+decision to suspend one thread and execute another is largely outside of the programmer’s control. Rather,
+it is under the control of the operating system, and the programmer must assume that a thread may be
+suspended and replaced with another at almost any time. In contrast, under the asynchronous model a task
+will continue to run until it explicitly relinquishes control to other tasks."\cite{asyncArticle}
 
-"The Document Object Model is a platform- and language-neutral interface that will allow programs and scripts to dynamically access and update the content, structure and style of documents." \cite{w3cDOM}
-\subsection{CasperJS}
-		\cite{casperjs}
-		CasperJS is an open source navigation scripting \& testing utility written in JavaScript for the PhantomJS WebKit headless browser and SlimerJS (Gecko). It eases the process of defining a full navigation scenario and provides useful high-level functions, methods \& syntactic sugar for doing common tasks such as:
-\begin{itemize}
-	\item defining \& ordering browsing navigation steps
-	\item filling \& submitting forms
-	\item clicking \& following links
-	\item capturing screenshots of a page (or part of it)
-	\item testing remote DOM
-	\item logging events
-	\item downloading resources, including binary ones
-	\item writing functional test suites, saving results as JUnit XML
-	\item scraping Web contents
-\end{itemize}
-
-\section{NodeJS and Ansynchronous programming}
-\subsection{NodeJS}
+\section{NodeJS}
 
 "As an asynchronous event driven framework, Node.js is designed to build scalable network applications. 
 Node is similar in design to and influenced by systems like Ruby's Event Machine or Python's Twisted. 
 Node takes the event model a bit further, it presents the event loop as a language construct instead of as a library." \cite{nodejsabout}
 
-"Node.js is considered by many as a game-changer—the biggest shift of the decade in web development.[...]\\
+"Node.js is considered by many as a game-changer the biggest shift of the decade in web development.[...]\\
  First, Node.js applications are written in JavaScript, the language of the web, the only programming language supported natively by a majority of web browsers. [...]\\
 The second revolutionizing factor is its single-threaded, asynchronous architecture. 
 Besides obvious advantages from a performance and scalability point of view, this characteristic changed the way developers approach concurrency and parallelism. [...]\\
@@ -1034,7 +1031,7 @@ In this section, we are going to explore the most important plumbing techniques 
 \cite{nodejsbook}
 
 \section{Performance measurements by Gorgi Kosev}
-"The original and flattened solutions are the fastest, as they use vanilla callbacks, with the fastest flattened solution being flattened-class.js." they also use the least amount of memory\cite{asyncA}
+"The original and flattened solutions are the fastest, as they use vanilla callbacks, with the fastest flattened solution being flattened-class.js." they also use the least amount of memory\cite{asyncPerformance}
 
 \section{Asynchronous Programming}
 here is the stuff from General Theory of Reactivity

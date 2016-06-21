@@ -1,20 +1,21 @@
 \chapter{figo GmbH}
-\section{General Information}
-The figo GmbH’s mission is to “build the backbone of next generation financial services"\cite{figoFAQVision}, company was founded in 2012 and has its headquarter in Hamburg. Total Equity Funding: \$778.660 in 3 Rounds from 7 Investors (November 3, 2015). Currently, the API is fully functional in Germany and partly in Austria.\cite{figoAngel}\cite{figoCB}
+\label{chaper:figo}
+The German banking system is divided into three large sectors: private, public, and cooperative. The cooperative sector is represented by 1,144 credit unions and 2 cooperative central banks. The public sector employs 431 savings bank, 10 land banks and other institutions. Private banks are represented by 4 transnational banks, 42 investment banks, and 176 regional and other banks. There is also operating are 167 registered branches of foreign banks, including 60 investment banks\cite{listOfBanks}.   
 
-figo Connect API was created to accelerate innovation in the FinTech area and to allow figo's partners to offer products with real added value. It enables developers, startups and even banks to connect to every financial service provider. These partners can access every bank account (current, savings, loan, securities, ...), credit card, eWallet and other financial services like PayPal through one single REST-API. \cite{figoFAQWhat}\cite{figoFAQVision}\cite{figoFAQPartners}
+An introduction of the Payment Services Directive (PSD) and PSD2 by European Commission together with initiatives of the UK Government regarding API provision and standardization have obligated banks with the implementation of on-line access points to their services\cite{LarsAPI}\cite{TimAPI}\cite{DaveAPI}. Within the Single European Payment Area acceptance of directive by European Bank Authority scheduled within the year 2017\cite{PSD2}.
 
-Functions available through API:\cite{figoAPI}
+
+
+figo is a platform to access banking information and execute banking transactions in a regulated environment (PSD).  figo connects and translates services (APIs) from 99\% of German banks to a unified RESTful API for partners and third parties i.e. banks ans financial institutions, financial technology companies (FinTech))\cite{figoAngel}\cite{figoCB}\cite{figoFAQWhat}\cite{figoFAQVision}\cite{figoFAQPartners}.
+The list of figo's partners and customers  together with their use cases can be found via following link: \url{http://figo.io/use\_cases.html}.
+
+The figo platform can be used in two different ways: 
 \begin{itemize}
-	\item Create, Read, Update, Delete Bank account(s);
-	\item Read, Update, Delete Bank account(s) transactions;
-	\item Create, Read, Update, Delete Bank account(s) standing orders;
-	\item Create, Read, Update, Delete Bank account(s) direct debits;
-	\item Read, Update  Bank account(s) securities;
-	\item Create, Read, Update, Delete Bank payment(s);
+	\item Access to account (XS2A) software as a service. That is the preferred and easiest model by developers and FinTech partners to get access to account;
+	\item XS2A API as white label technology  thats is the preferred model by banks since they can comply with PSD2 requirements, additionally, they have the big opportunity to benefit from an API platform infrastructure. 
 \end{itemize}
-List of partners of figo API with their use-cases: \url{http://figo.io/use_cases.html} 
 
+figo GmbH is a FinTech company with the headquarter located Hamburg, Germany. It was founded in 2012  with the mission “to build the backbone of next generation financial services"\cite{figoFAQVision}.  Currently, the API is fully functional in Germany, partly in Austria and England\cite{figoAngel}\cite{figoCB}.
 
 
 %"The Figo GmbH was founded in 2012 and has its headquarters in Hamburg.
@@ -32,37 +33,152 @@ List of partners of figo API with their use-cases: \url{http://figo.io/use_cases
 
 %"Our banking API enables developers, startups and even banks to connect to every financial service provider. These partners can access every bank account (current, savings, loan, securities, ...), credit card, eWallet and other financial services through one single REST-API. It is possible to extract account information and initiate bank transfers \& direct debits. With our API, old and new players of the financial service industry are able to easily develop and test new services without the inconvenience of connecting to every single bank."\cite{figoCB}
 
-\section{IT infrastructure}
-Information technology infrastructure of figo GmbH has two parts related to the external connections. \textbf{API Server} - implements interfaces to figo's customers and partners for accessing banking inforamtion and services. \textbf{Banking Server} - implements connection to banks via three possible communication channels. This particular part lays in scope of this research as a part where implemented system is running. Below provided description introduces basic concepts of Banking Service Architecture. For more information regarding IT infrastructure please use (pics with arch scheme attached)
-	\subsection{Banking Server Architecture}
-	\paragraph{Custom-API.} Introduction of Directive on Payment Services (PSD) and PSD2 by European Commission in European Union and initiatives of Government in United Kingdom regarding provision of API by Banks and its standartization obligated with providing of online access points to their services.\cite{LarsAPI}\cite{TimAPI}\cite{DaveAPI} Some of the banks already implemented Application Program Interfaces to access their services. Some of which provide full functionality while some only partial. Within the Single European Payment Area acceptance of directive by European Bank Authority scheduled within 2017 year. \cite{PSD2} All this APIs very in their structure and functionality, and connection process lays out of the scope of this research.
-	
-Moreover some of the banks implements standardized programmable entry point. 
-	
-	\paragraph{HBCI+/FinTS} - bank-independent protocol for online banking, developed and used by German banks.  Home Banking Computer Interface (HBCI) was originally designed by the two German banking groups Sparkasse and Volksbanken und Raiffeisenbanken and German higher-level associations as the Bundesverband deutscher Banken e.V.. The result of this effort was an open protocol specification, which is publicly available. The standardisation effort was necessary to replace the huge number of deprecated homemade software clients and servers (some of them still using BTX emulation). While IFX (Interactive Financial Exchange), OFX (Open Financial Exchange) and SET are tailored for the North American market, HBCI is designed to meet the requirements of the European market.\cite{finTS}\\
-	Features\cite{finTS}:\\
-	\begin{itemize}
-		\item Support for online-banking using PIN/TAN one time passwords.
-		\item Support for online-banking with SWIFT.
-		\item DES and RSA encryption and signatures.
-		\item Making use of XML and SOAP for data-exchange, encryption and signatures.
-		\item Implemented on top of HTTP, HTTPS and SMTP as communication layer.
-		\item Multibanking: The software clients are designed to support accounts on multiple banking companies.
-		\item Platform Independency: The specification allows software development for various types of clients.
-		\item Storage of the encryption keys on an external physical device (smart card) for improved security.
-		\item Possibility to use so called "Secoder" smart card readers to allow the user to cross check the transaction data on a secure device before signing it to uncover manipulations caused by malware. To use Secoder the bank as well as the home banking software have to support the Secoder protocol extension of FinTS
-	\end{itemize}
-	Low level vocabulary for message communication is defined by ISO20022 for more information please have a look to \url{https://www.iso20022.org/}
-	
-	% For banks which do not provide HBCI/FinTS end point  but has their own tailored API connection is implemented via provided interface. 
-	\paragraph{Web-Banking Engine.} Since not all of the banks provide API nor HBCI figo uses web scraping technology (implemented within Web-Banking Engine) to access account's information and perform interaction with internet banking web page.
-	From the banks perspective interaction completely looks like directly with user, while user does not feel the difference between interaction via Custom-API or HBCI or Web-Banking Engine.\\
-	In a same time this is the most sensitive part from the developer's perspective since every change to the bank's web page can leads to failure of the specific scripts. The critical part to recognize such significant for scraping changes before any user's interaction and notify a developer regarding part of the script which failed. Exactly for this purpose testing scripts generated from Test Sheets are used as a (demon task/crown job) in real time fashion with recording unexpected behavior to the general log and notification of the developer (email/slack). Next chapter provides general information regarding web scraping and high-level description of scraping tool used by figo Gmbh.
-	
+\section{IT infrastructure: Banking Server}
+\label{sec:infrastructure}
+The high-level IT infrastructure of figo GmbH consists of two parts (Fig. \ref{fig:figoArch}). The \textbf{API Server} implements interfaces to figo's customers and partners for accessing banking information and services (lays outside of the paper's scope). The \textbf{Banking Server} implements the connections to banks via three possible communication channels, their description provided below together with the basic motivation for each of them.
+\begin{figure}[ht]
+  	\label{fig:figoArch}
+    \centering
+    \includegraphics[scale=0.7]{grafiken/figoArch}
+     \caption{figo GmbH high level architecture}
+\end{figure}
 
+\subsection{Banking Server Architecture}
+\label{sec:bankingArch}
+	Banking server has three parts for communication with banks via three separate channels. Each of them is a realization of different technology in a same programming language - javascript.  
+
+	\paragraph{Custom-API} is responsible for connection to custom APIs provided by banks. It implements the client for custom banks APIs. Some of them provide full functionality while some only partial. All this APIs vary in their structure and functionality, but most of them  are an implementation of REST-API specification.
+	
+	\paragraph{HBCI+/FinTS} is responsible for connection to banks' interfaces via Home Banking Computer Interface (HBCI). It is an implementation of an \textit{adapter OOP pattern} for the jsHBCI library.  HBCI is an open publicly available protocol. Its specification was originally designed by the two German banking groups \textit{Sparkasse and Volksbanken und Raiffeisenbanken} and \textit{German higher-level associations such as the Bundesverband deutscher Banken e.V.}.  \cite{finTS}
+	
+	\paragraph{Web-Banking Engine} is responsible for communication with banks which does not provide API or HBCI. This is an implementation of a \textit{factory OOP pattern} for scraping libraries. Here figo GmbH uses \textit{web scraping} technology to perform interaction with internet-banking web pages.
+	From the banks perspective, the interaction looks completely like direct communication with the user, while a user does not feel the difference between interaction via Custom-API, or HBCI or Web-Banking Engine while accessing his bank or service via figo API.
+	This is the most sensitive part from the developer's perspective, since every change to the bank's web page can lead to failure of the specific scripts. \\
+	
+%	The aim of this paper is an application of Test Sheet for early (before any user's interaction will take place) recognition of page changes  and notification of developers regarding failed part of the script.
 	
 	%\subsection{Banking Technology Stack}
 	%banking server only
 	
-	
+%and analyses the difference in requirements differences defined by Test Sheets concept and introduced by figo GmbH.
+
+%Firstly the platform of the implementation must be node.js its conceptual differences with such enterprise languages as Java or C# can be understood from the paltform description provided earlier in this paper but it worth to highlight them explicitly. The language of implementation is javascript which is the language with \textit{prototype based inheritance}. The \textit{event-loop mechanism} placed in core of the platform makes it asynchronous. Support of f\textit{unctions as a first-class citizens} provides an ability of confrontational function passing which is a pattern of functional programming. The language is relatively new for implementation of server-side applications.
+
+
+
+%Test Sheets were originally designed for test definitions of OOP languages. And all available examples describes tests definitions for Java Classes. While figo GmbH case requires implementation of tests for nodeJS/casperJS, which are based on JavaScript - Object Oriented, imperative, Functional Oriented programming language with asynchronous information flow.
+%Moreover figo GmbH requires input of test results to be recorded in to LogStash logs database. 
+
+%Testing of real-time software
+
+
+%The execution requirements from figo GmbH are such that tests defined via Test Sheets should be automatically executed in a time manner (every 2 mins or so), while normal software testing is performed on demand.
+%The figo's requirement for comparison is such that while defining a Test Sheet user should be able to select from two types of comparison: 1) Strict comparison - complete comparison of objects including both properties' structure and their values. 2) Not-Strict comparison - scheme comparison of objects.
+
+%(Probably should go to different section)
+%Scraping scripts implement callback based approach for handling asynchronous data flow. This provides an opportunity to perform result comparison within the custom callback defined on a implementation stage.
+%Standard convention for callback definitions limitates number of input parameters of a callback (error, data), while comparison requires compare data parameter with expected outputs from Test Sheet. The opportunity to resolve this issue lays in a JavaScript's support of functions as a class citizens, the function implementation of module for comparison and report: module exports function which invoked with single parameters (expected\_output) / ( + script name) and returns function which is used as a callback for scrapping script, this callback function performs comparison and writes its result to TestSheet or logstash depending on environment in which the program was executed
+
+
+%%!!! update conventions and align this list to them!
+%\begin{enumerate}
+%	\item asynchronous software in combination with reference mechanism of test sheets
+%\end{enumerate}
+
+\chapter{Transformation project}
+\label{sec:transP}
+This section describes the transformation project initiated by figo GmbH for use of Test Sheets.
+\textbf{Enterprise System Transformation} -  "is a hierarchic-sequential process involving all actions of individuals in an organization leveraging information technology to support the transition of an Enterprise System from its original O-I-T[(Fig.:\ref{fig:oit})] configuration [...] to an (enhanced) O-I-T[(Fig.:\ref{fig:oit})] configuration."\cite{MES5}
+
+\begin{figure}[ht]
+	\label{fig:oit}
+	\centering
+	\includegraphics[width=\textwidth]{grafiken/oit.png}
+	\caption{O-I-T model\cite{MES5}}
+\end{figure}
+
+The transformation project includes four processes within itself:
+\paragraph{Development} focuses on the issue how information systems are developed. In contrast to software engineering, software development takes the socio-technical perspective on information systems\cite{MES6}.
+
+\paragraph{Adoption} is a process defined by three concepts\cite{MES7}
+\begin{enumerate}
+	\item \textbf{Diffusion} refers to the breadth of use, e.g.the number of adopters in an organization
+	\item \textbf{Infusion} describes how extensively the technology is used and the level of impact within the organization
+	\item \textbf{Assimilation} addresses how extensively the new technology is used and how deeply the firm's use of the technology alters processes, structures, and organizational culture
+\end{enumerate}
+
+\paragraph{Convertion} is a process of realization of transformation projects with goal of successful system transformations \cite{MES9}.
+
+\paragraph{Use} is a continues process closely coupled with conversion process. It covers not only the process of the system usage by the individuals but also the impact of it on the organization in context of short- and long-term benefits, individuals in the context of their performance and satisfaction \cite{MES9}.
+
+\section{Test Sheets project: Business perspective}
+
+
+
+%The tool should provide business staff of the company to define business scenarios in a non-technical way. After definition such scenarios must be executed over web-page. Create, Read, Update, Delete (CRUD) operations for this scenarios must be performed with .
+
+\paragraph{Project definition:} Introduction of a tool for verification and/or testing of product’s functional fit to its requirements (i. e. detection of changes in banks web-pages, local software failures and/or errors) with minimal involvement of software developers into the process. Continuous project which requires software to be developed and supported by developers and can be executed on workstations of product/project managers.
+
+\paragraph{Project uncertainties:}
+\begin{itemize}
+	\item Priority
+	\item Functional fit
+	\item Maintenance process
+	\item Functionality enhancement
+	\item Organizational culture fit
+\end{itemize}
+
+\paragraph{Rationale for project creation and focus:} 
+\begin{itemize}
+	\item High workload and time pressure in combination with limited technical resources leads to less time available on manual system monitoring. Non developers were not capable of testing the functionality;
+	\item Tests will help in estimation of time to fix errors.
+\end{itemize}
+
+
+\paragraph{Underlying assumptions:} Shift of responsibility for functionality  on managers will improve system maintenance process and customers' user experience. 
+
+\paragraph{Goal:} Routinization of product verification/testing process with respect to its business and functionality requirements by use of Test Sheets.
+\paragraph{Plan:}
+\begin{itemize}
+	\item Test Sheets concept introduction to the target customers
+	\item Requirements analysis 
+	\item Mapping requirements to the concept of Test Sheets
+	\item Definition of the development process
+	\item System design
+	\item Development:
+	\begin{itemize}
+		\item Alpha1 version without support of references and linear tests execution;
+		\item Alpha2 version with references support and linear tests execution;
+		\item BETA version with optimization for real-time testing;
+		\item Reporting mechanism;
+	\end{itemize}
+	\item Demonstration;
+	\item Performance measurements;
+	\item Workshop on system installation and usage;
+	\item Routinization;
+	\item User experience collection.
+\end{itemize}
+
+\paragraph{Success:}
+\begin{itemize}
+	\item Goals are met;
+	\item The system is fully routinized within the business processes;
+	\item The time for bugs allocation and fix is reduced;
+	\item The number of affected customers is minimized.
+\end{itemize}
+
+
+\section{Test Sheets project: Technical perspective}
+Test execution must be performed in a timely fashion for an opportunity to detect changes as early as possible to prevent attempts of customers' communication with not available banks or services. Consequently, tests execution have to be fast.
+
+
+Software developers must be notified about script failure as soon as it was detected to improve the response time. 
+
+Scraping scripts are communicating with web-pages in a real-time and asynchronous fashion.
+
+
+The language of implementation must be javascript for low entry level of developers in the future maintenance process.
+
+Last but not least, due to the nature of data represented on a web page the comparison between actual and expected results must have two possible options: object keys comparison and object key-value comparison.
+
 

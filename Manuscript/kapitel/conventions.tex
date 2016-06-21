@@ -1,0 +1,107 @@
+\chapter{Requirements and Conventions}
+\label{sec:reqiorements}
+
+	!!! update conventions and align this list to them!
+	\begin{enumerate}
+		\item javascript
+		\item realtime
+		\item asynchronous software in combination with reference mechanism of test sheets
+		\item high performance for crownjob
+		\item two types of comparison
+		\item report mechanism
+		\item notification mechanism
+		
+	\end{enumerate}
+	
+	This section describes requirements introduced to the software by figo GmbH.
+	%and analyses the difference in requirements differences defined by Test Sheets concept and introduced by figo GmbH.
+	
+	%Firstly the platform of the implementation must be node.js its conceptual differences with such enterprise languages as Java or C# can be understood from the paltform description provided earlier in this paper but it worth to highlight them explicitly. The language of implementation is javascript which is the language with \textit{prototype based inheritance}. The \textit{event-loop mechanism} placed in core of the platform makes it asynchronous. Support of f\textit{unctions as a first-class citizens} provides an ability of confrontational function passing which is a pattern of functional programming. The language is relatively new for implementation of server-side applications.
+	
+	
+	
+	Test Sheets were originally designed for test definitions of OOP languages. And all available examples describes tests definitions for Java Classes. While figo GmbH case requires implementation of tests for node.js/casper.js, which are based on javascript - Object Oriented, imperative, Functional Oriented programming language with asynchronous information flow.
+	%Moreover figo GmbH requires input of test results to be recorded in to LogStash logs database. 
+	
+	Testing of real-time software
+	
+	
+	The execution requirements from figo GmbH are such that tests defined via Test Sheets should be automatically executed in a time manner (every 2 mins or so), while normal software testing is performed on demand. Moreover, tests should be performed over scripts which are responsible for communication with an external system within predefined time frame.
+	The figo's requirement for comparison are such that while defining a Test Sheet user should be able to select from two types of comparison: 1) Strict -  objects including both structure and their values of objects. 2) Not-Strict - scheme comparison of objects.
+	
+	(Probably should go to different section)
+	Scraping scripts implement callback based approach for handling asynchronous data flow. This provides an opportunity to perform result comparison within the custom callback defined on a implementation stage.
+	Standard convention for callback definitions limitates number of input parameters of a callback (error, data), while comparison requires compare data parameter with expected outputs from Test Sheet. The opportunity to resolve this issue lays in a JavaScript's support of functions as a class citizens, the function implementation of module for comparison and report: module exports function which invoked with single parameters (expected\_output) / ( + script name) and returns function which is used as a callback for scrapping script, this callback function performs comparison and writes its result to TestSheet or logstash depending on environment in which the program was executed
+	
+	
+	
+	
+	%	\chapter{Use Case}
+	%	\label{sec:Use Case}
+	%	definition (possibly in tabular form)
+	%	
+	%	
+	%	\begin{itemize}
+	%		\item Test Sheets defined by users (clients or employees without development background).
+	%		\item Tests themselves will be applied for identification of layout changes on a target page before any interaction will appear to avoid errors and minimize the time of scripts correction.
+	%	\end{itemize}
+	%	
+	%	\textbf{Execution stages:}
+	%	\begin{itemize}
+	%		\item Automated transformation of Test Sheets into JavaScript tests;
+	%		\item Scheduled task for running tests on web pages;
+	%		\item Developer notification regarding failing test.
+	%	\end{itemize}
+	%	
+	%	The program run by user 
+	%	%The implemented program is running as a crown job which is executing JS files generated from xlsx Test Sheets. Each JS file invokes scrapping script via Command Line Interface which in turn performs communication to Bank's web page. Results of script execution are compared with expected outputs from Test Sheet using a callback function. Result of comparison is written to LogStash and original Test Sheet.
+	%	
+	%	!!! either Bianca/Sebastian Tisler or figo customers
+	%	!!! should be combined with requirements as a result/conclusion of them
+
+\label{sec:conventions}
+
+In general case creation of Basic Test Sheets must be done according to the conventions followed from the Basic Test Sheet definition:
+\begin{itemize}
+	\item A1 cell(optional) - description of the test case;
+	\item A2 cell - module under testing with an .js extension;
+	\item A3..n - name of the class/object under the test;
+	\item B3..n - name of the method from representative class (same row) under the test;
+	\item C2..n to Invocation Column - input parameters for representative method (same row) under the test;
+	\item Invocation Column - the column for separation of input values from expected output value(s) filled with | (pipe)(for comparison by scheme and data types) || (two pipes)(for deep comparison - by scheme, data types and values) as a cells values until the last line which includes objects under tests;
+	\item Expected Return - column(s) after invocation line.\\
+\end{itemize}
+
+Following elaboration was made by author as a result of trade off between simplicity of an implementation and directness of user experience:
+\begin{itemize}
+\item Number of columns within one TS should not exceed 26 columns (from A to Z);
+\item Invocation delimiters must be allocated within single column the (aligned to the longest row);
+\item References to the columns with expected returns columns will take as value actual return value obtained from method execution;
+\item References should be defined only to cells in one of the previous row;
+\item Input parameters mast be provided in a same order as in implementation of a function;
+\item Files extensions should be .xlsx
+\end{itemize}
+
+
+
+
+%\textbf{ Non-Linear Test Sheets}
+%Same convention as for Basic Test Sheets plus following conventions for Behaviour Specification:
+%\begin{itemize}
+%\item N-th row - the row for separation of test definitions from the test behaiour. Filled with \_ (underscore) until the last column of expect values (excluding invocation column)
+%\item N+1-th row - Starting state. Starts with -> following space separated integers which represent testing steps which should be executed first;
+%\item N+2-th row - Intermediate state. Each cell of this row should satisfy following syntax requirements: guard ->following space separated integers which represent testing steps which should be executed if condition within guard is true. One of which should be equal to N+3 which represents the final state;
+%\item N+3 - Final state. Empty line showing end of testing process.
+%\end{itemize}
+%Syntax for guard: [\#N <condition> <value | link to the cell>], where:
+%\#N - number of times row N has already been executed within current test;
+%<condition> - conditional operator (>, >=, <, <=, ==, !=)
+%<value | link to the cell> - value or link to the cell with value which should be compared.\\
+
+%\textbf{ Parameterized and Higher-Order Test Sheets}
+%Lower order test sheets can belong to Basic of Non-Linear types of Test Sheets and respectively follow conventions, with next additional option:
+%\begin{itemize}
+%\item Input and/or output cells can contain parameters ?[B-Z]+ which represent the value of cells within the representative column of Higher-Order Test Sheet
+%\item Rows 1 and 2 should follow conventions for Basic Test Sheet;
+%\item Cells starting from second row inside of [B-Z] columns should contain values which will replace parameters inside of Parameterized Test Sheet.
+%\end{itemize}

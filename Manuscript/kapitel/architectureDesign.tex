@@ -1,0 +1,86 @@
+\chapter{Architecture} 
+\label{chap:architectureDesign}
+
+The system consist of three piped object streams  (Figure: \ref{fig:tsGenArch}). Stream piping implements the idea of pipe "$|$" in Unix systems invented by Douglas Mcllroy. It enables the output of one program to be connected to the input of the next program. \textit{Object stream (Stream in an object mode)} is a stream in which a data is treated as a sequence of discrete javascript objects. The piping of object streams allows to perform parallel executions which can be beneficial from the performance perspective. 
+
+\begin{figure}[ht]
+	\label{fig:tsGenArch}
+	\centering
+	\includegraphics[scale=0.75]{grafiken/TSGeneratorArchitecture}
+	\caption{Information flow}
+\end{figure}
+
+\begin{enumerate}
+	\item \textbf{\textit{Read Stream}} accepts directory address and \textit{pulls} content of all .xlsx files together with their metadata  from this directory including nested directories;
+	\item \textbf{\textit{Transform Stream}} accepts the data object with the file name, content, metadata from upstream, creates TestSheet schema and generates content of .js file implementing \textit{interpreter pattern}; 
+	\item \textbf{\textit{Write Stream}} \textit{pulls} data from upstream. Then is performs an attempt to read the representative .js file from the  specified folder. If the file exists and its last update date is older then for .xlsx file then the next step will be skipped. If the file does not exist or its the last update date is earlier then the last update date of .xlsx file then it creates/overwrites .js file.
+\end{enumerate}
+
+Pipe method of streams provide developers with an opportunity to chain streams implementing different piping patterns:
+\begin{enumerate}
+	\item \textit{Combining} - encapsulation of sequentualy connected streams in to single looking stream with single I/O points and single error handling mechanism by pipeing readable stream in to writable stream;
+	\item \textit{Forking/Merging} - piping single readable in to multiple writable streams /  piping multiple readable streams in to single writable stream;
+	\item \textit{Multiplexing/Demultiplexing} - forking and merging pattern which provides shared communication channel for entities from different streams, analogy can be computer networks.
+\end{enumerate}
+
+As was already described streams are deferred analog of arrays, which allows to perform such operations as mapping, reducing and filtering. The process of transformation of xlsx files to js files in this application is treated as mapping process in general case, and filtering for avoiding of redundant file's overwriting.
+
+The folder/file structure of the application looks as following:
+\begin{itemize}
+	\item index.js
+	\item package.json
+	\item ReadMe.md
+	\item lib/
+	\begin{itemize}
+		\item scheme/
+		\begin{itemize}
+			\item index.js
+			\item execution\_scheme.js
+			\item order.js
+			\item scheme.js
+		\end{itemize}
+		\item stream/
+		\begin{itemize}
+			\item index.js
+			\item read\_stream.js
+			\item transform\_stream.js
+			\item write\_stream.js
+		\end{itemize}
+		\item template/
+		\begin{itemize}
+			\item index.js
+		\end{itemize}
+	\end{itemize}
+	\item test/
+	\begin{itemize}
+		\item read\_stream.js
+		\item write\_stream.js
+		\item transform\_stream.js
+		\item scheme.js
+		\item execution\_scheme.js
+		\item order.js
+		\item template.js
+		\item doublers/
+		\begin{itemize}
+			\item TestSheetOjbect.js
+			\item TestSheet.xlsx
+			\item TestSheet.js
+		\end{itemize}
+	\end{itemize}
+	\item node\_modules/
+\end{itemize}
+%Creation of folders for scheme and template directories is made for purpose of expansion in case of adding Non-linear and/or HigherOrder Test Sheets. 
+The entry point of the system ./index.js looks as following (Listing: \ref{index}):
+
+\lstinputlisting[
+language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
+basicstyle=\footnotesize,
+numberstyle=\tiny,
+caption={index.js},
+captionpos=b,
+label=index
+]
+{code/index.js.txt}
+
+The program invoked from the command line interface accepts one parameter - path to the folder with predefined xlsx files with defined  Test Sheets. The \textit{process} object's property \textit{argv} is an array of parameters with which node module was called from a command line interface. The First parameter is a module name. All next parameters are the arguments passed to this module.
+

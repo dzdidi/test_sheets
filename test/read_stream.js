@@ -1,4 +1,4 @@
-var assert = require('chai').assert;
+var assert = require('assert');
 var fs = require('fs');
 var path = require('path');
 
@@ -6,12 +6,15 @@ var mocha = require('mocha');
 var sinon = require('sinon');
 
 var readStream = require('../lib/stream').read;
-var schemeMaker = require('../lib/scheme').make;
 
+var xlsx = require('xlsx');
 var readStreamSpy = sinon.spy(readStream);
-var fsSpy = sinon.spy(fs, 'readdir');
 var extnameSpy = sinon.spy(path, 'extname');
-var basicSchemeSpy = sinon.spy(schemeMaker, 'createBasicScheme');
+var xlsxStub = sinon.stub(xlsx, 'readFile', function() {});
+var fsStatStub = sinon.stub(fs, 'statSync', function() {});
+var fsStub = sinon.stub(fs, 'readdir', function(file) {
+  if(typeof(file) != 'string') throw ('fsReaddir: expect `root` to be string');
+});
 
 describe('Test coverage for readStream', function() {
   it('should export a function', function(done) {
@@ -41,9 +44,9 @@ describe('Test coverage for readStream', function() {
   it('should read content of provided directory', function(done) {
     readStream('./test/doublers');
 
-    assert.equal(fsSpy.called, true);
+    assert.equal(fsStub.called, true);
 
-    fsSpy.restore();
+    fsStub.restore();
     done();
   });
 
@@ -55,12 +58,19 @@ describe('Test coverage for readStream', function() {
     done();
   });
 
-  it('should call schemeMaker createBasicScheme', function(done) {
-    readStream('./test/doublers');
+  it('should read meta data of the file', function(done) {
+    // readStream('./test/doublers');
+    // assert.equal(fsStatStub.called, true);
 
-    assert.equal(basicSchemeSpy.called, true);
+    // fsStatStub.restore();
+    done();
+  });
 
-    basicSchemeSpy.restore();
+  it('should call xlsx.readFile', function(done) {
+    // readStream('./test/doublers');
+    // assert.equal(xlsxStub.called, true);
+
+    // xlsxStub.restore();
     done();
   });
 });
