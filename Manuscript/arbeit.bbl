@@ -75,11 +75,6 @@ Ich möchte mehr zu eurer vision erfahren!
 \newblock
   \url{https://figo.zendesk.com/hc/de/articles/200974801-Ich-m\%C3\%B6chte-mehr-zu-eurer-Vision-erfahren-}.
 
-\bibitem{mdnProto}
-Inheritance and the prototype chain | mdn.
-\newblock
-  \url{https://developer.mozilla.org/en/docs/Web/JavaScript/Inheritance\_and\_the\_prototype\_chain}.
-
 \bibitem{asyncArticle}
 Introduction to asynchronous programming.
 \newblock \url{http://cs.brown.edu/courses/cs168/s12/handouts/async.pdf}.
@@ -87,11 +82,6 @@ Introduction to asynchronous programming.
 \bibitem{libuvBasic}
 An introduction to libuv: Basics of libuv.
 \newblock \url{http://nikhilm.github.io/uvbook/basics.html}.
-
-\bibitem{mdnOOP}
-Introduction to object-oriented javascript | mdn.
-\newblock
-  \url{https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction\_to\_Object-Oriented\_JavaScript}.
 
 \bibitem{mdnJS}
 Javascript | mdn.

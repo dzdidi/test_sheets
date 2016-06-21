@@ -124,5 +124,5 @@
 \contentsline {paragraph}{\nonumberline Automation tool}{86}{section*.52}
 \contentsline {paragraph}{\nonumberline Verification tool.}{86}{section*.53}
 \contentsline {chapter}{\numberline {15}Conclusion}{87}{chapter.15}
-\contentsline {chapter}{\nonumberline Bibliography}{89}{appendix*.54}
-\contentsline {part}{\nonumberline Appendix}{93}{section*.55}
+\contentsline {chapter}{\nonumberline Bibliography}{89}{chapter*.54}
+\contentsline {part}{\nonumberline Appendix}{93}{part*.56}

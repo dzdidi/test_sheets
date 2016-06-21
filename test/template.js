@@ -3,7 +3,7 @@ var assert = require('chai').assert;
 var mocha = require('mocha');
 var sinon = require('sinon');
 
-var template = require('../lib/template/template_for_xlsx');
+var template = require('../lib/template');
 
 var generated = require('./doublers/generated');
 var testSheetObject = require('./doublers/basicSheetObject');

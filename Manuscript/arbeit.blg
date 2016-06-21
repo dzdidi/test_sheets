@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2015)
+This is BibTeX, Version 0.99d (TeX Live 2016)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: arbeit.aux
 A level-1 auxiliary file: kapitel/titel.aux
@@ -60,8 +60,6 @@ Warning--to sort, need author or key in casperjs
 Warning--to sort, need author or key in asyncArticle
 Warning--to sort, need author or key in nodejsabout
 Warning--to sort, need author or key in mdnJS
-Warning--to sort, need author or key in mdnProto
-Warning--to sort, need author or key in mdnOOP
 Warning--to sort, need author or key in libuv
 Warning--to sort, need author or key in libuvBasic
 Warning--to sort, need author or key in events
@@ -74,45 +72,45 @@ Warning--empty note in MES6
 Warning--empty note in MES7
 Warning--empty note in MES9
 Warning--empty booktitle in npmHydra
-You've used 55 entries,
+You've used 53 entries,
             2118 wiz_defined-function locations,
-            744 strings with 10061 characters,
-and the built_in function-call counts, 9885 in all, are:
-= -- 940
-> -- 174
+            736 strings with 9739 characters,
+and the built_in function-call counts, 9567 in all, are:
+= -- 910
+> -- 172
 < -- 1
-+ -- 100
++ -- 98
 - -- 40
-* -- 383
-:= -- 1335
-add.period$ -- 126
-call.type$ -- 55
-change.case$ -- 182
+* -- 373
+:= -- 1301
+add.period$ -- 122
+call.type$ -- 53
+change.case$ -- 176
 chr.to.int$ -- 0
-cite$ -- 101
-duplicate$ -- 428
-empty$ -- 1203
+cite$ -- 97
+duplicate$ -- 414
+empty$ -- 1157
 format.name$ -- 40
-if$ -- 2307
+if$ -- 2227
 int.to.chr$ -- 0
-int.to.str$ -- 55
+int.to.str$ -- 53
 missing$ -- 12
-newline$ -- 238
+newline$ -- 230
 num.names$ -- 34
-pop$ -- 383
+pop$ -- 367
 preamble$ -- 1
-purify$ -- 130
+purify$ -- 126
 quote$ -- 0
-skip$ -- 424
+skip$ -- 408
 stack$ -- 0
-substring$ -- 348
-swap$ -- 58
+substring$ -- 338
+swap$ -- 56
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 212
-warning$ -- 46
+type$ -- 204
+warning$ -- 44
 while$ -- 39
-width$ -- 57
-write$ -- 432
+width$ -- 55
+write$ -- 418
 (There were 2 error messages)
