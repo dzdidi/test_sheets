@@ -14,4 +14,4 @@ var exec = require('child_process').exec;
 
 var stream = require('./lib/stream');
 
-stream.read('./demo').pipe(stream.transform).pipe(stream.write);
+stream.read(process.argv[2]).pipe(stream.transform).pipe(stream.write);

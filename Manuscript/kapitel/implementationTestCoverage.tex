@@ -650,6 +650,7 @@ label=report
 ]
 {code/report.js.txt}
 
+On Figure \ref{fig:resultTestSheet} you see the result Test Sheet created after execution of the generated demo.js file. Note that on line 10 the \textit{pop} method returns value \textit{\{"el": 1 \}} but not the \textit{\{ "el": 5 \}}. This is correct behavior since all the operations are asynchronous and test step 10 does not depend on test step 9. The implementation described in this paper does not guarantee sequential execution of independent test steps. This is done for optimization reasons, so that test steps which do not depend upon each other can be started for the execution without waiting for previous step execution being completed. 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{grafiken/testSheetResult.png}

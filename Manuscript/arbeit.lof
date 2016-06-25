@@ -28,16 +28,16 @@
 \contentsline {figure}{\numberline {10.6}{\ignorespaces Test coverage for creation of execution scheme}}{53}{figure.10.6}
 \contentsline {figure}{\numberline {10.7}{\ignorespaces Test coverage for template.js}}{58}{figure.10.7}
 \contentsline {figure}{\numberline {10.8}{\ignorespaces Test coverage for write\_stream.js}}{62}{figure.10.8}
-\contentsline {figure}{\numberline {10.9}{\ignorespaces Result Test Sheet for stack.js}}{64}{figure.10.9}
-\contentsline {figure}{\numberline {10.10}{\ignorespaces Test coverage for report mechanism}}{65}{figure.10.10}
+\contentsline {figure}{\numberline {10.9}{\ignorespaces Result Test Sheet for stack.js}}{65}{figure.10.9}
+\contentsline {figure}{\numberline {10.10}{\ignorespaces Test coverage for report mechanism}}{66}{figure.10.10}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {11.1}{\ignorespaces Generation performance for files within single folder}}{68}{figure.11.1}
-\contentsline {figure}{\numberline {11.2}{\ignorespaces Generation performance for files within nested folders}}{69}{figure.11.2}
-\contentsline {figure}{\numberline {11.3}{\ignorespaces Execution performance for independent test steps}}{70}{figure.11.3}
-\contentsline {figure}{\numberline {11.4}{\ignorespaces Execution performance for interdependent test steps}}{71}{figure.11.4}
+\contentsline {figure}{\numberline {11.1}{\ignorespaces Generation performance for files within single folder}}{70}{figure.11.1}
+\contentsline {figure}{\numberline {11.2}{\ignorespaces Generation performance for files within nested folders}}{71}{figure.11.2}
+\contentsline {figure}{\numberline {11.3}{\ignorespaces Execution performance for independent test steps}}{72}{figure.11.3}
+\contentsline {figure}{\numberline {11.4}{\ignorespaces Execution performance for interdependent test steps}}{73}{figure.11.4}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {13.1}{\ignorespaces Task-Technology Fit model\cite {MES10}}}{79}{figure.13.1}
+\contentsline {figure}{\numberline {13.1}{\ignorespaces Task-Technology Fit model\cite {MES10}}}{81}{figure.13.1}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

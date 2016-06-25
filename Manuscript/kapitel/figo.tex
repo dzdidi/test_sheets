@@ -6,7 +6,7 @@ An introduction of the Payment Services Directive (PSD) and PSD2 by European Com
 
 
 
-figo is a platform to access banking information and execute banking transactions in a regulated environment (PSD).  figo connects and translates services (APIs) from 99\% of German banks to a unified RESTful API for partners and third parties i.e. banks ans financial institutions, financial technology companies (FinTech))\cite{figoAngel}\cite{figoCB}\cite{figoFAQWhat}\cite{figoFAQVision}\cite{figoFAQPartners}.
+figo is a platform to access banking information and execute banking transactions in a regulated environment (PSD).  figo connects and translates services (APIs) from 99\% of German banks to a unified RESTful API for partners and third parties i.e. banks ans financial institutions, financial technology companies (FinTech)\cite{figoAngel}\cite{figoCB}\cite{figoFAQWhat}\cite{figoFAQVision}\cite{figoFAQPartners}.
 The list of figo's partners and customers  together with their use cases can be found via following link: \url{http://figo.io/use\_cases.html}.
 
 The figo platform can be used in two different ways: 
@@ -51,8 +51,8 @@ The high-level IT infrastructure of figo GmbH consists of two parts (Fig. \ref{f
 	
 	\paragraph{HBCI+/FinTS} is responsible for connection to banks' interfaces via Home Banking Computer Interface (HBCI). It is an implementation of an \textit{adapter OOP pattern} for the jsHBCI library.  HBCI is an open publicly available protocol. Its specification was originally designed by the two German banking groups \textit{Sparkasse and Volksbanken und Raiffeisenbanken} and \textit{German higher-level associations such as the Bundesverband deutscher Banken e.V.}.  \cite{finTS}
 	
-	\paragraph{Web-Banking Engine} is responsible for communication with banks which does not provide API or HBCI. This is an implementation of a \textit{factory OOP pattern} for scraping libraries. Here figo GmbH uses \textit{web scraping} technology to perform interaction with internet-banking web pages.
-	From the banks perspective, the interaction looks completely like direct communication with the user, while a user does not feel the difference between interaction via Custom-API, or HBCI or Web-Banking Engine while accessing his bank or service via figo API.
+	\paragraph{Web-Banking Engine} is responsible for communication with banks which does not provide API nor HBCI. This is an implementation of a \textit{factory OOP pattern} for scraping libraries. Here figo GmbH uses \textit{web scraping} technology to perform interaction with internet-banking web pages.
+	From the banks perspective, the interaction looks completely like direct communication with the user, while a user does not feel the difference between interaction via Custom-API, or HBCI or Web-Banking Engine during access to his or her bank or service via figo API.
 	This is the most sensitive part from the developer's perspective, since every change to the bank's web page can lead to failure of the specific scripts. \\
 	
 %	The aim of this paper is an application of Test Sheet for early (before any user's interaction will take place) recognition of page changes  and notification of developers regarding failed part of the script.
@@ -109,7 +109,7 @@ The transformation project includes four processes within itself:
 
 \paragraph{Convertion} is a process of realization of transformation projects with goal of successful system transformations \cite{MES9}.
 
-\paragraph{Use} is a continues process closely coupled with conversion process. It covers not only the process of the system usage by the individuals but also the impact of it on the organization in context of short- and long-term benefits, individuals in the context of their performance and satisfaction \cite{MES9}.
+\paragraph{Use} is a continues process closely coupled with conversion process. It covers not only the process of the system usage by the individuals but also the impact of it on the organization in context of short- and long-term benefits for individuals in the context of their performance and satisfaction \cite{MES9}.
 
 \section{Test Sheets project: Business perspective}
 
@@ -155,8 +155,8 @@ The transformation project includes four processes within itself:
 	\item Demonstration;
 	\item Performance measurements;
 	\item Workshop on system installation and usage;
-	\item Routinization;
-	\item User experience collection.
+	\item User experience collection;
+	\item Routinization.
 \end{itemize}
 
 \paragraph{Success:}
