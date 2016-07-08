@@ -13,7 +13,7 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces npm comparison with other package managers\cite {moduleCounts}}}{22}{figure.6.1}
 \contentsline {figure}{\numberline {6.2}{\ignorespaces Node.js architecture \cite {nodejsbook}}}{23}{figure.6.2}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Node.js event handling system \cite {nodejsbook}}}{24}{figure.6.3}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Node.js event handling system \cite {nodejsbook}}}{25}{figure.6.3}
 \contentsline {figure}{\numberline {6.4}{\ignorespaces Duality Matrix \cite {gtor}}}{26}{figure.6.4}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {7.1}{\ignorespaces Information flow}}{29}{figure.7.1}

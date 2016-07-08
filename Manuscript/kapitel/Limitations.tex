@@ -25,12 +25,12 @@ Further, all the code covered by tests should be located on the computer where g
 
 Last but not least, all asynchronous functions covered by tests implements callback for handling events. This pattern is de facto standard in node.js and creation of promises or stream chunks can be done inside of the callback. However it is possible that the function with asynchronous behavior returns promise object for deferred value, in such case the implementation of template library and reporting mechanism should be changed.
 
-\section{Planned product usage}
-Developed prove of concept will be used by figo GmbH in the following use cases.
-
-\paragraph{Internal product management testing tool.} As an original purpose of the Test Sheets.
-\paragraph{Automation tool} for customers to automate the routine with the creation of testing data within sandbox environment via implementing calls to API.
-\paragraph{Verification tool.} Using Test Sheets employees from business department of the company defines the test steps for verification of the scrapping scripts with the respect to banking web pages. Test files execution is performed as a crown job and automatically executed every five minutes. Verification failure (failed tests) are reported directly to developers.
+%\section{Planned product usage}
+%Developed prove of concept will be used by figo GmbH in the following use cases.
+%
+%\paragraph{Internal product management testing tool.} As an original purpose of the Test Sheets.
+%\paragraph{Automation tool} for customers to automate the routine with the creation of testing data within sandbox environment via implementing calls to API.
+%\paragraph{Verification tool.} Using Test Sheets employees from business department of the company defines the test steps for verification of the scrapping scripts with the respect to banking web pages. Test files execution is performed as a crown job and automatically executed every five minutes. Verification failure (failed tests) are reported directly to developers.
 
 
 

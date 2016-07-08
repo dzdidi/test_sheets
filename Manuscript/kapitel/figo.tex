@@ -35,7 +35,7 @@ figo GmbH is a FinTech company with the headquarter located Hamburg, Germany. It
 
 \section{IT infrastructure: Banking Server}
 \label{sec:infrastructure}
-The high-level IT infrastructure of figo GmbH consists of two parts (Fig. \ref{fig:figoArch}). The \textbf{API Server} implements interfaces to figo's customers and partners for accessing banking information and services (lays outside of the paper's scope). The \textbf{Banking Server} implements the connections to banks via three possible communication channels, their description provided below together with the basic motivation for each of them.
+The high-level IT infrastructure of figo GmbH consists of two parts (Figure: \ref{fig:figoArch}). The \textbf{API Server} implements interfaces to figo's customers and partners for accessing banking information and services (lays outside of the paper's scope). The \textbf{Banking Server} implements the connections to banks via three possible communication channels, their description provided below together with the basic motivation for each of them.
 \begin{figure}[ht]
   	\label{fig:figoArch}
     \centering
@@ -47,12 +47,11 @@ The high-level IT infrastructure of figo GmbH consists of two parts (Fig. \ref{f
 \label{sec:bankingArch}
 	Banking server has three parts for communication with banks via three separate channels. Each of them is a realization of different technology in a same programming language - javascript.  
 
-	\paragraph{Custom-API} is responsible for connection to custom APIs provided by banks. It implements the client for custom banks APIs. Some of them provide full functionality while some only partial. All this APIs vary in their structure and functionality, but most of them  are an implementation of REST-API specification.
+	\paragraph{Custom-API} is a client responsible for connection to custom APIs provided by banks. Some of them give full functionality while some only partial. In the same time all of them are an implementation of REST-API specification.
 	
-	\paragraph{HBCI+/FinTS} is responsible for connection to banks' interfaces via Home Banking Computer Interface (HBCI). It is an implementation of an \textit{adapter OOP pattern} for the jsHBCI library.  HBCI is an open publicly available protocol. Its specification was originally designed by the two German banking groups \textit{Sparkasse and Volksbanken und Raiffeisenbanken} and \textit{German higher-level associations such as the Bundesverband deutscher Banken e.V.}.  \cite{finTS}
+	\paragraph{HBCI+/FinTS} is responsible for connection to banks' interfaces via Home Banking Computer Interface (HBCI). It is an implementation of an \textit{adapter OOP pattern} for the jsHBCI library.  HBCI is an open publicly available protocol. Its specification was originally designed by the two German banking groups \textit{Sparkasse and Volksbanken und Raiffeisenbanken} and \textit{German higher-level associations such as the Bundesverband deutscher Banken e.V.}\cite{finTS}.
 	
 	\paragraph{Web-Banking Engine} is responsible for communication with banks which does not provide API nor HBCI. This is an implementation of a \textit{factory OOP pattern} for scraping libraries. Here figo GmbH uses \textit{web scraping} technology to perform interaction with internet-banking web pages.
-	From the banks perspective, the interaction looks completely like direct communication with the user, while a user does not feel the difference between interaction via Custom-API, or HBCI or Web-Banking Engine during access to his or her bank or service via figo API.
 	This is the most sensitive part from the developer's perspective, since every change to the bank's web page can lead to failure of the specific scripts. \\
 	
 %	The aim of this paper is an application of Test Sheet for early (before any user's interaction will take place) recognition of page changes  and notification of developers regarding failed part of the script.
@@ -77,7 +76,7 @@ The high-level IT infrastructure of figo GmbH consists of two parts (Fig. \ref{f
 
 %(Probably should go to different section)
 %Scraping scripts implement callback based approach for handling asynchronous data flow. This provides an opportunity to perform result comparison within the custom callback defined on a implementation stage.
-%Standard convention for callback definitions limitates number of input parameters of a callback (error, data), while comparison requires compare data parameter with expected outputs from Test Sheet. The opportunity to resolve this issue lays in a JavaScript's support of functions as a class citizens, the function implementation of module for comparison and report: module exports function which invoked with single parameters (expected\_output) / ( + script name) and returns function which is used as a callback for scrapping script, this callback function performs comparison and writes its result to TestSheet or logstash depending on environment in which the program was executed
+%Standard convention for callback definitions limitates number of input parameters of a callback (error, data), while comparison requires compare data parameter with expected outputs from Test Sheet. The opportunity to resolve this issue lays in a JavaScript's support of functions as a first class citizens, the function implementation of module for comparison and report: module exports function which invoked with single parameters (expected\_output) / ( + script name) and returns function which is used as a callback for scrapping script, this callback function performs comparison and writes its result to TestSheet or logstash depending on environment in which the program was executed
 
 
 %%!!! update conventions and align this list to them!
@@ -87,8 +86,8 @@ The high-level IT infrastructure of figo GmbH consists of two parts (Fig. \ref{f
 
 \chapter{Transformation project}
 \label{sec:transP}
-This section describes the transformation project initiated by figo GmbH for use of Test Sheets.
-\textbf{Enterprise System Transformation} -  "is a hierarchic-sequential process involving all actions of individuals in an organization leveraging information technology to support the transition of an Enterprise System from its original O-I-T[(Fig.:\ref{fig:oit})] configuration [...] to an (enhanced) O-I-T[(Fig.:\ref{fig:oit})] configuration."\cite{MES5}
+This section describes the transformation project initiated by figo GmbH for the use of Test Sheets.
+\textbf{Enterprise System Transformation} -  "is a hierarchic-sequential process involving all actions of individuals in an organization leveraging information technology to support the transition of an Enterprise System from its original O-I-T [Organization-Technology-Individual] configuration [...] to an (enhanced) configuration [(Figure: \ref{fig:oit})]."\cite{MES5}
 
 \begin{figure}[ht]
 	\label{fig:oit}
@@ -102,9 +101,9 @@ The transformation project includes four processes within itself:
 
 \paragraph{Adoption} is a process defined by three concepts\cite{MES7}
 \begin{enumerate}
-	\item \textbf{Diffusion} refers to the breadth of use, e.g.the number of adopters in an organization
-	\item \textbf{Infusion} describes how extensively the technology is used and the level of impact within the organization
-	\item \textbf{Assimilation} addresses how extensively the new technology is used and how deeply the firm's use of the technology alters processes, structures, and organizational culture
+	\item \textbf{Diffusion} refers to the breadth of use, e.g.the number of adopters in an organization;
+	\item \textbf{Infusion} describes how extensively the technology is used and the level of impact within the organization;
+	\item \textbf{Assimilation} addresses how extensively the new technology is used and how deeply the firm's use of the technology alters processes, structures, and organizational culture;
 \end{enumerate}
 
 \paragraph{Convertion} is a process of realization of transformation projects with goal of successful system transformations \cite{MES9}.
@@ -121,11 +120,11 @@ The transformation project includes four processes within itself:
 
 \paragraph{Project uncertainties:}
 \begin{itemize}
-	\item Priority
-	\item Functional fit
-	\item Maintenance process
-	\item Functionality enhancement
-	\item Organizational culture fit
+	\item Priority;
+	\item Functional fit;
+	\item Maintenance process;
+	\item Functionality enhancement;
+	\item Organizational culture fit.
 \end{itemize}
 
 \paragraph{Rationale for project creation and focus:} 
@@ -140,11 +139,11 @@ The transformation project includes four processes within itself:
 \paragraph{Goal:} Routinization of product verification/testing process with respect to its business and functionality requirements by use of Test Sheets.
 \paragraph{Plan:}
 \begin{itemize}
-	\item Test Sheets concept introduction to the target customers
-	\item Requirements analysis 
-	\item Mapping requirements to the concept of Test Sheets
-	\item Definition of the development process
-	\item System design
+	\item Test Sheets concept introduction to the target customers;
+	\item Requirements analysis;
+	\item Mapping requirements to the concept of Test Sheets;
+	\item Definition of the development process;
+	\item System design;
 	\item Development:
 	\begin{itemize}
 		\item Alpha1 version without support of references and linear tests execution;

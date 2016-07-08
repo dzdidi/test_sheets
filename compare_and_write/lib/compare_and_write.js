@@ -22,29 +22,12 @@ function makeComparisonAndWriteResult(expected, returned, deepness, scriptName, 
       testSheet.Sheets.Sheet1[variable].v = JSON.stringify(expected) + '\\' + JSON.stringify(returned);
     }
 
-    // xlsx.writeFile(testSheet, file, {'cellStyles': true});
+    xlsx.writeFile(testSheet, "res_" + file, {'cellStyles': true});
   };
 
   console.log(variable, expected, returned, deepness, result);
 
   return(result);
-};
-
-function report(file, variable, result, returned) {
-  result ? result = "#00FF00" : result = "#FFFF00";
-  var testSheet = xlsx.readFile(file, {'cellStyles': true});
-  var val = testSheet.Sheets.Sheet1[variable].v;
-  testSheet.Sheets.Sheet1[variable].v =
-  testSheet.Sheets.Sheet1[variable].s = {
-      "patternType":"solid",
-      "fgColor":{
-          "rgb":"66FF00"
-      },
-      "bgColor":{
-          "rgb":result
-      }
-  };
-  // xlsx.writeFile(testSheet, file, {'cellStyles': true});
 };
 
 function compare(obj1, obj2, deepness) {

@@ -113,6 +113,10 @@ Phantomjs - scriptable headless webkit.
 The real cost of software errors.
 \newblock \url{http://hdl.handle.net/1721.1/74607}.
 
+\bibitem{rtG}
+Real-time system references and reading materials.
+\newblock \url{http://www.ece.ubc.ca/\~gillies/readings.htm}.
+
 \bibitem{ts}
 Test sheets.
 \newblock
@@ -122,6 +126,10 @@ Test sheets.
 Test sheets.
 \newblock
   \url{http://swt.informatik.uni-mannheim.de/de/research/research-topics/test-sheets/basic-test-sheets/}.
+
+\bibitem{pipe}
+The unix oral history project.
+\newblock \url{http://www.princeton.edu/\~hos/Mahoney/expotape.htm}.
 
 \bibitem{w3cDOM}
 W3c document object notation.
@@ -198,9 +206,20 @@ N.~G. Leveson and C.~S. Turner.
 \newblock An investigation of the therac-25 accidents.
 \newblock {\em Computer}, 26(7):18--41, July 1993.
 
+\bibitem{Lewis}
+James~R. Lewis.
+\newblock Ibm computer usability satisfaction questionnaires: Psychometric
+  evaluation and instructions for use.
+\newblock {\em Int. J. Hum.-Comput. Interact.}, 7(1):57--78, January 1995.
+
 \bibitem{MES10}
 Alexander Maedche.
 \newblock L10-intro es use.
+\newblock 2014.
+
+\bibitem{MES11}
+Alexander Maedche.
+\newblock L11-intro es use process value.
 \newblock 2014.
 
 \bibitem{MES5}

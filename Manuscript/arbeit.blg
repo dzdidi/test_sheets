@@ -52,6 +52,7 @@ Warning--to sort, need author or key in fitIntro
 Warning--to sort, need author or key in cuceRef
 Warning--to sort, need author or key in ts
 Warning--to sort, need author or key in tsb
+Warning--to sort, need author or key in rtG
 Warning--to sort, need author or key in wikiScraping
 Warning--to sort, need author or key in conScrap
 Warning--to sort, need author or key in w3cDOM
@@ -64,53 +65,55 @@ Warning--to sort, need author or key in libuv
 Warning--to sort, need author or key in libuvBasic
 Warning--to sort, need author or key in events
 Warning--to sort, need author or key in zalgo
+Warning--to sort, need author or key in pipe
 Warning--empty note in Lecture1
 Warning--empty note in Lecture2
 Warning--empty note in MES10
+Warning--empty note in MES11
 Warning--empty note in MES5
 Warning--empty note in MES6
 Warning--empty note in MES7
 Warning--empty note in MES9
 Warning--empty booktitle in npmHydra
-You've used 53 entries,
+You've used 57 entries,
             2118 wiz_defined-function locations,
-            736 strings with 9739 characters,
-and the built_in function-call counts, 9567 in all, are:
-= -- 910
-> -- 172
+            755 strings with 10183 characters,
+and the built_in function-call counts, 10341 in all, are:
+= -- 988
+> -- 188
 < -- 1
-+ -- 98
-- -- 40
-* -- 373
-:= -- 1301
-add.period$ -- 122
-call.type$ -- 53
-change.case$ -- 176
++ -- 106
+- -- 44
+* -- 413
+:= -- 1418
+add.period$ -- 132
+call.type$ -- 57
+change.case$ -- 190
 chr.to.int$ -- 0
-cite$ -- 97
-duplicate$ -- 414
-empty$ -- 1157
-format.name$ -- 40
-if$ -- 2227
+cite$ -- 104
+duplicate$ -- 445
+empty$ -- 1239
+format.name$ -- 44
+if$ -- 2396
 int.to.chr$ -- 0
-int.to.str$ -- 53
-missing$ -- 12
-newline$ -- 230
-num.names$ -- 34
-pop$ -- 367
+int.to.str$ -- 57
+missing$ -- 13
+newline$ -- 248
+num.names$ -- 38
+pop$ -- 387
 preamble$ -- 1
-purify$ -- 126
+purify$ -- 136
 quote$ -- 0
-skip$ -- 408
+skip$ -- 436
 stack$ -- 0
-substring$ -- 338
-swap$ -- 56
+substring$ -- 377
+swap$ -- 59
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 204
-warning$ -- 44
-while$ -- 39
-width$ -- 55
-write$ -- 418
+type$ -- 220
+warning$ -- 47
+while$ -- 45
+width$ -- 59
+write$ -- 452
 (There were 2 error messages)

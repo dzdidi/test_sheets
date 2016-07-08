@@ -18,9 +18,9 @@ Generally, asynchronous systems are easier to control and to develop rather then
 \subsection{node.js}
 \label{subsec:node}
 node.js is an asynchronous event-driven framework designed to build scalable network applications.
-node.js is similar in design to and influenced by systems like Ruby's Event Machine or Python's Twisted with the difference that it presents the event loop as a language construct but not as a library\cite{nodejsabout}.
+node.js' design is similar to and influenced by systems such like Ruby's Event Machine or Python's Twisted with the difference that it presents the event loop as a language construct but not as a library\cite{nodejsabout}.
 
-node.js as a framework has powerful ecosystem - npm which consists of three parts. \textit{npm} - package manager for node.js, \textit{npm Registry} - public collection of packages of open-source code, \textit{npm command line client} which allows developers to install and publish those packages. The diagram (Fig.: \ref{fig:npmStat}) states the comparison of npm with other package, for more up to date information please visit \url{http://www.modulecounts.com/}.
+node.js as a framework has powerful ecosystem - npm which consists of three parts. \textit{npm} - package manager for node.js, \textit{npm Registry} - public collection of packages of open-source code, \textit{npm command line client} which allows developers to install and publish those packages. The diagram (Figure: \ref{fig:npmStat}) states the comparison of npm with other package, for more up to date information please visit \url{http://www.modulecounts.com/}.
 \begin{figure}[ht]
 	\label{fig:npmStat}
 	\centering
@@ -44,7 +44,7 @@ node.js applications are written in javascript - a lightweight dynamic scripting
 %This can be called classless, prototype-oriented, or instance-based programming\cite{mdnOOP}. Each object has an internal link to another object called its \textit{prototype}. That prototype object has a prototype of its own, and so on until an object is reached with \textbf{null} as its prototype. \textbf{null}, by definition, has no prototype and acts as the final link in this prototype chain. JavaScript objects are dynamic "bags" of properties (referred to as own properties). When trying to access a property of an object, the property will not only be sought on the object but on the prototype of the object, the prototype of the prototype, and so on until either a property with a matching name is found or the end of the prototype chain is reached\cite{mdnProto} This type of inheritance provide objects inherit both instance and class methods together with properties.
 
  
-The high-level architecture of node.js looks as following:(\ref{fig:nodeArch}). 
+The high-level architecture of node.js consists from the following parts (Figure: \ref{fig:nodeArch}): 
 \begin{figure}[ht]
   	\label{fig:nodeArch}
     \centering
@@ -70,7 +70,7 @@ Which is "a multi-platform support library with a focus on asynchronous I/O. "\c
 
 \subsection{Event handling}
 \label{subsec:event}
-An event is a core concept of asynchronous programming in node.js. All objects that emit events allows one or more functions to be attached to named events emitted by the object. When an event is emitted all the functions attached to that specific event are called synchronously\cite{events}. Node.js  event handler is an implementation of \textit{reactor pattern}. The illustration of process life-cycle is shown in Fig. \ref{fig:nodeEvent}:
+An event is a core concept of asynchronous programming in node.js. All objects that emit events allows one or more functions to be attached to named events emitted by the object. When an event is emitted all the functions attached to that specific event are called synchronously\cite{events}. Node.js  event handler is an implementation of \textit{reactor pattern}. The illustration of process life-cycle is shown on the figure \ref{fig:nodeEvent}:
 
 \begin{figure}[ht]
   	\label{fig:nodeEvent}
@@ -92,12 +92,12 @@ An event is a core concept of asynchronous programming in node.js. All objects t
 \label{sec:asyncstrat}
 \subsection{Declarative}
 The presence of functions as the first class citizens in javascript allows direct usage of functions for handling asynchronous program behavior. \textit{Callbacks} are default handlers for the reactor pattern described before. They are similar to \textit{visitor pattern} in OOP or continuation-passing-style from Functional Programming. They represent an operation to be performed on the elements of an object structure and they let define a new operation without introducing any changes to the definition of the object. 
-By convention callbacks must be passed as the last argument and accept two parameters, the first is an error and the second is a data to be processed further.
+By the convention callbacks must be passed as the last argument and accept two parameters, the first is an error and the second is a data to be processed further.
 
-There are two main negative sides of using callbacks. One of them is so-called \textit{callback hell} occurs due to the abundance of closures and in-place callback definitions. This makes the code hard to be read because of high level nesting, as well as written due to a scope of nesting and difficult to manage because of possible memory leaks created by closures. Another negative side is called \textit{releasing Zalgo}\cite{zalgo}, it occurs only in case of inconsistent function behavior when under some hidden conditions a function performs a synchronous action but some under other - asynchronous.
+There are two main negative sides of using callbacks. One of them is so-called \textit{callback hell} occurs due to the abundance of closures and in-place callback definitions. This makes the code hard to be read because of high level nesting, as well as written due to a scope of nesting and difficult to manage because of possible memory leaks created by closures. Another negative side is called \textit{releasing Zalgo}\cite{zalgo}. This occurs in case of inconsistent function behavior when under some hidden conditions a function performs a synchronous action but some under other - asynchronous.
 
 \subsection{Imperative}
-The further explanation is based on the \textit{concept of duality} (Fig. \ref{fig:dualityMatrix}) showed by Erik Meijer \url{https://channel9.msdn.com/Events/Lang-NEXT/Lang-NEXT-2014/Keynote-Duality} and used by Kris Koval in his \textit{General Theory of Reactivity} \url{https://github.com/kriskowal/gtor/}.
+The further explanation is based on the \textit{concept of duality} (Figure \ref{fig:dualityMatrix}) showed by Erik Meijer \url{https://channel9.msdn.com/Events/Lang-NEXT/Lang-NEXT-2014/Keynote-Duality} and used by Kris Koval \cite{gtor} in his \textit{General Theory of Reactivity} \url{https://github.com/kriskowal/gtor/}.
 
 \begin{figure}[ht]
 	\label{fig:dualityMatrix}
@@ -147,7 +147,9 @@ Often during communication the problem caused by the fact that different parts f
 
 \section{Performance}
 \label{subsec:performance}
-Following measures are taken from the article "Analysis of generators and other async patterns in node" by Gorgi Kosev (\url{https://spion.github.io/posts/analysis-generators-and-other-async-patterns-node.html}). There were no hardware characteristics provided for the experiment execution environment except the following description\cite{asyncPerformance_2}: "On my machine redis can be queried about 40 000 times per second; node's 'hello world' http server can serve up to 10 000 requests per second; postgresql's pgbench can do 300 mixed or 15 000 select transactions per second." 
+Following measures are taken from the article "Analysis of generators and other async patterns in node" by Gorgi Kosev \cite{asyncPerformance_2} \cite{asyncPerformance}
+%(\url{https://spion.github.io/posts/analysis-generators-and-other-async-patterns-node.html})
+. There were no hardware characteristics provided for the experiment execution environment except the following description\cite{asyncPerformance_2}: "On my machine redis can be queried about 40 000 times per second; node's 'hello world' http server can serve up to 10 000 requests per second; postgresql's pgbench can do 300 mixed or 15 000 select transactions per second." 
 
  The performance metrics were taken from the experiment under the the conditions where all external methods are mocked using setTimeout 10ms to simulate waiting for I/O with 1000 parallel requests (i.e. 100K IO / s) \cite{asyncPerformance_2}
 
@@ -169,9 +171,9 @@ Following measures are taken from the article "Analysis of generators and other 
 \end{table}
 
 
-"The original and flattened solutions are the fastest, as they use vanilla callbacks"\cite{asyncPerformance}
+According to the author of measurements \cite{asyncPerformance_2} "The original and flattened solutions are the fastest, as they use vanilla callbacks"\cite{asyncPerformance}
 
-Note that this table have only fastest among promise objects and since there were no measurements performed for streams but according to their nature the most optimistic performance for them should be equal to the promise generator provided by Bluebrid \url{http://bluebirdjs.com/docs/getting-started.html}.
+Note that this table have only fastest among promise objects and since there were no measurements performed for streams but according to their nature the most optimistic performance for them should be equal to the promise generator provided by Bluebrid since it is low level implementation on C++. For more details please visit \url{http://bluebirdjs.com/docs/getting-started.html}.
 
 
 

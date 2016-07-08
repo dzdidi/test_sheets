@@ -1,7 +1,7 @@
 \chapter{Architecture} 
 \label{chap:architectureDesign}
 
-The system consist of three piped object streams  (Figure: \ref{fig:tsGenArch}). Stream piping implements the idea of pipe "$|$" in Unix systems invented by Douglas Mcllroy. It enables the output of one program to be connected to the input of the next program. \textit{Object stream (Stream in an object mode)} is a stream in which a data is treated as a sequence of discrete javascript objects. The piping of object streams allows to perform parallel executions which can be beneficial from the performance perspective. 
+The system consist of three piped object streams  (Figure: \ref{fig:tsGenArch}). Stream piping implements the idea of pipe "$|$" in Unix systems invented by Douglas Mcllroy \cite{pipe}. It enables the output of one program to be connected to the input of the next program. \textit{Object stream (Stream in an object mode)} is a stream in which a data is treated as a sequence of discrete javascript objects. The piping of object streams allows to perform parallel executions which can be beneficial from the performance perspective. 
 
 \begin{figure}[ht]
 	\label{fig:tsGenArch}
@@ -11,9 +11,9 @@ The system consist of three piped object streams  (Figure: \ref{fig:tsGenArch}).
 \end{figure}
 
 \begin{enumerate}
-	\item \textbf{\textit{Read Stream}} accepts directory address and \textit{pulls} content of all .xlsx files together with their metadata  from this directory including nested directories;
-	\item \textbf{\textit{Transform Stream}} accepts the data object with the file name, content, metadata from upstream, creates TestSheet schema and generates content of .js file implementing \textit{interpreter pattern}; 
-	\item \textbf{\textit{Write Stream}} \textit{pulls} data from upstream. Then is performs an attempt to read the representative .js file from the  specified folder. If the file exists and its last update date is older then for .xlsx file then the next step will be skipped. If the file does not exist or its the last update date is earlier then the last update date of .xlsx file then it creates/overwrites .js file.
+	\item \textbf{\textit{Read Stream}} accepts directory address and \textit{pulls} content of all .xlsx files together with their metadata  from this directory including nested directories. From this stream perspective the \textit{Transform Stream} will be referred as an \textit{up stream};
+	\item \textbf{\textit{Transform Stream}} accepts the data object with the file name, content, metadata from upstream, creates TestSheet schema and generates content of .js file implementing \textit{interpreter pattern}. From this stream perspective the \textit{Read Stream} will be referred as an \textit{down stream}, and \textit{Write Stream} as an \textit{up stream}; 
+	\item \textbf{\textit{Write Stream}} \textit{pulls} data from upstream. Then is performs an attempt to read the representative .js file from the  specified folder. If the file exists and its last update date is older then for .xlsx file then the next step will be skipped. If the file does not exist or its the last update date is earlier then the last update date of .xlsx file then it creates/overwrites .js file. From this stream perspective the \textit{Transform Stream} will be referred as an \textit{down stream};
 \end{enumerate}
 
 Pipe method of streams provide developers with an opportunity to chain streams implementing different piping patterns:
@@ -23,7 +23,7 @@ Pipe method of streams provide developers with an opportunity to chain streams i
 	\item \textit{Multiplexing/Demultiplexing} - forking and merging pattern which provides shared communication channel for entities from different streams, analogy can be computer networks.
 \end{enumerate}
 
-As was already described streams are deferred analog of arrays, which allows to perform such operations as mapping, reducing and filtering. The process of transformation of xlsx files to js files in this application is treated as mapping process in general case, and filtering for avoiding of redundant file's overwriting.
+As was already described streams are deferred analog of arrays, which allows to perform such operations as mapping, reducing and filtering. The process of transformation of xlsx files to js files in this application is treated as mapping process in general case, and filtering for avoiding of redundant file's overwriting in case if a source xlsx file was not updated.
 
 The folder/file structure of the application looks as following:
 \begin{itemize}
@@ -82,5 +82,7 @@ label=index
 ]
 {code/index.js.txt}
 
-The program invoked from the command line interface accepts one parameter - path to the folder with predefined xlsx files with defined  Test Sheets. The \textit{process} object's property \textit{argv} is an array of parameters with which node module was called from a command line interface. The First parameter is a module name. All next parameters are the arguments passed to this module.
+The program invoked from the command line interface accepts one parameter - path to the folder with xlsx files which stores Test Sheets defined by users. The \textit{argv} property of \textit{process} is an array of parameters with which the node module was called from a command line interface. The first parameter is a module name. All next parameters are the arguments passed to this module.
+
+Each directory unifies node modules for implementation of representative logic. Every folder has \textit{index.js} file which is the public interface file of the module. The default behavior of the \textit{require} method from node.js is to require the \textit{index.js} file from folder if path to it is passed as an input parameter, and file if an input parameter is a path to the file.
 

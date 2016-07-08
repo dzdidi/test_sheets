@@ -2,8 +2,7 @@
 \label{chap:design}
 The implementation of each part of the system was made with application of Test Driven Development.The testing framework is \textit{mocha} \url{https://mochajs.org/}. For the creation of doublers (mocks, stubs and spies) for object and method was used \textit{sinon.js }\url{http://sinonjs.org/}.
 
-
-The symptoms of not agile design are by defined Robet Martin are following\cite{MartinASD}:
+Application of Test Driven Development principles provide better control over the system on a code level but not on design. In the same time Robert Martin \cite{MartinASD} defined symptoms of not agile design as following:
 \begin{itemize}
 	\item Rigidity - The design is difficult to change;
 	\item Fragility - The design is easy to break;
@@ -15,7 +14,7 @@ The symptoms of not agile design are by defined Robet Martin are following\cite{
 \end{itemize}
 
 
-To avoid creation of such software John Dooley \cite{Dooley} and Rober Maritn \cite{MartinASD} defined  the principles of agile architecture:
+To avoid creation of such software John Dooley \cite{Dooley} and Rober Maritn \cite{MartinASD} suggested the following principles of agile architecture:
 \begin{itemize}
 	\item Closing - Encapsulate things in your design that are likely to change.
 	\item Code to an Interface - rather then to an implementation. 
@@ -37,15 +36,15 @@ This principles are suggestional and can not be strictly followed due to their m
 
 \chapter{Conventions}
 \label{sec:convnetions}
-Following conventions were developed with respect to requirements defined by figo GmbH and must be followed by Test Sheet for proper work of developed system:
+Following conventions were developed with respect to the requirements defined by figo GmbH and must be followed by Test Sheet for proper work of developed system:
 \begin{itemize}
 	\item Number of columns within one Test Sheet should not exceed 26 columns (from A to Z);
 	\begin{itemize}
-		\item \textbf{A1} cell(optional) - description of the test case;
-		\item \textbf{A2} cell - module under testing with an extension *(.js)*;
+		\item \textbf{A1} cell - description of the test case;
+		\item \textbf{A2} cell - module under test (folder with index.js or file with js extension);
 		\item \textbf{A3..n} cells - name of the class/object under the test;
-		\item \textbf{B3..n} cells - name of the method from representative class *(same row)* under the test;
-		\item \textbf{C2..n} cells to \textbf{Invocation Column}   - input parameters for representative method *(same row)* under the test;
+		\item \textbf{B3..n} cells - name of the method from representative class/object under the test;
+		\item \textbf{C2..n} cells to \textbf{Invocation Column}   - input parameters for representative method under the test;
 	\end{itemize}
 	\item Invocation delimiters must be allocated within the single column (aligned to the longest row);
 	\begin{itemize}
@@ -54,13 +53,13 @@ Following conventions were developed with respect to requirements defined by fig
 	\item \textbf{Expected Return} - column must be next after invocation line.
 	\item All functions under test should be asynchronous and accept callback as a last input parameter with standard signature for handling emitted event;
 	\item References to the columns with expected return values will accept as value the value obtained from the method execution;
-	\item References should be defined only to cells in one of the previous rows;
-	\item Files extensions should be .xlsx.
+	\item References must be defined only to cells in one of the previous rows;
+	\item Files extensions must be xlsx.
 \end{itemize}
 
 \chapter{Implementation}
 \label{chap:implementation}
-For the description of data structures processed by the system, we will use following module (Listing: \ref{demo}) which implements a stack with asynchronous methods (respond time for each method delayed 10 milliseconds). Usage of the \textit{setTimeout()} method guarantees its asynchronism. While the fact that the timeframe for the response hard coded into scraping scripts guarantees that this method is valid for usage as a proof of concept within the current research topic.
+For the description of data structures processed by the system, we will use following module (Listing: \ref{demo}) which implements a stack with asynchronous methods (respond time for each method is delayed 10 milliseconds). Usage of the \textit{setTimeout()} method guarantees its asynchronism. While the fact that the timeframe for the response is hard coded into scraping scripts ensures that this method is valid for usage as a proof of concept within the current research topic.
 \lstinputlisting[
 language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
 basicstyle=\footnotesize,
@@ -70,7 +69,7 @@ captionpos=b,
 label=demo
 ]
 {code/demo/stack.js.txt}
-The Test Sheet for test coverage of this module looks as following (Figure: \ref{fig:demoTS}). Note that this test coverage was made with the  purpose to show handling of asynchronous testing of real-time software but not to cover stack module. There are both types of comparison in invocation line \textbf{D}. Red arrows indicate the references withing this test sheet.
+The Test Sheet for test coverage of this module looks as following (Figure: \ref{fig:demoTS}). Note that this test coverage was made for the  purpose to show handling of asynchronous testing of real-time software but not to cover the stack module. There are both types of comparison in invocation lines (Column \textbf{D}). The red arrows indicate the references withing this test sheet.
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{grafiken/demoTS.pdf}
@@ -79,28 +78,27 @@ The Test Sheet for test coverage of this module looks as following (Figure: \ref
 \end{figure}
 
 
-The system has following dependencies upon external npm packages:
+For the reading of the content from the spread sheet and transforming obtained information into javascript code with further writing of it into a js file the system uses following dependencies upon external npm packages:
 \begin{itemize}
 	\item Development dependencies:
 	\begin{itemize}
-		\item  "fs-readdir": "0.0.3", (\url{https://www.npmjs.com/package/fs-readdir})
-		\item "through2": "2.0.0", (\url{https://www.npmjs.com/package/through2})
-		\item "xlsx": "0.8.0", (\url{https://www.npmjs.com/package/xlsx})
+		\item  "fs-readdir": "0.0.3", (\url{https://www.npmjs.com/package/fs-readdir});
+		\item "through2": "2.0.0", (\url{https://www.npmjs.com/package/through2});
+		\item "xlsx": "0.8.0", (\url{https://www.npmjs.com/package/xlsx});
+		\item "multipipe": "0.3.1", (\url{https://www.npmjs.com/package/multipipe})
 	\end{itemize}
 	\item Testing dependencies:
 	\begin{itemize}
 		\item "mocha": "2.3.4", (\url{https://www.npmjs.com/package/mocha})
 		\item "sinon": "1.17.2", (\url{https://www.npmjs.com/package/sinon})
 	\end{itemize}
-
-
-
 \end{itemize}
 
 \section{Read Stream}
 \label{sec:read}
-This part of the system is an implementation of combining streams pattern. From the internal view, it consists of two streams. First stream performs a recursive search for files in a provided directory and returns the array with absolute paths to them. Second stream reads content of files with \textit{xlsx} module and meta data of the file using embedded node.js module \textit{fs} and pushes it to the next stream (Listing: \ref{readStream}).
-
+This part of the system is an implementation of combining streams pattern. From the internal view, it consists of two streams.  The first stream is implemented with the use  \textbf{getFilesStream} function. It creates readable stream for reading content of directory including nested directories and returns the array with absolute paths to them.
+Second stream is \textbf{getDataStream} the stream in an object mode. For every file path, it accepts from the down stream, it checks its extensions and if it is equal to .xlsx this stream implements the reading content of files. For this purpose it uses \textit{xlsx} module and  \textit{fs}  to read meta data of the file. Next, this stream pushes obtained data to the up stream (Listing: \ref{readStream}).
+ 
 \lstinputlisting[
 language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
 basicstyle=\footnotesize,
@@ -111,10 +109,8 @@ label=readStream
 ]
 {code/lib/stream/readStream.js.txt}
 
-The \textbf{function getFilesStream} creates readable stream for reading content of directory including nested directories and returns it. 
-The \textbf{variable getDataStream} defined by the stream in an object mode. For every file path, it accepts from the down stream , it checks its extensions an if it is equal to .xlsx then it will read it and obtain first sheet from the book, further it will read the meta data of the file and push it to the up stream.
-These two streams are piped into combined stream using module \textit{multipipe} \url{https://www.npmjs.com/package/multipipe} and returned by the function exported by this module.
-In other words, this module exports function which accepts path to the directory and returns array of deferred values, each of which is a javascript object with following structure (Listing \ref{readOut})
+These two streams are piped into combined stream using module \textit{multipipe} and returned by the function exported by this module.
+In other words, this module exports function which accepts path to the directory and returns array of deferred values to the upstream. Each of deferred value  is a javascript object with following structure (Listing \ref{readOut})
 \lstinputlisting[
 language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
 basicstyle=\footnotesize,
@@ -126,7 +122,7 @@ label=readOut
 {code/readOut.js.txt}
 
 \subsection{Test Coverage}
-Following test cases show every step incrementally performed during the development process. All calls to systems I/O (e. g. read file meta data, read file) are implemented using stubs. \textbf{Stub} is an implementation of \textit{proxy pattern} which allows to redefine functions behavior. This gives an opportunity to improve speed of tests by replacing functions with call to I/O with empty functions.
+Following test cases show step every incrementally performed during the development process. All calls to systems I/O (e. g. read file meta data, read file) are implemented using stubs. \textbf{Stub} is an implementation of \textit{proxy pattern} which allows to redefine functions behavior. This gives an opportunity to improve speed of tests by replacing functions with call to I/O with empty functions.
 %\lstinputlisting[
 %language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
 %basicstyle=\footnotesize,
@@ -150,9 +146,9 @@ The result of tests execution  for this module is following (Fig.: \ref{fig:test
 \subsection{Correspondence to the design principles}
 \begin{itemize}
 	\item Closing - the part of the code responsible for the reading content of the file with the concrete extension and the concrete structure is encapsulated with \textit{getDataStream} function
-	\item Code to an Interface - th communication is done vis standard stream interface.
+	\item Code to an Interface - no references to any classes;%the communication is done via standard stream interface.
 	\item Do not repeat yourself - no code duplication;
-	\item The Single-Responsibility Principle - can be changed only due to the introduction of new requirements for support multiple sheets within the one xlsx file;
+	\item The Single-Responsibility Principle - % can be changed only due to the introduction of new requirements for support multiple sheets within the one xlsx file;
 	\item The Open/Closed Principle - functionality of the library can be extended via adding new pipes with application of different piping patterns in a single place;
 	\item The Liskov Substitution Principle - object composition is used over inheritance (function wrapped in to pipe object);
 	\item The Dependency-Inversion Principle - communication with other modules is done via standard interface.
@@ -203,7 +199,7 @@ label=writeIn
 ]
 {code/lib/stream/transformStream.js.txt}
 
-The first stage which is necessary for the translation is a creation of \textit{schema} object of the Test Sheet. The next stage is the detection of the execution order. The third stage is merging results from previous steps. The last stage is an application of a template to the content of Test Sheet together with the file name of the xlsx file and execution schema created on a previous stage. The result of this transformation is pulled by the downstream as a \textit{content} property of an object together with \textit{meta data} and \textit{fileName} obtained from the upstream (Listing: \ref{writeIn}).
+The\textbf{ first stage} is a creation of \textit{schema} object of the Test Sheet. The \textbf{second stage} is the definition of the execution order. The \textbf{third stage} is mapping schema object from the first step to execution order array from the second step. The last, \textbf{forth stage} is an application of a template to the content of Test Sheet and the execution schema which has been created on a previous stage. The result of this transformation is pulled by the upstream as a \textit{content} property of an object together with \textit{meta data} and \textit{fileName} obtained from the downstream (Listing: \ref{writeIn}).
 
 \lstinputlisting[
 language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
@@ -238,7 +234,7 @@ The result of test execution:
 \subsection{Correspondence to the design principles}
 \begin{itemize}
 	\item Closing - the creation of data structure to be transformed to the next stream is created in a single function;
-	\item Code to an Interface - the communication with external modules done via standard stream in an object mode. 
+	\item Code to an Interface - this module does not refer to any class. 
 	\item Do not repeat yourself - no code duplication;
 	\item The Single-Responsibility Principle - can be changed only due to the change of Test Sheet type (another type of scheme);
 	\item The Open/Closed Principle - new pipes can be added in a single place with adding new functions to be wrapped in them;
@@ -256,10 +252,21 @@ The result of test execution:
 
 \section{Scheme}
 \label{sec:scheme}
-This part of the system creates a scheme object from the Test Sheet object, the only parameter accepted by the main function of this module is a Test Sheet object (the content of xlsx file).
-The decision to perform scheme creation in two stages was made due to the structure of the input object.
+This part of the system creates a scheme object from the Test Sheet, the only parameter accepted by the main function of this module is a Test Sheet object (the content of xlsx file in a JSON format).
+%The decision to perform scheme creation in two stages was made due to the structure of the input object.
 
-The \textbf{first stage} is creation of javascript object with Test Sheet properties (e. g. \textit{description, moduleUnderTest, objectsUnderTest, methodsUnderTest, inputs, outputs, invocations}), the value of each property except \textit{description} and \textit{moduleUnderTest} are arrays of strings with values which represent cell addresses for representative property of the Test Sheet. For the first two properties the values are strings with values (in a Test Sheet) from the cells \textit{A1} and \textit{A2} respectively(Listing: \ref{firstScheme}).
+The \textbf{first stage} is creation of the object with following properties:
+\begin{enumerate}
+	\item description;
+	\item moduleUnderTest;
+	\item objectsUnderTest;
+	\item methodsUnderTest;
+	\item inputs;
+	\item invocations;
+	\item outputs;
+\end{enumerate}
+
+ The values of each property except \textit{description} and \textit{moduleUnderTest} are arrays of strings with values which represent cell addresses for representative property of the Test Sheet. For the first two properties the values are strings with data  from the cells \textit{A1} and \textit{A2} respectively(Listing: \ref{firstScheme}).
 
 \lstinputlisting[
 language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
@@ -271,7 +278,7 @@ label=firstScheme
 ]
 {code/firstSchema.js.txt}
 
-The \textbf{sectod stage} is a pivot transformation of the scheme provided as the result of previous stage. The output of this transformation is an object with properties as a numbers of rows in the Test Sheet object. The values for first and second properties are values of \textit{description} and \textit{module} under test from the respective Test Sheet. While next of them are objects which consist of following Test Sheet properties: \textit{objectUnderTest, methodUnderTest, inputs, outputs, invocations}. With values as single element arrays with coordinate of respective cell (Listing \ref{scheme}).
+The \textbf{sectod stage} is a pivot transformation of the scheme provided from the previous stage. The output of this transformation is an object with properties as a numbers of rows in the Test Sheet object. The values for first and second properties are values of \textit{description} and \textit{module} under test from the respective Test Sheet. While next of them are objects which consist of following Test Sheet properties: \textit{objectUnderTest, methodUnderTest, inputs, outputs, invocations}. With values as single element arrays with coordinate of respective cell (Listing \ref{scheme}).
 \lstinputlisting[
 language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
 basicstyle=\footnotesize,
@@ -292,7 +299,7 @@ label=scheme
 %]
 %{code/lib/scheme/index.js.txt}
 \subsection{Test Coverage}
-Following test cases can show every step incrementally performed during the development process. Since the object obtained during reading of xlsx file is passed from one part of the system to another (\textit{Object pool OOP pattern}) this module does not perform any I/O calls.
+Following test cases can show every step incrementally performed during the development process. Since the object obtained from the reading of xlsx file is passed from one part of the system to another (\textit{Object pool OOP pattern}) this module does not perform any I/O calls. There are getter function for each type of cell in a Test Sheet as well as pivot function called \textit{transformScheme} and helper for it called \textit{getRowFromField}.
 %\lstinputlisting[
 %language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
 %basicstyle=\footnotesize,
@@ -313,11 +320,11 @@ The result of test execution:
 
 \subsection{Correspondence to the  design principles}
 \begin{itemize}
-	\item Closing - comparison type is closed within the \textit{getInvocationCells} function, all elements of Test Sheet are obtained via separate functions;
+	\item Closing - comparison type is closed within the \textit{getInvocationCells} function, all elements of Test Sheet are obtained via separate getter functions;
 	\item Code to an Interface - all methods have the same minimal abstraction layer for object which represents the content of Test Sheet. All keys of the object should be named as a two dimensional addresses of the cells (i. e. \textit{A1}, \textit{D7} etc);
 	\item Do not repeat yourself - no code repetition.
-	\item The Single-Responsibility Principle - the interface of the data object;
-	\item The Open/Closed Principle - violated in the two types comparison. For other types of Test Sheets it either should be implemented with different schemes or \textit{createScheme} enhanced with new functions;
+	\item The Single-Responsibility Principle - \textit{transformScheme} function should be changed in case of introduction of the non-linear Test Sheets, since this type has behavior definition in rows under test steps;
+	\item The Open/Closed Principle - violated in a \textit{transformScheme} function;
 	\item The Liskov Substitution Principle - no inheritance.
 	\item The Dependency-Inversion Principle - does not have any lower level modules;
 	\item The Interface Segregation Principle - does not have any lower level modules;
@@ -327,11 +334,11 @@ The result of test execution:
 
 \section{Execution Order}
 \label{sec:execOrder}
-This part of the system is responsible for the definition of an order for the test steps execution. In a general case, the execution order of tests within a Basic Test Sheet is defined by the order of test steps. 
+This part of the system is responsible for the definition of an order for the test steps execution. In a general case, the execution order of tests for a Basic Test Sheet is defined by the order of test steps. 
 All Test Sheets support references it provides an ability to define input for one test step as an output of some of the previous steps.
 
 
-However, in \textit{asynchronous} software the moment when execution is completed comes after the period of time when the next function is invoked. Moreover, \textit{real-time} systems have time constraints on their execution, but do not provide an exact time within it will be completed. This two factors force to define moment of each test step execution depending on the source of their input parameters. 
+However, in \textit{asynchronous} software the moment when execution is completed comes after the period of time when the next function can invoked. Moreover, \textit{real-time} systems have time constraints on their execution, but do not provide an exact time within it will be completed. Further, due to the requirements for the generated tests proposed by figo GmbH test execution should be fast since it will be performed in a timely fashion. Combination of this factors forced to define moment of each test step execution with respect to the source of their input parameters.
 
 
 For the definition of test steps execution order the decision was taken is to separate test steps in two types. \textit{The first} type covers test steps which behavior does not make influence to the next steps (do not define input parameters for further test steps) and is not determined by any of previous test steps. \textit{The second} type covers test steps which execution result determines behavior of the next test steps or is defined by previous steps.
@@ -339,7 +346,7 @@ For the definition of test steps execution order the decision was taken is to se
 %
 % But the fact that in this case Basic Test Sheets are applied  for \textit{asynchronous} testing of \textit{real-time} software together with an ability to 
 %This shit is important for application for real time software.
-The process of order definition is following. Main function accepts two input parameters: \textit{sheet} - the content of xlsx file which defines the Test Sheet and \textit{scheme} - the object generated by the main function from \textit{scheme.js} file (Listing: \ref{order}). Walking through the scheme elements stating with the third (skipping service rows) performs the check for each cell in a sheet object for determining is behavior of test step defined by the result of any previous test step. In this case such test step will be pushed to the \textit{chain} array as the first element and all dependent test steps will be pushed to the nested array as a list of dependent test steps. If \textit{chain} is not empty it will be pushed to the global (in a function scope) \textit{chains}  array. All other rows will be pushed to the \textit{linear array}. Such approach guarantees the saving order of rows and creates a record of the tree as a list of direct child nodes.
+The process of order definition is following. Main function accepts two input parameters: \textit{sheet} - the content of xlsx file which defines the Test Sheet and \textit{scheme} - the object generated by the main function from \textit{scheme.js} file (Listing: \ref{order}). Walking through the scheme elements starting with the third (skipping service rows) performs the check for each cell in a sheet object for determining does behavior of test step define inputs of any next test step. In this case such test step will be pushed to the \textit{chain} array as the first element and all dependent test steps will be pushed to the nested array as a list of dependent test steps. If \textit{chain} is not empty it will be pushed to the global (in a function scope) \textit{chains}  array. All other rows will be pushed to the \textit{linear array}.
 
 
 \lstinputlisting[
@@ -352,8 +359,8 @@ label=order
 ]
 {code/order.js.txt}
 
-For the further creation of test steps execution order the list of direct child nodes should be merged into nested list for child nodes which has other child nodes. In terms of test steps. This means that the result one test step can define the behavior of few next steps either directly or via some intermediate test steps. 
-The merging process is performed by the \textit{transformation} function (Listing \ref{transformation}). It accepts an array object (\textit{chains} array described previously) and performs iterative walk through with recursive call for each nested array. During each iteration this function iterates through values of childes (nested arrays) and checks if any of them is a parent for other child nodes (is it present as a first element in next arrays). In such case it takes list of its child nodes and creates a two dimensional array which replaces the the parent element in a list of childes with removing parent entry together with its child nodes from the current position. This operation of replacement performed recursively through all nested arrays using \textit{isIn} function which determines if given element belongs to the provided array including nested arrays.
+For the further creation of test steps execution order the list of child nodes should be merged into nested list for child nodes which has other child nodes. In terms of test steps this means that the result one test step can define the behavior of few next steps either directly or via some intermediate test steps. 
+The merging process is performed by the \textit{transformation} function (Listing \ref{transformation}). It accepts an array object (\textit{chains} array described previously) and performs iterative walk through with recursive call for each nested array. During each iteration this function checks the values of childes (nested arrays) for each of them being a parent for other child nodes (is it present as a first element in next arrays). In such case it takes list of its child nodes and creates a two dimensional array which replaces the the parent element in a list of childes with removing parent entry together with its child nodes from the current position. This operation of replacement performed recursively through all nested arrays using \textit{isIn} function which determines if given element belongs to the provided array including nested arrays.
 
 \lstinputlisting[
 language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
@@ -365,7 +372,7 @@ label=transformation
 ]
 {code/transformFunction.js.txt}
 
-The final step is the  concatenation of arrays from the \textit{first} and the \textit{second} test steps types. In this example, rows \textit{one} and \textit{two} belong to the first type as a service rows which do not define any test steps together with rows \textit{three} and \textit{four}. Note that the input parameter for the test step defined in a row number four is referenced by the expected output of the test step that was defined in a row five. However, the input parameter can not be changed by the execution process of test step and can be passed to the next step before the execution starts without any execution logic violation. At the same time result of test step \textit{five} is an input parameter for the steps \textit{six}, \textit{seven} and \textit{ten} this in turn defines an input for the test step \textit{eleven} (Listing: \ref{orderSteps}).
+The final step is the  concatenation of arrays from the \textit{first} and the \textit{second} test steps types. In this example, rows \textit{one} and \textit{two} belong to the first type as a service rows which do not define any test steps together with rows \textit{three} and \textit{four}. Note that the input parameter for the test step defined in a row number four is referenced by the expected output of the test step that was defined in a row five. However, the input parameter can not be changed by the execution process of test step and can be passed to the next step before the execution starts without any logic violation. At the same time result of test step \textit{five} is an input parameter for the steps \textit{six}, \textit{seven} and \textit{ten} this in turn defines an input for the test step \textit{eleven} (Listing: \ref{orderSteps}).
 \lstinputlisting[
 language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
 basicstyle=\footnotesize,
@@ -392,7 +399,7 @@ The following test cases can show every step incrementally performed during the 
 	\item Closing - nothing is likely to change;
 	\item Code to an Interface - exports a single function;
 	\item Do not repeat yourself - no code duplication;
-	\item The Single-Responsibility Principle - nothing is likely to change;
+	\item The Single-Responsibility Principle - can be changed only because of the introduction of new types of the Test Sheets;
 	\item The Open/Closed Principle - no reason to change, no need for a new functionality;
 	\item The Liskov Substitution Principle - no inheritance;
 	\item The Dependency-Inversion Principle - does not have any lower level modules;
@@ -429,7 +436,7 @@ Following test cases can show each step incrementally performed during the devel
 	\item Code to an Interface - exports a single function;
 	\item Do not repeat yourself - no code duplication;
 	\item The Single-Responsibility Principle - nothing is likely to change;
-	\item The Open/Closed Principle - no reason to change, no need for a new functionality;
+	\item The Open/Closed Principle - no reason to add/change the functionality;
 	\item The Liskov Substitution Principle - no inheritance;
 	\item The Dependency-Inversion Principle - does not have any lower level modules;
 	\item The Interface Segregation Principle - does not have any lower level modules;
@@ -535,7 +542,7 @@ The result of test execution:
 	\item Code to an Interface - exports a single function;
 	\item Do not repeat yourself - no code duplication;
 	\item The Single-Responsibility Principle - can be changed only due to the requirements for generated code;
-	\item The Open/Closed Principle - no need to be changed;
+	\item The Open/Closed Principle - no need to be changed, new functionality can be added via implementation of new version for the \textit{makeCall} function;
 	\item The Liskov Substitution Principle - no inheritance;
 	\item The Dependency-Inversion Principle - does not have any lower level dependencies;
 	\item The Interface Segregation Principle - composition over inheritance;
@@ -545,7 +552,7 @@ The result of test execution:
 
 e\section{Write Stream}
 \label{sec:write}
-This part of the system implements on function and exports it wrapped into object stream. It receives an object from the upstream with the following structure (Listing: \ref{writeIn}). It tries to read meta-data of the file with same name as Test Sheet file but with the .js extension, it is possible only if the file exists. In other case, the exception will be thrown and caught by the \textit{ catch} block which implements the creation of the file with the content received from the upstream, and the notification of the user about successfully created file via standard system output or with an error if the file failed to create. If the  file is already exists then the function will be able to read its meta-data. After it, this meta-data will be compared with meta-data of the Test Sheet file received from the upstream. In case if the modification date of the Test Sheet file is bigger then the modification data of the  .js file then the system will overwrite the js file with the content that was received from the upstream. In case when the Tests Sheet file was not updated after the creation of the representative js file the system will switch to the next object received from the upstream. The result javascript file generated from the provided Test Sheet looks as following (Listing: \ref{demo})
+This part of the system implements on function and exports it wrapped into object stream. It receives an object from the down with the following structure (Listing: \ref{writeIn}). It tries to read meta-data of the file with same name as Test Sheet file but with the .js extension, it is possible only if the file exists. In other case, the exception will be thrown and caught by the \textit{ catch} block which implements the creation of the file with the content received from the down stream. If the file is already exists then the function will be able to read its meta-data. After it, this meta-data will be compared with meta-data of the Test Sheet file received from the down stream. In case if the modification date of the Test Sheet file is bigger then the modification data of the  .js file then the system will overwrite the content of the javascript file with the content that was received from the down stream. In case when the Tests Sheet file was not updated after the creation of the representative js file the system will switch to the next object received from the upstream. The result javascript file generated from the provided Test Sheet looks as following (Listing: \ref{demo})
 
 \lstinputlisting[
 language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
@@ -608,7 +615,7 @@ The result of tests execution  for this module is following (Fig.: \ref{fig:test
 
 \section{Reporting mechanism}
 \label{sec:report}
-The reporting mechanism made as a standalone npm package which must be installed globally for it to be available at any place of the system where it is called by generated javascript files described in a previous section. 
+The reporting mechanism made as a standalone npm package which must be installed globally. This is necessary for an ability to be called by generated javascript files described in a previous section. Since they can be located in different parts of the system. 
 The folder/file structure of the application looks as following:
 \begin{itemize}
 	\item index.js
@@ -650,7 +657,7 @@ label=report
 ]
 {code/report.js.txt}
 
-On Figure \ref{fig:resultTestSheet} you see the result Test Sheet created after execution of the generated demo.js file. Note that on line 10 the \textit{pop} method returns value \textit{\{"el": 1 \}} but not the \textit{\{ "el": 5 \}}. This is correct behavior since all the operations are asynchronous and test step 10 does not depend on test step 9. The implementation described in this paper does not guarantee sequential execution of independent test steps. This is done for optimization reasons, so that test steps which do not depend upon each other can be started for the execution without waiting for previous step execution being completed. 
+On Figure \ref{fig:resultTestSheet} you see the result Test Sheet created after execution of the generated demo.js file. Note that on line 10 the \textit{pop} method returns value \textit{\{"el": 1 \}} but not the \textit{\{ "el": 5 \}}. This is correct behavior since all the operations are asynchronous and test step 10 does not depend on test step 9. The implementation described in this paper does not guarantee sequential execution of independent test steps. As was already said, this is done for optimization reasons, so that test steps which do not depend upon each other can be started for the execution without waiting for previous step execution being completed. 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{grafiken/testSheetResult.png}
