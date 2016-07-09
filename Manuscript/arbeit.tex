@@ -157,6 +157,8 @@ pdfpagelabels, %used with plainpages=false to make pdf readers show roman and ar
 \newgeometry{margin=3cm}
 \include{kapitel/titel}     % titelseite einbinden
 \restoregeometry
+\include{acknowledgments}
+\addcontentsline{toc}{chapter}{Acknowledgement}
 \include{kapitel/abstract}  % abstract einbinden
 \tableofcontents            % inhaltsverzeichnis
 
@@ -164,7 +166,7 @@ pdfpagelabels, %used with plainpages=false to make pdf readers show roman and ar
 \listoftables               % tabellenverzeichnis
 
 \clearpage %tell toc that there is a pagebreak after list of tables, however the hyperlink still points to the wrong page
-\addcontentsline{toc}{chapter}{\nomname} %abkuerzungen ins inhaltsverzeichnis
+\addcontentsline{toc}{chapter}{\nomname} %
 
 \Listofabbrev % liste der abkuerzungen erstellen
 
@@ -214,7 +216,7 @@ pdfpagelabels, %used with plainpages=false to make pdf readers show roman and ar
 
 %appendices can be defined here, the appendix structure has to be added manually to the toc (table of contents)
 %\clearpage  %toc new page
-%\addcontentsline{toc}{chapter}{Appendix} %add chapter to toc
+%\{toc}{chapter}{Appendix} %add chapter to toc
 \addpart{\appendixname}
 \input{kapitel/append}
 % \newpage

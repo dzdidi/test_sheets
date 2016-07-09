@@ -6,28 +6,28 @@ The end product introduced in this paper is a proof of concept,  applicable for 
 The wide spread of systems with time constraints imposed on their response time in a web development caused an appearance of new technologies for asynchronous programming (i.e. node.js, python's tornado or twisted, ruby's event machine etc). 
 This, together with increasing level of code reuse raised the speed of software development process.
 As a result, it raised the velocity of a new business requirements introduction.
-However, the processes for definitions of tests did not change a lot. 
-It still has high entry level for people who define tests requiring development background.
+However, the processes of tests' definitions did not change a lot. 
+It still has high entry level for people who define tests requiring them to have software development background.
 This fact necessitates direct involvement of software developers in the processes of test definition and editing.
 Test Sheets is a new approach developed by Software Engineering group of the University of Mannheim. 
 It combines  tool-free user experience of test definitions for business related staff via use of regular spreadsheets editors.
 As a result, it reduces involvement of technical staff to minimum.
 
 
-This work describes the change project: development, adoption, conversion and use processes for an implementation of Test Sheets in figo GmbH. The research is based on works of Michael Zhivich and Robert Cunningham in the field of software testing, as well as papers of Robert Glass and Tsai, Fang  and Bi in scope of testing of real-time software systems.
-Description of asynchronous strategies is based on General Theory of Reactivity, the research made by Chris Kowal and researches in field of reactive programming made by Erik Meijer, Cvonal Eliot and Mark S. Miller. 
+This work describes the change project: development, adoption, conversion and use processes for an implementation of Test Sheets in figo GmbH. The research is based on works of Michael Zhivich and Robert Cunningham in the field of software testing, as well as papers of Robert Glass and Tsai, Fang  and Bi in scope of real-time software systems testing.
+Description of asynchronous strategies analysed in this paper is based on General Theory of Reactivity, the research made by Chris Kowal and researches in field of reactive programming made by Erik Meijer, Cvonal Eliot and Mark S. Miller. 
 The selection of the strategy for asynchronous event handling in node.js based on the performance measurements made by Gorgi Kosev. 
 System  architecture and design made with respect to the principles of agile architecture described by Robert  C. Marting and John Dolley. 
 The implementation of the system made according to the Test Driven Development approach and guidances introduced by Robert C. Martin in his book "Clean Code: A Handbook of Agile Software Craftsmanship".
-The user experience collected by polling process based on After Scenario Questionnaire and Post Study System Usability Questionnaire.
+The user experience collected by polling process based on After Scenario Questionnaire and Post Study System Usability Questionnaire designed by James R Lewis.
 The representation of system fit based on Task-Technology Fit model described by Dale Goodhue and Ronald Thompson.
 
-The results of the research introduced within the scope of this paper are stated below.
+The results of the research made by author within the scope of this paper are stated below.
 The guidance of code generation for asynchronous testing of real-time software was created (Section \ref{sec:execOrder}). 
-The conventions (Section \ref{sec:convnetions}) for Test Sheet definitions created within the scope of this paper put limitations on a number of input/output parameters and reduce their type to javascript object (Section \ref{chap:limits}).
+The conventions (Section \ref{sec:convnetions}) for Test Sheet definitions created within the scope of this paper put limitations on a number of input/output parameters and reduce their type to javascript object.
 While enhancing the flexibility by introducing two types of comparison of actual and expected execution result. 
 Transformation project dedicated to introduction of Basic Test Sheets into the business process of financial technology company described in Section \ref{sec:transP}.
-This paper introduces the comparison of Test Sheets with another widely used test definition approaches(Chapter \ref{chap:testing}). 
+This paper introduces the comparison of Test Sheets with another widely used test definition approaches (Chapter \ref{chap:testing}). 
 The definition of real-time software with respect to the modern state of art in web development is given in Chapter \ref{chap:rt} which also describes specifics of a testing process for real-time software systems.
 The structure of event mechanism of node.js showed in this paper. The paper elaborates on strategies for asynchronous event handling together with their performance (Chapter \ref{chap:async}). 
 Described architecture (Chapter \ref{chap:architectureDesign}), design and implementation (Chapter \ref{chap:design}) together with principles and patterns this processes were based on. 

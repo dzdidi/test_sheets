@@ -96,8 +96,8 @@ For the reading of the content from the spread sheet and transforming obtained i
 
 \section{Read Stream}
 \label{sec:read}
-This part of the system is an implementation of combining streams pattern. From the internal view, it consists of two streams.  The first stream is implemented with the use  \textbf{getFilesStream} function. It creates readable stream for reading content of directory including nested directories and returns the array with absolute paths to them.
-Second stream is \textbf{getDataStream} the stream in an object mode. For every file path, it accepts from the down stream, it checks its extensions and if it is equal to .xlsx this stream implements the reading content of files. For this purpose it uses \textit{xlsx} module and  \textit{fs}  to read meta data of the file. Next, this stream pushes obtained data to the up stream (Listing: \ref{readStream}).
+This part of the system is an implementation of combining streams pattern. From the internal view, it consists of two streams.  The first stream is implemented with the use  \textbf{getFilesStream} function from\textbf{ fs-readdir} module. It creates readable stream for reading content of directory including nested directories and returns the array with absolute paths to them.
+Second stream is \textbf{getDataStream} the stream in an object mode. For every file path, it accepts from the down stream, it checks its extensions and if it is equal to \textit{.xlsx} this stream implements the reading content of files. For this purpose it uses \textbf{xlsx} module. While for reading files' metadata the internal node.js module \textbf{fs}is used. Next, this stream pushes obtained data to the up stream (Listing: \ref{readStream}).
  
 \lstinputlisting[
 language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
@@ -109,7 +109,7 @@ label=readStream
 ]
 {code/lib/stream/readStream.js.txt}
 
-These two streams are piped into combined stream using module \textit{multipipe} and returned by the function exported by this module.
+These two streams are piped into combined stream using module \textbf{multipipe} and returned by the function exported by this module.
 In other words, this module exports function which accepts path to the directory and returns array of deferred values to the upstream. Each of deferred value  is a javascript object with following structure (Listing \ref{readOut})
 \lstinputlisting[
 language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
@@ -186,20 +186,20 @@ The result of tests execution  for this module is following (Fig.: \ref{fig:test
 
 \section{Transform Stream}
 \label{sec:transform}
-This part of the system performs translation of the Test Sheet into executable javascript code. In this realization of the Test Sheet concept translation performed in four stages. 
+This part of the system performs translation of the Test Sheet into executable javascript code. From the perspective of this module the translation performed in two stages (Listing: \ref{transformST}) 
 
 
 \lstinputlisting[
 language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
 basicstyle=\footnotesize,
 numberstyle=\tiny,
-caption={Transform Stream},
+caption={transform\_stream.js},
 captionpos=b,
-label=writeIn
+label=transformST
 ]
 {code/lib/stream/transformStream.js.txt}
 
-The\textbf{ first stage} is a creation of \textit{schema} object of the Test Sheet. The \textbf{second stage} is the definition of the execution order. The \textbf{third stage} is mapping schema object from the first step to execution order array from the second step. The last, \textbf{forth stage} is an application of a template to the content of Test Sheet and the execution schema which has been created on a previous stage. The result of this transformation is pulled by the upstream as a \textit{content} property of an object together with \textit{meta data} and \textit{fileName} obtained from the downstream (Listing: \ref{writeIn}).
+The\textbf{ first stage} is a creation of \textit{scheme} object of the Test Sheet. The \textbf{second stage} is an application of a template to the content of Test Sheet and the execution schema which has been created on a previous stage. The result of this transformation is pulled by the upstream as a \textit{content} property of an object together with \textit{meta data} and \textit{fileName} obtained from the downstream (Listing: \ref{writeIn}).
 
 \lstinputlisting[
 language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
@@ -334,7 +334,7 @@ The result of test execution:
 
 \section{Execution Order}
 \label{sec:execOrder}
-This part of the system is responsible for the definition of an order for the test steps execution. In a general case, the execution order of tests for a Basic Test Sheet is defined by the order of test steps. 
+This part of the system is responsible for the definition of an order for the test steps execution. It is called in the main entry point of the scheme module and applied to the pivoted scheme described above and the sheet object the scheme relates to. In a general case, the execution order of tests for a Basic Test Sheet is defined by the order of test steps.
 All Test Sheets support references it provides an ability to define input for one test step as an output of some of the previous steps.
 
 

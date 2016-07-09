@@ -2,7 +2,7 @@
 \label{chap:testing}
 %Oxford dictionary defines test as a procedure intended to establish the quality, performance, or reliability of something, especially before it is taken into widespread use. 
 Software testing is an important technique to evaluate and assess software's quality and reliability, it provides a possibility to determine whether the development of product conform the requirements. At least 30\% of the price of a software project is the cost of software testing \cite{Lecture2}. 
-The general requirements to test definitions are following: fast, independent, repeatable, self-validating, timely.
+The general requirements to test definitions are following: \textbf{fast}, \textbf{independent}, \textbf{repeatable}, \textbf{self-validating}, \textbf{timely}.
 More detailed information regarding requirements can be found via following URL: \url{http://www.extremeprogramming.org/rules/testfirst.html}
  %The price of software project for at least 30\% consists of costs for tests\cite{Lecture2}.
 %The knowledge on software testing have become crucial for all software developers and engineers\cite{IntroductionST}.
@@ -54,7 +54,7 @@ Toyota was fined \$1.2 Billion for concealing safety defects\cite{toyota}.\\
 
 \section{Existing approaches for test definitions}
 \label{sec:testApproaches}
-In most of the cases developers are using testing frameworks or internal DSLs which requires the use of formal programming languages. This requires knowledge of languages and understanding of the basic programming concepts from everyone who is involved in the creation of a test, reading its result or updating/deleting the test.
+In most of the cases developers are using testing frameworks or internal Domain Specific Languages (DSL) which requires the use of formal programming languages. This requires knowledge of languages and understanding of the basic programming concepts from everyone who is involved in the creation of a test, reading its result or updating/deleting the test.
 %Since it is common practice to base tests on top of business requirements tests should be used by different shareholders who define those requirements.
 The brief overview of different testing approaches and their analysis with respect to modern business requirements is provided below.
 
@@ -78,13 +78,13 @@ Definition of tests with formal general programming language from one side makes
 \subsection{Fit}
 Framework for Integrated Test (Fit) - is a way of defining test cases with HTML pages. It enhances the communication and collaboration connecting customers and programmers. Moreover, it creates a feedback loop between them. Fit automatically checks HTML pages against actual program\cite{fit}.
 
-Fit reads tables in HTML files, each table is interpreted by a \textit{fixture} written by programmers. This fixture checks the examples in the table by running the actual program\cite{fitIntro}.
+Fit reads tables in HTML files, each table is interpreted by a \textit{\textbf{fixture}} written by programmers. This fixture checks the examples in the table by running the actual program\cite{fitIntro}.
 
-Programmers use a \textit{ColumnFixture} to map the columns in the table to variables and methods in the fixture. The first columns provide correspondence to variables in the fixture. The last column has the expected result and corresponds to the method in the fixture\cite{fitIntro}.
+Programmers use a \textit{\textbf{ColumnFixture}} to map the columns in the table to variables and methods in the fixture. The first columns provide correspondence to variables in the fixture. The last column has the expected result and corresponds to the method in the fixture\cite{fitIntro}.
 
 Different implementations provide different user experience from Wiki pages (i.e. FitNess) to complete standalone application with internal functionality for tables definitions and tests execution (i.e. GuiRunner).
 
-With Fit, customers can provide more guidance in a development process by lending their subject matter expertise and imagination to the effort\cite{fit} requiring developer to write only \textit{fixture}, the middleware between tests and code. At the same time, it provides media between operations over tests and the results of their execution for people without development experience.
+With Fit, customers can provide more guidance in a development process by lending their subject matter expertise and imagination to the effort\cite{fit} requiring developer to write only \textit{\textbf{fixture}}, the middleware between tests and code. At the same time, it provides media between operations over tests and the results of their execution for people without development experience.
 
 \subsection{Cucumber}
 Cucumber is a Behavior Driven Development tool which allows users to define tests specifications with \textit{Gherkin}, the language which is structured plain text with support of internationalization for more then sixty different languages\cite{cuceRef}.

@@ -49,10 +49,10 @@ The high-level IT infrastructure of figo GmbH consists of two parts (Figure: \re
 
 	\paragraph{Custom-API} is a client responsible for connection to custom APIs provided by banks. Some of them give full functionality while some only partial. In the same time all of them are an implementation of REST-API specification.
 	
-	\paragraph{HBCI+/FinTS} is responsible for connection to banks' interfaces via Home Banking Computer Interface (HBCI). It is an implementation of an \textit{adapter OOP pattern} for the jsHBCI library.  HBCI is an open publicly available protocol. Its specification was originally designed by the two German banking groups \textit{Sparkasse and Volksbanken und Raiffeisenbanken} and \textit{German higher-level associations such as the Bundesverband deutscher Banken e.V.}\cite{finTS}.
+	\paragraph{HBCI+/FinTS} is responsible for connection to banks' interfaces via Home Banking Computer Interface (HBCI) client. It is an implementation of an \textit{adapter OOP pattern} for the jsHBCI library.  HBCI is an open publicly available protocol. Its specification was originally designed by the two German banking groups \textit{Sparkasse and Volksbanken und Raiffeisenbanken} and \textit{German higher-level associations such as the Bundesverband deutscher Banken e.V.}\cite{finTS}.
 	
 	\paragraph{Web-Banking Engine} is responsible for communication with banks which does not provide API nor HBCI. This is an implementation of a \textit{factory OOP pattern} for scraping libraries. Here figo GmbH uses \textit{web scraping} technology to perform interaction with internet-banking web pages.
-	This is the most sensitive part from the developer's perspective, since every change to the bank's web page can lead to failure of the specific scripts. \\
+	This is the most sensitive part from the developer's perspective, since every change to the bank's web page can lead to failure of the specific scripts. Tests defined with the use of Test Sheets are applied to testing of the scraping scripts against banking web-page.
 	
 %	The aim of this paper is an application of Test Sheet for early (before any user's interaction will take place) recognition of page changes  and notification of developers regarding failed part of the script.
 	
@@ -87,7 +87,7 @@ The high-level IT infrastructure of figo GmbH consists of two parts (Figure: \re
 \chapter{Transformation project}
 \label{sec:transP}
 This section describes the transformation project initiated by figo GmbH for the use of Test Sheets.
-\textbf{Enterprise System Transformation} -  "is a hierarchic-sequential process involving all actions of individuals in an organization leveraging information technology to support the transition of an Enterprise System from its original O-I-T [Organization-Technology-Individual] configuration [...] to an (enhanced) configuration [(Figure: \ref{fig:oit})]."\cite{MES5}
+\textbf{Enterprise System Transformation} -  "is a hierarchic-sequential process involving all actions of individuals in an organization leveraging information technology to support the transition of an Enterprise System from its original O-I-T [Organization-Technology-Individual] configuration [...] to an (enhanced) configuration (Figure: \ref{fig:oit})]"\cite{MES5}.
 
 \begin{figure}[ht]
 	\label{fig:oit}
@@ -136,7 +136,7 @@ The transformation project includes four processes within itself:
 
 \paragraph{Underlying assumptions:} Shift of responsibility for functionality  on managers will improve system maintenance process and customers' user experience. 
 
-\paragraph{Goal:} Routinization of product verification/testing process with respect to its business and functionality requirements by use of Test Sheets.
+\paragraph{Goal:} Routinization of product verification/testing process with respect to its business and functionality requirements by use of Test Sheets. Tests defined with Test Sheets must be executed on timely basis for immediate detection of critical changes in web pages of clients for Internet banking.
 \paragraph{Plan:}
 \begin{itemize}
 	\item Test Sheets concept introduction to the target customers;
