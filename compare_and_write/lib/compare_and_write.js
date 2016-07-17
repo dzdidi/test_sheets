@@ -9,23 +9,21 @@
 var assert = require('assert');
 var fs = require('fs');
 var xlsx = require('xlsx');
+var util = require('util')
 
 function makeComparisonAndWriteResult(expected, returned, deepness, scriptName, file, variable){
   var result = compare(expected, returned, deepness);
   var res = "";
   result ? res = "#00FF00" : res = "#FFFF00";
   var testSheet = xlsx.readFile(file, {'cellStyles': true});
-  if(!result){
-    if (testSheet.Sheets.Sheet1[variable].f) {
-      console.log(testSheet.Sheets.Sheet1[variable].f)
-    } else {
-      testSheet.Sheets.Sheet1[variable].v = JSON.stringify(expected) + '\\' + JSON.stringify(returned);
-    }
 
-    xlsx.writeFile(testSheet, "res_" + file, {'cellStyles': true});
+  if(!result){
+    testSheet.Sheets.Sheet1[variable].v = JSON.stringify(expected) + '\\' + JSON.stringify(returned);
   };
 
-  console.log(variable, expected, returned, deepness, result);
+  xlsx.writeFile(testSheet, file, {'cellStyles': true});
+
+  console.log("In cell", variable, result ? "Test succeed." : "Test step failed with returned value: " + util.inspect(returned, {depth: null}), "Comparison done by:", deepness);
 
   return(result);
 };

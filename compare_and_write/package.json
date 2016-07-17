@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "sinon": "^1.17.2",
-    "xlsx": "^0.8.0",
+    "xlsx": "^0.8.0"
   },
   "license": "ISC"
 }
