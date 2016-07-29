@@ -9,11 +9,12 @@ An introduction of the Payment Services Directive (PSD) and PSD2 by European Com
 figo is a platform to access banking information and execute banking transactions in a regulated environment (PSD).  figo connects and translates services (APIs) from 99\% of German banks to a unified RESTful API for partners and third parties i.e. banks ans financial institutions, financial technology companies (FinTech)\cite{figoAngel}\cite{figoCB}\cite{figoFAQWhat}\cite{figoFAQVision}\cite{figoFAQPartners}.
 The list of figo's partners and customers  together with their use cases can be found via following link: \url{http://figo.io/use\_cases.html}.
 
-The figo platform can be used in two different ways: 
+In the scope of PSD2 the product of figo GmbH can be used in two different ways: 
 \begin{itemize}
-	\item Access to account (XS2A) software as a service. That is the preferred and easiest model by developers and FinTech partners to get access to account;
-	\item XS2A API as white label technology  thats is the preferred model by banks since they can comply with PSD2 requirements, additionally, they have the big opportunity to benefit from an API platform infrastructure. 
+	\item Account Information Service Provider;
+	\item Payment Initiation Service Provider.
 \end{itemize}
+
 
 figo GmbH is a FinTech company with the headquarter located Hamburg, Germany. It was founded in 2012  with the mission “to build the backbone of next generation financial services"\cite{figoFAQVision}.  Currently, the API is fully functional in Germany, partly in Austria and England\cite{figoAngel}\cite{figoCB}.
 
@@ -130,33 +131,13 @@ The transformation project includes four processes within itself:
 \paragraph{Rationale for project creation and focus:} 
 \begin{itemize}
 	\item High workload and time pressure in combination with limited technical resources leads to less time available on manual system monitoring. Non developers were not capable of testing the functionality;
-	\item Tests will help in estimation of time to fix errors.
+	\item Output of the tests results will help in a time estimation for errors fixing.
 \end{itemize}
 
 
 \paragraph{Underlying assumptions:} Shift of responsibility for functionality  on managers will improve system maintenance process and customers' user experience. 
 
 \paragraph{Goal:} Routinization of product verification/testing process with respect to its business and functionality requirements by use of Test Sheets. Tests defined with Test Sheets must be executed on timely basis for immediate detection of critical changes in web pages of clients for Internet banking.
-\paragraph{Plan:}
-\begin{itemize}
-	\item Test Sheets concept introduction to the target customers;
-	\item Requirements analysis;
-	\item Mapping requirements to the concept of Test Sheets;
-	\item Definition of the development process;
-	\item System design;
-	\item Development:
-	\begin{itemize}
-		\item Alpha1 version without support of references and linear tests execution;
-		\item Alpha2 version with references support and linear tests execution;
-		\item BETA version with optimization for real-time testing;
-		\item Reporting mechanism;
-	\end{itemize}
-	\item Demonstration;
-	\item Performance measurements;
-	\item Workshop on system installation and usage;
-	\item User experience collection;
-	\item Routinization.
-\end{itemize}
 
 \paragraph{Success:}
 \begin{itemize}
@@ -180,4 +161,25 @@ The language of implementation must be javascript for low entry level of develop
 
 Last but not least, due to the nature of data represented on a web page the comparison between actual and expected results must have two possible options: object keys comparison and object key-value comparison.
 
+\section{Test Sheet's project plan}
+ This high level plan was developed and used by the author to align the project state, to perform time estimations and to provide transparency regarding the project state for company's management staff:
+\begin{enumerate}
+	\item Test Sheets concept introduction to the target customers;
+	\item Requirements analysis;
+	\item Mapping requirements to the concept of Test Sheets;
+	\item Definition of the development process;
+	\item System design;
+	\item Development:
+	\begin{enumerate}
+		\item ALPHA1 version without support of references and linear tests execution;
+		\item ALPHA2 version with references support and linear tests execution;
+		\item BETA version with optimization for real-time testing;
+		\item Reporting mechanism;
+	\end{enumerate}
+		\item Demonstration;
+		\item Performance measurements;
+		\item Workshop on system installation and usage;
+		\item User experience collection;
+		\item Routinization.
+\end{enumerate}
 

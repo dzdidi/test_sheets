@@ -36,7 +36,7 @@ This principles are suggestional and can not be strictly followed due to their m
 
 \chapter{Conventions}
 \label{sec:convnetions}
-Following conventions were developed with respect to the requirements defined by figo GmbH and must be followed by Test Sheet for proper work of developed system:
+Following conventions were developed by author with respect to the requirements defined by figo GmbH and based on the definition of the Test Sheets. This conventions must be followed by Test Sheet for proper work of developed system:
 \begin{itemize}
 	\item Number of columns within one Test Sheet should not exceed 26 columns (from A to Z);
 	\begin{itemize}
@@ -96,8 +96,9 @@ For the reading of the content from the spread sheet and transforming obtained i
 
 \section{Read Stream}
 \label{sec:read}
-This part of the system is an implementation of combining streams pattern. From the internal view, it consists of two streams.  The first stream is implemented with the use  \textbf{getFilesStream} function from\textbf{ fs-readdir} module. It creates readable stream for reading content of directory including nested directories and returns the array with absolute paths to them.
-Second stream is \textbf{getDataStream} the stream in an object mode. For every file path, it accepts from the down stream, it checks its extensions and if it is equal to \textit{.xlsx} this stream implements the reading content of files. For this purpose it uses \textbf{xlsx} module. While for reading files' metadata the internal node.js module \textbf{fs}is used. Next, this stream pushes obtained data to the up stream (Listing: \ref{readStream}).
+This part of the system is an implementation of combining streams pattern using \textit{multipipe} module. From the internal view, it consists of two streams.  The first stream is implemented with the use  \textbf{getFilesStream} function from\textbf{ fs-readdir} module. It creates readable stream for reading content of directory including nested directories and returns the array with absolute paths to them.
+Second stream is \textbf{getDataStream} the stream in an object mode. 
+For every file path, it accepts from the down stream, it checks its extensions and if it is equal to \textit{.xlsx} this stream reads the content of files. For this purpose it uses \textbf{xlsx} module. While for reading files' metadata the internal node.js module \textbf{fs} is used. Next, this stream pushes obtained data to the up stream in a data object with file name, file meta data and its content (Listing: \ref{readStream}).
  
 \lstinputlisting[
 language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
@@ -109,8 +110,7 @@ label=readStream
 ]
 {code/lib/stream/readStream.js.txt}
 
-These two streams are piped into combined stream using module \textbf{multipipe} and returned by the function exported by this module.
-In other words, this module exports function which accepts path to the directory and returns array of deferred values to the upstream. Each of deferred value  is a javascript object with following structure (Listing \ref{readOut})
+This module exports single function which accepts a single string parameter - path to the directory with Test Sheet files. This function return single stream (two piped streams),  an array of deferred values which will be pushed to the upstream. Each of deferred value  is a javascript object with following structure (Listing \ref{readOut})
 \lstinputlisting[
 language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
 basicstyle=\footnotesize,
@@ -122,7 +122,7 @@ label=readOut
 {code/readOut.js.txt}
 
 \subsection{Test Coverage}
-Following test cases show step every incrementally performed during the development process. All calls to systems I/O (e. g. read file meta data, read file) are implemented using stubs. \textbf{Stub} is an implementation of \textit{proxy pattern} which allows to redefine functions behavior. This gives an opportunity to improve speed of tests by replacing functions with call to I/O with empty functions.
+Following test cases show step every incrementally performed during the development process. All calls to systems I/O (e. g. read file meta data, read file) are performed using stubs. \textbf{Stub} is an implementation of \textit{proxy pattern} which allows to redefine functions behavior. This gives an opportunity to improve speed of tests by replacing functions with call to I/O with empty functions or functions with predefined returned values.
 %\lstinputlisting[
 %language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
 %basicstyle=\footnotesize,
@@ -223,7 +223,7 @@ Following test cases can show every step incrementally performed during the deve
 %]
 %{code/lib/stream/transformStream.js.txt}
 
-The result of test execution:
+The result of tests execution  for this module is following (Fig.: \ref{fig:testTransofm}):
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{grafiken/testTransform.png}
@@ -310,7 +310,7 @@ Following test cases can show every step incrementally performed during the deve
 %]
 %{code/test/scheme.js.txt}
 
-The result of test execution:
+The result of test execution (Figure \ref{fig:testScheme}): 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{grafiken/testScheme.png}
@@ -338,7 +338,7 @@ This part of the system is responsible for the definition of an order for the te
 All Test Sheets support references it provides an ability to define input for one test step as an output of some of the previous steps.
 
 
-However, in \textit{asynchronous} software the moment when execution is completed comes after the period of time when the next function can invoked. Moreover, \textit{real-time} systems have time constraints on their execution, but do not provide an exact time within it will be completed. Further, due to the requirements for the generated tests proposed by figo GmbH test execution should be fast since it will be performed in a timely fashion. Combination of this factors forced to define moment of each test step execution with respect to the source of their input parameters.
+However, in \textit{asynchronous} software the moment when execution is completed comes after the period of time when the next function can invoked. Moreover, \textit{real-time} systems have time constraints on their execution, but do not provide an exact time within it will be completed. Further, due to the requirements for the generated tests proposed by figo GmbH test execution should be fast since it will be performed in a timely fashion. Combination of all this factors forced to define moment of each test step execution with respect to the source of their input parameters.
 
 
 For the definition of test steps execution order the decision was taken is to separate test steps in two types. \textit{The first} type covers test steps which behavior does not make influence to the next steps (do not define input parameters for further test steps) and is not determined by any of previous test steps. \textit{The second} type covers test steps which execution result determines behavior of the next test steps or is defined by previous steps.
@@ -346,7 +346,7 @@ For the definition of test steps execution order the decision was taken is to se
 %
 % But the fact that in this case Basic Test Sheets are applied  for \textit{asynchronous} testing of \textit{real-time} software together with an ability to 
 %This shit is important for application for real time software.
-The process of order definition is following. Main function accepts two input parameters: \textit{sheet} - the content of xlsx file which defines the Test Sheet and \textit{scheme} - the object generated by the main function from \textit{scheme.js} file (Listing: \ref{order}). Walking through the scheme elements starting with the third (skipping service rows) performs the check for each cell in a sheet object for determining does behavior of test step define inputs of any next test step. In this case such test step will be pushed to the \textit{chain} array as the first element and all dependent test steps will be pushed to the nested array as a list of dependent test steps. If \textit{chain} is not empty it will be pushed to the global (in a function scope) \textit{chains}  array. All other rows will be pushed to the \textit{linear array}.
+The process of order definition is following. Main function accepts two input parameters: \textit{sheet} - the content of xlsx file which defines the Test Sheet and \textit{scheme} - the object generated by the main function from \textit{scheme.js} file. Walking through the scheme elements starting with the third (skipping service rows) performs the check for each cell in a sheet object for determining does behavior of test step define inputs of any next test step. In this case such a test step will be pushed to the \textit{chain} array as the first element and all dependent test steps will be pushed to the nested array as a list of dependent test steps. If \textit{chain} is not empty it will be pushed to the global (in a function scope) \textit{chains}  array. All other rows will be pushed to the \textit{linear array} (Listing: \ref{order}).
 
 
 \lstinputlisting[
@@ -360,7 +360,7 @@ label=order
 {code/order.js.txt}
 
 For the further creation of test steps execution order the list of child nodes should be merged into nested list for child nodes which has other child nodes. In terms of test steps this means that the result one test step can define the behavior of few next steps either directly or via some intermediate test steps. 
-The merging process is performed by the \textit{transformation} function (Listing \ref{transformation}). It accepts an array object (\textit{chains} array described previously) and performs iterative walk through with recursive call for each nested array. During each iteration this function checks the values of childes (nested arrays) for each of them being a parent for other child nodes (is it present as a first element in next arrays). In such case it takes list of its child nodes and creates a two dimensional array which replaces the the parent element in a list of childes with removing parent entry together with its child nodes from the current position. This operation of replacement performed recursively through all nested arrays using \textit{isIn} function which determines if given element belongs to the provided array including nested arrays.
+The merging process is performed by the \textit{transform} function (Listing \ref{transformation}). It accepts an array object (\textit{chains} array described previously) and performs iterative walk through with recursive call for each nested array. During each iteration this function checks the values of childes (nested arrays) for each of them being a parent for other child nodes (is it present as a first element in next arrays). In such case it takes list of its child nodes and creates a two dimensional array which replaces the the parent element in a list of childes with removing parent entry together with its child nodes from the current position. This operation of replacement performed recursively through all nested arrays using \textit{isIn} function which determines if given element belongs to the provided array including nested arrays.
 
 \lstinputlisting[
 language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
@@ -387,6 +387,7 @@ label=orderSteps
 \subsection{Test coverage}
 
 The following test cases can show every step incrementally performed during the development process. Here you also can see application of Object pool pattern which helped to get rid of the call to I/O for the process of reading content from the .xlsx file.
+The result of test execution (Figure \ref{fig:testOrder}): 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{grafiken/testOrder.png}
@@ -422,7 +423,7 @@ label=execScheme
 ]
 {code/executionSchema.js.txt}
 \subsection{Test Coverage}
-Following test cases can show each step incrementally performed during the development process.
+Following test cases can show each step incrementally performed during the development process (Figure: \ref{fig:testCreate}).
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{grafiken/testCreate.png}
@@ -458,10 +459,10 @@ The \textbf{second stage} is adding require of reporting module for representati
 The \textbf{third stage} is adding declarations of the module scope variables. The variable names are taken from the coordinates of cells which store input and output parameters in a Test Sheet. The values of the variables are taken from the cells with respective addresses.
 
 
-The \textbf{fourth stage} is adding calls to the methods (Listing: \ref{applyTemplate}). This stage is the most important part of this module. Since there are two types of execution orders adding function calls is performed in two steps described below. 
+The \textbf{fourth stage} is adding calls to the methods (Listing: \ref{applyTemplate}). This stage is the most important part of this module. Since there are two types of execution orders adding function calls is performed for two cases described below. 
 
 
-The \textit{\textbf{first step}} is adding calls for independent test steps. This is made by iterative call of the \textit{makeCall} function with appending closing brackets to the end of the result string during each of iterations. This function simply performs mapping between \textit{sheet} object (content of xlsx file), \textit{scheme} entry (test step) and string with the content for executable javascript file (Listing: \ref{makeCall}).
+The \textit{\textbf{first case}} is adding calls for independent test steps. This is made by iterative call of the \textit{makeCall} function with appending closing brackets to the end of the result string during each of iterations. This function simply performs mapping between \textit{sheet} object (content of xlsx file), \textit{scheme} entry (test step) and string with the content for executable javascript file which represents each individual test step from the Test Sheet (Listing: \ref{makeCall}).
 
 \lstinputlisting[
 language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
@@ -476,7 +477,7 @@ label=makeCall
 Note that functions in the generated code are not called directly but via the \textit{call} method of the function's prototype. This method provides an opportunity to call the function from the different context (environment). In the current example the implementation of \textit{stack} module does not depend on the environment in which it was called. But in some cases the result of function's invocation can depend on the environment in which it was invoked. One of such cases can be the creation of child process. The environment for such calls should be passed as an \textit{object under test}.
 
 
-The \textit{\textbf{second step}} is adding calls for interdependent test steps. For every  element of the \textit{nestedCalls} array it calls the  \textit{makeNestedCall} function and if the next element is an array then this function performs recursive call with an appending of the closing brackets to the result of this call. In case if next element is not an array the it appends closing brackets and performs next iteration (Listing: {\ref{applyTemplate}).
+The \textit{\textbf{second case}} is adding calls for interdependent test steps. For every  element of the \textit{nestedCalls} array it calls the  \textit{makeNestedCall} function. Which calls \textit{makeCall} function (Listing: \ref{makeCall}) and if the next element is an array then this function performs recursive call with an appending of the closing brackets to the result of this call. In case if next element is not an array the it appends closing brackets and performs next iteration (Listing: {\ref{makeNestedCall}).
 
 
 
@@ -484,11 +485,11 @@ The \textit{\textbf{second step}} is adding calls for interdependent test steps.
 language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
 basicstyle=\footnotesize,
 numberstyle=\tiny,
-caption={Function applyTemplate from template module},
+caption={Function makeNestedCall from template module},
 captionpos=b,
-label=applyTemplate
+label=makeNestedCall
 ]
-{code/apply_template.js.txt}
+{code/makeNestedCall.js.txt}
 
 
 %
@@ -528,7 +529,7 @@ Following test cases can show each step incrementally performed during the devel
 %]
 %{code/test/template.js.txt}
 
-The result of test execution:
+The result of test execution (Figure: \ref{fig:testTeamplate}):
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{grafiken/testTemplate.png}
@@ -552,7 +553,7 @@ The result of test execution:
 
 e\section{Write Stream}
 \label{sec:write}
-This part of the system implements on function and exports it wrapped into object stream. It receives an object from the down with the following structure (Listing: \ref{writeIn}). It tries to read meta-data of the file with same name as Test Sheet file but with the .js extension, it is possible only if the file exists. In other case, the exception will be thrown and caught by the \textit{ catch} block which implements the creation of the file with the content received from the down stream. If the file is already exists then the function will be able to read its meta-data. After it, this meta-data will be compared with meta-data of the Test Sheet file received from the down stream. In case if the modification date of the Test Sheet file is bigger then the modification data of the  .js file then the system will overwrite the content of the javascript file with the content that was received from the down stream. In case when the Tests Sheet file was not updated after the creation of the representative js file the system will switch to the next object received from the upstream. The result javascript file generated from the provided Test Sheet looks as following (Listing: \ref{demo})
+This part of the system implements on function and exports it wrapped into object stream. It receives an object from the down stream with the following structure (Listing: \ref{writeIn}). It tries to read meta-data of the file with same name as Test Sheet file but with the .js extension, it is possible only if the file exists. In other case, the exception will be thrown and caught by the \textit{ catch} block which implements the creation of the file with the content received from the down stream. If the file is already exists then the function will be able to read its meta-data. After it, this meta-data will be compared with meta-data of the Test Sheet file received from the down stream. In case if the modification date of the Test Sheet file is bigger then the modification data of the js file then the system will overwrite the content of the javascript file with the content that was received from the down stream. In case when the Tests Sheet file was not updated after the creation of the representative js file the system will switch to the next object received from the upstream. The result javascript file generated from the provided Test Sheet looks as following (Listing: \ref{demo})
 
 \lstinputlisting[
 language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
@@ -575,7 +576,7 @@ label=demo
 %{code/lib/stream/writeStream.js.txt}
 
 \subsection{Test Coverage}
-The following test cases can show each step incrementally performed during the development process. All calls to systems I/O (e. g. read file meta data, read file) are implemented using stubs.
+The following test cases can show each step incrementally performed during the development process. All calls to systems I/O are implemented using stubs.
 %\lstinputlisting[
 %language=Javascript, numbers=left, stepnumber=5, firstnumber=1, breaklines=true, 
 %basicstyle=\footnotesize,
@@ -667,7 +668,7 @@ On Figure \ref{fig:resultTestSheet} you see the result Test Sheet created after 
 
 
 \subsection{Test coverage}
-The following test cases can show each step incrementally performed during the development process. All calls to systems I/O (e. g. read file meta data, read file) are implemented using stubs.
+The following test cases can show each step incrementally performed during the development process. All calls to systems I/O are implemented using stubs.
 The result of tests execution  for this module is following (Fig.: \ref{fig:testReport}): 
 \begin{figure}[H]
 	\centering

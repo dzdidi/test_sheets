@@ -1,0 +1,11 @@
+function makeNestedCall(sheet, nestedCalls, fileName, str, indent){
+  for (var i = 0; i < nestedCalls.length; i++) {
+    str += makeCall(sheet, nestedCalls[i], 0, '', fileName)
+    if(Array.isArray(nestedCalls[i+1])){
+      return str += makeNestedCall(sheet, nestedCalls[i+1], fileName, '', 0) + '\n});\n';
+    } else {
+      str += '\n});\n'
+    }
+  }
+  return str;
+}

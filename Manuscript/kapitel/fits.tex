@@ -1,11 +1,11 @@
 \chapter{User Experience}
 \label{chap:UX}
-The user experience collection was performed after introducing the final version of the system. First was given a a workshop regarding the system use. This decision was taken due to the fact that not all volunteered employees were the target users. Total number of respondents was seven. All of them were from different divisions of the company and had a different background. Three of respondents were from customer support and project management and four from the development team. 
+The user experience collection was performed after introducing the final version of the system. First was given a workshop regarding the system use. This decision was taken due to the fact that not all volunteered employees were the target users. Total number of respondents was seven. All of them were from different divisions of the company and had a different background. Three of respondents were from customer support and project management. Another four were from the development team. 
 
-The task for respondents during collection of user experience was to recreate test coverage introduced in the chapter \ref{chap:implementation} for the module \textit{stack} from the same chapter. They were allowed to use their favorite spreadsheet editor.
+The task for respondents during collection of user experience was to recreate test coverage introduced in the Chapter \ref{chap:implementation} for the module \textit{stack} from the same chapter. They were allowed to use their favorite spreadsheet editor.
 
 The scenario was defined in a following way:
-\begin{itemize}
+\begin{enumerate}
 	\item Open spreadsheet editor;
 	\item Create new spreadsheet;
 	\item In the cell \textbf{A1} add the \textit{description} text\textit{ \textbf{User experience}};
@@ -85,7 +85,7 @@ The scenario was defined in a following way:
 	\item Execute the generated file running \textit{node ./ux.xlsx};
 	
 	\item Open \textit{ux.xlsx} file and check test execution results.;
-\end{itemize}
+\end{enumerate}
 
 After the task completion every respondent filled up two questioners regarding their user experience.
 
@@ -216,7 +216,7 @@ The number taken for measures calculations were the arithmetic mean of answer va
 \end{table}
 
 Values of ASQ, OVERALL and SYSUSE show high level of user satisfaction.
-Firs of all this was achieved by the fact the concept of Test Sheets allows users to apply any spread sheet editor. The next factor is relative simplicity of the module under test and consequently the test coverage users were asked to recreate. Further the conventions introduced for current implementation are straight forward and simple. Despite of this there is a room for user experience improvement. The most complains regarding the system's user were about necessity of using command line interface.
+First of all, this was achieved by the fact the concept of Test Sheets allows users to apply any spread sheet editor. The next factor is relative simplicity of the module under test and consequently the test coverage users were asked to recreate. Further, the conventions introduced for current implementation are straight forward and simple. Despite of this there is a room for user experience improvement. The most complains regarding the system's use were about necessity of using command line interface instead of graphical user interface.
 
 \chapter{System fit and benefits}
 \label{chap:fitsBenefits}
@@ -240,7 +240,7 @@ In case of the pilot stage of the Test Sheet in figo GmbH the properties of TTF 
 
 \paragraph{Technology Characteristics:}
 \begin{itemize}
-	\item Asynchronous software;
+	\item Asynchronous event driven framework;
 	\item Real-time software.
 \end{itemize}
 
@@ -256,7 +256,7 @@ The initial assumption was that Test Sheets can be the most beneficial approach 
 	\item Test Sheet is a representation for tests developed with the goal to combine the power and completeness of formal programming language with a representation that is easy to understand and work with even for people with little IT knowledge\cite{ts};
 	\item node.js is an asynchronous event-driven framework designed to build scalable network applications;
 	\item Optimization for real-time execution is done by changing test steps execution order and position in the event loop with the respect to their reference structure;
-	\item Automatization of bug reporting process directly to the developer.
+	\item Automatization of bug reporting process directly to the developer (not covered in this researched).
 \end{itemize}
 
 \paragraph{Utilization:}
@@ -279,7 +279,7 @@ The factors influenced project's benefits were analyzed from the perspective of 
 \paragraph{Functional Fit} is the extent to which the functional capabilities are embedded and configured within an system package match the functionality that organization needs to operate effectively and efficiently.
 \begin{itemize}
 	\item reduced load of developers;
-	\item reduced time to detect bug;
+	\item reduced time for issues detection.
 \end{itemize}
 
 \paragraph{Overcoming Organizational Inertia} is the extent to which members of the organization have been motivated to learn, use, and accept new system. During initial implementation and subsequent upgrade projects, considerable change-management effort, training, and support are needed to overcome organizational inertia.
@@ -299,11 +299,11 @@ The benefits detected after the pilot stage of the Test Sheet project were class
 
 \paragraph{Managerial benefits:}
 \begin{itemize}
-	\item Resource management - No additional QA staff necessary.
+	\item Resource management - No additional quality assurance staff necessary.
 \end{itemize}
 
 
-\paragraph{Organizational benefits} from the system use from the perspective of senior management, is an overall measure of senior managemt's perception of the benefits from the IT-based application. Such benefits usually revolve around the software enabling the faster and more accurate process of coordination and execution, resulting in more tightly controlled organizational processes improved asset utilization and decision making. \cite{MES11} 
+\paragraph{Organizational benefits} from the system use from the perspective of senior management, is an overall measure of senior managemt's perception of the benefits from the IT-based application. Such benefits usually revolve around the software enabling the faster and more accurate process of coordination and execution, resulting in more tightly controlled organizational processes improved asset utilization and decision making \cite{MES11}.
 Next, organizational benefit were observed by chief technical and chief product managers during the use stage of the Test Sheet project:
 
 \begin{itemize}
@@ -314,7 +314,7 @@ Next, organizational benefit were observed by chief technical and chief product 
 
 
 \section{Misfits}
-This section states the cases from the misfits' perspective of the software product implemented in scope of this research and the Test Sheet project. There are six perspectives where misfits can occur e. g. \textit{functionality, data, usability, role, control} and \textit{organizational culture} \cite{MES10}.
+This section states the cases from the misfits' perspective of the software product implemented in scope of this research and the Test Sheet project. There are six perspectives where misfits can occur: \textit{functionality, data, usability, role, control} and \textit{organizational culture} \cite{MES10}.
 
 \paragraph{Functionality misfits:} occur, when the way processes are executed using the software leads to reduced efficiency and effectiveness compared to pre-ES outcomes. For this project no functionality misfits were detected.
 
