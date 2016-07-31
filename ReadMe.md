@@ -11,9 +11,15 @@ Official topic name: "Using Test Sheets for Real Time Testing in the case of Fig
 
  More information about [Chair of Software Engineering of University of Mannheim](http://swt.informatik.uni-mannheim.de/de/home/)
 
- ##System runing and testing
+ ## Installation and use:
+
+ * `npm install -g ./compare_and_write` - to install reporting mechanism
+ * `npm install -g xlsx` - to install xlsx connector
+
  * To run the system call the following command: `node index.js </path/to/test/sheets/directory>`
  * To run test call `npm test`
+
+ * To execute generated files call `node <name_of_the_generated_file>`
 
  # Conventions for definitions of Test Sheets
 Following conventions should be followed for Test Sheet passed verification.
