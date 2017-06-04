@@ -1,3 +1,0 @@
-var stream = require('./lib/stream');
-
-stream.read(process.argv[2]).pipe(stream.transform).pipe(stream.write);

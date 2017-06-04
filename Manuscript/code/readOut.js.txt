@@ -1,6 +1,0 @@
-{
-  fileName: <String>,
-  meta: <Object>,
-  sheet: <Object>
-}
-

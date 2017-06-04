@@ -1,6 +1,0 @@
-<module under test>.<method under test>.call(<module under test>, [<input paramteres>],function(err, <actual output>){
-  if(err)  return(err, null);
-  makeComparisonAndWriteResult(<expected output>, <actual output>, <comparison type>, '<module under test> <method under test>', '<path to xlsx file>', '<actual output>');
-  <expected output> = <actual output>;
-
-});
